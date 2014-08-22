@@ -14,6 +14,7 @@
 
 //- Other Scripts
 - scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
+- scripts.add(["/vendor/log.js","/vendor/github.js"])
 - styles.add(["/vendor/ribbon.css"])
 
 //- User
@@ -52,6 +53,7 @@ html(lang="en")
     link(rel="apple-touch-icon-precomposed", sizes="114x114", href="/ico/apple-touch-icon-114-precomposed.png")
     link(rel="apple-touch-icon-precomposed", sizes="72x72", href="/ico/apple-touch-icon-72-precomposed.png")
     link(rel="apple-touch-icon-precomposed", href="/ico/apple-touch-icon-57-precomposed.png")
+
     //- Shims: IE6-8 support of HTML5 elements
     //if lt IE 9
       script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
@@ -59,7 +61,11 @@ html(lang="en")
     // Styles
     != styles.toHTML()
 
-  body#csv
+  body#csv-home
+    
+    //- .ribbon-holder
+    //-   a.ribbon(href="https://github.com/wdavidw/node-csv")
+    //-     span.ribbon-text Fork me on GitHub
 
     // Markup
     //- .container-fluid
@@ -83,8 +89,8 @@ html(lang="en")
                         = childpage.label + " "
                         if /^http/.test(childurl)
                           span.glyphicon.glyphicon-new-window
+    section#content.content!= content
     .container
-      section#content.content!= content
       hr
       footer
         div= site.copyright
@@ -94,7 +100,6 @@ html(lang="en")
       a.darkblue.ribbon(href="https://github.com/wdavidw/node-csv")
         span.text Fork me on GitHub
 
+
     // Scripts
     != scripts.toHTML()
-
-
