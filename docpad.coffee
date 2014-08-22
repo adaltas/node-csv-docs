@@ -12,35 +12,105 @@ docpadConfig =
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://website.com"
+      url: "http://csv.adaltas.com"
 
       # Here are some old site urls that you would like to redirect from
       oldUrls: [
-        'www.website.com',
-        'website.herokuapp.com'
+        'adaltas.com/projects/node-csv'
       ]
 
       # The default title of our website
-      title: "Your Website"
+      title: "Node.js CSV project"
 
       # The website description (for SEO)
       description: """
-        When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+        CSV parser and stringifier with a simple api, full of options and tested against large datasets.
         """
 
       # The website keywords (for SEO) separated by commas
       keywords: """
-        place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+        csv, parser, stringifier, nodejs
         """
 
       # The website author's name
-      author: "Your Name"
+      author: "David Worms"
 
       # The website author's email
-      email: "your@email.com"
+      email: "david@adaltas.com"
 
       # Your company's name
-      copyright: "© Your Company 2013"
+      copyright: "© Adaltas 2014"
+      
+      sitemap:
+        '/csv':
+          label: 'CSV'
+          children:
+            '/':
+              label: 'Homepage'
+            '/csv':
+              label: 'Documentation'
+            '/csv/examples':
+              label: 'Examples'
+            '/csv/community':
+              label: 'Community'
+            'https://github.com/wdavidw/node-csv':
+              label: 'GitHub'
+            'https://github.com/wdavidw/node-csv/blob/master/src/index.coffee.md':
+              label: 'Source Code'
+            'https://www.npmjs.org/package/csv':
+              label: 'NPM'
+        '/generate':
+          label: 'Generate'
+          children:
+            '/generate':
+              label: 'Documentation'
+            '/generate/examples':
+              label: 'Examples'
+            'https://github.com/wdavidw/node-csv-generate':
+              label: 'GitHub'
+            'https://github.com/wdavidw/node-csv-generate/blob/master/src/index.coffee.md':
+              label: 'Source Code'
+            'https://www.npmjs.org/package/stream-generate':
+              label: 'NPM'
+        '/parse':
+          label: 'Parse'
+          children:
+            '/parse':
+              label: 'Documentation'
+            '/parse/examples':
+              label: 'Examples'
+            'https://github.com/wdavidw/node-csv-parse':
+              label: 'GitHub'
+            'https://github.com/wdavidw/node-csv-parse/blob/master/src/index.coffee.md':
+              label: 'Source Code'
+            'https://www.npmjs.org/package/csv-parse':
+              label: 'NPM'
+        '/transform':
+          label: 'Transform'
+          children:
+            '/transform':
+              label: 'Documentation'
+            '/transform/examples':
+              label: 'Examples'
+            'https://github.com/wdavidw/node-stream-transform':
+              label: 'GitHub'
+            'https://github.com/wdavidw/node-stream-transform/blob/master/src/index.coffee.md':
+              label: 'Source Code'
+            'https://www.npmjs.org/package/csv-transform':
+              label: 'NPM'
+        '/stringify':
+          label: 'Stringify'
+          children:
+            '/stringify':
+              label: 'Documentation'
+            '/stringify/examples':
+              label: 'Examples'
+            'https://github.com/wdavidw/node-csv-stringify':
+              label: 'GitHub'
+            'https://github.com/wdavidw/node-csv-stringify/blob/master/src/index.coffee.md':
+              label: 'Source Code'
+            'https://www.npmjs.org/package/csv-stringify':
+              label: 'NPM'
 
 
     # Helper Functions
@@ -113,3 +183,5 @@ docpadConfig =
 
 # Export our DocPad Configuration
 module.exports = docpadConfig
+
+

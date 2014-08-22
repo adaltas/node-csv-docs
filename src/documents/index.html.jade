@@ -1,23 +1,29 @@
 --- yaml
-layout: 'default'
+layout: 'home'
 title: 'Home'
 ---
 
-// Main hero unit for a primary marketing message or call to action.
-.jumbotron
-  h1 Welcome to your new site!
-  p: :markdown
-    We've copied over the [Twitter Bootstrap Skeleton](https://github.com/docpad/twitter-bootstrap.docpad) for you already, which is what you're currently viewing.
-    <br>
-    Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
-
-// Example row of columns.
-.row
-  .col-md-6
-    h2 Docpad
-    p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-    p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
-  .col-md-6
-    h2 Twitter Bootstrap
-    p Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-    p: a.btn.btn-default(href="http://twitter.github.com/bootstrap/") Visit Website
+.container-fluid
+  .jumbotron
+    h1 CSV for Node.js
+    p: :markdown
+      Comprehensive CSV suite combining 4 well tested packages 
+      to generate, parse, transform and stringify CSV data.
+.container
+  .row
+    .col-md-3(style="height: 150px")
+      h2 Generate
+      p Output text, objects or Arrays
+      p: a.btn.btn-default(href="/generate") Learn More
+    .col-md-3(style="height: 150px")
+      h2 Parse
+      p Input text and output objects or Arrays
+      p: a.btn.btn-default(href="/parse") Learn More
+    .col-md-3(style="height: 150px")
+      h2 Transform
+      p Input and output objects or Arrays
+      p: a.btn.btn-default(href="/transform") Learn More
+    .col-md-3(style="height: 150px")
+      h2 Stringify
+      p Input objects or Arrays and output texts
+      p: a.btn.btn-default(href="/stringify") Learn More
