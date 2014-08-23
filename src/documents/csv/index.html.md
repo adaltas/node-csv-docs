@@ -29,6 +29,8 @@ The `csv` package is itself split into 4 packages:
     a stringifier converting records into a CSV text.
     [![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-stringify.png)][travis-csv-stringify]
 
+## Legacy versions
+
 This documentation is covering the current version 0.4.x. You can access 
 previous documentation on github:
 
