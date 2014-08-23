@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DEPLOY_SOURCE_DIR="out/"
+DEPLOY_DEST_DIR="~/csv.adaltas.com/"
+DEPLOY_SERVER=adaltas.com
+DEPLOY_ACCOUNT=wdavidw
+
+NFLAG=""
+DIR="$( cd "$( dirname $( dirname "$0" ) )" && pwd)"
+
+docpad generate --env static
+chmod -R og+Xr out
+rsync $NFLAG -rvzp --size-only --delete --exclude-from="$DIR/.deployignore" "${DIR}/${DEPLOY_SOURCE_DIR}" "${DEPLOY_ACCOUNT}@${DEPLOY_SERVER}:${DEPLOY_DEST_DIR}"
