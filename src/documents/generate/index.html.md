@@ -5,6 +5,8 @@ tags: ['intro','page']
 pageOrder: 1
 ---
 
+[![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-generate.png)][travis-csv-generate]
+
 This package provides a flexible generator of CSV strings and Javascript objects
 implementing the Node.js `stream.Readable` API.
 
@@ -31,6 +33,6 @@ Most of the generator is imported from its parent project [CSV][csv] in a effort
 to split it between the generator, the parser, the transformer and the stringifier.
 
 [csv]: https://github.com/wdavidw/node-csv
-[travis]: https://travis-ci.org/#!/wdavidw/node-csv-generate
+[travis-csv-generate]: http://travis-ci.org/wdavidw/node-csv-generate
 [generate-samples]: https://github.com/wdavidw/node-csv-generate/tree/master/samples
 [generate-test]: https://github.com/wdavidw/node-csv-generate/tree/master/test

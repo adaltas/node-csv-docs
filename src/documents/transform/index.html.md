@@ -5,6 +5,8 @@ tags: ['intro','page']
 pageOrder: 1
 ---
 
+[![Build Status](https://secure.travis-ci.org/wdavidw/node-stream-transform.png)][travis-stream-transform]
+
 This project provides a simple object transformation framework implementing the
 Node.js `stream.Transform` API. It was originally developed as a part of the Node.js
 [CSV package][csv] (`npm install csv`) and can be used independently.
@@ -78,9 +80,9 @@ in the constructor or send to the `write` function. If you wish to not alter the
 original data, it is your responsibility to send a new data in your
 transformation function instead of the original modified data.
 
+[travis-stream-transform]: http://travis-ci.org/wdavidw/node-stream-transform
 [streamtransform]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 [transform]: https://github.com/wdavidw/node-stream-transform
 [csv]: https://github.com/wdavidw/node-csv
 [stream-samples]: https://github.com/wdavidw/node-stream-transform/tree/master/samples
 [stream-test]: https://github.com/wdavidw/node-stream-transform/tree/master/test
-[travis]: http://travis-ci.org/wdavidw/node-stream-transform

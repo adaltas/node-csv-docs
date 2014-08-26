@@ -5,6 +5,8 @@ tags: ['intro','page']
 pageOrder: 1
 ---
 
+[![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-parse.png)][travis-csv-parse]
+
 This package is a
 parser converting CSV text input into arrays or objects. It implements the
 Node.js [stream.Transform`API](http://nodejs.org/api/stream.html#stream_class_stream_transform). It also provides a simple callback-base API for convenience. It is both extremely easy to use and powerful. It was first
@@ -59,8 +61,9 @@ The "record" has disappeared, you are encouraged to use the "readable" event con
 with the "read" function as documented above and in the [Stream API][stream_transform].
 
 [csv]: https://github.com/wdavidw/node-csv
+[travis-csv-parse]: http://travis-ci.org/wdavidw/node-csv-parse
 [fs_read]: https://github.com/wdavidw/node-csv-parse/tree/master/samples/fs_read.js
 [parse-samples]: https://github.com/wdavidw/node-csv-parse/tree/master/samples
 [parse-test]: https://github.com/wdavidw/node-csv-parse/tree/master/test
 [stream_transform]: http://nodejs.org/api/stream.html#stream_class_stream_transform
-[travis]: https://travis-ci.org/#!/wdavidw/node-csv-parse
+
