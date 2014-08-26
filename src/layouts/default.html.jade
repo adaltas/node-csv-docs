@@ -60,29 +60,23 @@ html(lang="en")
     != styles.toHTML()
 
   body#csv
-
-    // Markup
-    //- .container-fluid
-    //-   div.carousel.slide
-    //-   div.carousel-inner
-    //-   div.item.active
-    //-   img(src="/home.png", style="width:100%")
     nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
       .container
         .collapse.navbar-collapse
           ul.nav.navbar-nav
             each page, url in site.sitemap
-              li.dropdown
-                a(href="/pages/stringify", data-toggle="dropdown", property="dc:title")
-                  = page.label
-                  span.caret
-                ul.dropdown-menu(role="menu")
-                  each childpage, childurl in page.children
-                    li
-                      a(href=childurl, property="dc:title")
-                        = childpage.label + " "
-                        if /^http/.test(childurl)
-                          span.glyphicon.glyphicon-new-window
+              if !/^\/legacy/.test(url) || /^\/legacy/.test(document.url)
+                li.dropdown
+                  a(href="/pages/stringify", data-toggle="dropdown", property="dc:title")
+                    = page.label
+                    span.caret
+                  ul.dropdown-menu(role="menu")
+                    each childpage, childurl in page.children
+                      li
+                        a(href=childurl, property="dc:title")
+                          = childpage.label + " "
+                          if /^http/.test(childurl)
+                            span.glyphicon.glyphicon-new-window
     .container
       section#content.content!= content
       hr

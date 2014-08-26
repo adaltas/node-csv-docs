@@ -111,6 +111,25 @@ docpadConfig =
               label: 'Source Code'
             'https://www.npmjs.org/package/csv-stringify':
               label: 'NPM'
+        '/legacy':
+          label: 'Legacy'
+          children:
+            '/legacy':
+              label: 'Introduction'
+            '/legacy/from':
+              label: 'Reading data from a source'
+            '/legacy/to':
+              label: 'Writing data to a destination'
+            '/legacy/transformer':
+              label: 'Transforming data'
+            '/legacy/columns':
+              label: 'Columns'
+            '/legacy/parser':
+              label: 'Parsing'
+            '/legacy/stringifier':
+              label: 'Stringifier'
+            '/legacy/changes':
+              label: 'Changes in latest versions'
 
 
     # Helper Functions
