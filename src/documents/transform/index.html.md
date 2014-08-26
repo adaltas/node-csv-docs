@@ -37,6 +37,22 @@ For additionnal usage and example, you may refer to
 [example page](/transform/examples/),
 [the "samples" folder][stream-samples] and [the "test" folder][stream-test].
 
+## Options and properties
+
+Options include:
+
+*   `parallel` (number)   
+     The number of transformation callbacks to run in parallel, default to "100".
+
+Available properties:
+
+*    `transform.running`   
+      The number of transformation callback being run at a given time.   
+*    `transform.started`   
+      The number of transformation callback which have been initiated.   
+*    `transform.running`   
+      The number of transformation callback which have been executed.   
+
 ## Synchronous versus asynchronous execution
 
 The mode is defined by the signature of transformation function. It is expected
@@ -48,6 +64,9 @@ is ready.
 In synchronous mode, you may simply return the altered data or throw an error.
 In asynchronous mode, you must call the provided callback with 2 arguments, the
 error if any and the altered data.
+
+Using the asynchronous mode present the advantage that more than one record may
+be emitted per transform callback.
 
 ## Array versus objects
 
