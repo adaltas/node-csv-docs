@@ -7,10 +7,11 @@ pageOrder: 1
 
 [![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-parse.png)][travis-csv-parse]
 
-This package is a
-parser converting CSV text input into arrays or objects. It implements the
-Node.js [stream.Transform`API](http://nodejs.org/api/stream.html#stream_class_stream_transform). It also provides a simple callback-base API for convenience. It is both extremely easy to use and powerful. It was first
-released in 2010 and is used against big data sets by a large community.
+This package is a parser converting CSV text input into arrays or objects. It
+implements the Node.js [`stream.Transform`API][stream_transform]. It also
+provides a simple callback-based API for convenience. It is both extremely easy
+to use and powerful. It was first released in 2010 and is used against big data
+sets by a large community.
 
 ## Features
 
@@ -76,15 +77,17 @@ All options are optional.
 
 ## Migration
 
-Most of the generator is imported from its parent project [CSV][csv] in a effort
-to split it between the generator, the parser, the transformer and the
+Most of the generator is imported from its parent project [CSV][csv] in an
+effort to split it between the generator, the parser, the transformer and the
 stringifier.
 
-The "record" has disappeared, you are encouraged to use the "readable" event conjointly
-with the "read" function as documented above and in the [Stream API][stream_transform].
+The "record" has disappeared, you are encouraged to use the "readable" event
+conjointly with the "read" function as documented above and in the
+[Stream API][stream_transform].
 
 [csv]: https://github.com/wdavidw/node-csv
 [travis-csv-parse]: http://travis-ci.org/wdavidw/node-csv-parse
+[stream_transform]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 [fs_read]: https://github.com/wdavidw/node-csv-parse/tree/master/samples/fs_read.js
 [parse-samples]: https://github.com/wdavidw/node-csv-parse/tree/master/samples
 [parse-test]: https://github.com/wdavidw/node-csv-parse/tree/master/test

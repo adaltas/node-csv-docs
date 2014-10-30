@@ -7,7 +7,7 @@ pageOrder: 1
 
 ## Using the callback API
 
-The parser receive a string and returns an array inside a user-provided
+The parser receives a string and returns an array inside a user-provided
 callback. This example is available with the command `node samples/callback.js`.
 
 See the full list of supported parsing options below.
@@ -24,9 +24,9 @@ parse(input, {comment: '#'}, function(err, output){
 
 ## Using the stream API
 
-The CSV parser implements the [stream.Transform`API][stream_transform].
+The CSV parser implements the [`stream.Transform`API][stream_transform].
 
-CSV data is send through the `write` function and the resulted data is obtained
+CSV data is sent through the `write` function and the resulting data is obtained
 within the "readable" event by calling the `read` function. This example is
 available with the command `node samples/stream.js`.
 
@@ -65,10 +65,10 @@ parser.end();
 
 ## Using the pipe function
 
-One useful function part of the Stream API is `pipe` to interact between
+One useful function of the Stream API is `pipe` to interact between
 multiple streams. You may use this function to pipe a `stream.Readable` string
-source to a `stream.Writable` object destination. This example available as
-`node samples/pipe.js` read the file, parse its content and transform it.
+source to a `stream.Writable` object destination. This example is available as
+`node samples/pipe.js` and reads the file, parses its content and transforms it.
 
 ```javascript
 var fs = require('fs');
