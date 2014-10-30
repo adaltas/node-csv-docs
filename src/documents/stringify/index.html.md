@@ -66,5 +66,5 @@ Options may include:
 All options are optional.
 
 [travis-csv-stringify]: http://travis-ci.org/wdavidw/node-csv-stringify
-[stringify-samples]: https://github.com/wdavidw/node-csv-parse/tree/master/samples
-[stringify-test]: https://github.com/wdavidw/node-csv-parse/tree/master/test
+[stringify-samples]: https://github.com/wdavidw/node-csv-stringify/tree/master/samples
+[stringify-test]: https://github.com/wdavidw/node-csv-stringify/tree/master/test
