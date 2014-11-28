@@ -25,6 +25,9 @@ The `csv` package is itself split into 4 packages:
 *   [`csv-stringify`](https://github.com/wdavidw/node-csv-stringify),
     a stringifier converting records into a CSV text.
 
+Additionaly, you might want to look at the [iconv-lite][iconv] module for
+alternative encoding support.
+
 ## Legacy versions
 
 This documentation is covering the current version 0.4.x. The documentation for
@@ -48,6 +51,6 @@ Also, a simple callback-based API is always provided for conveniency.
 For additionnal usage and example, you may refer to
 [the example page][examples].
 
-
+[iconv]: https://github.com/ashtuchkin/iconv-lite
 [examples]: /csv/examples/
 [legacy]: /legacy/
