@@ -59,6 +59,8 @@ For additionnal usage and example, you may refer to
     Treat all the characteres after this one as a comment, default to '#'.   
 *   `objname`   
     Name of header-record title to name objects by.   
+*   `relax` (boolean)   
+    Preserve quotes inside unquoted field.   
 *   `skip_empty_lines`   
     Dont generate empty values for empty lines.   
 *   `trim`   
