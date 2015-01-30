@@ -34,7 +34,7 @@ scalability. You may also mix the two styles. For example, the
 [fs_read.js example][fs_read] pipe a file stream reader and get the results
 inside a callback.
 
-For additionnal usage and example, you may refer to
+For additional usage and example, you may refer to
 [example page](/parse/examples/),
 [the "samples" folder][parse-samples] and [the "test" folder][parse-test].
 
@@ -57,7 +57,7 @@ For additionnal usage and example, you may refer to
     line, default to null, affect the result data set in the sense that records
     will be objects instead of arrays.   
 *   `comment` (char)   
-    Treat all the characteres after this one as a comment, default to '#'.   
+    Treat all the characters after this one as a comment, default to '#'.   
 *   `objname` (string)   
     Name of header-record title to name objects by.   
 *   `relax` (boolean)   
