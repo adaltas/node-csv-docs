@@ -41,7 +41,7 @@ Options may include:
     Add the value of "options.rowDelimiter" on the last line, default to true.   
 *   `escape`   
     Defaults to the escape read option.   
-*   `header`
+*   `header`   
     Display the column names on the first line if the columns option is
     provided or discovered.   
 *   `lineBreaks`   
