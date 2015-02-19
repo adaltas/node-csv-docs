@@ -3,6 +3,7 @@ title: CSV Parser
 layout: page
 tags: ['intro','page']
 pageOrder: 1
+github: 'https://github.com/wdavidw/node-csv-parse'
 ---
 
 [![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-parse.png)][travis-csv-parse]

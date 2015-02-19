@@ -3,6 +3,7 @@ title: CSV Stringifier
 layout: page
 tags: ['intro','page']
 pageOrder: 1
+github: 'https://github.com/wdavidw/node-csv-stringify'
 ---
 
 [![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-stringify.png)][travis-csv-stringify]

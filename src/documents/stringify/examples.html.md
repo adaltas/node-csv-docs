@@ -3,6 +3,7 @@ title: Examples
 layout: page
 tags: ['intro','page']
 pageOrder: 1
+github: 'https://github.com/wdavidw/node-csv-stringify'
 ---
 
 ## Using the callback API

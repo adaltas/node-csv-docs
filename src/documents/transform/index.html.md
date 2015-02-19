@@ -3,6 +3,7 @@ title: CSV and object transformer
 layout: page
 tags: ['intro','page']
 pageOrder: 1
+github: 'https://github.com/wdavidw/node-stream-transform'
 ---
 
 [![Build Status](https://secure.travis-ci.org/wdavidw/node-stream-transform.png)][travis-stream-transform]

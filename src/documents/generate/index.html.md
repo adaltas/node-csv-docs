@@ -3,6 +3,7 @@ title: CSV and object generator
 layout: page
 tags: ['intro','page']
 pageOrder: 1
+github: 'https://github.com/wdavidw/node-csv-generate'
 ---
 
 [![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-generate.png)][travis-csv-generate]
