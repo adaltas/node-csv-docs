@@ -79,6 +79,23 @@ For additionnal usage and example, you may refer to
 
 All options are optional.
 
+## Internal properites
+
+Those properties are for internal usage but may be considered usefull to the
+final user in some situations. They are accessible from the intance returned by
+the `parse` function.
+
+*   `count` (number)   
+    Internal counter of records being processed.   
+*   `lines` (number)   
+    The number of lines encountered in the source dataset.   
+*   `regexp_int` (regexp)   
+    The regular expression used to determine if a value should be cast to an
+    integer.   
+*   `regexp_float` (regexp)   
+    The regular expression used to determine if a value should be cast to an
+    float.   
+
 ## Migration
 
 Most of the generator is imported from its parent project [CSV][csv] in an
