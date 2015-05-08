@@ -15,7 +15,7 @@ Node.js `stream.Transform` API. It was originally developed as a part of the Nod
 [Documentation for the stream-transform package is available here][transform].
 
 *   Simple callback based API
-*   Node.js [stream.Transform][streamtransform] API, pipe through it
+*   Node.js [stream.Transform][stream] API, pipe through it
 *   synchronous versus asynchronous user callbacks
 *   Accept object, array or JSON as input and output
 *   Sequential or user-defined concurrent execution
@@ -25,14 +25,18 @@ Node.js `stream.Transform` API. It was originally developed as a part of the Nod
 ## Usage
 
 Run `npm install csv` to install the full CSV module or run
-`npm install stream-transform` if you are only interested by this package.
-
-Callback API: `transform(udf, [options])`
-
-Stream API: `transform(data, [options], udf, [options], [callback])`
+`npm install stream-transform` if you are only interested by this package.   
 
 Use the callback style API for simplicity or the stream based API for
-scalability or mix the 2 APIs.
+scalability or mix the 2 APIs.   
+
+### Callback API   
+
+`transform(handler, [options])`     
+
+### [Node.js Stream API][stream]   
+
+`transform(data, [options], handler, [options], [callback])`   
 
 For additionnal usage and example, you may refer to
 [example page](/transform/examples/),
@@ -101,7 +105,7 @@ original data, it is your responsibility to send a new data in your
 transformation function instead of the original modified data.
 
 [travis-stream-transform]: http://travis-ci.org/wdavidw/node-stream-transform
-[streamtransform]: http://nodejs.org/api/stream.html#stream_class_stream_transform
+[stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 [transform]: https://github.com/wdavidw/node-stream-transform
 [csv]: https://github.com/wdavidw/node-csv
 [stream-samples]: https://github.com/wdavidw/node-stream-transform/tree/master/samples
