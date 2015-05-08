@@ -9,7 +9,7 @@ github: 'https://github.com/wdavidw/node-csv-parse'
 [![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-parse.png)][travis-csv-parse]
 
 This package is a parser converting CSV text input into arrays or objects. It
-implements the Node.js [`stream.Transform`API][stream_transform]. It also
+implements the Node.js [`stream.Transform`API][stream]. It also
 provides a simple callback-based API for convenience. It is both extremely easy
 to use and powerful. It was first released in 2010 and is used against big data
 sets by a large community.
@@ -35,7 +35,15 @@ scalability. You may also mix the two styles. For example, the
 [fs_read.js example][fs_read] pipe a file stream reader and get the results
 inside a callback.
 
-For additionnal usage and example, you may refer to
+### Callback API   
+
+signature: `parse(data, [options], callback)`     
+
+### [Node.js Stream API][stream]   
+
+signature: `parse([options], [callback])`   
+
+For additional usage and example, you may refer to
 [example page](/parse/examples/),
 [the "samples" folder][parse-samples] and [the "test" folder][parse-test].
 
@@ -58,7 +66,7 @@ For additionnal usage and example, you may refer to
     line, default to null, affect the result data set in the sense that records
     will be objects instead of arrays.   
 *   `comment` (char)   
-    Treat all the characteres after this one as a comment, default to '#'.   
+    Treat all the characters after this one as a comment, default to '#'.   
 *   `objname` (string)   
     Name of header-record title to name objects by.   
 *   `relax` (boolean)   
@@ -67,13 +75,13 @@ For additionnal usage and example, you may refer to
     Dont generate empty values for empty lines.   
 *   `trim` (boolean)   
     If true, ignore whitespace immediately around the delimiter, defaults to
-    false.   
+    false. Does not remove whitespace in a quoted field.   
 *   `ltrim` (boolean)   
     If true, ignore whitespace immediately following the delimiter (i.e.
-    left-trim all fields), defaults to false.   
+    left-trim all fields), defaults to false. Does not remove whitespace in a quoted field.
 *   `rtrim` (boolean)   
     If true, ignore whitespace immediately preceding the delimiter (i.e.
-    right-trim all fields), defaults to false.   
+    right-trim all fields), defaults to false.  Does not remove whitespace in a quoted field.
 *   `auto_parse` (boolean)   
     If true, the parser will attempt to convert read data types to native types.   
 
@@ -104,13 +112,12 @@ stringifier.
 
 The "record" has disappeared, you are encouraged to use the "readable" event
 conjointly with the "read" function as documented above and in the
-[Stream API][stream_transform].
+[Stream API][stream].
 
 [csv]: https://github.com/wdavidw/node-csv
 [travis-csv-parse]: http://travis-ci.org/wdavidw/node-csv-parse
-[stream_transform]: http://nodejs.org/api/stream.html#stream_class_stream_transform
+[stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 [fs_read]: https://github.com/wdavidw/node-csv-parse/tree/master/samples/fs_read.js
 [parse-samples]: https://github.com/wdavidw/node-csv-parse/tree/master/samples
 [parse-test]: https://github.com/wdavidw/node-csv-parse/tree/master/test
-[stream_transform]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 
