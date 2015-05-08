@@ -22,6 +22,14 @@ Run `npm install csv` to install the full csv module or run
 Use the callback style API for simplicity or the stream based API for
 scalability.
 
+### Callback API   
+
+`stringify(data, [options], callback)`   
+
+### [Node.js Stream API][stream]   
+
+`stringify([options], [callback])`   
+
 For additionnal usage and example, you may refer to
 [example page](/stringify/examples/),
 [the "samples" folder][stringify-samples] and [the "test" folder][stringify-test].
