@@ -24,6 +24,14 @@ Run `npm install csv` to install the full csv module or run
 Use the callback style API for simplicity or the stream based API for
 scalability.
 
+### Callback API   
+
+`generate([options])`   
+
+### [Node.js Stream API][stream]   
+
+`generate([options], callback)`   
+
 For additionnal usage and example, you may refer to
 [the example page](/generate/examples/),
 [the "samples" folder][generate-samples] and [the "test" folder][generate-test].
@@ -63,6 +71,7 @@ Most of the generator is imported from its parent project [CSV][csv] in a effort
 to split it between the generator, the parser, the transformer and the stringifier.
 
 [csv]: https://github.com/wdavidw/node-csv
+[stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 [travis-csv-generate]: http://travis-ci.org/wdavidw/node-csv-generate
 [generate-samples]: https://github.com/wdavidw/node-csv-generate/tree/master/samples
 [generate-test]: https://github.com/wdavidw/node-csv-generate/tree/master/test
