@@ -67,13 +67,13 @@ For additional usage and example, you may refer to
     Dont generate empty values for empty lines.   
 *   `trim` (boolean)   
     If true, ignore whitespace immediately around the delimiter, defaults to
-    false.   
+    false. Does not remove whitespace in a quoted field.   
 *   `ltrim` (boolean)   
     If true, ignore whitespace immediately following the delimiter (i.e.
-    left-trim all fields), defaults to false.   
+    left-trim all fields), defaults to false. Does not remove whitespace in a quoted field.
 *   `rtrim` (boolean)   
     If true, ignore whitespace immediately preceding the delimiter (i.e.
-    right-trim all fields), defaults to false.   
+    right-trim all fields), defaults to false.  Does not remove whitespace in a quoted field.
 *   `auto_parse` (boolean)   
     If true, the parser will attempt to convert read data types to native types.   
 
