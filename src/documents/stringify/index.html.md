@@ -52,10 +52,6 @@ Options may include:
 *   `header`   
     Display the column names on the first line if the columns option is
     provided or discovered.   
-*   `lineBreaks`   
-    String used to delimit record rows or a special value; special values are
-    'auto', 'unix', 'mac', 'windows', 'unicode'; defaults to 'auto'
-    (discovered in source or 'unix' if no source is specified).   
 *   `quote`   
     Defaults to the quote read option.   
 *   `quoted`   
