@@ -102,12 +102,12 @@ the `parse` function.
     Internal counter of records being processed.   
 *   `lines` (number)   
     The number of lines encountered in the source dataset.   
-*   `regexp_int` (regexp)   
-    The regular expression used to determine if a value should be cast to an
-    integer.   
-*   `regexp_float` (regexp)   
-    The regular expression used to determine if a value should be cast to an
-    float.   
+*   `is_int` (regexp, function)   
+    The regular expression or function used to determine if a value should be
+    cast to an integer.   
+*   `is_float` (regexp, function)   
+    The regular expression or function used to determine if a value should be
+    cast to a float.   
 
 ## Migration
 
