@@ -14,6 +14,8 @@ for converniency. It is both extremely easy to use and powerfull. It was
 released since 2010 and is tested against very large dataset by a large
 community.
 
+Source code for this project is available on [GitHub][stringify].
+
 ## Usage
 
 Run `npm install csv` to install the full csv module or run

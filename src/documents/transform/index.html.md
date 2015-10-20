@@ -47,7 +47,10 @@ For additionnal usage and example, you may refer to
 Options include:
 
 *   `parallel` (number)   
-     The number of transformation callbacks to run in parallel, default to "100".
+     The number of transformation callbacks to run in parallel, default to "100".   
+*   `consume` (boolean)   
+    In the absence of a consumer, like a stream.Readable, trigger the
+    consumption of the stream.   
 
 Available properties:
 
