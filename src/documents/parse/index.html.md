@@ -14,6 +14,8 @@ provides a simple callback-based API for convenience. It is both extremely easy
 to use and powerful. It was first released in 2010 and is used against big data
 sets by a large community.
 
+Source code for this project is available on [GitHub][parse].
+
 ## Features
 
 *   Follow the Node.js streaming API
@@ -118,6 +120,6 @@ conjointly with the "read" function as documented above and in the
 [travis-csv-parse]: http://travis-ci.org/wdavidw/node-csv-parse
 [stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 [fs_read]: https://github.com/wdavidw/node-csv-parse/tree/master/samples/fs_read.js
+[parse]: https://github.com/wdavidw/node-csv-parse
 [parse-samples]: https://github.com/wdavidw/node-csv-parse/tree/master/samples
 [parse-test]: https://github.com/wdavidw/node-csv-parse/tree/master/test
-

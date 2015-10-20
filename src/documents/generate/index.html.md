@@ -11,6 +11,8 @@ github: 'https://github.com/wdavidw/node-csv-generate'
 This package provides a flexible generator of CSV strings and Javascript objects
 implementing the Node.js `stream.Readable` API.
 
+Source code for this project is available on [GitHub][generate].
+
 Features includes:
 
 *   random or pseudo-random seed based generation
@@ -73,5 +75,6 @@ to split it between the generator, the parser, the transformer and the stringifi
 [csv]: https://github.com/wdavidw/node-csv
 [stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
 [travis-csv-generate]: http://travis-ci.org/wdavidw/node-csv-generate
+[generate]: https://github.com/wdavidw/node-csv-generate
 [generate-samples]: https://github.com/wdavidw/node-csv-generate/tree/master/samples
 [generate-test]: https://github.com/wdavidw/node-csv-generate/tree/master/test
