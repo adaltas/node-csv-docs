@@ -86,6 +86,9 @@ For additional usage and example, you may refer to
     right-trim all fields), defaults to false.  Does not remove whitespace in a quoted field.
 *   `auto_parse` (boolean)   
     If true, the parser will attempt to convert read data types to native types.   
+*   `auto_parse_date` (boolean)   
+    If true, the parser will attempt to convert read data types to dates. It
+    requires the "auto_parse" option.   
 
 All options are optional.
 
