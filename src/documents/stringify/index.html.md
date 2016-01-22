@@ -43,8 +43,9 @@ Options may include:
 *   `columns`   
     List of fields, applied when `transform` returns an object, order matters,
     read the transformer documentation for additionnal information, columns are
-    auto discovered in the first record when the user write objects, see the
-    "header" option on how to print columns names on the first line.   
+    auto discovered in the first record when the user write objects, can refer
+    to nested properties of the input JSON, see the "header" option on how to
+    print columns names on the first line.
 *   `delimiter`   
     Set the field delimiter, one character only, defaults to a comma.   
 *   `eof`   
