@@ -58,7 +58,7 @@ Available properties:
       The number of transformation callback being run at a given time.   
 *    `transform.started`   
       The number of transformation callback which have been initiated.   
-*    `transform.running`   
+*    `transform.finished`   
       The number of transformation callback which have been executed.   
 
 ## Synchronous versus asynchronous execution
