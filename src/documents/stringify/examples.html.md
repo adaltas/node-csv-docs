@@ -40,7 +40,7 @@ stringifier.on('readable', function(){
   }
 });
 stringifier.on('error', function(err){
-  consol.log(err.message);
+  console.log(err.message);
 });
 stringifier.on('finish', function(){
   data.should.eql(
