@@ -11,8 +11,6 @@ github: 'https://github.com/wdavidw/node-csv-parse'
 The parser receives a string and returns an array inside a user-provided
 callback. This example is available with the command `node samples/callback.js`.
 
-See the full list of supported parsing options below.
-
 ```javascript
 var parse = require('csv-parse');
 require('should');
@@ -30,8 +28,6 @@ The CSV parser implements the [`stream.Transform`API][stream_transform].
 CSV data is sent through the `write` function and the resulting data is obtained
 within the "readable" event by calling the `read` function. This example is
 available with the command `node samples/stream.js`.
-
-See the full list of supported parser options below.
 
 ```javascript
 var parse = require('csv-parse');
@@ -85,4 +81,19 @@ var transformer = transform(function(record, callback){
   }, 500);
 }, {parallel: 10});
 input.pipe(parser).pipe(transformer).pipe(process.stdout);
+```
+
+## Using the synchronous API
+
+The parser receives a string and returns an array of objects. This example also
+illustrate the "columns" options which return records as object instead of
+arrays. This example is available with the command `node samples/callback.js`.
+
+```javascript
+var parse = require('csv-parse/lib/sync');
+require('should');
+
+var input = '"key_1","key_2"\n"value 1","value 2"';
+var records = parse(input, {columns: true});
+records.should.eql([{ key_1: 'value 1', key_2: 'value 2' }]);
 ```

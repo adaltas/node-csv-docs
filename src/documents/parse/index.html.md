@@ -37,6 +37,12 @@ scalability. You may also mix the two styles. For example, the
 [fs_read.js example][fs_read] pipe a file stream reader and get the results
 inside a callback.
 
+There is also a synchronous API if you need it.   
+
+For additional usage and example, you may refer to
+[example page](/parse/examples/),
+[the "samples" folder][parse-samples] and [the "test" folder][parse-test].
+
 ### Callback API   
 
 signature: `parse(data, [options], callback)`     
@@ -45,9 +51,11 @@ signature: `parse(data, [options], callback)`
 
 signature: `parse([options], [callback])`   
 
-For additional usage and example, you may refer to
-[example page](/parse/examples/),
-[the "samples" folder][parse-samples] and [the "test" folder][parse-test].
+### Synchronous API
+
+Using this API involves requiring the 'csv-parse/lib/sync' module.
+
+signature: `records = parse(text, [options])`
 
 ## Parser options
 
