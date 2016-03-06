@@ -45,8 +45,7 @@
     "marked": "*"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "2.x",
-    "bower": "~1"
+    "docpad-plugin-livereload": "2.x"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
