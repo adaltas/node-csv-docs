@@ -1,37 +1,22 @@
-# [Twitter Bootstrap](http://twitter.github.com/bootstrap/) skeleton for [DocPad](https://github.com/bevry/docpad)
-Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.
+# Node.js CSV Documentation
 
+This is the source code for the official website of the CSV parser for Node.js
+hosted at [csv.adaltas.com]. Please submit an issue if you see any typo or
+possible improvement for the documentation.
 
-## Getting Started
+## Deploy Instructions
 
-1. [Install DocPad](https://github.com/bevry/docpad)
-
-1. Clone the project and run the server
-
-  ``` bash
-  git clone git://github.com/docpad/twitter-bootstrap.docpad.git
-  cd twitter-bootstrap.docpad
-  npm install
-  docpad run
-  ```
-
-1. [Open http://localhost:9778/](http://localhost:9778/)
-
-1. Start hacking away by modifying the `src` directory
-
-
-## License
-
-This skeleton is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
-
-If you are wanting to open-source your website, we suggest using the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) for content and the [MIT License](http://creativecommons.org/licenses/MIT/) for code. In which case you'd probably want to use the following as your license:
-
-  Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Your Name](http://your.website)
-
-If you are wanting to close-source your website, we'd suggest using the following:
-
-  Copyright [Your Name](http://your.website). All rights reserved.
-
-Other included things such as themes and libraries are likely already licensed by their own invidual licenses, so be sure to respect their licenses too.
-
-Thanks, the DocPad team loves you.
+```bash
+git clone https://github.com/wdavidw/node-csv-docs.git csv-docs
+cd csv-docs
+cat /root/.bowerrc
+npm install
+# Generate the documentation
+node_modules/docpad/bin/docpad generate --env static
+# Build the container
+docker build -t csv-docs .
+# Start nginx unless already running
+docker run -d -p 91.121.35.92:80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+# Serve the CSV documentation
+docker run -e VIRTUAL_HOST=csv.adaltas.com -d -p 80 csv-docs
+```
