@@ -76,7 +76,8 @@ signature: `records = parse(text, [options])`
     line, default to null, affect the result data set in the sense that records
     will be objects instead of arrays.   
 *   `comment` (char)   
-    Treat all the characters after this one as a comment, default to '#'.   
+    Treat all the characters after this one as a comment, default to ''
+    (disabled).   
 *   `objname` (string)   
     Name of header-record title to name objects by.   
 *   `relax` (boolean)   
