@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>CSV Parse Examples | Node.js CSV project</title><meta name="description" content="CSV parser and stringifier with a simple api, full of options and tested against large datasets."><meta name="keywords" content="csv, parser, stringifier, nodejs"><meta name="author" content="David Worms"><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/ribbon.css" /><link  rel="stylesheet" href="/styles/style.css" /><link  rel="stylesheet" href="/styles/desert.css" /></head><body id="csv"><nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">CSV<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/" property="dc:title">Homepage </a></li><li><a href="/csv" property="dc:title">Documentation </a></li><li><a href="/csv/examples" property="dc:title">Examples </a></li><li><a href="/csv/community" property="dc:title">Community </a></li><li><a href="https://github.com/wdavidw/node-csv" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Generate<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/generate" property="dc:title">Documentation </a></li><li><a href="/generate/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-generate" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-generate/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/stream-generate" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Parse<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/parse" property="dc:title">Documentation </a></li><li><a href="/parse/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-parse" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-parse/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-parse" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Transform<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/transform" property="dc:title">Documentation </a></li><li><a href="/transform/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-stream-transform" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-stream-transform/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-transform" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Stringify<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/stringify" property="dc:title">Documentation </a></li><li><a href="/stringify/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-stringify" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-stringify/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-stringify" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li></ul></div></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><h1>CSV Parse Examples</h1><div class="page-content"><h2 id="using-the-callback-api">Using the callback API</h2>
+<p>The parser receives a string and returns an array inside a user-provided
+callback. This example is available with the command <code>node samples/callback.js</code>.</p>
+<pre><code class="lang-javascript">var parse = require(&#39;csv-parse&#39;);
+require(&#39;should&#39;);
+
+var input = &#39;#Welcome\n&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;\n&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;&#39;;
+parse(input, {comment: &#39;#&#39;}, function(err, output){
+  output.should.eql([ [ &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39; ], [ &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39; ] ]);
+});
+</code></pre>
+<h2 id="using-the-stream-api">Using the stream API</h2>
+<p>The CSV parser implements the [<code>stream.Transform</code>API][stream_transform].</p>
+<p>CSV data is sent through the <code>write</code> function and the resulting data is obtained
+within the &quot;readable&quot; event by calling the <code>read</code> function. This example is
+available with the command <code>node samples/stream.js</code>.</p>
+<pre><code class="lang-javascript">var parse = require(&#39;csv-parse&#39;);
+require(&#39;should&#39;);
+
+var output = [];
+// Create the parser
+var parser = parse({delimiter: &#39;:&#39;});
+// Use the writable stream api
+parser.on(&#39;readable&#39;, function(){
+  while(record = parser.read()){
+    output.push(record);
+  }
+});
+// Catch any error
+parser.on(&#39;error&#39;, function(err){
+  console.log(err.message);
+});
+// When we are done, test that the parsed output matched what expected
+parser.on(&#39;finish&#39;, function(){
+  output.should.eql([
+    [ &#39;root&#39;,&#39;x&#39;,&#39;0&#39;,&#39;0&#39;,&#39;root&#39;,&#39;/root&#39;,&#39;/bin/bash&#39; ],
+    [ &#39;someone&#39;,&#39;x&#39;,&#39;1022&#39;,&#39;1022&#39;,&#39;a funny cat&#39;,&#39;/home/someone&#39;,&#39;/bin/bash&#39; ]
+  ]);
+});
+// Now that setup is done, write data to the stream
+parser.write(&quot;root:x:0:0:root:/root:/bin/bash\n&quot;);
+parser.write(&quot;someone:x:1022:1022:a funny cat:/home/someone:/bin/bash\n&quot;);
+// Close the readable stream
+parser.end();
+</code></pre>
+<h2 id="using-the-pipe-function">Using the pipe function</h2>
+<p>One useful function of the Stream API is <code>pipe</code> to interact between
+multiple streams. You may use this function to pipe a <code>stream.Readable</code> string
+source to a <code>stream.Writable</code> object destination. This example is available as
+<code>node samples/pipe.js</code> and reads the file, parses its content and transforms it.</p>
+<pre><code class="lang-javascript">var fs = require(&#39;fs&#39;);
+var parse = require(&#39;csv-parse&#39;);
+var transform = require(&#39;stream-transform&#39;);
+
+var output = [];
+var parser = parse({delimiter: &#39;:&#39;})
+var input = fs.createReadStream(&#39;/etc/passwd&#39;);
+var transformer = transform(function(record, callback){
+  setTimeout(function(){
+    callback(null, record.join(&#39; &#39;)+&#39;\n&#39;);
+  }, 500);
+}, {parallel: 10});
+input.pipe(parser).pipe(transformer).pipe(process.stdout);
+</code></pre>
+<h2 id="using-the-synchronous-api">Using the synchronous API</h2>
+<p>The parser receives a string and returns an array of objects. This example also
+illustrate the &quot;columns&quot; options which return records as object instead of
+arrays. This example is available with the command <code>node samples/callback.js</code>.</p>
+<pre><code class="lang-javascript">var parse = require(&#39;csv-parse/lib/sync&#39;);
+require(&#39;should&#39;);
+
+var input = &#39;&quot;key_1&quot;,&quot;key_2&quot;\n&quot;value 1&quot;,&quot;value 2&quot;&#39;;
+var records = parse(input, {columns: true});
+records.should.eql([{ key_1: &#39;value 1&#39;, key_2: &#39;value 2&#39; }]);
+</code></pre>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Mar 11 2016 23:09:09 GMT+0100 (CET)</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Changes in latest versions | Node.js CSV project</title><meta name="description" content="CSV parser and stringifier with a simple api, full of options and tested against large datasets."><meta name="keywords" content="csv, parser, stringifier, nodejs"><meta name="author" content="David Worms"><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/ribbon.css" /><link  rel="stylesheet" href="/styles/style.css" /><link  rel="stylesheet" href="/styles/desert.css" /></head><body id="csv"><nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">CSV<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/" property="dc:title">Homepage </a></li><li><a href="/csv" property="dc:title">Documentation </a></li><li><a href="/csv/examples" property="dc:title">Examples </a></li><li><a href="/csv/community" property="dc:title">Community </a></li><li><a href="https://github.com/wdavidw/node-csv" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Generate<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/generate" property="dc:title">Documentation </a></li><li><a href="/generate/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-generate" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-generate/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/stream-generate" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Parse<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/parse" property="dc:title">Documentation </a></li><li><a href="/parse/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-parse" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-parse/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-parse" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Transform<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/transform" property="dc:title">Documentation </a></li><li><a href="/transform/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-stream-transform" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-stream-transform/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-transform" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Stringify<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/stringify" property="dc:title">Documentation </a></li><li><a href="/stringify/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-stringify" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-stringify/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-stringify" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Legacy<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/legacy" property="dc:title">Introduction </a></li><li><a href="/legacy/from" property="dc:title">Reading data from a source </a></li><li><a href="/legacy/to" property="dc:title">Writing data to a destination </a></li><li><a href="/legacy/transformer" property="dc:title">Transforming data </a></li><li><a href="/legacy/columns" property="dc:title">Columns </a></li><li><a href="/legacy/parser" property="dc:title">Parsing </a></li><li><a href="/legacy/stringifier" property="dc:title">Stringifier </a></li><li><a href="/legacy/changes" property="dc:title">Changes in latest versions </a></li></ul></li></ul></div></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><h1>Changes in latest versions</h1><div class="page-content"><h2 id="version-0-2-6">version 0.2.6</h2>
+<ul>
+<li>Print headers if no records</li>
+<li>Add function <code>to.prototype.array</code></li>
+<li>TSV sample</li>
+<li>Test 0, null and undefined values in <code>from.prototype.array</code></li>
+</ul>
+<h2 id="version-0-2-5">version 0.2.5</h2>
+<ul>
+<li>Print doc generation path</li>
+<li>Update doc generation with latest each dependency</li>
+<li>Remove buffer related test</li>
+</ul>
+<h2 id="version-0-2-4">version 0.2.4</h2>
+<ul>
+<li>Speed improvement to transformation</li>
+</ul>
+<h2 id="version-0-2-3">version 0.2.3</h2>
+<ul>
+<li>Fix stdout samples</li>
+<li>Install instruction</li>
+<li>Honor the pipe <code>end</code> option</li>
+</ul>
+<h2 id="version-0-2-2">version 0.2.2</h2>
+<ul>
+<li>Function <code>from.stream</code> now use a &quot;pipe&quot; implementation</li>
+<li>Add <code>setEncoding</code> to the generator to respect the readable stream API</li>
+</ul>
+<h2 id="version-0-2-1">version 0.2.1</h2>
+<ul>
+<li>Line number in parsing error</li>
+<li>Asynchronous transformation</li>
+<li>Have from stream send pause/resume advisories from csv to stream</li>
+<li>Column property to column name if defined option column defined as an object</li>
+<li>Pass options in the <code>from</code> and <code>to</code> functions</li>
+<li>Function <code>to.string</code> receives the number of written records</li>
+<li>Skip UTF BOM from first data event on UTF-8 decoded stream</li>
+<li>Fix from array with the column options</li>
+<li>Travis support</li>
+<li>More doc about columns and transformation</li>
+<li>Update and improve samples</li>
+<li>Backward compatibility width Node.js &lt; 0.8.x</li>
+</ul>
+<h2 id="version-0-2-0">version 0.2.0</h2>
+<ul>
+<li>Add <code>to</code> and <code>from</code> convenient functions</li>
+<li>Documentation generation</li>
+<li>New generator function and class</li>
+<li>Full stream support</li>
+<li>Externalize the parse, stringify and transform functionnalities</li>
+<li>Rename the <code>data</code> event to <code>record</code></li>
+<li>Test coverage</li>
+<li>Isolate state into its own file</li>
+<li>Isolate default options into their own file; Implement <code>to.options</code></li>
+<li>Convert lib to coffee</li>
+<li>Rename <code>from*</code> and <code>to*</code> functions to <code>from.*</code> and <code>to.*</code></li>
+</ul>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Mar 11 2016 23:09:09 GMT+0100 (CET)</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

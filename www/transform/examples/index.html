@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Examples | Node.js CSV project</title><meta name="description" content="CSV parser and stringifier with a simple api, full of options and tested against large datasets."><meta name="keywords" content="csv, parser, stringifier, nodejs"><meta name="author" content="David Worms"><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/ribbon.css" /><link  rel="stylesheet" href="/styles/style.css" /><link  rel="stylesheet" href="/styles/desert.css" /></head><body id="csv"><nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">CSV<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/" property="dc:title">Homepage </a></li><li><a href="/csv" property="dc:title">Documentation </a></li><li><a href="/csv/examples" property="dc:title">Examples </a></li><li><a href="/csv/community" property="dc:title">Community </a></li><li><a href="https://github.com/wdavidw/node-csv" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Generate<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/generate" property="dc:title">Documentation </a></li><li><a href="/generate/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-generate" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-generate/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/stream-generate" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Parse<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/parse" property="dc:title">Documentation </a></li><li><a href="/parse/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-parse" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-parse/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-parse" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Transform<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/transform" property="dc:title">Documentation </a></li><li><a href="/transform/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-stream-transform" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-stream-transform/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-transform" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Stringify<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/stringify" property="dc:title">Documentation </a></li><li><a href="/stringify/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-stringify" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-stringify/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-stringify" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li></ul></div></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><h1>Examples</h1><div class="page-content"><h2 id="using-the-callback-api">Using the callback API</h2>
+<p>The transformer receive a string and return an array inside a user-provided
+callback. This example is available with the command <code>node samples/callback.js</code>.</p>
+<pre><code class="lang-javascript">var transform = require(&#39;stream-transform&#39;);
+var should = require(&#39;should&#39;);
+
+transform([
+  [&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;],
+  [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]
+], function(data){
+  data.push(data.shift())
+  return data;
+}, function(err, output){
+  output.should.eql([ [ &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;1&#39; ], [ &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39; ] ]);
+});
+</code></pre>
+<h2 id="using-the-stream-api">Using the stream API</h2>
+<p>CSV data is send through the <code>write</code> function and the resulted data is obtained
+within the &quot;readable&quot; event by calling the <code>read</code> function. This example is
+available with the command <code>node samples/stream.js</code>.</p>
+<pre><code class="lang-javascript">var transform = require(&#39;stream-transform&#39;);
+var should = require(&#39;should&#39;);
+
+var output = [];
+var transformer = transform(function(data){
+  data.push(data.shift())
+  return data;
+});
+transformer.on(&#39;readable&#39;, function(){
+  while(row = transformer.read()){
+    output.push(row);
+  }
+});
+transformer.on(&#39;error&#39;, function(err){
+  console.log(err.message);
+});
+transformer.on(&#39;finish&#39;, function(){
+  output.should.eql([ [ &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;1&#39; ], [ &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39; ] ]);
+});
+transformer.write([&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;]);
+transformer.write([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]);
+transformer.end();
+</code></pre>
+<h2 id="using-synchronous-transformation">Using synchronous transformation</h2>
+<p>You may run this script with the command <code>node samples/synchronous.js</code>.</p>
+<p>The transformation function is run synchronously because is only expect one
+argument, the data to be transformed. It is expected to return the transformed
+data or to throw an error.</p>
+<pre><code class="lang-javascript">var transform = require(&#39;stream-transform&#39;);
+
+transform([
+  [&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;],
+  [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]
+], function(data){
+  data.push(data.shift());
+  return data.join(&#39;,&#39;)+&#39;\n&#39;;
+})
+.pipe(process.stdout);
+
+// Output:
+// 2,3,4,1
+// b,c,d,a
+</code></pre>
+<h2 id="using-asynchronous-transformation">Using asynchronous transformation</h2>
+<p>You may run this script with the command <code>node samples/asynchronous.js</code>.</p>
+<p>The transformation callback is requesting two arguments, the data to transform
+and the callback to call once the data is ready.</p>
+<p>The transformation callback is exected concurrently with a maximum of 20
+parallel executions.</p>
+<pre><code class="lang-javascript">var transform = require(&#39;stream-transform&#39;);
+
+transform([
+  [&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;],
+  [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]
+], function(data, callback){
+  setImmediate(function(){
+    data.push(data.shift());
+    callback(null, data.join(&#39;,&#39;)+&#39;\n&#39;);
+  });
+}, {parallel: 20})
+.pipe(process.stdout);
+
+// Output:
+// 2,3,4,1
+// b,c,d,a
+</code></pre>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Mar 11 2016 23:09:09 GMT+0100 (CET)</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-stream-transform" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

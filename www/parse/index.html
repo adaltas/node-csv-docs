@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>CSV Parser | Node.js CSV project</title><meta name="description" content="CSV parser and stringifier with a simple api, full of options and tested against large datasets."><meta name="keywords" content="csv, parser, stringifier, nodejs"><meta name="author" content="David Worms"><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/ribbon.css" /><link  rel="stylesheet" href="/styles/style.css" /><link  rel="stylesheet" href="/styles/desert.css" /></head><body id="csv"><nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">CSV<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/" property="dc:title">Homepage </a></li><li><a href="/csv" property="dc:title">Documentation </a></li><li><a href="/csv/examples" property="dc:title">Examples </a></li><li><a href="/csv/community" property="dc:title">Community </a></li><li><a href="https://github.com/wdavidw/node-csv" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Generate<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/generate" property="dc:title">Documentation </a></li><li><a href="/generate/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-generate" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-generate/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/stream-generate" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Parse<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/parse" property="dc:title">Documentation </a></li><li><a href="/parse/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-parse" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-parse/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-parse" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Transform<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/transform" property="dc:title">Documentation </a></li><li><a href="/transform/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-stream-transform" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-stream-transform/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-transform" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Stringify<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/stringify" property="dc:title">Documentation </a></li><li><a href="/stringify/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-stringify" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-stringify/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-stringify" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li></ul></div></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><h1>CSV Parser</h1><div class="page-content"><p><a href="http://travis-ci.org/wdavidw/node-csv-parse"><img src="https://secure.travis-ci.org/wdavidw/node-csv-parse.png" alt="Build Status"></a></p>
+<p>This package is a parser converting CSV text input into arrays or objects. It
+implements the Node.js <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform"><code>stream.Transform</code>API</a>. It also
+provides a simple callback-based API for convenience. It is both extremely easy
+to use and powerful. It was first released in 2010 and is used against big data
+sets by a large community.</p>
+<p>Source code for this project is available on <a href="https://github.com/wdavidw/node-csv-parse">GitHub</a>.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Follow the Node.js streaming API</li>
+<li>Simplicity with the optional callback API</li>
+<li>Support delimiters, quotes, escape characters and comments</li>
+<li>Line breaks discovery</li>
+<li>Support big datasets</li>
+<li>Complete test coverage and samples for inspiration</li>
+<li>no external dependencies</li>
+<li>to be used conjointly with <code>csv-generate</code>, <code>stream-transform</code> and <code>csv-stringify</code></li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Run <code>npm install csv</code> to install the full CSV package or run
+<code>npm install csv-parse</code> if you are only interested by the CSV parser.</p>
+<p>Use the callback style API for simplicity or the stream based API for
+scalability. You may also mix the two styles. For example, the
+<a href="https://github.com/wdavidw/node-csv-parse/tree/master/samples/fs_read.js">fs_read.js example</a> pipe a file stream reader and get the results
+inside a callback.</p>
+<p>There is also a synchronous API if you need it.   </p>
+<p>For additional usage and example, you may refer to
+<a href="/parse/examples/">example page</a>,
+<a href="https://github.com/wdavidw/node-csv-parse/tree/master/samples">the &quot;samples&quot; folder</a> and <a href="https://github.com/wdavidw/node-csv-parse/tree/master/test">the &quot;test&quot; folder</a>.</p>
+<h3 id="callback-api">Callback API</h3>
+<p>signature: <code>parse(data, [options], callback)</code>     </p>
+<h3 id="-node-js-stream-api-stream-"><a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Node.js Stream API</a></h3>
+<p>signature: <code>parse([options], [callback])</code>   </p>
+<h3 id="synchronous-api">Synchronous API</h3>
+<p>Using this API involves requiring the &#39;csv-parse/lib/sync&#39; module.</p>
+<p>signature: <code>records = parse(text, [options])</code></p>
+<h2 id="parser-options">Parser options</h2>
+<ul>
+<li><code>delimiter</code> (char)<br>Set the field delimiter. One character only, defaults to comma.   </li>
+<li><code>rowDelimiter</code> (chars|constant)<br>String used to delimit record rows or a special value; special constants are
+&#39;auto&#39;, &#39;unix&#39;, &#39;mac&#39;, &#39;windows&#39;, &#39;unicode&#39;; defaults to &#39;auto&#39; (discovered
+in source or &#39;unix&#39; if no source is specified).   </li>
+<li><code>quote</code> (char)<br>Optionnal character surrounding a field, one character only, defaults to
+double quotes.   </li>
+<li><code>escape</code> (char)<br>Set the escape character, one character only, defaults to double quotes.   </li>
+<li><code>columns</code> (array|boolean|function)
+List of fields as an array, a user defined callback accepting the first line
+and returning the column names or true if autodiscovered in the first CSV
+line, default to null, affect the result data set in the sense that records
+will be objects instead of arrays.   </li>
+<li><code>comment</code> (char)<br>Treat all the characters after this one as a comment, default to &#39;&#39;
+(disabled).   </li>
+<li><code>objname</code> (string)<br>Name of header-record title to name objects by.   </li>
+<li><code>relax</code> (boolean)<br>Preserve quotes inside unquoted field.   </li>
+<li><code>skip_empty_lines</code> (boolean)<br>Dont generate empty values for empty lines.   </li>
+<li><code>trim</code> (boolean)<br>If true, ignore whitespace immediately around the delimiter, defaults to
+false. Does not remove whitespace in a quoted field.   </li>
+<li><code>ltrim</code> (boolean)<br>If true, ignore whitespace immediately following the delimiter (i.e.
+left-trim all fields), defaults to false. Does not remove whitespace in a quoted field.</li>
+<li><code>rtrim</code> (boolean)<br>If true, ignore whitespace immediately preceding the delimiter (i.e.
+right-trim all fields), defaults to false.  Does not remove whitespace in a quoted field.</li>
+<li><code>auto_parse</code> (boolean)<br>If true, the parser will attempt to convert read data types to native types.   </li>
+<li><code>auto_parse_date</code> (boolean)<br>If true, the parser will attempt to convert read data types to dates. It
+requires the &quot;auto_parse&quot; option.   </li>
+</ul>
+<p>All options are optional.</p>
+<h2 id="internal-properites">Internal properites</h2>
+<p>Those properties are for internal usage but may be considered usefull to the
+final user in some situations. They are accessible from the intance returned by
+the <code>parse</code> function.</p>
+<ul>
+<li><code>count</code> (number)<br>Internal counter of records being processed.   </li>
+<li><code>lines</code> (number)<br>The number of lines encountered in the source dataset.   </li>
+<li><code>is_int</code> (regexp, function)<br>The regular expression or function used to determine if a value should be
+cast to an integer.   </li>
+<li><code>is_float</code> (regexp, function)<br>The regular expression or function used to determine if a value should be
+cast to a float.   </li>
+</ul>
+<h2 id="migration">Migration</h2>
+<p>Most of the generator is imported from its parent project <a href="https://github.com/wdavidw/node-csv">CSV</a> in an
+effort to split it between the generator, the parser, the transformer and the
+stringifier.</p>
+<p>The &quot;record&quot; has disappeared, you are encouraged to use the &quot;readable&quot; event
+conjointly with the &quot;read&quot; function as documented above and in the
+<a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Stream API</a>.</p>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Mar 11 2016 23:09:09 GMT+0100 (CET)</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

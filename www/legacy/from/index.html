@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Reading data from a source | Node.js CSV project</title><meta name="description" content="CSV parser and stringifier with a simple api, full of options and tested against large datasets."><meta name="keywords" content="csv, parser, stringifier, nodejs"><meta name="author" content="David Worms"><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/ribbon.css" /><link  rel="stylesheet" href="/styles/style.css" /><link  rel="stylesheet" href="/styles/desert.css" /></head><body id="csv"><nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">CSV<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/" property="dc:title">Homepage </a></li><li><a href="/csv" property="dc:title">Documentation </a></li><li><a href="/csv/examples" property="dc:title">Examples </a></li><li><a href="/csv/community" property="dc:title">Community </a></li><li><a href="https://github.com/wdavidw/node-csv" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Generate<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/generate" property="dc:title">Documentation </a></li><li><a href="/generate/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-generate" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-generate/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/stream-generate" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Parse<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/parse" property="dc:title">Documentation </a></li><li><a href="/parse/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-parse" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-parse/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-parse" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Transform<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/transform" property="dc:title">Documentation </a></li><li><a href="/transform/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-stream-transform" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-stream-transform/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-transform" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Stringify<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/stringify" property="dc:title">Documentation </a></li><li><a href="/stringify/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-stringify" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-stringify/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-stringify" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Legacy<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/legacy" property="dc:title">Introduction </a></li><li><a href="/legacy/from" property="dc:title">Reading data from a source </a></li><li><a href="/legacy/to" property="dc:title">Writing data to a destination </a></li><li><a href="/legacy/transformer" property="dc:title">Transforming data </a></li><li><a href="/legacy/columns" property="dc:title">Columns </a></li><li><a href="/legacy/parser" property="dc:title">Parsing </a></li><li><a href="/legacy/stringifier" property="dc:title">Stringifier </a></li><li><a href="/legacy/changes" property="dc:title">Changes in latest versions </a></li></ul></li></ul></div></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><h1>Reading data from a source</h1><div class="page-content"><p>The <code>csv().from</code> property provides functions to read from an external 
+source and write to a CSV instance. The source may be a string, a file, 
+a buffer or a readable stream.   </p>
+<p>You may call the <code>from</code> function or one of its sub function. For example, 
+here are two identical ways to read from a file:</p>
+<pre><code class="lang-javascript">
+csv().from(&#39;/tmp/data.csv&#39;).on(&#39;data&#39;, console.log);
+csv().from.path(&#39;/tmp/data.csv&#39;).on(&#39;data&#39;, console.log);
+</code></pre>
+<p><a name="from"></a></p>
+<h2 id="-from-mixed-"><code>from(mixed)</code></h2>
+<p>Read from any sort of source. It should be considered as a convenient function which 
+will discover the nature of the data source to parse.   </p>
+<p>If the parameter is a string, check if a file of that path exists. If so, read the file contents,
+otherwise, treat the string as CSV data. If the parameter is an instance of <code>stream</code>, consider the
+object to be an input stream. If it is an array, then treat each line as a record.   </p>
+<p>Here are some examples on how to use this function:</p>
+<pre><code class="lang-javascript">
+csv()
+.from(&#39;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;\n&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;&#39;)
+.on(&#39;end&#39;, function(){ console.log(&#39;done&#39;) })
+
+csv()
+.from(&#39;./path/to/file.csv&#39;)
+.on(&#39;end&#39;, function(){ console.log(&#39;done&#39;) })
+
+csv()
+.from(fs.createReadStream(&#39;./path/to/file.csv&#39;))
+.on(&#39;end&#39;, function(){ console.log(&#39;done&#39;) })
+
+csv()
+.from([&#39;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;&#39;,[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;]])
+.on(&#39;end&#39;, function(){ console.log(&#39;done&#39;) })
+</code></pre>
+<p><a name="from.options"></a></p>
+<h2 id="-from-options-options-"><code>from.options([options])</code></h2>
+<p>Update and retrieve options relative to the input source. Return 
+the options as an object if no argument is provided.</p>
+<ul>
+<li><code>delimiter</code>     Set the field delimiter. One character only, defaults to comma.</li>
+<li><code>rowDelimiter</code>  String used to delimit record rows or a special value; special values are &#39;auto&#39;, &#39;unix&#39;, &#39;mac&#39;, &#39;windows&#39;, &#39;unicode&#39;; defaults to &#39;auto&#39; (discovered in source or &#39;unix&#39; if no source is specified).</li>
+<li><code>quote</code>         Optionnal character surrounding a field, one character only, defaults to double quotes.</li>
+<li><code>escape</code>        Set the escape character, one character only, defaults to double quotes.</li>
+<li><code>columns</code>       List of fields or true if autodiscovered in the first CSV line, default to null. Impact the <code>transform</code> argument and the <code>data</code> event by providing an object instead of an array, order matters, see the transform and the columns sections for more details.</li>
+<li><code>comment</code>       Treat all the characteres after this one as a comment, default to &#39;#&#39;</li>
+<li><code>flags</code>         Used to read a file stream, default to the r charactere.</li>
+<li><code>encoding</code>      Encoding of the read stream, defaults to &#39;utf8&#39;, applied when a readable stream is created.</li>
+<li><code>trim</code>          If true, ignore whitespace immediately around the delimiter, defaults to false.</li>
+<li><code>ltrim</code>         If true, ignore whitespace immediately following the delimiter (i.e. left-trim all fields), defaults to false.</li>
+<li><code>rtrim</code>         If true, ignore whitespace immediately preceding the delimiter (i.e. right-trim all fields), defaults to false.</li>
+</ul>
+<p>Additionnally, in case you are working with stream, you can pass all 
+the options accepted by the <code>stream.pipe</code> function.</p>
+<p><a name="from.array"></a></p>
+<h2 id="-from-array-data-options-"><code>from.array(data, [options])</code></h2>
+<p>Read from an array. Take an array as first argument and optionally 
+an object of options as a second argument. Each element of the array 
+represents a CSV record. Those elements may be a string, a buffer, an
+array or an object.</p>
+<p><a name="from.string"></a></p>
+<h2 id="-from-string-data-options-"><code>from.string(data, [options])</code></h2>
+<p>Read from a string or a buffer. Take a string as first argument and 
+optionally an object of options as a second argument. The string 
+must be the complete csv data, look at the streaming alternative if your 
+CSV is large.</p>
+<pre><code class="lang-javascript">
+csv()
+.from( &#39;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;\n&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;&#39; )
+.to( function(data){} )
+</code></pre>
+<p><a name="from.stream"></a></p>
+<h2 id="-from-stream-stream-options-"><code>from.stream(stream, [options])</code></h2>
+<p>Read from a stream. Take a readable stream as first argument and optionally 
+an object of options as a second argument.</p>
+<p>Additionnal options may be defined. See the <a href="http://www.nodejs.org/api/stream.html#stream_readable_pipe_destination_options"><code>readable.pipe</code> 
+documentation</a> for additionnal information.</p>
+<p><a name="from.path"></a></p>
+<h2 id="-from-path-path-options-"><code>from.path(path, [options])</code></h2>
+<p>Read from a file path. Take a file path as first argument and optionally an object 
+of options as a second argument.</p>
+<p>Additionnal options may be defined with the following default:</p>
+<pre><code class="lang-javascript">
+{ flags: &#39;r&#39;,
+  encoding: null,
+  fd: null,
+  mode: 0666,
+  bufferSize: 64 * 1024,
+  autoClose: true }
+</code></pre>
+<p>See the <a href="http://www.nodejs.org/api/fs.html#fs_fs_createreadstream_path_options"><code>fs.createReadStream</code> documentation</a> for additionnal information.</p>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Mar 11 2016 23:09:09 GMT+0100 (CET)</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
