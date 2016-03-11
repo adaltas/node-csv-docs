@@ -1,0 +1,15 @@
+:2020
+#:443
+#proxy / localhost:4001 localhost:4002
+#tls {
+#	max_certs 10
+#}
+gzip
+root /src/www
+log /src/access.log
+git {
+    repo     https://github.com/wdavidw/node-csv-docs.git
+    path     ..
+    branch   master
+    interval 3600 # 86400
+}
