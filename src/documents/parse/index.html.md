@@ -84,6 +84,10 @@ signature: `records = parse(text, [options])`
     Preserve quotes inside unquoted field.   
 *   `skip_empty_lines` (boolean)   
     Dont generate empty values for empty lines.   
+*   `max_limit_on_data_read` (int)   
+    Maximum numer of characters to be contained in the field and line buffers
+    before an exception is raised, used to guard against a wrong delimiter or
+    rowDelimiter, default to 128000 characters.   
 *   `trim` (boolean)   
     If true, ignore whitespace immediately around the delimiter, defaults to
     false. Does not remove whitespace in a quoted field.   

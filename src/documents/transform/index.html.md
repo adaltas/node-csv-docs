@@ -32,7 +32,7 @@ scalability or mix the 2 APIs.
 
 ### Callback API   
 
-`transform(handler, [options])`     
+`transform(data, handler, [options], callback)`     
 
 ### [Node.js Stream API][stream]   
 
