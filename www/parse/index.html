@@ -53,7 +53,11 @@ will be objects instead of arrays.   </li>
 (disabled).   </li>
 <li><code>objname</code> (string)<br>Name of header-record title to name objects by.   </li>
 <li><code>relax</code> (boolean)<br>Preserve quotes inside unquoted field.   </li>
+<li><code>relax_column_count</code> (boolean)<br>Discard inconsistent columns count, default to false.   </li>
 <li><code>skip_empty_lines</code> (boolean)<br>Dont generate empty values for empty lines.   </li>
+<li><code>max_limit_on_data_read</code> (int)<br>Maximum numer of characters to be contained in the field and line buffers
+before an exception is raised, used to guard against a wrong delimiter or
+rowDelimiter, default to 128000 characters.   </li>
 <li><code>trim</code> (boolean)<br>If true, ignore whitespace immediately around the delimiter, defaults to
 false. Does not remove whitespace in a quoted field.   </li>
 <li><code>ltrim</code> (boolean)<br>If true, ignore whitespace immediately following the delimiter (i.e.
@@ -84,4 +88,4 @@ stringifier.</p>
 <p>The &quot;record&quot; has disappeared, you are encouraged to use the &quot;readable&quot; event
 conjointly with the &quot;read&quot; function as documented above and in the
 <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Stream API</a>.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Mar 11 2016 23:09:09 GMT+0100 (CET)</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Apr 27 2016 00:04:25 GMT+0200 (CEST)</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

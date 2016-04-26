@@ -82,6 +82,8 @@ signature: `records = parse(text, [options])`
     Name of header-record title to name objects by.   
 *   `relax` (boolean)   
     Preserve quotes inside unquoted field.   
+*   `relax_column_count` (boolean)   
+    Discard inconsistent columns count, default to false.   
 *   `skip_empty_lines` (boolean)   
     Dont generate empty values for empty lines.   
 *   `max_limit_on_data_read` (int)   
