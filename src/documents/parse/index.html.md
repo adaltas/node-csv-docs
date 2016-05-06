@@ -21,7 +21,7 @@ Source code for this project is available on [GitHub][parse].
 *   Follow the Node.js streaming API
 *   Simplicity with the optional callback API
 *   Support delimiters, quotes, escape characters and comments
-*   Line breaks discovery
+*   Line break discovery
 *   Support big datasets
 *   Complete test coverage and samples for inspiration
 *   no external dependencies
@@ -60,56 +60,56 @@ signature: `records = parse(text, [options])`
 ## Parser options
 
 *   `delimiter` (char)   
-    Set the field delimiter. One character only, defaults to comma.   
+    Set the field delimiter. One character only. Defaults to `","` (comma).   
 *   `rowDelimiter` (chars|constant)   
-    String used to delimit record rows or a special value; special constants are
-    'auto', 'unix', 'mac', 'windows', 'unicode'; defaults to 'auto' (discovered
-    in source or 'unix' if no source is specified).   
+    String used to delimit record rows or a special constant; special constants are
+    `'auto'`, `'unix'`, `'mac'`, `'windows'`, `'unicode'`; defaults to `'auto'` (discovered
+    in source or `'unix'` if no source is specified).   
 *   `quote` (char)   
-    Optionnal character surrounding a field, one character only, defaults to
-    double quotes.   
+    Optional character surrounding a field. One character only. Defaults to
+    double quote.   
 *   `escape` (char)   
-    Set the escape character, one character only, defaults to double quotes.   
+    Set the escape character. One character only. Defaults to double quote.   
 *   `columns` (array|boolean|function)
     List of fields as an array, a user defined callback accepting the first line
-    and returning the column names or true if autodiscovered in the first CSV
-    line, default to null, affect the result data set in the sense that records
+    and returning the column names, or `true` if autodiscovered in the first CSV
+    line. Defaults to `null`. Affects the result data set in the sense that records
     will be objects instead of arrays.   
 *   `comment` (char)   
-    Treat all the characters after this one as a comment, default to ''
+    Treat all the characters after this one as a comment. Defaults to `''`
     (disabled).   
 *   `objname` (string)   
     Name of header-record title to name objects by.   
 *   `relax` (boolean)   
     Preserve quotes inside unquoted field.   
 *   `relax_column_count` (boolean)   
-    Discard inconsistent columns count, default to false.   
+    Discard inconsistent columns count. Default to `false`.   
 *   `skip_empty_lines` (boolean)   
-    Dont generate empty values for empty lines.   
+    Don't generate empty values for empty lines.   
 *   `max_limit_on_data_read` (int)   
     Maximum numer of characters to be contained in the field and line buffers
-    before an exception is raised, used to guard against a wrong delimiter or
-    rowDelimiter, default to 128000 characters.   
+    before an exception is raised. Used to guard against a wrong `delimiter` or
+    `rowDelimiter`. Default to 128,000 characters.   
 *   `trim` (boolean)   
-    If true, ignore whitespace immediately around the delimiter, defaults to
-    false. Does not remove whitespace in a quoted field.   
+    If `true`, ignore whitespace immediately around the delimiter. Defaults to
+    `false`. Does not remove whitespace in a quoted field.   
 *   `ltrim` (boolean)   
-    If true, ignore whitespace immediately following the delimiter (i.e.
-    left-trim all fields), defaults to false. Does not remove whitespace in a quoted field.
+    If `true`, ignore whitespace immediately following the delimiter (i.e.
+    left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
 *   `rtrim` (boolean)   
-    If true, ignore whitespace immediately preceding the delimiter (i.e.
-    right-trim all fields), defaults to false.  Does not remove whitespace in a quoted field.
+    If `true`, ignore whitespace immediately preceding the delimiter (i.e.
+    right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 *   `auto_parse` (boolean)   
-    If true, the parser will attempt to convert read data types to native types.   
+    If `true`, the parser will attempt to convert read data types to native types.   
 *   `auto_parse_date` (boolean)   
-    If true, the parser will attempt to convert read data types to dates. It
-    requires the "auto_parse" option.   
+    If `true`, the parser will attempt to convert read data types to dates. It
+    requires the `auto_parse` option.   
 
 All options are optional.
 
 ## Internal properites
 
-Those properties are for internal usage but may be considered usefull to the
+Those properties are for internal usage but may be considered useful to the
 final user in some situations. They are accessible from the intance returned by
 the `parse` function.
 
@@ -130,8 +130,8 @@ Most of the generator is imported from its parent project [CSV][csv] in an
 effort to split it between the generator, the parser, the transformer and the
 stringifier.
 
-The "record" has disappeared, you are encouraged to use the "readable" event
-conjointly with the "read" function as documented above and in the
+As `record` has disappeared, you are encouraged to use the `"readable"` event
+conjointly with the `"read"` function as documented above and in the
 [Stream API][stream].
 
 [csv]: https://github.com/wdavidw/node-csv
