@@ -103,7 +103,7 @@ signature: `records = parse(text, [options])`
     If `true`, the parser will attempt to convert read data types to native types.   
 *   `auto_parse_date` (boolean)   
     If `true`, the parser will attempt to convert read data types to dates. It
-    requires the "auto_parse" option.   
+    requires the `auto_parse` option.   
 
 All options are optional.
 
@@ -130,8 +130,8 @@ Most of the generator is imported from its parent project [CSV][csv] in an
 effort to split it between the generator, the parser, the transformer and the
 stringifier.
 
-The "record" has disappeared, you are encouraged to use the "readable" event
-conjointly with the "read" function as documented above and in the
+As `record` has disappeared, you are encouraged to use the `"readable"` event
+conjointly with the `"read"` function as documented above and in the
 [Stream API][stream].
 
 [csv]: https://github.com/wdavidw/node-csv
