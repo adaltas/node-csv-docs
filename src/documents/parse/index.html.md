@@ -100,10 +100,17 @@ signature: `records = parse(text, [options])`
     If `true`, ignore whitespace immediately preceding the delimiter (i.e.
     right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 *   `auto_parse` (boolean)   
+<<<<<<< refs/remotes/origin/master
     If `true`, the parser will attempt to convert read data types to native types.   
 *   `auto_parse_date` (boolean)   
     If `true`, the parser will attempt to convert read data types to dates. It
     requires the `auto_parse` option.   
+=======
+    If true, the parser will attempt to convert input string to native types.   
+*   `auto_parse_date` (boolean)   
+    If true, the parser will attempt to convert input string to dates. It
+    requires the "auto_parse" option. Be careful, it relies on `Date.parse`.   
+>>>>>>> parse: warn about auto_parse_date
 
 All options are optional.
 
