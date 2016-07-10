@@ -245,7 +245,7 @@ jQuery.extend({
 		i = 0;
 		while ( (elem = nodes[ i++ ]) ) {
 
-			// #4087 - If origin and destination elements are the same, and this is
+			// #4087 - If origin and target elements are the same, and this is
 			// that element, do not do anything
 			if ( selection && jQuery.inArray( elem, selection ) !== -1 ) {
 				continue;

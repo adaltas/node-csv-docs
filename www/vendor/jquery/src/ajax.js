@@ -336,7 +336,7 @@ jQuery.extend({
 		},
 
 		// Data converters
-		// Keys separate source (or catchall "*") and destination types with a single space
+		// Keys separate source (or catchall "*") and target types with a single space
 		converters: {
 
 			// Convert anything to text
