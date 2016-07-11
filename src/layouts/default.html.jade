@@ -82,7 +82,7 @@ html(lang="en")
       hr
       footer
         div= site.copyright
-        div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
+        div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date.toDateString()}
 
     .right.ribbon-holder
       a.darkblue.ribbon(href=document.github||"https://github.com/wdavidw/node-csv")
@@ -90,5 +90,3 @@ html(lang="en")
 
     // Scripts
     != scripts.toHTML()
-
-
