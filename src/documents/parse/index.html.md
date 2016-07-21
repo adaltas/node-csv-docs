@@ -107,7 +107,7 @@ signature: `records = parse(text, [options])`
 
 All options are optional.
 
-## Internal properites
+## Internal properties
 
 Those properties are for internal usage but may be considered useful to the
 final user in some situations. They are accessible from the intance returned by
@@ -115,6 +115,10 @@ the `parse` function.
 
 *   `count` (number)   
     Internal counter of records being processed.   
+*   `empty_line_count` (number)   
+    Internal counter of empty lines
+*   `skipped_line_count` (number)   
+    Number of non uniform lines skipped when `relax_column_count` is true
 *   `lines` (number)   
     The number of lines encountered in the source dataset.   
 *   `is_int` (regexp, function)   
