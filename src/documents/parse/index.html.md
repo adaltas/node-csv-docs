@@ -107,7 +107,7 @@ signature: `records = parse(text, [options])`
 
 All options are optional.
 
-## Internal properites
+## Internal properties
 
 Those properties are for internal usage but may be considered useful to the
 final user in some situations. They are accessible from the intance returned by
