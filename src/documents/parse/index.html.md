@@ -85,7 +85,9 @@ signature: `records = parse(text, [options])`
 *   `relax_column_count` (boolean)   
     Discard inconsistent columns count. Default to `false`.   
 *   `skip_empty_lines` (boolean)   
-    Don't generate empty values for empty lines.   
+    Don't generate empty values for empty lines. Defaults to `false`.
+*   `skip_lines_with_empty_values` (boolean)   
+    Don't generate rows with blank values. Defaults to `false`.
 *   `max_limit_on_data_read` (int)   
     Maximum numer of characters to be contained in the field and line buffers
     before an exception is raised. Used to guard against a wrong `delimiter` or
