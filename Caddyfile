@@ -6,7 +6,7 @@
 #}
 gzip
 root /src/www
-log /src/caddy/access.log {
+log /src/logs/access.log {
   rotate {
       size 10 # Rotate after 100 MB
       age  14  # Keep log files for 14 days
