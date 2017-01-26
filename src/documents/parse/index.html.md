@@ -59,53 +59,60 @@ signature: `records = parse(text, [options])`
 
 ## Parser options
 
-*   `delimiter` (char)   
-    Set the field delimiter. One character only. Defaults to `","` (comma).   
-*   `rowDelimiter` (chars|constant)   
-    String used to delimit record rows or a special constant; special constants are
-    `'auto'`, `'unix'`, `'mac'`, `'windows'`, `'unicode'`; defaults to `'auto'` (discovered
-    in source or `'unix'` if no source is specified).   
-*   `quote` (char)   
-    Optional character surrounding a field. One character only. Defaults to
-    double quote.   
-*   `escape` (char)   
-    Set the escape character. One character only. Defaults to double quote.   
-*   `columns` (array|boolean|function)
-    List of fields as an array, a user defined callback accepting the first line
-    and returning the column names, or `true` if autodiscovered in the first CSV
-    line. Defaults to `null`. Affects the result data set in the sense that records
-    will be objects instead of arrays.   
-*   `comment` (char)   
-    Treat all the characters after this one as a comment. Defaults to `''`
-    (disabled).   
-*   `objname` (string)   
-    Name of header-record title to name objects by.   
-*   `relax` (boolean)   
-    Preserve quotes inside unquoted field.   
-*   `relax_column_count` (boolean)   
-    Discard inconsistent columns count. Default to `false`.   
-*   `skip_empty_lines` (boolean)   
-    Don't generate empty values for empty lines. Defaults to `false`.
-*   `skip_lines_with_empty_values` (boolean)   
-    Don't generate rows with blank values. Defaults to `false`.
-*   `max_limit_on_data_read` (int)   
-    Maximum numer of characters to be contained in the field and line buffers
-    before an exception is raised. Used to guard against a wrong `delimiter` or
-    `rowDelimiter`. Default to 128,000 characters.   
-*   `trim` (boolean)   
-    If `true`, ignore whitespace immediately around the delimiter. Defaults to
-    `false`. Does not remove whitespace in a quoted field.   
-*   `ltrim` (boolean)   
-    If `true`, ignore whitespace immediately following the delimiter (i.e.
-    left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
-*   `rtrim` (boolean)   
-    If `true`, ignore whitespace immediately preceding the delimiter (i.e.
-    right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 *   `auto_parse` (boolean)   
     If true, the parser will attempt to convert input string to native types.   
 *   `auto_parse_date` (boolean)   
     If true, the parser will attempt to convert input string to dates. It
     requires the "auto_parse" option. Be careful, it relies on `Date.parse`.   
+*   `columns` (array|boolean|function)   
+    List of fields as an array, a user defined callback accepting the first line
+    and returning the column names, or `true` if autodiscovered in the first CSV
+    line. Defaults to `null`. Affects the result data set in the sense that 
+    records will be objects instead of arrays. A value "false" skips the all column.   
+*   `comment` (char)   
+    Treat all the characters after this one as a comment. Defaults to `''`
+    (disabled).   
+*   `delimiter` (char)   
+    Set the field delimiter. One character only. Defaults to `","` (comma).   
+*   `escape` (char)   
+    Set the escape character. One character only. Defaults to double quote.   
+*   `from`, (number)   
+    Start returning records from a particular line.   
+*   `ltrim` (boolean)   
+    If `true`, ignore whitespace immediately following the delimiter (i.e.
+    left-trim all fields). Defaults to `false`. Does not remove whitespace in a
+    quoted field.   
+*   `max_limit_on_data_read` (int)   
+    Maximum numer of characters to be contained in the field and line buffers
+    before an exception is raised. Used to guard against a wrong `delimiter` or
+    `rowDelimiter`. Default to 128,000 characters.   
+*   `objname` (string)   
+    Name of header-record title to name objects by.   
+*   `quote` (char)   
+    Optional character surrounding a field. One character only. Defaults to
+    double quote.   
+*   `relax` (boolean)   
+    Preserve quotes inside unquoted field.   
+*   `relax_column_count` (boolean)   
+    Discard inconsistent columns count. Default to `false`.   
+*   `rowDelimiter` (chars|constant)   
+    String used to delimit record rows or a special constant; special constants 
+    are `'auto'`, `'unix'`, `'mac'`, `'windows'`, `'unicode'`; defaults to 
+    `'auto'` (discovered in source or `'unix'` if no source is specified).   
+*   `rtrim` (boolean)   
+    If `true`, ignore whitespace immediately preceding the delimiter (i.e.
+    right-trim all fields). Defaults to `false`.  Does not remove whitespace in
+    a quoted field.   
+*   `skip_empty_lines` (boolean)   
+    Don't generate records for empty lines (line matching `/\s*/`), defaults to `false`.   
+*   `skip_lines_with_empty_values` (boolean)   
+    Don't generate records for lines containing empty column values (column 
+    matching `/\s*/`), defaults to `false`.   
+*   `to`, (number)   
+    Stop returning records after a particular line.   
+*   `trim` (boolean)   
+    If `true`, ignore whitespace immediately around the delimiter. Defaults to
+    `false`. Does not remove whitespace in a quoted field.   
 
 All options are optional.
 
