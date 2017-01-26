@@ -6,7 +6,13 @@
 #}
 gzip
 root /src/www
-log /src/access.log
+log /src/caddy/access.log {
+  rotate {
+      size 10 # Rotate after 100 MB
+      age  14  # Keep log files for 14 days
+      keep 10  # Keep at most 10 log files
+  }
+}
 git {
     repo     https://github.com/wdavidw/node-csv-docs.git
     path     ..
