@@ -37,44 +37,51 @@ inside a callback.</p>
 <p>signature: <code>records = parse(text, [options])</code></p>
 <h2 id="parser-options">Parser options</h2>
 <ul>
-<li><code>delimiter</code> (char)<br>Set the field delimiter. One character only. Defaults to <code>&quot;,&quot;</code> (comma).   </li>
-<li><code>rowDelimiter</code> (chars|constant)<br>String used to delimit record rows or a special constant; special constants are
-<code>&#39;auto&#39;</code>, <code>&#39;unix&#39;</code>, <code>&#39;mac&#39;</code>, <code>&#39;windows&#39;</code>, <code>&#39;unicode&#39;</code>; defaults to <code>&#39;auto&#39;</code> (discovered
-in source or <code>&#39;unix&#39;</code> if no source is specified).   </li>
-<li><code>quote</code> (char)<br>Optional character surrounding a field. One character only. Defaults to
-double quote.   </li>
-<li><code>escape</code> (char)<br>Set the escape character. One character only. Defaults to double quote.   </li>
-<li><code>columns</code> (array|boolean|function)
-List of fields as an array, a user defined callback accepting the first line
-and returning the column names, or <code>true</code> if autodiscovered in the first CSV
-line. Defaults to <code>null</code>. Affects the result data set in the sense that records
-will be objects instead of arrays.   </li>
-<li><code>comment</code> (char)<br>Treat all the characters after this one as a comment. Defaults to <code>&#39;&#39;</code>
-(disabled).   </li>
-<li><code>objname</code> (string)<br>Name of header-record title to name objects by.   </li>
-<li><code>relax</code> (boolean)<br>Preserve quotes inside unquoted field.   </li>
-<li><code>relax_column_count</code> (boolean)<br>Discard inconsistent columns count. Default to <code>false</code>.   </li>
-<li><code>skip_empty_lines</code> (boolean)<br>Don&#39;t generate empty values for empty lines.   </li>
-<li><code>max_limit_on_data_read</code> (int)<br>Maximum numer of characters to be contained in the field and line buffers
-before an exception is raised. Used to guard against a wrong <code>delimiter</code> or
-<code>rowDelimiter</code>. Default to 128,000 characters.   </li>
-<li><code>trim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately around the delimiter. Defaults to
-<code>false</code>. Does not remove whitespace in a quoted field.   </li>
-<li><code>ltrim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately following the delimiter (i.e.
-left-trim all fields). Defaults to <code>false</code>. Does not remove whitespace in a quoted field.</li>
-<li><code>rtrim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately preceding the delimiter (i.e.
-right-trim all fields). Defaults to <code>false</code>.  Does not remove whitespace in a quoted field.</li>
 <li><code>auto_parse</code> (boolean)<br>If true, the parser will attempt to convert input string to native types.   </li>
 <li><code>auto_parse_date</code> (boolean)<br>If true, the parser will attempt to convert input string to dates. It
 requires the &quot;auto_parse&quot; option. Be careful, it relies on <code>Date.parse</code>.   </li>
+<li><code>columns</code> (array|boolean|function)<br>List of fields as an array, a user defined callback accepting the first line
+and returning the column names, or <code>true</code> if autodiscovered in the first CSV
+line. Defaults to <code>null</code>. Affects the result data set in the sense that 
+records will be objects instead of arrays. A value &quot;false&quot; skips the all column.   </li>
+<li><code>comment</code> (char)<br>Treat all the characters after this one as a comment. Defaults to <code>&#39;&#39;</code>
+(disabled).   </li>
+<li><code>delimiter</code> (char)<br>Set the field delimiter. One character only. Defaults to <code>&quot;,&quot;</code> (comma).   </li>
+<li><code>escape</code> (char)<br>Set the escape character. One character only. Defaults to double quote.   </li>
+<li><code>from</code>, (number)<br>Start returning records from a particular line.   </li>
+<li><code>ltrim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately following the delimiter (i.e.
+left-trim all fields). Defaults to <code>false</code>. Does not remove whitespace in a
+quoted field.   </li>
+<li><code>max_limit_on_data_read</code> (int)<br>Maximum numer of characters to be contained in the field and line buffers
+before an exception is raised. Used to guard against a wrong <code>delimiter</code> or
+<code>rowDelimiter</code>. Default to 128,000 characters.   </li>
+<li><code>objname</code> (string)<br>Name of header-record title to name objects by.   </li>
+<li><code>quote</code> (char)<br>Optional character surrounding a field. One character only. Defaults to
+double quote.   </li>
+<li><code>relax</code> (boolean)<br>Preserve quotes inside unquoted field.   </li>
+<li><code>relax_column_count</code> (boolean)<br>Discard inconsistent columns count. Default to <code>false</code>.   </li>
+<li><code>rowDelimiter</code> (chars|constant)<br>String used to delimit record rows or a special constant; special constants 
+are <code>&#39;auto&#39;</code>, <code>&#39;unix&#39;</code>, <code>&#39;mac&#39;</code>, <code>&#39;windows&#39;</code>, <code>&#39;unicode&#39;</code>; defaults to 
+<code>&#39;auto&#39;</code> (discovered in source or <code>&#39;unix&#39;</code> if no source is specified).   </li>
+<li><code>rtrim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately preceding the delimiter (i.e.
+right-trim all fields). Defaults to <code>false</code>.  Does not remove whitespace in
+a quoted field.   </li>
+<li><code>skip_empty_lines</code> (boolean)<br>Don&#39;t generate records for empty lines (line matching <code>/\s*/</code>), defaults to <code>false</code>.   </li>
+<li><code>skip_lines_with_empty_values</code> (boolean)<br>Don&#39;t generate records for lines containing empty column values (column 
+matching <code>/\s*/</code>), defaults to <code>false</code>.   </li>
+<li><code>to</code>, (number)<br>Stop returning records after a particular line.   </li>
+<li><code>trim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately around the delimiter. Defaults to
+<code>false</code>. Does not remove whitespace in a quoted field.   </li>
 </ul>
 <p>All options are optional.</p>
-<h2 id="internal-properites">Internal properites</h2>
+<h2 id="internal-properties">Internal properties</h2>
 <p>Those properties are for internal usage but may be considered useful to the
 final user in some situations. They are accessible from the intance returned by
 the <code>parse</code> function.</p>
 <ul>
 <li><code>count</code> (number)<br>Internal counter of records being processed.   </li>
+<li><code>empty_line_count</code> (number)<br>Internal counter of empty lines</li>
+<li><code>skipped_line_count</code> (number)<br>Number of non uniform lines skipped when <code>relax_column_count</code> is true</li>
 <li><code>lines</code> (number)<br>The number of lines encountered in the source dataset.   </li>
 <li><code>is_int</code> (regexp, function)<br>The regular expression or function used to determine if a value should be
 cast to an integer.   </li>
@@ -88,4 +95,4 @@ stringifier.</p>
 <p>As <code>record</code> has disappeared, you are encouraged to use the <code>&quot;readable&quot;</code> event
 conjointly with the <code>&quot;read&quot;</code> function as documented above and in the
 <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Stream API</a>.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Mon Jul 11 2016</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu Jan 26 2017</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
