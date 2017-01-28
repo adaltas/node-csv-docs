@@ -70,6 +70,14 @@ Options may include:
     String used to delimit record rows or a special value; special values are
     'auto', 'unix', 'mac', 'windows', 'unicode'; defaults to 'auto' (discovered
     in source or 'unix' if no source is specified).   
+*   `formatters`
+    Key-value object which defines custom formatters for certain data types
+    * `date`
+      Custom formatter for date values
+    * `bool`
+      Custom formatter for boolean values
+    * `object`
+      Custom formatter for generic object values
 
 All options are optional.
 

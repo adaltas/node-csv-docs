@@ -103,6 +103,38 @@ KB,dmiM
 B,LF
 ```
 
+## Using custom formatters
+This example uses [moment.js](http://momentjs.com/) as external dependency.
+
+```javascript
+var moment = require('moment');
+var stringify = require('../lib');
+var input = [{
+  name: 'foo',
+  date: new Date(1970, 0)
+}, {
+  name: 'bar',
+  date: new Date(1971, 0)
+}]
+
+var stringifier = stringify(input, {
+  formatters: {
+    date: function(value) {
+      return moment(value).format('YYYY-MM-DD');
+    }
+  }
+}, function(err, output) {
+  console.log(output);
+});
+```
+
+The output on the console will be:
+
+```csv
+foo,1970-01-01
+bar,1971-01-01
+```
+
 [ac]: https://github.com/wdavidw/node-csv-stringify/blob/master/samples/api.callback.js
 [as]: https://github.com/wdavidw/node-csv-stringify/blob/master/samples/api.stream.js
 [ap]: https://github.com/wdavidw/node-csv-stringify/blob/master/samples/api.pipe.js
