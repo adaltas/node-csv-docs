@@ -12,7 +12,7 @@ cd csv-docs
 cat /root/.bowerrc
 npm install
 # Generate the documentation
-node_modules/docpad/bin/docpad generate --env static --out www
+npm run generate
 # Build the container
 docker build -t csv-docs .
 # Start nginx unless already running
