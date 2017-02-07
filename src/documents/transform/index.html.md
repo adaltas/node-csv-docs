@@ -51,6 +51,8 @@ Options include:
 *   `consume` (boolean)   
     In the absence of a consumer, like a stream.Readable, trigger the
     consumption of the stream.   
+*   `params` (anything)   
+    Pass user defined parameters to the user handler as last argument.   
 
 Available properties:
 
