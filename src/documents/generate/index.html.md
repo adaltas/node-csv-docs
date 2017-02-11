@@ -50,13 +50,13 @@ Options may include:
     number of fields. If it is an array, each element correspond 
     to a field. If the element is a function, the function will generate
     the field value, if it is a string, it call the registered 
-    function of the same name.
+    function of the same name. Default to 8 ascii columns.
 *   `max_word_length`   
-    Maximum number of characters per word.
+    Maximum number of characters per word. Default to 16.
 *   `seed`   
     Generate idempotent random characters if a number provided
 *   `length`   
-    Number of lines to read.   
+    Number of lines or records to generate.   
 *   `objectMode`   
     Whether this stream should behave as a stream of objects. Meaning 
     that stream.read(n) returns a single value instead of a Buffer of 
