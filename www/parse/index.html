@@ -56,13 +56,13 @@ quoted field.   </li>
 before an exception is raised. Used to guard against a wrong <code>delimiter</code> or
 <code>rowDelimiter</code>. Default to 128,000 characters.   </li>
 <li><code>objname</code> (string)<br>Name of header-record title to name objects by.   </li>
-<li><code>quote</code> (char)<br>Optional character surrounding a field. One character only. Defaults to
-double quote.   </li>
+<li><code>quote</code> (char|boolean)<br>Optional character surrounding a field. One character only. Disabled if 
+null, false or empty. Defaults to double quote.   </li>
 <li><code>relax</code> (boolean)<br>Preserve quotes inside unquoted field.   </li>
 <li><code>relax_column_count</code> (boolean)<br>Discard inconsistent columns count. Default to <code>false</code>.   </li>
-<li><code>rowDelimiter</code> (chars|constant)<br>String used to delimit record rows or a special constant; special constants 
-are <code>&#39;auto&#39;</code>, <code>&#39;unix&#39;</code>, <code>&#39;mac&#39;</code>, <code>&#39;windows&#39;</code>, <code>&#39;unicode&#39;</code>; defaults to 
-<code>&#39;auto&#39;</code> (discovered in source or <code>&#39;unix&#39;</code> if no source is specified).   </li>
+<li><code>rowDelimiter</code> (chars|array)<br>One or multiple characters used to delimit record rows; defaults to 
+auto discovery if not provided. Suported auto disvovery method are Linux (&quot;\n&quot;),
+Apple (&quot;\r&quot;) and Windows (&quot;\r\n&quot;) row delimiters.   </li>
 <li><code>rtrim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately preceding the delimiter (i.e.
 right-trim all fields). Defaults to <code>false</code>.  Does not remove whitespace in
 a quoted field.   </li>
@@ -95,4 +95,4 @@ stringifier.</p>
 <p>As <code>record</code> has disappeared, you are encouraged to use the <code>&quot;readable&quot;</code> event
 conjointly with the <code>&quot;read&quot;</code> function as documented above and in the
 <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Stream API</a>.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Feb 08 2017</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Mon Jul 24 2017</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/wdavidw/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

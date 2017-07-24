@@ -88,17 +88,17 @@ signature: `records = parse(text, [options])`
     `rowDelimiter`. Default to 128,000 characters.   
 *   `objname` (string)   
     Name of header-record title to name objects by.   
-*   `quote` (char)   
-    Optional character surrounding a field. One character only. Defaults to
-    double quote.   
+*   `quote` (char|boolean)   
+    Optional character surrounding a field. One character only. Disabled if 
+    null, false or empty. Defaults to double quote.   
 *   `relax` (boolean)   
     Preserve quotes inside unquoted field.   
 *   `relax_column_count` (boolean)   
     Discard inconsistent columns count. Default to `false`.   
-*   `rowDelimiter` (chars|constant)   
-    String used to delimit record rows or a special constant; special constants 
-    are `'auto'`, `'unix'`, `'mac'`, `'windows'`, `'unicode'`; defaults to 
-    `'auto'` (discovered in source or `'unix'` if no source is specified).   
+*   `rowDelimiter` (chars|array)   
+    One or multiple characters used to delimit record rows; defaults to 
+    auto discovery if not provided. Suported auto disvovery method are Linux ("\n"),
+    Apple ("\r") and Windows ("\r\n") row delimiters.   
 *   `rtrim` (boolean)   
     If `true`, ignore whitespace immediately preceding the delimiter (i.e.
     right-trim all fields). Defaults to `false`.  Does not remove whitespace in
