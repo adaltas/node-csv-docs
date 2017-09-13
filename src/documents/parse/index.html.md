@@ -92,7 +92,7 @@ signature: `records = parse(text, [options])`
     Optional character surrounding a field. One character only. Disabled if 
     null, false or empty. Defaults to double quote.   
 *   `relax` (boolean)   
-    Preserve quotes inside unquoted field (be careful, unstable).   
+    Preserve quotes inside unquoted field (be warned, it doesn't make coffee).   
 *   `relax_column_count` (boolean)   
     Discard inconsistent columns count. Default to `false`.   
 *   `rowDelimiter` (chars|array)   
