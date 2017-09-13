@@ -3,10 +3,10 @@ title: CSV and object transformer
 layout: page
 tags: ['intro','page']
 pageOrder: 1
-github: 'https://github.com/wdavidw/node-stream-transform'
+github: 'https://github.com/adaltas/node-stream-transform'
 ---
 
-[![Build Status](https://secure.travis-ci.org/wdavidw/node-stream-transform.png)][travis-stream-transform]
+[![Build Status](https://secure.travis-ci.org/adaltas/node-stream-transform.png)][travis-stream-transform]
 
 This project provides a simple object transformation framework implementing the
 Node.js `stream.Transform` API. It was originally developed as a part of the Node.js
@@ -109,9 +109,9 @@ in the constructor or send to the `write` function. If you wish to not alter the
 original data, it is your responsibility to send a new data in your
 transformation function instead of the original modified data.
 
-[travis-stream-transform]: http://travis-ci.org/wdavidw/node-stream-transform
+[travis-stream-transform]: http://travis-ci.org/adaltas/node-stream-transform
 [stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
-[csv]: https://github.com/wdavidw/node-csv
-[transform]: https://github.com/wdavidw/node-stream-transform
-[transform-samples]: https://github.com/wdavidw/node-stream-transform/tree/master/samples
-[transform-test]: https://github.com/wdavidw/node-stream-transform/tree/master/test
+[csv]: https://github.com/adaltas/node-csv
+[transform]: https://github.com/adaltas/node-stream-transform
+[transform-samples]: https://github.com/adaltas/node-stream-transform/tree/master/samples
+[transform-test]: https://github.com/adaltas/node-stream-transform/tree/master/test

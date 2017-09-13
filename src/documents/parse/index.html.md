@@ -3,10 +3,10 @@ title: CSV Parser
 layout: page
 tags: ['intro','page']
 pageOrder: 1
-github: 'https://github.com/wdavidw/node-csv-parse'
+github: 'https://github.com/adaltas/node-csv-parse'
 ---
 
-[![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-parse.png)][travis-csv-parse]
+[![Build Status](https://secure.travis-ci.org/adaltas/node-csv-parse.png)][travis-csv-parse]
 
 This package is a parser converting CSV text input into arrays or objects. It
 implements the Node.js [`stream.Transform`API][stream]. It also
@@ -92,7 +92,7 @@ signature: `records = parse(text, [options])`
     Optional character surrounding a field. One character only. Disabled if 
     null, false or empty. Defaults to double quote.   
 *   `relax` (boolean)   
-    Preserve quotes inside unquoted field.   
+    Preserve quotes inside unquoted field (be careful, unstable).   
 *   `relax_column_count` (boolean)   
     Discard inconsistent columns count. Default to `false`.   
 *   `rowDelimiter` (chars|array)   
@@ -147,10 +147,10 @@ As `record` has disappeared, you are encouraged to use the `"readable"` event
 conjointly with the `"read"` function as documented above and in the
 [Stream API][stream].
 
-[csv]: https://github.com/wdavidw/node-csv
-[travis-csv-parse]: http://travis-ci.org/wdavidw/node-csv-parse
+[csv]: https://github.com/adaltas/node-csv
+[travis-csv-parse]: http://travis-ci.org/adaltas/node-csv-parse
 [stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
-[fs_read]: https://github.com/wdavidw/node-csv-parse/tree/master/samples/fs_read.js
-[parse]: https://github.com/wdavidw/node-csv-parse
-[parse-samples]: https://github.com/wdavidw/node-csv-parse/tree/master/samples
-[parse-test]: https://github.com/wdavidw/node-csv-parse/tree/master/test
+[fs_read]: https://github.com/adaltas/node-csv-parse/tree/master/samples/fs_read.js
+[parse]: https://github.com/adaltas/node-csv-parse
+[parse-samples]: https://github.com/adaltas/node-csv-parse/tree/master/samples
+[parse-test]: https://github.com/adaltas/node-csv-parse/tree/master/test

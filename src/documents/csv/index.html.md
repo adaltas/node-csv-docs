@@ -16,13 +16,13 @@ CSV parser and stringifier.
 
 The `csv` package is itself split into 4 packages:
 
-*   [`csv-generate`](https://github.com/wdavidw/node-csv-generate),
+*   [`csv-generate`](https://github.com/adaltas/node-csv-generate),
     a flexible generator of CSV string and Javascript objects.
-*   [`csv-parse`](https://github.com/wdavidw/node-csv-parse),
+*   [`csv-parse`](https://github.com/adaltas/node-csv-parse),
     a parser converting CSV text into arrays or objects.
-*   [`stream-transform`](https://github.com/wdavidw/node-stream-transform),
+*   [`stream-transform`](https://github.com/adaltas/node-stream-transform),
     a transformation framework.
-*   [`csv-stringify`](https://github.com/wdavidw/node-csv-stringify),
+*   [`csv-stringify`](https://github.com/adaltas/node-csv-stringify),
     a stringifier converting records into a CSV text.
 
 Additionaly, you might want to look at the [iconv-lite][iconv] module for
@@ -34,9 +34,9 @@ This documentation is covering the current version 0.4.x. The documentation for
 the previous versionis available [here][legacy]. You can also access 
 previous release on github:
 
-*   [0.3.x](https://github.com/wdavidw/node-csv/tree/v0.3.6/doc)
-*   [0.2.x](https://github.com/wdavidw/node-csv/tree/v0.2.9/doc)
-*   [0.1.x](https://github.com/wdavidw/node-csv/tree/v0.1.0/doc)
+*   [0.3.x](https://github.com/adaltas/node-csv/tree/v0.3.6/doc)
+*   [0.2.x](https://github.com/adaltas/node-csv/tree/v0.2.9/doc)
+*   [0.1.x](https://github.com/adaltas/node-csv/tree/v0.1.0/doc)
 
 ## Usage
 

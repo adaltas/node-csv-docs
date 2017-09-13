@@ -19,7 +19,7 @@ on large input files.
 
 Important: this documentation covers the current version (0.2.x) of 
 `node-csv-parser`. The documentation for the previous version (0.1.0) is 
-available [here](https://github.com/wdavidw/node-csv-parser/tree/v0.1).
+available [here](https://github.com/adaltas/node-csv-parser/tree/v0.1).
 
 ## Installation
 
@@ -120,7 +120,7 @@ npm install csv
 
 Via git (or downloaded tarball):
 ```bash
-git clone http://github.com/wdavidw/node-csv-parser.git
+git clone http://github.com/adaltas/node-csv-parser.git
 ```
 
 ## Events

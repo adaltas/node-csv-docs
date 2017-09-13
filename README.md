@@ -7,7 +7,7 @@ possible improvement for the documentation.
 ## Deploy Instructions
 
 ```bash
-git clone https://github.com/wdavidw/node-csv-docs.git csv-docs
+git clone https://github.com/adaltas/node-csv-docs.git csv-docs
 cd csv-docs
 cat /root/.bowerrc
 npm install

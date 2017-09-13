@@ -3,7 +3,7 @@ title: Examples
 layout: page
 tags: ['intro','page']
 pageOrder: 1
-github: 'https://github.com/wdavidw/node-stream-transform'
+github: 'https://github.com/adaltas/node-stream-transform'
 ---
 
 ## Using the callback API

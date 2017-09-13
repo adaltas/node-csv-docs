@@ -3,10 +3,10 @@ title: CSV Stringifier
 layout: page
 tags: ['intro','page']
 pageOrder: 1
-github: 'https://github.com/wdavidw/node-csv-stringify'
+github: 'https://github.com/adaltas/node-csv-stringify'
 ---
 
-[![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-stringify.png)][travis-csv-stringify]
+[![Build Status](https://secure.travis-ci.org/adaltas/node-csv-stringify.png)][travis-csv-stringify]
 
 This package is a stringifier converting records into a CSV text and implementing the
 Node.js `stream.Transform` API. It is also providing a simple callback-base API
@@ -81,7 +81,7 @@ Options may include:
 
 All options are optional.
 
-[travis-csv-stringify]: http://travis-ci.org/wdavidw/node-csv-stringify
-[stringify]: https://github.com/wdavidw/node-csv-stringify
-[stringify-samples]: https://github.com/wdavidw/node-csv-stringify/tree/master/samples
-[stringify-test]: https://github.com/wdavidw/node-csv-stringify/tree/master/test
+[travis-csv-stringify]: http://travis-ci.org/adaltas/node-csv-stringify
+[stringify]: https://github.com/adaltas/node-csv-stringify
+[stringify-samples]: https://github.com/adaltas/node-csv-stringify/tree/master/samples
+[stringify-test]: https://github.com/adaltas/node-csv-stringify/tree/master/test

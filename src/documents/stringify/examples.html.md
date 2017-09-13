@@ -3,7 +3,7 @@ title: Examples
 layout: page
 tags: ['intro','page']
 pageOrder: 1
-github: 'https://github.com/wdavidw/node-csv-stringify'
+github: 'https://github.com/adaltas/node-csv-stringify'
 ---
 
 ## Using the callback API
@@ -135,7 +135,7 @@ foo,1970-01-01
 bar,1971-01-01
 ```
 
-[ac]: https://github.com/wdavidw/node-csv-stringify/blob/master/samples/api.callback.js
-[as]: https://github.com/wdavidw/node-csv-stringify/blob/master/samples/api.stream.js
-[ap]: https://github.com/wdavidw/node-csv-stringify/blob/master/samples/api.pipe.js
-[oh]: https://github.com/wdavidw/node-csv-stringify/blob/master/samples/options.header.js
+[ac]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.callback.js
+[as]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.stream.js
+[ap]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.pipe.js
+[oh]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/options.header.js

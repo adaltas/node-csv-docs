@@ -3,10 +3,10 @@ title: CSV and object generator
 layout: page
 tags: ['intro','page']
 pageOrder: 1
-github: 'https://github.com/wdavidw/node-csv-generate'
+github: 'https://github.com/adaltas/node-csv-generate'
 ---
 
-[![Build Status](https://secure.travis-ci.org/wdavidw/node-csv-generate.png)][travis-csv-generate]
+[![Build Status](https://secure.travis-ci.org/adaltas/node-csv-generate.png)][travis-csv-generate]
 
 This package provides a flexible generator of CSV strings and Javascript objects
 implementing the Node.js `stream.Readable` API.
@@ -72,9 +72,9 @@ All options are optional.
 Most of the generator is imported from its parent project [CSV][csv] in a effort
 to split it between the generator, the parser, the transformer and the stringifier.
 
-[csv]: https://github.com/wdavidw/node-csv
+[csv]: https://github.com/adaltas/node-csv
 [stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
-[travis-csv-generate]: http://travis-ci.org/wdavidw/node-csv-generate
-[generate]: https://github.com/wdavidw/node-csv-generate
-[generate-samples]: https://github.com/wdavidw/node-csv-generate/tree/master/samples
-[generate-test]: https://github.com/wdavidw/node-csv-generate/tree/master/test
+[travis-csv-generate]: http://travis-ci.org/adaltas/node-csv-generate
+[generate]: https://github.com/adaltas/node-csv-generate
+[generate-samples]: https://github.com/adaltas/node-csv-generate/tree/master/samples
+[generate-test]: https://github.com/adaltas/node-csv-generate/tree/master/test
