@@ -83,7 +83,7 @@ signature: `records = parse(text, [options])`
     left-trim all fields). Defaults to `false`. Does not remove whitespace in a
     quoted field.   
 *   `max_limit_on_data_read` (int)   
-    Maximum numer of characters to be contained in the field and line buffers
+    Maximum number of characters to be contained in the field and line buffers
     before an exception is raised. Used to guard against a wrong `delimiter` or
     `rowDelimiter`. Default to 128,000 characters.   
 *   `objname` (string)   
