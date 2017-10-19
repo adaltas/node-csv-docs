@@ -60,7 +60,8 @@ signature: `records = parse(text, [options])`
 ## Parser options
 
 *   `auto_parse` (boolean)   
-    If true, the parser will attempt to convert input string to native types.   
+    If true, the parser will attempt to convert input string to native types. If a 
+    function, receive the value as argument and return a new value.   
 *   `auto_parse_date` (boolean|function)   
     If true, the parser will attempt to convert input string to dates. If a 
     function, receive the value as argument and return a new value. It
@@ -84,7 +85,7 @@ signature: `records = parse(text, [options])`
     left-trim all fields). Defaults to `false`. Does not remove whitespace in a
     quoted field.   
 *   `max_limit_on_data_read` (int)   
-    Maximum number of characters to be contained in the field and line buffers
+    Maximum numer of characters to be contained in the field and line buffers
     before an exception is raised. Used to guard against a wrong `delimiter` or
     `rowDelimiter`. Default to 128,000 characters.   
 *   `objname` (string)   
