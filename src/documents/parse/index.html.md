@@ -61,8 +61,9 @@ signature: `records = parse(text, [options])`
 
 *   `auto_parse` (boolean)   
     If true, the parser will attempt to convert input string to native types.   
-*   `auto_parse_date` (boolean)   
-    If true, the parser will attempt to convert input string to dates. It
+*   `auto_parse_date` (boolean|function)   
+    If true, the parser will attempt to convert input string to dates. If a 
+    function, receive the value as argument and return a new value. It
     requires the "auto_parse" option. Be careful, it relies on `Date.parse`.   
 *   `columns` (array|boolean|function)   
     List of fields as an array, a user defined callback accepting the first line
