@@ -59,7 +59,7 @@ signature: `records = parse(text, [options])`
 
 ## Parser options
 
-*   `auto_parse` (boolean)   
+*   `auto_parse` (boolean|function)   
     If true, the parser will attempt to convert input string to native types. If a 
     function, receive the value as argument and return a new value.   
 *   `auto_parse_date` (boolean|function)   
