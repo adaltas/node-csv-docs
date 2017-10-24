@@ -9,7 +9,8 @@ github: 'https://github.com/adaltas/node-csv-generate'
 [![Build Status](https://secure.travis-ci.org/adaltas/node-csv-generate.png)][travis-csv-generate]
 
 This package provides a flexible generator of CSV strings and Javascript objects
-implementing the Node.js `stream.Readable` API.
+implementing the Node.js `stream.Readable` API. It may be used to generate 
+random or user driven data.
 
 Source code for this project is available on [GitHub][generate].
 
@@ -48,9 +49,12 @@ Options may include:
     Define the number of generated fields and the generation 
     method. If columns is an integer, it corresponds to the 
     number of fields. If it is an array, each element correspond 
-    to a field. If the element is a function, the function will generate
-    the field value, if it is a string, it call the registered 
-    function of the same name. Default to 8 ascii columns.
+    to a field. If the field is a function, the function is expected to return
+    a value, if a string, it call the registered function of the same name (eg 
+    `Generator.int` for the value "int"), current values are "ascii", "int" 
+    and "bool", more could be added by the user or on demand by opending a 
+    [pull request](https://github.com/adaltas/node-csv-generate/issues/new). 
+    Default to 8 ascii columns.
 *   `max_word_length`   
     Maximum number of characters per word. Default to 16.
 *   `seed`   
