@@ -27,7 +27,7 @@ take a second. As an example, correcting a typo on this page would as simple as 
 
 Bellow is a non-restrictive list of contributors:
 
-*   David Worms: <https://github.com/wdavidw>
+*   David Worms: <https://github.com/adaltas>
 *   Will White: <https://github.com/willwhite>
 *   Justin Latimer: <https://github.com/justinlatimer>
 *   jonseymour: <https://github.com/jonseymour>

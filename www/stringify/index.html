@@ -1,24 +1,42 @@
 <!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>CSV Stringifier | Node.js CSV project</title><meta name="description" content="CSV parser and stringifier with a simple api, full of options and tested against large datasets."><meta name="keywords" content="csv, parser, stringifier, nodejs"><meta name="author" content="David Worms"><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 --><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/ribbon.css" /><link  rel="stylesheet" href="/styles/style.css" /><link  rel="stylesheet" href="/styles/desert.css" /></head><body id="csv"><nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">CSV<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/" property="dc:title">Homepage </a></li><li><a href="/csv" property="dc:title">Documentation </a></li><li><a href="/csv/examples" property="dc:title">Examples </a></li><li><a href="/csv/community" property="dc:title">Community </a></li><li><a href="https://github.com/wdavidw/node-csv" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Generate<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/generate" property="dc:title">Documentation </a></li><li><a href="/generate/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-generate" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-generate/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/stream-generate" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Parse<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/parse" property="dc:title">Documentation </a></li><li><a href="/parse/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-parse" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-parse/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-parse" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Transform<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/transform" property="dc:title">Documentation </a></li><li><a href="/transform/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-stream-transform" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-stream-transform/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-transform" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li><li class="dropdown"><a href="/pages/stringify" data-toggle="dropdown" property="dc:title">Stringify<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li><a href="/stringify" property="dc:title">Documentation </a></li><li><a href="/stringify/examples" property="dc:title">Examples </a></li><li><a href="https://github.com/wdavidw/node-csv-stringify" property="dc:title">GitHub <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://github.com/wdavidw/node-csv-stringify/blob/master/src/index.coffee.md" property="dc:title">Source Code <span class="glyphicon glyphicon-new-window"></span></a></li><li><a href="https://www.npmjs.org/package/csv-stringify" property="dc:title">NPM <span class="glyphicon glyphicon-new-window"></span></a></li></ul></li></ul></div></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><h1>CSV Stringifier</h1><div class="page-content"><p><a href="http://travis-ci.org/adaltas/node-csv-stringify"><img src="https://secure.travis-ci.org/adaltas/node-csv-stringify.png" alt="Build Status"></a></p>
 <p>This package is a stringifier converting records into a CSV text and implementing the
-Node.js <code>stream.Transform</code> API. It is also providing a simple callback-base API
-for converniency. It is both extremely easy to use and powerfull. It was
-released since 2010 and is tested against very large dataset by a large
-community.</p>
+Node.js <code>stream.Transform</code> API. It is also providing a easier synchronous or
+callback-based API for converniency. It is both extremely easy to use and
+powerfull. It was first released in 2010 and is tested against big data
+sets by a large community.</p>
 <p>Source code for this project is available on <a href="https://github.com/adaltas/node-csv-stringify">GitHub</a>.</p>
 <h2 id="usage">Usage</h2>
 <p>Run <code>npm install csv</code> to install the full csv module or run
 <code>npm install csv-stringify</code> if you are only interested by the CSV stringifier.</p>
-<p>Use the callback style API for simplicity or the stream based API for
-scalability.</p>
-<h3 id="callback-api">Callback API</h3>
-<p><code>stringify(data, [options], callback)</code>   </p>
-<h3 id="-node-js-stream-api-stream-">[Node.js Stream API][stream]</h3>
-<p><code>stringify([options], [callback])</code>   </p>
-<p>For additionnal usage and example, you may refer to
-<a href="/stringify/examples/">example page</a>,
-<a href="https://github.com/adaltas/node-csv-stringify/tree/master/samples">the &quot;samples&quot; folder</a> and <a href="https://github.com/adaltas/node-csv-stringify/tree/master/test">the &quot;test&quot; folder</a>.</p>
-<h2 id="options">Options</h2>
+<p>Use the stream based API for scalability and the sync or mixed APIs for simplicity.</p>
+<h3 id="stream-api">Stream API</h3>
+<p>It implement the native Node.js [transform stream][stream] which is both
+readable and writable.</p>
+<p>This is the recommended approach if you need a maximum of power. It ensure
+scalability by treating your data as a stream from the source to the destination.</p>
+<pre><code>const stringify = require(&#39;csv-stringify&#39;)
+stringify([options]);
+</code></pre><h3 id="mixed-api">Mixed API</h3>
+<p>It leverages the stream transform API but input doesnt have to be an readable
+stream and output doesnt have to be a writable stream. Input may be a string
+passed as first argument. Output may be obtained in the callback passed as last
+argument.</p>
+<p>Uses it for conveniency in case you are already interacting with a readable
+stream or a writable stream. It is not scallable because it implies that you
+either have all your records in memory and wish to pipe the generated
+CSV into a stream writer or that you have a stream reader generated records and
+wish to object the full CSV text.</p>
+<pre><code>const stringify = require(&#39;csv-stringify&#39;)
+stringify([data], [options], [callback])
+</code></pre><h3 id="sync-api">Sync API</h3>
+<p>It accepts a full data set of records and returns the full result set.</p>
+<p>This represent a regular direct synchronous call to a function: you pass records
+and it return a CSV text. Because of its simplicity, this is the recommanded
+approach if you don&#39;t need scallability and if your dataset fit in memory. </p>
+<pre><code>const stringify = require(&#39;csv-stringify/lib/sync&#39;)
+stringify(records, [options]
+</code></pre><h2 id="options">Options</h2>
 <p>Options may include:</p>
 <ul>
 <li><code>columns</code><br>List of fields, applied when <code>transform</code> returns an object, order matters,
@@ -53,4 +71,8 @@ Custom formatter for generic object values</li>
 </li>
 </ul>
 <p>All options are optional.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Oct 24 2017</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-stringify" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+<h2 id="additionnal-help">Additionnal help</h2>
+<p>For usage and examples, you may refer to
+<a href="/stringify/examples/">example page</a>,
+<a href="https://github.com/adaltas/node-csv-stringify/tree/master/samples">the &quot;samples&quot; folder</a> and <a href="https://github.com/adaltas/node-csv-stringify/tree/master/test">the &quot;test&quot; folder</a>.</p>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Dec 20 2017</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-stringify" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
