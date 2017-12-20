@@ -9,10 +9,10 @@ github: 'https://github.com/adaltas/node-csv-stringify'
 [![Build Status](https://secure.travis-ci.org/adaltas/node-csv-stringify.png)][travis-csv-stringify]
 
 This package is a stringifier converting records into a CSV text and implementing the
-Node.js `stream.Transform` API. It is also providing a simple callback-base API
-for converniency. It is both extremely easy to use and powerfull. It was
-released since 2010 and is tested against very large dataset by a large
-community.
+Node.js `stream.Transform` API. It is also providing a easier synchronous or
+callback-based API for converniency. It is both extremely easy to use and
+powerfull. It was first released in 2010 and is tested against big data
+sets by a large community.
 
 Source code for this project is available on [GitHub][stringify].
 
@@ -21,20 +21,51 @@ Source code for this project is available on [GitHub][stringify].
 Run `npm install csv` to install the full csv module or run
 `npm install csv-stringify` if you are only interested by the CSV stringifier.
 
-Use the callback style API for simplicity or the stream based API for
-scalability.
+Use the stream based API for scalability and the sync or mixed APIs for simplicity.
 
-### Callback API   
+### Stream API
 
-`stringify(data, [options], callback)`   
+It implement the native Node.js [transform stream][stream] which is both
+readable and writable.
 
-### [Node.js Stream API][stream]   
+This is the recommended approach if you need a maximum of power. It ensure
+scalability by treating your data as a stream from the source to the destination.
 
-`stringify([options], [callback])`   
+```
+const stringify = require('csv-stringify')
+stringify([options]);
+```
 
-For additionnal usage and example, you may refer to
-[example page](/stringify/examples/),
-[the "samples" folder][stringify-samples] and [the "test" folder][stringify-test].
+### Mixed API
+
+It leverages the stream transform API but input doesnt have to be an readable
+stream and output doesnt have to be a writable stream. Input may be a string
+passed as first argument. Output may be obtained in the callback passed as last
+argument.
+
+Uses it for conveniency in case you are already interacting with a readable
+stream or a writable stream. It is not scallable because it implies that you
+either have all your records in memory and wish to pipe the generated
+CSV into a stream writer or that you have a stream reader generated records and
+wish to object the full CSV text.
+
+```
+const stringify = require('csv-stringify')
+stringify([data], [options], [callback])
+```
+
+### Sync API
+
+It accepts a full data set of records and returns the full result set.
+
+This represent a regular direct synchronous call to a function: you pass records
+and it return a CSV text. Because of its simplicity, this is the recommanded
+approach if you don't need scallability and if your dataset fit in memory. 
+
+```
+const stringify = require('csv-stringify/lib/sync')
+stringify(records, [options]
+```
 
 ## Options
 
@@ -80,6 +111,12 @@ Options may include:
       Custom formatter for generic object values
 
 All options are optional.
+
+## Additionnal help
+
+For usage and examples, you may refer to
+[example page](/stringify/examples/),
+[the "samples" folder][stringify-samples] and [the "test" folder][stringify-test].
 
 [travis-csv-stringify]: http://travis-ci.org/adaltas/node-csv-stringify
 [stringify]: https://github.com/adaltas/node-csv-stringify
