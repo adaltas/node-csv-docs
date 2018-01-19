@@ -32,12 +32,7 @@ Source code for this project is available on [GitHub][parse].
 Run `npm install csv` to install the full CSV package or run
 `npm install csv-parse` if you are only interested by the CSV parser.
 
-Use the callback style API for simplicity or the stream based API for
-scalability. You may also mix the two styles. For example, the
-[fs_read.js example][fs_read] pipe a file stream reader and get the results
-inside a callback.
-
-There is also a synchronous API if you need it.   
+Use the stream based API for scalability and the sync or mixed APIs for simplicity.
 
 For additional usage and example, you may refer to
 [example page](/parse/examples/),
@@ -46,19 +41,50 @@ For additional usage and example, you may refer to
 The source code uses modern JavaScript features and run natively in Node 7.6+.
 For older browsers or older versions of Node, however, transpilation is required.
 
-### Callback API   
+### Stream API
 
-signature: `parse(data, [options], callback)`     
+It implement the native Node.js [transform stream][stream] which is both
+readable and writable.
 
-### [Node.js Stream API][stream]   
+This is the recommended approach if you need a maximum of power. It ensure
+scalability by treating your data as a stream from the source to the destination.
 
-signature: `parse([options], [callback])`   
+```
+const parse = require('csv-parse')
+parse([options]);
+```
 
-### Synchronous API
+### Mixed API
 
-Using this API involves requiring the 'csv-parse/lib/sync' module.
+It leverages the stream transform API but input doesn't have to be an readable
+stream and output doesn't have to be a writable stream. Input may be a string
+passed as first argument. Output may be obtained in the callback passed as last
+argument.
 
-signature: `records = parse(text, [options])`
+Uses it for convenience in case you are already interacting with a readable
+stream or a writable stream. It is not scalable because it implies that you
+either have all CSV dataset in memory and wish to pipe the generated
+records into a stream writer or that you have a stream reader generating a CSV
+data stream and wish to obtain an object representing all the records.
+
+```
+const parse = require('csv-parse')
+parse([data], [options], [callback])
+```
+
+### Sync API
+
+It accepts a full data set as text and returns the full result set as an array
+or an object.
+
+This represent a regular direct synchronous call to a function: you pass records
+and it return a CSV text. Because of its simplicity, this is the recommended
+approach if you don't need scalability and if your dataset fit in memory. 
+
+```
+const parse = require('csv-parse/lib/sync')
+parse(records, [options])
+```
 
 ## Parser options
 
@@ -155,7 +181,6 @@ conjointly with the `"read"` function as documented above and in the
 [csv]: https://github.com/adaltas/node-csv
 [travis-csv-parse]: http://travis-ci.org/adaltas/node-csv-parse
 [stream]: http://nodejs.org/api/stream.html#stream_class_stream_transform
-[fs_read]: https://github.com/adaltas/node-csv-parse/tree/master/samples/fs_read.js
 [parse]: https://github.com/adaltas/node-csv-parse
 [parse-samples]: https://github.com/adaltas/node-csv-parse/tree/master/samples
 [parse-test]: https://github.com/adaltas/node-csv-parse/tree/master/test
