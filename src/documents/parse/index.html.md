@@ -43,6 +43,9 @@ For additional usage and example, you may refer to
 [example page](/parse/examples/),
 [the "samples" folder][parse-samples] and [the "test" folder][parse-test].
 
+The source code uses modern JavaScript features and run natively in Node 7.6+.
+For older browsers or older versions of Node, however, transpilation is required.
+
 ### Callback API   
 
 signature: `parse(data, [options], callback)`     

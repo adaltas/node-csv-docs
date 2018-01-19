@@ -25,10 +25,13 @@ Source code for this project is available on [GitHub][transform].
 ## Usage
 
 Run `npm install csv` to install the full CSV module or run
-`npm install stream-transform` if you are only interested by this package.   
+`npm install stream-transform` if you are only interested by this package.
 
 Use the callback style API for simplicity or the stream based API for
-scalability or mix the 2 APIs.   
+scalability or mix the 2 APIs.
+
+The source code uses modern JavaScript features and run natively in Node 7.6+.
+For older browsers or older versions of Node, however, transpilation is required.
 
 ### Callback API   
 

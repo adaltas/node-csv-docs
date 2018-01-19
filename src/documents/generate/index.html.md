@@ -27,6 +27,9 @@ Run `npm install csv` to install the full csv module or run
 Use the callback style API for simplicity or the stream based API for
 scalability.
 
+The source code uses modern JavaScript features and run natively in Node 7.6+.
+For older browsers or older versions of Node, however, transpilation is required.
+
 ### Callback API   
 
 `generate([options])`   
