@@ -10,6 +10,8 @@ sets by a large community.</p>
 <p>Run <code>npm install csv</code> to install the full csv module or run
 <code>npm install csv-stringify</code> if you are only interested by the CSV stringifier.</p>
 <p>Use the stream based API for scalability and the sync or mixed APIs for simplicity.</p>
+<p>The source code uses modern JavaScript features and run natively in Node 7.6+.
+For older browsers or older versions of Node, however, transpilation is required.</p>
 <h3 id="stream-api">Stream API</h3>
 <p>It implement the native Node.js [transform stream][stream] which is both
 readable and writable.</p>
@@ -18,24 +20,24 @@ scalability by treating your data as a stream from the source to the destination
 <pre><code>const stringify = require(&#39;csv-stringify&#39;)
 stringify([options]);
 </code></pre><h3 id="mixed-api">Mixed API</h3>
-<p>It leverages the stream transform API but input doesnt have to be an readable
-stream and output doesnt have to be a writable stream. Input may be a string
+<p>It leverages the stream transform API but input doesn&#39;t have to be an readable
+stream and output doesn&#39;t have to be a writable stream. Input may be a string
 passed as first argument. Output may be obtained in the callback passed as last
 argument.</p>
-<p>Uses it for conveniency in case you are already interacting with a readable
-stream or a writable stream. It is not scallable because it implies that you
+<p>Uses it for convenience in case you are already interacting with a readable
+stream or a writable stream. It is not scalable because it implies that you
 either have all your records in memory and wish to pipe the generated
 CSV into a stream writer or that you have a stream reader generated records and
-wish to object the full CSV text.</p>
+wish to obtain a string representing the full CSV text.</p>
 <pre><code>const stringify = require(&#39;csv-stringify&#39;)
 stringify([data], [options], [callback])
 </code></pre><h3 id="sync-api">Sync API</h3>
 <p>It accepts a full data set of records and returns the full result set.</p>
 <p>This represent a regular direct synchronous call to a function: you pass records
-and it return a CSV text. Because of its simplicity, this is the recommanded
-approach if you don&#39;t need scallability and if your dataset fit in memory. </p>
+and it return a CSV text. Because of its simplicity, this is the recommended
+approach if you don&#39;t need scalability and if your dataset fit in memory. </p>
 <pre><code>const stringify = require(&#39;csv-stringify/lib/sync&#39;)
-stringify(records, [options]
+stringify(records, [options])
 </code></pre><h2 id="options">Options</h2>
 <p>Options may include:</p>
 <ul>
@@ -75,4 +77,4 @@ Custom formatter for generic object values</li>
 <p>For usage and examples, you may refer to
 <a href="/stringify/examples/">example page</a>,
 <a href="https://github.com/adaltas/node-csv-stringify/tree/master/samples">the &quot;samples&quot; folder</a> and <a href="https://github.com/adaltas/node-csv-stringify/tree/master/test">the &quot;test&quot; folder</a>.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Dec 20 2017</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-stringify" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Jan 19 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-stringify" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

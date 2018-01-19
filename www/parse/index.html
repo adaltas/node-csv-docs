@@ -20,22 +20,40 @@ sets by a large community.</p>
 <h2 id="usage">Usage</h2>
 <p>Run <code>npm install csv</code> to install the full CSV package or run
 <code>npm install csv-parse</code> if you are only interested by the CSV parser.</p>
-<p>Use the callback style API for simplicity or the stream based API for
-scalability. You may also mix the two styles. For example, the
-<a href="https://github.com/adaltas/node-csv-parse/tree/master/samples/fs_read.js">fs_read.js example</a> pipe a file stream reader and get the results
-inside a callback.</p>
-<p>There is also a synchronous API if you need it.   </p>
+<p>Use the stream based API for scalability and the sync or mixed APIs for simplicity.</p>
 <p>For additional usage and example, you may refer to
 <a href="/parse/examples/">example page</a>,
 <a href="https://github.com/adaltas/node-csv-parse/tree/master/samples">the &quot;samples&quot; folder</a> and <a href="https://github.com/adaltas/node-csv-parse/tree/master/test">the &quot;test&quot; folder</a>.</p>
-<h3 id="callback-api">Callback API</h3>
-<p>signature: <code>parse(data, [options], callback)</code>     </p>
-<h3 id="-node-js-stream-api-stream-"><a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Node.js Stream API</a></h3>
-<p>signature: <code>parse([options], [callback])</code>   </p>
-<h3 id="synchronous-api">Synchronous API</h3>
-<p>Using this API involves requiring the &#39;csv-parse/lib/sync&#39; module.</p>
-<p>signature: <code>records = parse(text, [options])</code></p>
-<h2 id="parser-options">Parser options</h2>
+<p>The source code uses modern JavaScript features and run natively in Node 7.6+.
+For older browsers or older versions of Node, however, transpilation is required.</p>
+<h3 id="stream-api">Stream API</h3>
+<p>It implement the native Node.js <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">transform stream</a> which is both
+readable and writable.</p>
+<p>This is the recommended approach if you need a maximum of power. It ensure
+scalability by treating your data as a stream from the source to the destination.</p>
+<pre><code>const parse = require(&#39;csv-parse&#39;)
+parse([options]);
+</code></pre><h3 id="mixed-api">Mixed API</h3>
+<p>It leverages the stream transform API but input doesn&#39;t have to be an readable
+stream and output doesn&#39;t have to be a writable stream. Input may be a string
+passed as first argument. Output may be obtained in the callback passed as last
+argument.</p>
+<p>Uses it for convenience in case you are already interacting with a readable
+stream or a writable stream. It is not scalable because it implies that you
+either have all CSV dataset in memory and wish to pipe the generated
+records into a stream writer or that you have a stream reader generating a CSV
+data stream and wish to obtain an object representing all the records.</p>
+<pre><code>const parse = require(&#39;csv-parse&#39;)
+parse([data], [options], [callback])
+</code></pre><h3 id="sync-api">Sync API</h3>
+<p>It accepts a full data set as text and returns the full result set as an array
+or an object.</p>
+<p>This represent a regular direct synchronous call to a function: you pass records
+and it return a CSV text. Because of its simplicity, this is the recommended
+approach if you don&#39;t need scalability and if your dataset fit in memory. </p>
+<pre><code>const parse = require(&#39;csv-parse/lib/sync&#39;)
+parse(records, [options])
+</code></pre><h2 id="parser-options">Parser options</h2>
 <ul>
 <li><code>auto_parse</code> (boolean|function)<br>If true, the parser will attempt to convert input string to native types. If a 
 function, receive the value as argument and return a new value.   </li>
@@ -97,4 +115,4 @@ stringifier.</p>
 <p>As <code>record</code> has disappeared, you are encouraged to use the <code>&quot;readable&quot;</code> event
 conjointly with the <code>&quot;read&quot;</code> function as documented above and in the
 <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Stream API</a>.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Dec 20 2017</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Jan 19 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
