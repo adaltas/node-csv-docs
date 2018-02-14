@@ -39,7 +39,7 @@ For additional usage and example, you may refer to
 [the "samples" folder][parse-samples] and [the "test" folder][parse-test].
 
 The source code uses modern JavaScript features and run natively in Node 7.6+.
-For older browsers or older versions of Node, however, transpilation is required.
+For older browsers or older versions of Node, use the modules inside "./lib/es5".
 
 ### Stream API
 

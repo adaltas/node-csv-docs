@@ -31,7 +31,7 @@ Use the callback style API for simplicity or the stream based API for
 scalability or mix the 2 APIs.
 
 The source code uses modern JavaScript features and run natively in Node 7.6+.
-For older browsers or older versions of Node, however, transpilation is required.
+For older browsers or older versions of Node, use the module inside "./lib/es5".
 
 ### Callback API   
 

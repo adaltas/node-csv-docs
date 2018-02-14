@@ -24,7 +24,7 @@ Run `npm install csv` to install the full csv module or run
 Use the stream based API for scalability and the sync or mixed APIs for simplicity.
 
 The source code uses modern JavaScript features and run natively in Node 7.6+.
-For older browsers or older versions of Node, however, transpilation is required.
+For older browsers or older versions of Node, use the modules inside "./lib/es5".
 
 ### Stream API
 
