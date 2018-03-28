@@ -90,60 +90,63 @@ parse(records, [options])
 
 *   `auto_parse` (boolean|function)   
     If true, the parser will attempt to convert input string to native types. If a 
-    function, receive the value as argument and return a new value.   
+    function, receive the value as argument and return a new value.
 *   `auto_parse_date` (boolean|function)   
     If true, the parser will attempt to convert input string to dates. If a 
     function, receive the value as argument and return a new value. It
-    requires the "auto_parse" option. Be careful, it relies on `Date.parse`.   
+    requires the "auto_parse" option. Be careful, it relies on `Date.parse`.
 *   `columns` (array|boolean|function)   
     List of fields as an array, a user defined callback accepting the first line
     and returning the column names, or `true` if autodiscovered in the first CSV
     line. Defaults to `null`. Affects the result data set in the sense that 
-    records will be objects instead of arrays. A value "false" skips the all column.   
+    records will be objects instead of arrays. A value "false" skips the all column.
 *   `comment` (char)   
     Treat all the characters after this one as a comment. Defaults to `''`
-    (disabled).   
+    (disabled).
 *   `delimiter` (char)   
-    Set the field delimiter. One character only. Defaults to `","` (comma).   
+    Set the field delimiter. One character only. Defaults to `","` (comma).
 *   `escape` (char)   
-    Set the escape character. One character only. Defaults to double quote.   
+    Set the escape character. One character only. Defaults to double quote.
 *   `from`, (number)   
-    Start returning records from a particular line.   
+    Start returning records from a particular line.
 *   `ltrim` (boolean)   
     If `true`, ignore whitespace immediately following the delimiter (i.e.
     left-trim all fields). Defaults to `false`. Does not remove whitespace in a
-    quoted field.   
+    quoted field.
 *   `max_limit_on_data_read` (int)   
     Maximum numer of characters to be contained in the field and line buffers
     before an exception is raised. Used to guard against a wrong `delimiter` or
-    `rowDelimiter`. Default to 128,000 characters.   
+    `rowDelimiter`. Default to 128,000 characters.
 *   `objname` (string)   
-    Name of header-record title to name objects by.   
+    Name of header-record title to name objects by.
 *   `quote` (char|boolean)   
     Optional character surrounding a field. One character only. Disabled if 
-    null, false or empty. Defaults to double quote.   
+    null, false or empty. Defaults to double quote.
 *   `relax` (boolean)   
-    Preserve quotes inside unquoted field (be warned, it doesn't make coffee).   
+    Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
 *   `relax_column_count` (boolean)   
-    Discard inconsistent columns count. Default to `false`.   
+    Discard inconsistent columns count. Default to `false`.
+*   `raw` (boolean)   
+    Generate two properties `raw` and `row` where `raw` is the original CSV row
+    content and `row` is the parsed array or object.
 *   `rowDelimiter` (chars|array)   
     One or multiple characters used to delimit record rows; defaults to 
     auto discovery if not provided. Suported auto disvovery method are Linux ("\n"),
-    Apple ("\r") and Windows ("\r\n") row delimiters.   
+    Apple ("\r") and Windows ("\r\n") row delimiters.
 *   `rtrim` (boolean)   
     If `true`, ignore whitespace immediately preceding the delimiter (i.e.
     right-trim all fields). Defaults to `false`.  Does not remove whitespace in
     a quoted field.   
 *   `skip_empty_lines` (boolean)   
-    Don't generate records for empty lines (line matching `/\s*/`), defaults to `false`.   
+    Don't generate records for empty lines (line matching `/\s*/`), defaults to `false`.
 *   `skip_lines_with_empty_values` (boolean)   
     Don't generate records for lines containing empty column values (column 
-    matching `/\s*/`), defaults to `false`.   
+    matching `/\s*/`), defaults to `false`.
 *   `to`, (number)   
-    Stop returning records after a particular line.   
+    Stop returning records after a particular line.
 *   `trim` (boolean)   
     If `true`, ignore whitespace immediately around the delimiter. Defaults to
-    `false`. Does not remove whitespace in a quoted field.   
+    `false`. Does not remove whitespace in a quoted field.
 
 All options are optional.
 
@@ -154,19 +157,19 @@ final user in some situations. They are accessible from the intance returned by
 the `parse` function.
 
 *   `count` (number)   
-    Internal counter of records being processed.   
+    Internal counter of records being processed.
 *   `empty_line_count` (number)   
     Internal counter of empty lines
 *   `skipped_line_count` (number)   
-    Number of non uniform lines skipped when `relax_column_count` is true
+    Number of non uniform lines skipped when `relax_column_count` is true.
 *   `lines` (number)   
-    The number of lines encountered in the source dataset.   
+    The number of lines encountered in the source dataset.
 *   `is_int` (regexp, function)   
     The regular expression or function used to determine if a value should be
-    cast to an integer.   
+    cast to an integer.
 *   `is_float` (regexp, function)   
     The regular expression or function used to determine if a value should be
-    cast to a float.   
+    cast to a float.
 
 ## Migration
 
