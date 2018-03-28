@@ -56,42 +56,45 @@ parse(records, [options])
 </code></pre><h2 id="parser-options">Parser options</h2>
 <ul>
 <li><code>auto_parse</code> (boolean|function)<br>If true, the parser will attempt to convert input string to native types. If a 
-function, receive the value as argument and return a new value.   </li>
+function, receive the value as argument and return a new value.</li>
 <li><code>auto_parse_date</code> (boolean|function)<br>If true, the parser will attempt to convert input string to dates. If a 
 function, receive the value as argument and return a new value. It
-requires the &quot;auto_parse&quot; option. Be careful, it relies on <code>Date.parse</code>.   </li>
+requires the &quot;auto_parse&quot; option. Be careful, it relies on <code>Date.parse</code>.</li>
 <li><code>columns</code> (array|boolean|function)<br>List of fields as an array, a user defined callback accepting the first line
 and returning the column names, or <code>true</code> if autodiscovered in the first CSV
 line. Defaults to <code>null</code>. Affects the result data set in the sense that 
-records will be objects instead of arrays. A value &quot;false&quot; skips the all column.   </li>
+records will be objects instead of arrays. A value &quot;false&quot; skips the all column.</li>
 <li><code>comment</code> (char)<br>Treat all the characters after this one as a comment. Defaults to <code>&#39;&#39;</code>
-(disabled).   </li>
-<li><code>delimiter</code> (char)<br>Set the field delimiter. One character only. Defaults to <code>&quot;,&quot;</code> (comma).   </li>
-<li><code>escape</code> (char)<br>Set the escape character. One character only. Defaults to double quote.   </li>
-<li><code>from</code>, (number)<br>Start returning records from a particular line.   </li>
+(disabled).</li>
+<li><code>delimiter</code> (char)<br>Set the field delimiter. One character only. Defaults to <code>&quot;,&quot;</code> (comma).</li>
+<li><code>escape</code> (char)<br>Set the escape character. One character only. Defaults to double quote.</li>
+<li><code>from</code>, (number)<br>Start returning records from a particular line.</li>
 <li><code>ltrim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately following the delimiter (i.e.
 left-trim all fields). Defaults to <code>false</code>. Does not remove whitespace in a
-quoted field.   </li>
+quoted field.</li>
 <li><code>max_limit_on_data_read</code> (int)<br>Maximum numer of characters to be contained in the field and line buffers
 before an exception is raised. Used to guard against a wrong <code>delimiter</code> or
-<code>rowDelimiter</code>. Default to 128,000 characters.   </li>
-<li><code>objname</code> (string)<br>Name of header-record title to name objects by.   </li>
+<code>rowDelimiter</code>. Default to 128,000 characters.</li>
+<li><code>objname</code> (string)<br>Name of header-record title to name objects by.</li>
 <li><code>quote</code> (char|boolean)<br>Optional character surrounding a field. One character only. Disabled if 
-null, false or empty. Defaults to double quote.   </li>
-<li><code>relax</code> (boolean)<br>Preserve quotes inside unquoted field (be warned, it doesn&#39;t make coffee).   </li>
-<li><code>relax_column_count</code> (boolean)<br>Discard inconsistent columns count. Default to <code>false</code>.   </li>
+null, false or empty. Defaults to double quote.</li>
+<li><code>relax</code> (boolean)<br>Preserve quotes inside unquoted field (be warned, it doesn&#39;t make coffee).</li>
+<li><code>relax_column_count</code> (boolean)<br>Discard inconsistent columns count. Default to <code>false</code>.</li>
+<li><code>raw</code> (boolean)<br>Generate two properties <code>raw</code> and <code>row</code> where <code>raw</code> is the original CSV row
+content and <code>row</code> is the parsed array or object.</li>
 <li><code>rowDelimiter</code> (chars|array)<br>One or multiple characters used to delimit record rows; defaults to 
 auto discovery if not provided. Suported auto disvovery method are Linux (&quot;\n&quot;),
-Apple (&quot;\r&quot;) and Windows (&quot;\r\n&quot;) row delimiters.   </li>
+Apple (&quot;\r&quot;) and Windows (&quot;\r\n&quot;) row delimiters.</li>
 <li><code>rtrim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately preceding the delimiter (i.e.
 right-trim all fields). Defaults to <code>false</code>.  Does not remove whitespace in
 a quoted field.   </li>
-<li><code>skip_empty_lines</code> (boolean)<br>Don&#39;t generate records for empty lines (line matching <code>/\s*/</code>), defaults to <code>false</code>.   </li>
+<li><code>skip_empty_lines</code> (boolean)<br>Don&#39;t generate records for empty lines (line matching <code>/\s*/</code>), defaults to <code>false</code>.</li>
+<li><code>skip_lines_with_error</code> (boolean)<br>Skip a line with error found inside and directly go process the next line.</li>
 <li><code>skip_lines_with_empty_values</code> (boolean)<br>Don&#39;t generate records for lines containing empty column values (column 
-matching <code>/\s*/</code>), defaults to <code>false</code>.   </li>
-<li><code>to</code>, (number)<br>Stop returning records after a particular line.   </li>
+matching <code>/\s*/</code>), defaults to <code>false</code>.</li>
+<li><code>to</code>, (number)<br>Stop returning records after a particular line.</li>
 <li><code>trim</code> (boolean)<br>If <code>true</code>, ignore whitespace immediately around the delimiter. Defaults to
-<code>false</code>. Does not remove whitespace in a quoted field.   </li>
+<code>false</code>. Does not remove whitespace in a quoted field.</li>
 </ul>
 <p>All options are optional.</p>
 <h2 id="internal-properties">Internal properties</h2>
@@ -99,14 +102,14 @@ matching <code>/\s*/</code>), defaults to <code>false</code>.   </li>
 final user in some situations. They are accessible from the intance returned by
 the <code>parse</code> function.</p>
 <ul>
-<li><code>count</code> (number)<br>Internal counter of records being processed.   </li>
+<li><code>count</code> (number)<br>Internal counter of records being processed.</li>
 <li><code>empty_line_count</code> (number)<br>Internal counter of empty lines</li>
-<li><code>skipped_line_count</code> (number)<br>Number of non uniform lines skipped when <code>relax_column_count</code> is true</li>
-<li><code>lines</code> (number)<br>The number of lines encountered in the source dataset.   </li>
+<li><code>skipped_line_count</code> (number)<br>Number of non uniform lines skipped when <code>relax_column_count</code> is true.</li>
+<li><code>lines</code> (number)<br>The number of lines encountered in the source dataset.</li>
 <li><code>is_int</code> (regexp, function)<br>The regular expression or function used to determine if a value should be
-cast to an integer.   </li>
+cast to an integer.</li>
 <li><code>is_float</code> (regexp, function)<br>The regular expression or function used to determine if a value should be
-cast to a float.   </li>
+cast to a float.</li>
 </ul>
 <h2 id="migration">Migration</h2>
 <p>Most of the generator is imported from its parent project <a href="https://github.com/adaltas/node-csv">CSV</a> in an
@@ -115,4 +118,4 @@ stringifier.</p>
 <p>As <code>record</code> has disappeared, you are encouraged to use the <code>&quot;readable&quot;</code> event
 conjointly with the <code>&quot;read&quot;</code> function as documented above and in the
 <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Stream API</a>.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Feb 14 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Mar 28 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
