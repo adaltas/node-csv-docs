@@ -90,7 +90,8 @@ Options may include:
     Display the column names on the first line if the columns option is
     provided or discovered.   
 *   `quote`   
-    Defaults to the quote read option.   
+    The quote characters, defaults to the `"`, an empty quote value will
+    preserve the original field.   
 *   `quoted`   
     Boolean, default to false, quote all the non-empty fields even if not
     required.
