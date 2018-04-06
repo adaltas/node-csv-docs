@@ -89,9 +89,15 @@ parse(records, [options])
 ## Parser options
 
 *   `auto_parse` (boolean|function)   
-    If true, the parser will attempt to convert input string to native types. If a 
-    function, receive the value as argument and return a new value.
+    Deprecated, alias of "cast".
 *   `auto_parse_date` (boolean|function)   
+    Deprecated, alias of "cast_date".
+*   `cast` (boolean|function)   
+    If true, the parser will attempt to convert input string to native types. If
+    a function, receive the value as first argument, a context as second
+    argument and return a new value. The context contains the following
+    properties: quoting, count, index and column.
+*   `cast_date` (boolean|function)   
     If true, the parser will attempt to convert input string to dates. If a 
     function, receive the value as argument and return a new value. It
     requires the "auto_parse" option. Be careful, it relies on `Date.parse`.
