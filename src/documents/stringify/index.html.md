@@ -102,7 +102,7 @@ Options may include:
     required.
 *   `rowDelimiter`   
     String used to delimit record rows or a special value; special values are
-    'auto', 'unix', 'mac', 'windows', 'unicode'; defaults to 'auto' (discovered
+    'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered
     in source or 'unix' if no source is specified).   
 *   `formatters`
     Key-value object which defines custom formatters for certain data types
