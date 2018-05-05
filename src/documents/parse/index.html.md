@@ -95,8 +95,8 @@ parse(records, [options])
 *   `cast` (boolean|function)   
     If true, the parser will attempt to convert input string to native types. If
     a function, receive the value as first argument, a context as second
-    argument and return a new value. The context contains the following
-    properties: quoting, count, index and column.
+    argument and return a new value. More information about the context
+    properties is available below.
 *   `cast_date` (boolean|function)   
     If true, the parser will attempt to convert input string to dates. If a 
     function, receive the value as argument and return a new value. It
@@ -164,20 +164,40 @@ Those properties are for internal usage but may be considered useful to the
 final user in some situations. They are accessible from the intance returned by
 the `parse` function.
 
-*   `count` (number)   
-    Internal counter of records being processed.
-*   `empty_line_count` (number)   
-    Internal counter of empty lines
-*   `skipped_line_count` (number)   
-    Number of non uniform lines skipped when `relax_column_count` is true.
-*   `lines` (number)   
-    The number of lines encountered in the source dataset.
-*   `is_int` (regexp, function)   
-    The regular expression or function used to determine if a value should be
-    cast to an integer.
-*   `is_float` (regexp, function)   
-    The regular expression or function used to determine if a value should be
-    cast to a float.
+* `count` (number)   
+  Internal counter of records being processed.
+* `empty_line_count` (number)   
+  Internal counter of empty lines
+* `skipped_line_count` (number)   
+  Number of non uniform lines skipped when `relax_column_count` is true.
+* `lines` (number)   
+  The number of lines encountered in the source dataset, start at 1 for the
+  first line.
+* `is_int` (regexp, function)   
+  The regular expression or function used to determine if a value should be
+  cast to an integer.
+* `is_float` (regexp, function)   
+  The regular expression or function used to determine if a value should be
+  cast to a float.
+
+## Casting context
+
+The `cast` option accept a function which provides full control over a field.
+The function is called with 2 arguments: the field value and a context object.
+The context object accept the following properties: 
+
+* `column`   
+  The column name if the `columns` options is defined or the field index.
+* `count`   
+  The number of records which have been fully parsed.
+* `index`   
+  The field position.
+* `header`   
+  A boolean indicating if the records being parsed is the header.
+* `quoting`   
+  A boolean indicating if the field was surrounded by quotes.
+* `lines`   
+  The number of lines which have been processed including the current line.
 
 ## Migration
 
