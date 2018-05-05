@@ -79,7 +79,7 @@ or an object.
 
 This represent a regular direct synchronous call to a function: you pass records
 and it return a CSV text. Because of its simplicity, this is the recommended
-approach if you don't need scalability and if your dataset fit in memory. 
+approach if you don't need scalability and if your dataset fit in memory.
 
 ```
 const parse = require('csv-parse/lib/sync')
@@ -104,7 +104,7 @@ parse(records, [options])
 *   `columns` (array|boolean|function)   
     List of fields as an array, a user defined callback accepting the first line
     and returning the column names, or `true` if autodiscovered in the first CSV
-    line. Defaults to `null`. Affects the result data set in the sense that 
+    line. Defaults to `null`. Affects the result data set in the sense that
     records will be objects instead of arrays. A value "false" skips the all column.
 *   `comment` (char)   
     Treat all the characters after this one as a comment. Defaults to `''`
@@ -136,19 +136,19 @@ parse(records, [options])
     Generate two properties `raw` and `row` where `raw` is the original CSV row
     content and `row` is the parsed array or object.
 *   `rowDelimiter` (chars|array)   
-    One or multiple characters used to delimit record rows; defaults to 
+    One or multiple characters used to delimit record rows; defaults to
     auto discovery if not provided. Suported auto disvovery method are Linux ("\n"),
     Apple ("\r") and Windows ("\r\n") row delimiters.
 *   `rtrim` (boolean)   
     If `true`, ignore whitespace immediately preceding the delimiter (i.e.
     right-trim all fields). Defaults to `false`.  Does not remove whitespace in
-    a quoted field.   
+    a quoted field.
 *   `skip_empty_lines` (boolean)   
     Don't generate records for empty lines (line matching `/\s*/`), defaults to `false`.
 *   `skip_lines_with_error` (boolean)   
     Skip a line with error found inside and directly go process the next line.
 *   `skip_lines_with_empty_values` (boolean)   
-    Don't generate records for lines containing empty column values (column 
+    Don't generate records for lines containing empty column values (column
     matching `/\s*/`), defaults to `false`.
 *   `to`, (number)   
     Stop returning records after a particular line.
