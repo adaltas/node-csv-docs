@@ -51,7 +51,8 @@ print columns names on the first line.</li>
 <li><code>escape</code><br>Defaults to the escape read option.   </li>
 <li><code>header</code><br>Display the column names on the first line if the columns option is
 provided or discovered.   </li>
-<li><code>quote</code><br>Defaults to the quote read option.   </li>
+<li><code>quote</code><br>The quote characters, defaults to the <code>&quot;</code>, an empty quote value will
+preserve the original field.   </li>
 <li><code>quoted</code><br>Boolean, default to false, quote all the non-empty fields even if not
 required.</li>
 <li><code>quotedEmpty</code><br>Boolean, no default, quote empty fields?  If specified, overrides
@@ -59,7 +60,7 @@ required.</li>
 <li><code>quotedString</code><br>Boolean, default to false, quote all fields of type string even if not
 required.</li>
 <li><code>rowDelimiter</code><br>String used to delimit record rows or a special value; special values are
-&#39;auto&#39;, &#39;unix&#39;, &#39;mac&#39;, &#39;windows&#39;, &#39;unicode&#39;; defaults to &#39;auto&#39; (discovered
+&#39;auto&#39;, &#39;unix&#39;, &#39;mac&#39;, &#39;windows&#39;, &#39;ascii&#39;, &#39;unicode&#39;; defaults to &#39;auto&#39; (discovered
 in source or &#39;unix&#39; if no source is specified).   </li>
 <li><code>formatters</code>
 Key-value object which defines custom formatters for certain data types<ul>
@@ -77,4 +78,4 @@ Custom formatter for generic object values</li>
 <p>For usage and examples, you may refer to
 <a href="/stringify/examples/">example page</a>,
 <a href="https://github.com/adaltas/node-csv-stringify/tree/master/samples">the &quot;samples&quot; folder</a> and <a href="https://github.com/adaltas/node-csv-stringify/tree/master/test">the &quot;test&quot; folder</a>.</p>
-</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Mar 28 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-stringify" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div>© Adaltas 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri May 11 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-stringify" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
