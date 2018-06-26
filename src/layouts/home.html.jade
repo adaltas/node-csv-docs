@@ -81,7 +81,8 @@ html(lang="en")
     .container
       hr
       footer
-        div= site.copyright
+        div
+          a(href="http://www.adaltas.com")= site.copyright
         div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
 
     .right.ribbon-holder
