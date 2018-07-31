@@ -33,38 +33,59 @@ scalability or mix the 2 APIs.
 The source code uses modern JavaScript features and run natively in Node 7.6+.
 For older browsers or older versions of Node, use the module inside "./lib/es5".
 
-### Callback API   
+Data is expected to be an array of records. Records may be provided in any form
+such as a string, an array or an object. Options can be placed in any positions
+despite being represented as the second argument.
 
-`transform(data, handler, [options], callback)`     
+### [Node.js Stream API][stream]
 
-### [Node.js Stream API][stream]   
+It implements the native Node.js [transform stream][stream] which is both
+readable and writable.
 
-`transform(data, [options], handler, [options], [callback])`   
+This is the recommended approach if you need a maximum of power. It ensures
+scalability by treating your data as a stream from the source to the destination
+and support all the options available.
+
+`transform(data, [options], handler, [options], [callback])`
 
 For additionnal usage and example, you may refer to
 [example page](/transform/examples/),
 [the "samples" folder][transform-samples] and [the "test" folder][transform-test].
+
+### Callback API
+
+The callback API support all the available options and will fit all the data
+into memory. It must be used only when the input source is not too big.
+
+`transform(data, [options], handler, callback)`
+
+### Sync API
+
+The sync API is here for conveniency. Due to its synchronous nature, not all
+options are honored. User handler functions must only be written as synchronous.
+
+`const data = transform(data, [options], handler)`
 
 ## Options and properties
 
 Options include:
 
 *   `parallel` (number)   
-     The number of transformation callbacks to run in parallel, default to "100".   
+     The number of transformation callbacks to run in parallel, default to "100".
 *   `consume` (boolean)   
     In the absence of a consumer, like a stream.Readable, trigger the
-    consumption of the stream.   
+    consumption of the stream.
 *   `params` (anything)   
-    Pass user defined parameters to the user handler as last argument.   
+    Pass user defined parameters to the user handler as last argument.
 
 Available properties:
 
 *    `transform.running`   
-      The number of transformation callback being run at a given time.   
+      The number of transformation callback being run at a given time.
 *    `transform.started`   
-      The number of transformation callback which have been initiated.   
+      The number of transformation callback which have been initiated.
 *    `transform.finished`   
-      The number of transformation callback which have been executed.   
+      The number of transformation callback which have been executed.
 
 ## Synchronous versus asynchronous execution
 
@@ -80,14 +101,6 @@ error if any and the altered data.
 
 Using the asynchronous mode present the advantage that more than one record may
 be emitted per transform callback.
-
-## Array versus objects
-
-The transformation function may either receive arrays or objects.
-
-If you specify the `columns` read option, the `row` argument will be
-provided as an object with keys matching columns names. Otherwise it
-will be provided as an array.
 
 ## Sequential versus concurrent execution
 
