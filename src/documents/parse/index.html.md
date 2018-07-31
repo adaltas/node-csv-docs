@@ -43,10 +43,10 @@ For older browsers or older versions of Node, use the modules inside "./lib/es5"
 
 ### Stream API
 
-It implement the native Node.js [transform stream][stream] which is both
+It implements the native Node.js [transform stream][stream] which is both
 readable and writable.
 
-This is the recommended approach if you need a maximum of power. It ensure
+This is the recommended approach if you need a maximum of power. It ensures
 scalability by treating your data as a stream from the source to the destination.
 
 ```
