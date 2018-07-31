@@ -30,17 +30,40 @@ scalability.
 The source code uses modern JavaScript features and run natively in Node 7.6+.
 For older browsers or older versions of Node, use the module inside "./lib/es5".
 
-### Callback API   
+### [Node.js Stream API][stream]
 
-`generate([options])`   
+It implements the native Node.js [readable stream API][stream]. This is the 
+recommended approach if you need a maximum of power. It ensures scalability 
+by treating your data as an input stream.
 
-### [Node.js Stream API][stream]   
+```
+const generate = require('csv-generate')
+const readable_stream = generate([options])
+```   
 
-`generate([options], callback)`   
-
-For additionnal usage and example, you may refer to
+For additional usage and example, you may refer to
 [the example page](/generate/examples/),
 [the "samples" folder][generate-samples] and [the "test" folder][generate-test].
+
+### Callback API
+
+The generated output is passed to the callback in the second argument. This mode
+implies that the overall dataset will be stored in memory.
+
+```
+const generate = require('csv-generate')
+generate([options], callback)
+```
+
+### Sync API
+
+The generated output is returned. Like with the callback API, this mode
+implies that the overall dataset will be stored in memory.
+
+```
+const generate = require('csv-generate/lib/sync')
+const data = generate([options])
+```
 
 ## Options
 
