@@ -47,7 +47,7 @@ parser.on('error', function(err){
   console.log(err.message);
 });
 // When we are done, test that the parsed output matched what expected
-parser.on('finish', function(){
+parser.on('end', function(){
   output.should.eql([
     [ 'root','x','0','0','root','/root','/bin/bash' ],
     [ 'someone','x','1022','1022','a funny cat','/home/someone','/bin/bash' ]
