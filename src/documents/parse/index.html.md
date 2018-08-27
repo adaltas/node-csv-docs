@@ -103,9 +103,10 @@ parse(records, [options])
     requires the "auto_parse" option. Be careful, it relies on `Date.parse`.
 *   `columns` (array|boolean|function)   
     List of fields as an array, a user defined callback accepting the first line
-    and returning the column names, or `true` if autodiscovered in the first CSV
+    and returning the column names, or `true` if auto-discovered in the first CSV
     line. Defaults to `null`. Affects the result data set in the sense that
-    records will be objects instead of arrays. A value "false" skips the all column.
+    records will be objects instead of arrays. A value "false" "null", or "undefined" inside
+    the column array skips the column from the output.
 *   `comment` (char)   
     Treat all the characters after this one as a comment. Defaults to `''`
     (disabled).
