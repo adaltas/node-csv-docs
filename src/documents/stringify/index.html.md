@@ -106,13 +106,15 @@ Options may include:
     'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered
     in source or 'unix' if no source is specified).   
 *   `formatters`
-    Key-value object which defines custom formatters for certain data types
+    Key-value object which defines custom formatters for certain data types.
+    * `boolean`
+      Custom formatter for boolean values.
     * `date`
-      Custom formatter for date values
-    * `bool`
-      Custom formatter for boolean values
+      Custom formatter for date values.
+    * `number`
+      Custom formatter for number values.
     * `object`
-      Custom formatter for generic object values
+      Custom formatter for generic object values.
 
 All options are optional.
 
