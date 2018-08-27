@@ -27,9 +27,9 @@ sets by a large community.</p>
 <p>The source code uses modern JavaScript features and run natively in Node 7.6+.
 For older browsers or older versions of Node, use the modules inside &quot;./lib/es5&quot;.</p>
 <h3 id="stream-api">Stream API</h3>
-<p>It implement the native Node.js <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">transform stream</a> which is both
+<p>It implements the native Node.js <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">transform stream</a> which is both
 readable and writable.</p>
-<p>This is the recommended approach if you need a maximum of power. It ensure
+<p>This is the recommended approach if you need a maximum of power. It ensures
 scalability by treating your data as a stream from the source to the destination.</p>
 <pre><code>const parse = require(&#39;csv-parse&#39;)
 parse([options]);
@@ -65,9 +65,10 @@ properties is available below.</li>
 function, receive the value as argument and return a new value. It
 requires the &quot;auto_parse&quot; option. Be careful, it relies on <code>Date.parse</code>.</li>
 <li><code>columns</code> (array|boolean|function)<br>List of fields as an array, a user defined callback accepting the first line
-and returning the column names, or <code>true</code> if autodiscovered in the first CSV
+and returning the column names, or <code>true</code> if auto-discovered in the first CSV
 line. Defaults to <code>null</code>. Affects the result data set in the sense that
-records will be objects instead of arrays. A value &quot;false&quot; skips the all column.</li>
+records will be objects instead of arrays. A value &quot;false&quot; &quot;null&quot;, or &quot;undefined&quot; inside
+the column array skips the column from the output.</li>
 <li><code>comment</code> (char)<br>Treat all the characters after this one as a comment. Defaults to <code>&#39;&#39;</code>
 (disabled).</li>
 <li><code>delimiter</code> (char)<br>Set the field delimiter. One character only. Defaults to <code>&quot;,&quot;</code> (comma).</li>
@@ -135,4 +136,4 @@ stringifier.</p>
 <p>As <code>record</code> has disappeared, you are encouraged to use the <code>&quot;readable&quot;</code> event
 conjointly with the <code>&quot;read&quot;</code> function as documented above and in the
 <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Stream API</a>.</p>
-</div></article></section><hr><footer><div><a href="http://www.adaltas.com">© Adaltas 2014</a></div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Jun 27 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div><a href="http://www.adaltas.com">© Adaltas 2014</a></div><div style="font-style:italic; font-size: 12px">This website was last updated at Mon Aug 27 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-csv-parse" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

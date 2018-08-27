@@ -20,26 +20,40 @@ Node.js <code>stream.Transform</code> API. It was originally developed as a part
 scalability or mix the 2 APIs.</p>
 <p>The source code uses modern JavaScript features and run natively in Node 7.6+.
 For older browsers or older versions of Node, use the module inside &quot;./lib/es5&quot;.</p>
-<h3 id="callback-api">Callback API</h3>
-<p><code>transform(data, handler, [options], callback)</code>     </p>
+<p>Data is expected to be an array of records. Records may be provided in any form
+such as a string, an array or an object. Options can be placed in any positions
+despite being represented as the second argument.</p>
 <h3 id="-node-js-stream-api-stream-"><a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">Node.js Stream API</a></h3>
-<p><code>transform(data, [options], handler, [options], [callback])</code>   </p>
+<p>It implements the native Node.js <a href="http://nodejs.org/api/stream.html#stream_class_stream_transform">transform stream</a> which is both
+readable and writable.</p>
+<p>This is the recommended approach if you need a maximum of power. It ensures
+scalability by treating your data as a stream from the source to the destination
+and support all the options available.</p>
+<p><code>transform(data, [options], handler, [options], [callback])</code></p>
 <p>For additionnal usage and example, you may refer to
 <a href="/transform/examples/">example page</a>,
 <a href="https://github.com/adaltas/node-stream-transform/tree/master/samples">the &quot;samples&quot; folder</a> and <a href="https://github.com/adaltas/node-stream-transform/tree/master/test">the &quot;test&quot; folder</a>.</p>
+<h3 id="callback-api">Callback API</h3>
+<p>The callback API support all the available options and will fit all the data
+into memory. It must be used only when the input source is not too big.</p>
+<p><code>transform(data, [options], handler, callback)</code></p>
+<h3 id="sync-api">Sync API</h3>
+<p>The sync API is here for conveniency. Due to its synchronous nature, not all
+options are honored. User handler functions must only be written as synchronous.</p>
+<p><code>const data = transform(data, [options], handler)</code></p>
 <h2 id="options-and-properties">Options and properties</h2>
 <p>Options include:</p>
 <ul>
-<li><code>parallel</code> (number)<br> The number of transformation callbacks to run in parallel, default to &quot;100&quot;.   </li>
+<li><code>parallel</code> (number)<br> The number of transformation callbacks to run in parallel, default to &quot;100&quot;.</li>
 <li><code>consume</code> (boolean)<br>In the absence of a consumer, like a stream.Readable, trigger the
-consumption of the stream.   </li>
-<li><code>params</code> (anything)<br>Pass user defined parameters to the user handler as last argument.   </li>
+consumption of the stream.</li>
+<li><code>params</code> (anything)<br>Pass user defined parameters to the user handler as last argument.</li>
 </ul>
 <p>Available properties:</p>
 <ul>
-<li><code>transform.running</code><br> The number of transformation callback being run at a given time.   </li>
-<li><code>transform.started</code><br> The number of transformation callback which have been initiated.   </li>
-<li><code>transform.finished</code><br> The number of transformation callback which have been executed.   </li>
+<li><code>transform.running</code><br> The number of transformation callback being run at a given time.</li>
+<li><code>transform.started</code><br> The number of transformation callback which have been initiated.</li>
+<li><code>transform.finished</code><br> The number of transformation callback which have been executed.</li>
 </ul>
 <h2 id="synchronous-versus-asynchronous-execution">Synchronous versus asynchronous execution</h2>
 <p>The mode is defined by the signature of transformation function. It is expected
@@ -52,11 +66,6 @@ In asynchronous mode, you must call the provided callback with 2 arguments, the
 error if any and the altered data.</p>
 <p>Using the asynchronous mode present the advantage that more than one record may
 be emitted per transform callback.</p>
-<h2 id="array-versus-objects">Array versus objects</h2>
-<p>The transformation function may either receive arrays or objects.</p>
-<p>If you specify the <code>columns</code> read option, the <code>row</code> argument will be
-provided as an object with keys matching columns names. Otherwise it
-will be provided as an array.</p>
 <h2 id="sequential-versus-concurrent-execution">Sequential versus concurrent execution</h2>
 <p>By sequential, we mean only 1 transformation function is running at a given
 time. By concurrent, we mean a maximum of x functions are running in parrallel.
@@ -74,4 +83,4 @@ not modified nor cloned. Depending on which api you choose, it may be provided
 in the constructor or send to the <code>write</code> function. If you wish to not alter the
 original data, it is your responsibility to send a new data in your
 transformation function instead of the original modified data.</p>
-</div></article></section><hr><footer><div><a href="http://www.adaltas.com">© Adaltas 2014</a></div><div style="font-style:italic; font-size: 12px">This website was last updated at Wed Jun 27 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-stream-transform" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div><a href="http://www.adaltas.com">© Adaltas 2014</a></div><div style="font-style:italic; font-size: 12px">This website was last updated at Mon Aug 27 2018</div></footer></div><div class="right ribbon-holder"><a href="https://github.com/adaltas/node-stream-transform" class="darkblue ribbon"><span class="text">Fork me on GitHub</span></a></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
