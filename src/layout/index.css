@@ -1,0 +1,19 @@
+
+/* html, body {
+  background-color: #4C5959;
+} */
+
+@font-face {
+  font-family: "csvlogo";
+  src: local("csvlogo"), url("../fonts/csvlogo.woff") format("truetype");
+  font-style: normal; 
+  font-weight: 400;
+  font-display: optional;
+}
+@font-face {
+  font-family: "Khula";
+  src: local("khula"), url("../fonts/Khula-Light.ttf") format("truetype");
+  font-style: normal; 
+  font-weight: 400;
+  font-display: optional;
+}

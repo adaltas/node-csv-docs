@@ -1,7 +1,8 @@
-node_modules/
-.idea/
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+
+# Build directory
+/public
 .DS_Store
-*.iml
-src/files/vendor/components-bootstrap
-src/files/vendor/jquery
-.docpad.db

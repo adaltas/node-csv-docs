@@ -1,56 +1,49 @@
 {
-  "name": "twitter-bootstrap.docpad",
-  "version": "0.9.0",
-  "description": "Twitter Bootstrap skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
-  "homepage": "https://github.com/bevry/twitter-bootstrap.docpad",
+  "name": "csv-docs",
+  "description": "Node.js CSV official documentation website",
+  "version": "1.0.0",
+  "author": "David Worms <david@adaltas.com>",
+  "dependencies": {
+    "gatsby": "next",
+    "gatsby-plugin-catch-links": "^2.1.0-alpha.f98688ee",
+    "gatsby-plugin-glamor": "^2.0.5",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-typography": "^2.2.0",
+    "gatsby-remark-autolink-headers": "^2.0.5",
+    "gatsby-remark-prismjs": "^3.0.0",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-remark": "^2.1.3",
+    "glamor": "^2.20.40",
+    "prismjs": "^1.15.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.1.0",
+    "react-modal": "^3.5.1",
+    "react-tooltip": "^3.8.4",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.17",
+    "typography-theme-grand-view": "^0.15.10"
+  },
   "keywords": [
-    "docpad-skeleton",
-    "docpad",
-    "website",
-    "bootstrap",
-    "twitter bootstrap"
+    "csv, node.js, parser, stringifier, website, gatsby"
   ],
-  "license": "BSD-3-Clause",
-  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-  "maintainers": [
-    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
-  ],
-  "contributors": [
-    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
-  ],
-  "bugs": {
-    "url": "https://github.com/docpad/twitter-bootstrap.docpad/issues"
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/docpad/twitter-bootstrap.docpad.git"
-  },
-  "engines": {
-    "node": "0.10.x",
-    "npm": "1.4.x"
-  },
-  "dependencies": {
-    "bower": "~1",
-    "docpad": "6.x",
-    "docpad-plugin-cleanurls": "2.x",
-    "docpad-plugin-coffeescript": "2.x",
-    "docpad-plugin-eco": "2.x",
-    "docpad-plugin-jade": "2.x",
-    "docpad-plugin-less": "2.x",
-    "docpad-plugin-livereload": "~2.6.0",
-    "docpad-plugin-marked": "2.x",
-    "docpad-plugin-partials": "2.x",
-    "docpad-plugin-related": "2.x",
-    "docpad-plugin-stylus": "2.x",
-    "docpad-plugin-text": "2.x",
-    "marked": "*"
-  },
-  "devDependencies": {
-    "docpad-plugin-livereload": "2.x"
-  },
-  "main": "node_modules/docpad/bin/docpad-server",
-  "scripts": {
-    "postinstall": "node node_modules/bower/bin/bower install",
-    "generate": "docpad generate --env static --out www"
+    "url": "https://github.com/adaltas/node-csv-docs"
   }
 }
