@@ -1,9 +1,43 @@
 import React, {Component} from 'react'
 import { Link } from 'gatsby'
 import { TABLET_MEDIA_QUERY } from 'typography-breakpoint-constants'
-
-
+// Local
 import Layout from '../layout'
+
+// Syntax
+import SyntaxHighlighter, {
+  registerLanguage,
+} from 'react-syntax-highlighter/prism-light'
+import javascript from 'react-syntax-highlighter/languages/prism/javascript'
+import { tomorrow } from 'react-syntax-highlighter/styles/prism'
+registerLanguage('javascript', javascript)
+const codeString = `
+// Import the package main module
+const csv = require('..')
+// Use the module
+csv
+// Generate 20 records
+.generate({
+  delimiter: '|',
+  length: 20
+})
+// Parse the records
+.pipe(csv.parse({
+  delimiter: '|'
+}))
+// Transform each value into uppercase
+.pipe(csv.transform(function(record){
+   return record.map(function(value){
+     return value.toUpperCase()
+   });
+}))
+// Convert the object into a stream
+.pipe(csv.stringify({
+  quoted: true
+}))
+// Print the CSV stream to stdout
+.pipe(process.stdout)
+`.trim()
 
 class Index extends Component {
   style = {
@@ -22,10 +56,13 @@ class Index extends Component {
         flex: '0 0 100%',
       },
       backgroundColor: '#304040',
-      padding: '.5rem',
+      padding: '1rem 2rem',
       textAlign: 'center',
-      '& h1': {
+      '& h1, & img': {
         marginTop: '0',
+        marginBottom: '.5rem',
+      },
+      '& p': {
         marginBottom: '0',
       }
     }
@@ -88,6 +125,9 @@ class Index extends Component {
           </div>
         </div>
         <h1>Quick Example</h1>
+        <SyntaxHighlighter language="javascript" style={tomorrow}>
+          {codeString}
+        </SyntaxHighlighter>
       </Layout>
     )
   }
