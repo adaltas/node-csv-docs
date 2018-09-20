@@ -1,8 +1,8 @@
 ---
-title: CSV Generate Examples
+title: Examples
 description: Examples on how to generate CSV data sets and streams
 keywords: ['intro','page']
-sort: 1
+sort: 4
 github: 'https://github.com/adaltas/node-csv-generate'
 ---
 
