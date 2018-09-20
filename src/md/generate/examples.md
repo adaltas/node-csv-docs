@@ -42,15 +42,18 @@ generator.on('end', function(){
 
 ## Using the pipe function
 
-One usefull function part of the Stream API is `pipe` to interact between
+One useful function part of the Stream API is `pipe` to interact between
 multiple streams. You may use this function to pipe a `stream.Readable` string
-source to a `stream.Writable` object destination. The next example available as
-`node samples/pipe.js` read the file, parse its content and transform it.
+source to a `stream.Writable` object destination.
+
+The [pipe example](https://github.com/adaltas/node-csv-generate/blob/master/samples/pipe.js), generates a dataset of 2 rows with 2 columns. The first columns contains integer values and the second column contains boolean values. It prints the generated dataset to stdout. the function `generate` return a readable stream which is then piped to `process.stdout` which is a writable stream.
 
 ```javascript
 // node samples/pipe.js
-var generate = require('csv-generate');
-
-var generator = generate({columns: ['int', 'bool'], length: 2});
-generator.pipe(process.stdout);
+const generate = require('csv-generate')
+generate({
+  columns: ['int', 'bool'],
+  length: 2}
+)
+.pipe(process.stdout)
 ```
