@@ -86,7 +86,6 @@ class Menu extends Component {
     }
     pages.map( page => {
       const section = /^\/(\w+)/.exec(page.slug)[1]
-      console.log(section)
       menus[section].pages.push(page)
     })
     return (

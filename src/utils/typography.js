@@ -37,6 +37,9 @@ const theme = {
       background: '#667575',
       color: '#fff',
     },
+    'main div .gatsby-highlight': {
+      marginBottom: '1.45rem',
+    },
     blockquote: {
       ...scale(1 / 5),
       color: gray(41),

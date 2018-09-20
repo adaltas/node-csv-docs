@@ -5,31 +5,32 @@ import ReactTooltip from 'react-tooltip'
 import Button from '../components/Button'
 // Local
 import bck from '../images/header_bck.svg'
-import Logo from './Logo'
 import { FaBug, FaGithub, FaBars } from 'react-icons/fa';
 
 class Header extends Component {
   styles = {
     root: {
-      height: '4rem',
-      display: 'flex',
-      alignItems: 'center',
-      fontSize: '1.2rem',
       background: `url(${bck})`,
       backgroundSize: 'cover',
-      borderBottom: '.1rem solid #FFF',
-      padding: '.5rem 2rem 0 1rem',
       '@media (max-width: 960px)': {
-      },
-      '& *': {
-        verticalAlign: 'baseline',
       },
       '& a': {
         color: '#FFF',
         textDecoration: 'none'
       },
     },
-    
+    header: {
+      backgroundColor: 'rgba(0,0,0,.5)',
+      borderBottom: '.1rem solid #FFF',
+      padding: '.5rem 2rem 0 1rem',
+      height: '4rem',
+      display: 'flex',
+      alignItems: 'center',
+      fontSize: '1.2rem',
+      '& *': {
+        verticalAlign: 'baseline',
+      },
+    },
     icon: {
       color: '#FFF',
       position: 'relative',
@@ -52,59 +53,59 @@ class Header extends Component {
     },
   }
   render () {
-    const {onMenuClick} = this.props
+    const {children, onMenuClick} = this.props
     const {styles} = this
     return (
       <div css={styles.root}>
-        <Button
-          aria-label="header-menu"
-          data-for="header-tooltip"
-          data-tip="Toggle the menu"
-          onClick={onMenuClick}
-          className={css(styles.button).toString()}
-        >
-          <FaBars css={styles.icon} />
-        </Button>
-        <h1 css={styles.title}>
-          <span css={styles.logo}>CSV</span>
-          for Node.js
-        </h1>
-        <div css={styles.grow} />
-        <a href="https://github.com/adaltas/node-csv/issues">
+        <header css={styles.header}>
           <Button
-            color="inherit"
-            aria-label="header-bug"
-            data-for="header-tooltip"
-            data-tip="Report an issue"
-            href="https://github.com/adaltas/node-hbase/issues"
-            target="_blank"
-            rel="noopener"
-            className={css(styles.button).toString()}
-          >
-            <FaBug css={styles.icon} />
-          </Button>
-          Issues
-        </a>
-        <a href="https://github.com/adaltas/node-csv">
-          <Button
-            color="inherit"
-            aria-label="header-github"
+            aria-label="header-menu"
             data-for="header-tooltip"
             data-tip="Toggle the menu"
-            target="_blank"
-            rel="noopener"
+            onClick={onMenuClick}
             className={css(styles.button).toString()}
           >
-            <FaGithub css={styles.icon} />
+            <FaBars css={styles.icon} />
           </Button>
-          GitHub
-        </a>
-        <ReactTooltip
-          id="header-tooltip"
-          delayShow={300}
-          place="bottom"
-          effect="solid"
-        />
+          <h1 css={styles.title}>
+            <Link to="/">
+              <span css={styles.logo}>CSV</span>
+              for Node.js
+              </Link>
+          </h1>
+          <div css={styles.grow} />
+          <a href="https://github.com/adaltas/node-csv/issues" rel="noopener" target="_blank">
+            <Button
+              color="inherit"
+              aria-label="header-bug"
+              data-for="header-tooltip"
+              data-tip="Report an issue"
+              className={css(styles.button).toString()}
+            >
+              <FaBug css={styles.icon} />
+            </Button>
+            Issues
+          </a>
+          <a href="https://github.com/adaltas/node-csv" rel="noopener" target="_blank">
+            <Button
+              color="inherit"
+              aria-label="header-github"
+              data-for="header-tooltip"
+              data-tip="Toggle the menu"
+              className={css(styles.button).toString()}
+            >
+              <FaGithub css={styles.icon} />
+            </Button>
+            GitHub
+          </a>
+          <ReactTooltip
+            id="header-tooltip"
+            delayShow={300}
+            place="bottom"
+            effect="solid"
+          />
+        </header>
+        {children}
       </div>
     )
   }

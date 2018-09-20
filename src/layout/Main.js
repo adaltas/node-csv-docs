@@ -110,7 +110,7 @@ class Main extends Component {
       <main ref={this.content} css={styles.root}>
         <div ref={this.toc} css={styles.toc}></div>
         <div css={styles.tools}>
-          { page &&
+          { page && page.edit &&
             <Button
               color="inherit"
               aria-label="content-edit"
@@ -128,7 +128,7 @@ class Main extends Component {
               </svg>
             </Button>
           }
-          { page &&
+          { page && page.edit &&
             <Button
               color="inherit"
               aria-label="content-toc"

@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 // Local
 import Drawer from '../components/Drawer'
 import Header from './Header'
+import Intro from './Intro'
 import Main from './Main'
 import Menu from './Menu'
 import Footer from './Footer'
@@ -23,10 +24,12 @@ class Layout extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this)
-    this.state = {open: true, breakpoint: 960}
+    this.state = {open: !props.intro, breakpoint: 960}
   }
   componentDidMount(){
-    if(window.innerWidth < this.state.breakpoint){
+    if(this.props.intro){
+      this.setState({ open: false })
+    }else if(window.innerWidth < this.state.breakpoint){
       this.setState({ open: false })
     }
   }
@@ -34,7 +37,7 @@ class Layout extends Component {
     this.setState({open: !this.state.open})
   }
   render() {
-    const { children, data, page } = this.props
+    const { children, data, intro, page } = this.props
     const {styles} = this
     const toggle = this.toggle
     const handleClickLink = () => {
@@ -63,7 +66,9 @@ class Layout extends Component {
           width={'25%'}
           main={
             <>
-              <Header onMenuClick={ toggle } />
+              <Header onMenuClick={ toggle }>
+                {intro && <Intro />}
+              </Header>
               <Main page={page}>
                 {children}
               </Main>
