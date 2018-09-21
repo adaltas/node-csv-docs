@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
 // Local
 import Drawer from '../components/Drawer'
 import Header from './Header'
@@ -24,7 +23,7 @@ class Layout extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this)
-    this.state = {open: !props.intro, breakpoint: 960}
+    this.state = {open: !props.intro, breakpoint: 980}
   }
   componentDidMount(){
     if(this.props.intro){
@@ -63,7 +62,7 @@ class Layout extends Component {
           breakpoint={this.state.breakpoint}
           open={ this.state.open }
           onClickModal={ () => this.setState({open: false})}
-          width={'25%'}
+          width={'23%'}
           main={
             <>
               <Header onMenuClick={ toggle }>

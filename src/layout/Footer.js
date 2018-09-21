@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'gatsby'
+import { TABLET_MEDIA_QUERY, MIN_TABLET_MEDIA_QUERY } from 'typography-breakpoint-constants'
 // Local
 import bck from '../images/footer_bck.svg'
 
@@ -14,6 +15,13 @@ class Footer extends Component {
     },
     container: {
       maxWidth: 800,
+      [TABLET_MEDIA_QUERY]: {
+        padding: '0 1rem',
+      },
+      [MIN_TABLET_MEDIA_QUERY]: {
+        padding: '0 1rem 0 3rem',
+        boxSizing: 'content-box',
+      },
       display: 'flex',
       flexWrap: 'wrap',
       margin: '0 auto',
@@ -82,17 +90,19 @@ class Footer extends Component {
           <nav css={styles.navigate}>
             <h1>Navigate</h1>
             <ul>
-              <li><Link to="/learn/quickstart/">Getting Started</Link></li>
-              <li><Link to="/learn/changelog/">Changelog</Link></li>
-              <li><Link to="/learn/license/">License</Link></li>
+              <li><Link to="/generate/">Generate</Link></li>
+              <li><Link to="/parse/">Parse</Link></li>
+              <li><Link to="/transform/">Transform</Link></li>
+              <li><Link to="/stringify/">Stringify</Link></li>
             </ul>
           </nav>
           <nav css={styles.contribute}>
             <h1>Contribute</h1>
             <ul>
               <li><Link to="/learn/contribute/">How to contribute</Link></li>
-              <li><a href="https://github.com/adaltas/node-hbase" target="_blank" rel="noopener">GitHub</a></li>
-              <li><a href="https://github.com/adaltas/node-hbase/issues" target="_blank" rel="noopener">Issue Tracker</a></li>
+              <li><a href="https://github.com/adaltas/node-csv" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://github.com/adaltas/node-csv/issues" target="_blank" rel="noopener">Issue Tracker</a></li>
+              <li><Link to="/project/license/">License</Link></li>
             </ul>
           </nav>
           <div css={styles.about}>

@@ -96,12 +96,8 @@ class Button extends Component {
       justifyContent: 'inherit',
     },
   }
-  handleBlur(event) {
-    // console.log('handleBlur')
-  }
-  handleFocus(event) {
-    // console.log('handleFocus')
-  }
+  handleBlur(event) {}
+  handleFocus(event) {}
   handleKeyDown(event) {}
   handleKeyUp(event) {
     const key = event.key
@@ -113,26 +109,16 @@ class Button extends Component {
     }
   }
   handleMouseDown(event) {
-    // console.log('handleMouseDown')
     event.persist()
     this.ripple.current.stop(event, () => {
       this.ripple.current.start(event)
     })
   }
-  handleMouseLeave(event) {
-    // console.log('handleMouseLeave')
-  }
-  handleMouseUp(event) {
-    // console.log('handleMouseUp')
-  }
-  handleTouchMove(event) {
-    // console.log('handleTouchMove')
-  }
-  handleTouchEnd(event) {
-    // console.log('handleTouchEnd')
-  }
+  handleMouseLeave(event) {}
+  handleMouseUp(event) {}
+  handleTouchMove(event) {}
+  handleTouchEnd(event) {}
   handleTouchStart(event) {
-    // console.log('handleTouchStart')
     event.persist()
     this.ripple.current.stop(event, () => {
       this.ripple.current.start(event)
@@ -142,18 +128,12 @@ class Button extends Component {
     super(props)
     this.state = { isMobile: false }
     this.ripple = React.createRef()
-    // this.handleMouseDown = this.handleMouseDown.bind(this)
   }
   componentDidMount() {
     if (window.innerWidth < this.props.breakpoint) {
       this.setState({ isMobile: true })
     }
   }
-  // onRippleRef = node => {
-  //   console.log('WHAT the fuck')
-  //   this.ripple = node;
-  //   console.log('this.ripple.start', this.ripple.start())
-  // }
   render() {
     const {
       children,
@@ -162,12 +142,20 @@ class Button extends Component {
       tabIndex,
       href,
       role,
+      className,
+      userStyles,
       ...props
     } = this.props
     const { styles } = this
+    if (userStyles && userStyles.base)
+      styles.base = {...styles.base, ...userStyles.base}
+    if (userStyles && userStyles.button)
+      styles.button = {...styles.button, ...userStyles.button}
+    if (userStyles && userStyles.link)
+      styles.link = {...styles.link, ...userStyles.link}
+    if (userStyles && userStyles.label)
+      styles.label = {...styles.label, ...userStyles.label}
     const label = <span css={styles.label}>{children}</span>
-    // const ripple =
-    //   <span css={styles.ripple} />
     const Component = href ? 'a' : 'button'
     const componentProps = {
       title: title,
@@ -180,16 +168,8 @@ class Button extends Component {
       componentProps.type = 'button'
       componentProps.disabled = disabled
     }
-    // href ? {
-    //   type: 'button',
-    //   disabled: disabled,
-    // } : {
-    //   href: href,
-    //   role: role,
-    // }
     return (
       <Component
-        // ref={this.ripple}
         onBlur={this.handleBlur.bind(this)}
         onFocus={this.handleFocus.bind(this)}
         onKeyDown={this.handleKeyDown.bind(this)}
@@ -201,6 +181,7 @@ class Button extends Component {
         onTouchMove={this.handleTouchMove.bind(this)}
         onTouchStart={this.handleTouchStart.bind(this)}
         css={[styles.base, href ? styles.link : styles.button]}
+        className={className}
         {...componentProps}
         {...props}
       >

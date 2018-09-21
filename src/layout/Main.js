@@ -3,6 +3,7 @@ import ReactDom from 'react-dom'
 import {css} from 'glamor'
 import ReactTooltip from 'react-tooltip'
 import Button from '../components/Button'
+import { TABLET_MEDIA_QUERY, MIN_TABLET_MEDIA_QUERY } from 'typography-breakpoint-constants'
 // Prism
 require('prismjs/themes/prism-tomorrow.css')
 
@@ -11,6 +12,13 @@ class Main extends Component {
     root: {
       maxWidth: 800,
       margin: '0 auto',
+      [TABLET_MEDIA_QUERY]: {
+        padding: '0 1rem',
+      },
+      [MIN_TABLET_MEDIA_QUERY]: {
+        padding: '0 1rem 0 3rem',
+        boxSizing: 'content-box',
+      },
       // '@media (max-width: 960px)': {
       //   margin: '0 1rem',
       // },
@@ -59,6 +67,10 @@ class Main extends Component {
       },
     },
     main: {
+      position: 'relative',
+      [MIN_TABLET_MEDIA_QUERY]: {
+        boxSizing: 'border-box',
+      },
       clear: 'right',
       '& .toc': {
         // backgroundColor: '#fff',
