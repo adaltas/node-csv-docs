@@ -34,18 +34,18 @@ class Main extends Component {
     },
     tools: {
       float: 'right',
-      // backgroundColor: '#fff',
+      backgroundColor: '#626F6F',
       marginBottom: '1rem',
-      // padding: '0 .4rem .4rem .4rem',
-      // '@media (max-width: 960px)': {
-      //   borderRadius: '0 0 1.8rem 1.8rem',
-      // },
-      // '@media (min-width: 960px)': {
-      //   borderRadius: '0 0 1.4rem 1.4rem',
-      // },
+      padding: '0 .4rem .4rem .4rem',
+      '@media (max-width: 960px)': {
+        borderRadius: '0 0 1.8rem 1.8rem',
+      },
+      '@media (min-width: 960px)': {
+        borderRadius: '0 0 1.4rem 1.4rem',
+      },
     },
     icon: {
-      fill: '#9B9B9B',
+      fill: '#fff',
       '@media (max-width: 960px)': {
         width: '1.4rem',
         height: '1.4rem',
@@ -75,7 +75,7 @@ class Main extends Component {
       '& .toc': {
         // backgroundColor: '#fff',
         // padding: '5px 0',
-        // display: 'none',
+        display: 'none',
         '& h2': {
           marginTop: 0,
         },
@@ -86,17 +86,17 @@ class Main extends Component {
       },
     },
     toc: {
-      // backgroundColor: '#fff',
-      // '& > div': {
-      //   padding: '1rem',
-      // },
-      // '& h2': {
-      //   marginTop: 0,
-      // },
-      // '& ul, & li': {
-      //   marginTop: 0,
-      //   marginBottom: 0,
-      // },
+      backgroundColor: '#626F6F',
+      '& > div': {
+        padding: '1rem',
+      },
+      '& h2': {
+        marginTop: 0,
+      },
+      '& ul, & li': {
+        marginTop: 0,
+        marginBottom: 0,
+      },
     },
   }
   constructor (props) {
@@ -113,7 +113,7 @@ class Main extends Component {
       const tocNode = contentNode.querySelector('.toc')
       if (!tocNode) return
       const anchorNode = tocNode.querySelector('.anchor')
-      if(anchorNode) anchorNode.remove()
+      if (anchorNode) anchorNode.remove()
       const display = window.getComputedStyle(tocNode).display
       this.toc.current.appendChild(tocNode)
       tocNode.style.display = display === 'none' ? 'block' : 'none'
@@ -122,7 +122,7 @@ class Main extends Component {
       <main ref={this.content} css={styles.root}>
         <div ref={this.toc} css={styles.toc}></div>
         <div css={styles.tools}>
-          { page && page.edit &&
+          { page && page.edit_url &&
             <Button
               color="inherit"
               aria-label="content-edit"
@@ -140,7 +140,7 @@ class Main extends Component {
               </svg>
             </Button>
           }
-          { page && page.edit &&
+          { page && page.edit_url &&
             <Button
               color="inherit"
               aria-label="content-toc"
