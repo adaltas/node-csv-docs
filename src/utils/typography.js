@@ -35,6 +35,10 @@ const theme = {
       borderBottom: '.5rem solid #fff',
       lineHeight: rhythm(1.5),
     },
+    'main h1': {
+      marginTop: '2rem',
+      // display: 'inline-block',
+    },
     'main :not(pre) > code[class*="language-"]': {
       padding: '.2em .3em .2em .3em',
       background: '#667575',
