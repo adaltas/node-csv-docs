@@ -5,27 +5,9 @@ keywords: ['intro','page']
 sort: 2
 ---
 
-## Callback example
+# Examples
 
-Execute this script with the command `node samples/callback.js`.
-
-```javascript
-var csv = require('csv');
-
-csv.generate({seed: 1, columns: 2, length: 20}, function(err, data){
-  csv.parse(data, function(err, data){
-    csv.transform(data, function(data){
-      return data.map(function(value){return value.toUpperCase()});
-    }, function(err, data){
-      csv.stringify(data, function(err, data){
-        process.stdout.write(data);
-      });
-    });
-  });
-});
-```
-
-## Stream example
+## Stream API
 
 Execute this script with the command `node samples/stream.js`.
 
@@ -64,17 +46,39 @@ stringifier.on('readable', function(){
 });
 ```
 
-## Pipe example
+## Pipe API
 
-Execute this script with the command `node samples/pipe.js`.
+Execute this script with the command `node samples/pipe_funny.js`.
+
+```javascript
+// Import the package main module
+const csv = require('csv')
+// Use the module
+csv.generate  ({seed: 1, length: 20}).pipe(
+csv.parse     ()).pipe(
+csv.transform (function(record){
+                return record.map(function(value){
+                  return value.toUpperCase()
+              })})).pipe(
+csv.stringify ()).pipe(process.stdout)
+```
+
+## Callback API
+
+Execute this script with the command `node samples/callback.js`.
 
 ```javascript
 var csv = require('csv');
 
-csv.generate  ({seed: 1, columns: 2, length: 20}).pipe(
-csv.parse     ()).pipe(
-csv.transform (function(record){
-                return record.map(function(value){return value.toUpperCase()});
-              })).pipe(
-csv.stringify ()).pipe(process.stdout);
+csv.generate({seed: 1, columns: 2, length: 20}, function(err, data){
+  csv.parse(data, function(err, data){
+    csv.transform(data, function(data){
+      return data.map(function(value){return value.toUpperCase()});
+    }, function(err, data){
+      csv.stringify(data, function(err, data){
+        process.stdout.write(data);
+      });
+    });
+  });
+});
 ```
