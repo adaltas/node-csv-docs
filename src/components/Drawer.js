@@ -89,7 +89,6 @@ class Drawer extends Component {
     const { drawer, main, open, width } = this.props
     const userStyles = this.props.styles || {}
     const w = width ? typeof width === 'number' ? width + 'px' : width : 250
-    styles.main.paddingLeft = '-250px'
     styles.mainOpen['@media (min-width: 980px)'].paddingLeft = w
     styles.mainOpen['@media (max-width: 980px)'].left = w
     styles.drawer.width = w
