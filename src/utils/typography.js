@@ -18,6 +18,9 @@ const theme = {
       marginTop: rhythm(2),
       color: '#B3C6C8',
     },
+    'h1 a svg, h2 a svg, h3 a svg, h4 a svg, h5 a svg, h6 a svg': {
+      fill: '#B3C6C8',
+    },
     'a': {
       textDecoration: 'underline',
       color: 'rgba(255,255,255,0.95)',

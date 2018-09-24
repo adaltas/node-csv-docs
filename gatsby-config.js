@@ -20,12 +20,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-autolink-headers',
-            options: {
-              offsetY: '64', // <600: 48; >600:64
-            },
-          },
-          {
             resolve: 'gatsby-remark-toc-patched',
             options: {
               header: 'Table of Contents', // the custom header text
@@ -40,6 +34,12 @@ module.exports = {
               classPrefix: 'language-',
               inlineCodeMarker: '±',
               aliases: {},
+            },
+          },
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              offsetY: '24', // <600: 48; >600:64
             },
           },
         ],

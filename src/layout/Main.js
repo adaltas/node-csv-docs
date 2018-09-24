@@ -67,7 +67,7 @@ class Main extends Component {
       },
     },
     main: {
-      position: 'relative',
+      // position: 'relative',
       [MIN_TABLET_MEDIA_QUERY]: {
         boxSizing: 'border-box',
       },
