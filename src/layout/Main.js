@@ -36,7 +36,7 @@ class Main extends Component {
       float: 'right',
       backgroundColor: '#626F6F',
       marginBottom: '1rem',
-      padding: '0 .4rem .4rem .4rem',
+      padding: '.4rem .4rem .4rem .4rem',
       '@media (max-width: 960px)': {
         borderRadius: '0 0 1.8rem 1.8rem',
       },

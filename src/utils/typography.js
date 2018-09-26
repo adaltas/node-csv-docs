@@ -12,7 +12,7 @@ const theme = {
   headerFontFamily: ['Khula', 'sans-serif'],
   overrideStyles: ({ adjustFontSizeTo, rhythm, scale }, options) => ({
     'body, html': {
-      backgroundColor: '#4C5959',
+      backgroundColor: '#384444',
     },
     'h1,h2,h3,h4,h5,h6': {
       marginTop: rhythm(2),
@@ -25,7 +25,7 @@ const theme = {
       textDecoration: 'underline',
       color: 'rgba(255,255,255,0.95)',
     },
-    'a:hover,a:active': {
+    'a:hover, a:active': {
       color: '#00D0B4',
     },
     'article h1': {
@@ -41,7 +41,8 @@ const theme = {
     },
     'main :not(pre) > code[class*="language-"]': {
       padding: '.2em .3em .2em .3em',
-      background: '#667575',
+      // background: '#667575',
+      backgroundColor: 'rgba(255,255,255,.1)',
       color: '#fff',
     },
     'main div .gatsby-highlight': {

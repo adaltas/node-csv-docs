@@ -37,21 +37,14 @@ class Header extends Component {
         verticalAlign: 'baseline',
       },
     },
-    button: {
-    },
-    menu: {
-      position: 'absolute',
-      padding: '1rem 0 0 .5rem',
-    },
     icon: {
       color: '#FFF',
       position: 'relative',
       top: '-.1rem'
     },
-    label: {
-      [TABLET_MEDIA_QUERY]: {
-        display: 'none',
-      },
+    menu: {
+      position: 'absolute',
+      padding: '1rem 0 0 .5rem',
     },
     title: {
       marginTop: 0,
@@ -68,7 +61,7 @@ class Header extends Component {
       letterSpacing: '.2rem',
       paddingRight: '.2rem'
     },
-    node: {
+    nodejs: {
       '@media (max-width:374px)': {
         display: 'none',
       }
@@ -76,10 +69,36 @@ class Header extends Component {
     grow: {
       flex: '1 1 auto',
     },
+    button: {
+    },
+    quick: {
+      marginLeft: '1rem'
+    },
+    quick_label: {
+      [TABLET_MEDIA_QUERY]: {
+        display: 'none',
+      },
+    },
   }
   render () {
-    const {children, onMenuClick} = this.props
+    const {children, onMenuClick, slug} = this.props
     const {styles} = this
+    const project = {}
+    project.slug = slug ? /\/(\w+)/.exec(slug)[1] : 'project'
+    switch(project.slug) {
+      case 'project':
+        project.name =  'node-csv'
+        break
+      case 'transform':
+        project.name = 'node-stream-transform'
+        break
+      default:
+        project.name = 'node-csv-' + project.slug
+    }
+    project.label = project.slug.charAt(0).toUpperCase() + project.slug.substr(1)
+    project.issue = `https://github.com/adaltas/${project.name}/issues`
+    project.github = `https://github.com/adaltas/${project.name}`
+    console.log(project)
     return (
       <div css={styles.root}>
         <div css={styles.menu}>
@@ -98,11 +117,15 @@ class Header extends Component {
             <h1 css={styles.title}>
               <Link to="/">
                 <span css={styles.logo}>CSV</span>
-                <span css={styles.node}>for Node.js</span>
+                { project.slug !== 'project' &&
+                  <span css={styles.project}>{project.label}{' '}</span>
+                  
+                }
+                <span css={styles.nodejs}>for Node.js</span>
                 </Link>
             </h1>
             <div css={styles.grow} />
-            <a href="https://github.com/adaltas/node-csv/issues" rel="noopener" target="_blank">
+            <a href={project.issue} css={styles.quick} rel="noopener" target="_blank">
               <Button
                 color="inherit"
                 aria-label="header-bug"
@@ -114,7 +137,7 @@ class Header extends Component {
               </Button>
               <span css={styles.label}>Issues</span>
             </a>
-            <a href="https://github.com/adaltas/node-csv" rel="noopener" target="_blank">
+            <a href={project.github} css={styles.quick} rel="noopener" target="_blank">
               <Button
                 color="inherit"
                 aria-label="header-github"

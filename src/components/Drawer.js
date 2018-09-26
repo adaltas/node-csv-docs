@@ -100,12 +100,12 @@ class Drawer extends Component {
       <>
         <div
           ref={this.main}
-          css={[
+          className={css([
             styles.main,
             userStyles.main,
             isWindow && open && styles.mainOpen,
             isWindow && !open && styles.mainClose,
-          ]}
+          ]).toString()}
         >
           {main}
         </div>
@@ -131,11 +131,11 @@ class Drawer extends Component {
           </Modal>
         ) : (
           <div
-            css={[
+            className={css([
               styles.drawer,
               isWindow && open && styles.drawerOpen,
               isWindow && !open && styles.drawerClose,
-            ]}
+            ]).toString()}
           >
             {drawer}
           </div>

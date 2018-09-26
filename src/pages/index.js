@@ -55,7 +55,7 @@ class Index extends Component {
         // width: '50%',
         flex: '0 0 100%',
       },
-      backgroundColor: '#304040',
+      backgroundColor: 'rgba(255,255,255,.1)',
       padding: '1rem 2rem',
       textAlign: 'center',
       '& h1, & img': {

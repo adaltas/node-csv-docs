@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "David Worms <david@adaltas.com>",
   "dependencies": {
-    "gatsby": "next",
+    "gatsby": "^2.0.8",
     "gatsby-plugin-catch-links": "^2.1.0-alpha.f98688ee",
     "gatsby-plugin-glamor": "^2.0.5",
     "gatsby-plugin-manifest": "next",

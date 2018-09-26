@@ -17,7 +17,7 @@ class Layout extends Component {
       backgroundColor: '#EBEBEB',
     },
     footer: {
-      backgroundColor: '#EBEBEB',
+      // backgroundColor: '#EBEBEB',
     },
   }
   constructor(props) {
@@ -65,7 +65,7 @@ class Layout extends Component {
           width={'23%'}
           main={
             <>
-              <Header onMenuClick={ toggle }>
+              <Header onMenuClick={ toggle } slug={page.slug}>
                 {intro && <Intro />}
               </Header>
               <Main page={page}>

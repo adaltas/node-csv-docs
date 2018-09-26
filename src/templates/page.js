@@ -24,6 +24,7 @@ export const pageQuery = graphql`
       }
       fields {
         edit_url
+        slug
       }
     }
   }
