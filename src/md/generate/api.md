@@ -1,12 +1,11 @@
 ---
 title: API
-description: CSV and object generation implementing the Node.js `stream.Readable` API
+description: CSV Generate - stream, callback and sync APIs
 keywords: ['intro','page']
 sort: 2
-github: 'https://github.com/adaltas/node-csv-generate'
 ---
 
-# CSV Generate options API
+# CSV Generate API
 
 ## Introduction
 

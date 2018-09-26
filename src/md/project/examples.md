@@ -1,15 +1,18 @@
 ---
 title: Examples
-layout: page
-keywords: ['intro','page']
+keywords: ['csv', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
 sort: 2
 ---
 
-# Examples
+# CSV Examples
 
-## Stream API
+## Introduction
 
-Execute this script with the command `node samples/stream.js`.
+This package proposes different API flavours. Every example is available on [GitHub](https://github.com/adaltas/node-csv/tree/master/samples).
+
+## Using the stream API
+
+This example is available with the command `node samples/stream.js`.
 
 ```javascript
 var csv = require('csv');
@@ -46,9 +49,9 @@ stringifier.on('readable', function(){
 });
 ```
 
-## Pipe API
+## Using the pipe API
 
-Execute this script with the command `node samples/pipe_funny.js`.
+This example is available with the command `node samples/pipe_funny.js`.
 
 ```javascript
 // Import the package main module
@@ -63,9 +66,9 @@ csv.transform (function(record){
 csv.stringify ()).pipe(process.stdout)
 ```
 
-## Callback API
+## Using the callback API
 
-Execute this script with the command `node samples/callback.js`.
+This example is available with the command `node samples/callback.js`.
 
 ```javascript
 var csv = require('csv');

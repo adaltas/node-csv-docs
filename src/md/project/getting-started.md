@@ -1,11 +1,12 @@
 ---
 title: Getting started
-layout: page
 keywords: ['intro','page']
 sort: 1
 ---
 
 # Getting started
+
+## Introduction
 
 This project provides CSV generation, parsing, transformation and serialization
 for Node.js.

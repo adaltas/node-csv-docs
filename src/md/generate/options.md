@@ -3,12 +3,11 @@ title: Options
 description: Options relative to the csv-generate package
 keywords: ['csv', 'generate', 'options', 'duration', 'columns', 'seed', 'object', 'string']
 sort: 3
-github: 'https://github.com/adaltas/node-csv-generate'
 ---
 
 # CSV Generate options
 
-All options are optional. All the options from the [Node.js Stream Writable](https://nodejs.org/api/stream.html#stream_new_stream_readable_options) are support and passed as is.   
+All options are optional. All the options from the [Node.js Stream Writable](https://nodejs.org/api/stream.html#stream_constructor_new_stream_writable_options) are supported and passed as is.
 
 ## Available options
 

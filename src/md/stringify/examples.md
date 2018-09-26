@@ -1,97 +1,109 @@
 ---
 title: Examples
-layout: page
-keywords: ['intro','page']
-sort: 1
-github: 'https://github.com/adaltas/node-csv-stringify'
+keywords: ['csv','stringify', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
+sort: 4
 ---
 
-## Using the callback API
+# CSV Stringify examples
 
-This source code for this example is available in
-["./samples/api.callback.js"][ac].
+## Introduction
 
-The stringifier receive an array and return a string inside a user-provided
-callback. This example is available with the command `node samples/callback.js`.
-
-```javascript
-var stringify = require('csv-stringify');
-
-input = [ [ '1', '2', '3', '4' ], [ 'a', 'b', 'c', 'd' ] ];
-stringify(input, function(err, output){
-  output.should.eql('1,2,3,4\na,b,c,d');
-});
-```
+This package proposes different API flavours. Every example is available on [GitHub](https://github.com/adaltas/node-csv-stringify/tree/master/samples).
 
 ## Using the stream API
 
-This source code for this example is available in
-["./samples/api.stream.js"][as].
+The stringify module implement both a writable and a readable stream
+
+The [stream example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.stream.js) write 2 records and register multiple events to read the generated CSV output and get notified when the serialisation is finished.
+
+This example is available with the command `node samples/api.stream.js`.
 
 ```javascript
-// node samples/stream.js
-var stringify = require('csv-stringify');
-
-data = '';
-stringifier = stringify({delimiter: ':'})
+const stringify = require('csv-stringify')
+const assert = require('assert')
+const data = []
+const stringifier = stringify({
+  delimiter: ':'
+})
+stringifier.write([ 'root','x','0','0','root','/root','/bin/bash' ])
+stringifier.write([ 'someone','x','1022','1022','','/home/someone','/bin/bash' ])
+stringifier.end()
 stringifier.on('readable', function(){
+  let row;
   while(row = stringifier.read()){
-    data += row;
+    data.push(row)
   }
-});
+})
 stringifier.on('error', function(err){
-  console.info(err.message);
-});
+  console.error(err.message)
+})
 stringifier.on('finish', function(){
-  data.should.eql(
+  assert.equal(
+    data.join('\n'),
     "root:x:0:0:root:/root:/bin/bash\n" +
-    "someone:x:1022:1022:a funny cat:/home/someone:/bin/bash"
-  );
-});
-stringifier.write([ 'root','x','0','0','root','/root','/bin/bash' ]);
-stringifier.write([ 'someone','x','1022','1022','a funny cat','/home/someone','/bin/bash' ]);
-stringifier.end();
+    "someone:x:1022:1022::/home/someone:/bin/bash\n"
+  )
+})
 ```
 
 ## Using the pipe function
 
-This source code for this example is available in
-["./samples/api.pipe.js"][ap].
+One useful function part of the Stream API is `pipe`. It is used to connect
+multiple `stream.Readable` sources to `stream.Writable` destinations.
 
-One usefull function part of the Stream API is `pipe` to interact between
-multiple streams. You may use this function to pipe a `stream.Readable` array
-or object source to a `stream.Writable` string destination. The next example
-available as `node samples/pipe.js` generate records, stringify them and print
-them to stdout.
+The [pipe example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.pipe.js) generates object records, stringifies them and print the generated CSV to the standard output.
+
+This example is available with the command `node samples/api.pipe.js`.
 
 ```javascript
-var stringify = require('csv-stringify');
-var generate = require('csv-generate');
+const stringify = require('csv-stringify')
+const generate = require('csv-generate')
+generator = generate({
+  objectMode: true,
+  seed: 1,
+  headers: 2
+})
+stringifier = stringify()
+generator.pipe(stringifier).pipe(process.stdout)
+```
 
-generator = generate({objectMode: true, seed: 1, headers: 2});
-stringifier = stringify();
-generator.pipe(stringifier).pipe(process.stdout);
+## Using the callback API
+
+The [stringify example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.callback.js) receives an array and a callback function. The input is serialised into a string unless an error occurred.
+
+This example is available with the command `node samples/api.callback.js`.
+
+```javascript
+const stringify = require('csv-stringify')
+const assert = require('assert')
+input = [ [ '1', '2', '3', '4' ], [ 'a', 'b', 'c', 'd' ] ]
+stringify(input, function(err, output){
+  assert.equal(output, '1,2,3,4\na,b,c,d\n')
+})
 ```
 
 ## Using the "header" option
 
-This source code for this example is available in
-["./samples/options.header.js"][oh]. Run it with the command
-`node ./samples/options.header.js`.
+In the [header example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/options.header.js), the "header" option is set true and its value is obtained from the keys present in the "columns" option. 
+
+This example is available with the command `node samples/options.header.js`.
 
 ```javascript
-var stringify = require('../lib');
-var generate = require('csv-generate');
-
-var generator = generate({objectMode: true, seed: 1, headers: 2});
-
-var columns = {
- year: 'birthYear',
- phone: 'phone'
-};
-var stringifier = stringify({ header: true, columns: columns });
-
-generator.pipe(stringifier).pipe(process.stdout);
+const stringify = require('csv-stringify')
+const generate = require('csv-generate')
+const generator = generate({
+  objectMode: true,
+  seed: 1,
+  headers: 2
+})
+const stringifier = stringify({
+  header: true,
+  columns: {
+   year: 'birthYear',
+   phone: 'phone'
+  }
+})
+generator.pipe(stringifier).pipe(process.stdout)
 ```
 
 The output on the console will start with:
@@ -99,43 +111,35 @@ The output on the console will start with:
 ```csv
 birthYear,phone
 OMH,ONKCHhJmjadoA
-KB,dmiM
-B,LF
 ```
 
 ## Using custom formatters
-This example uses [moment.js](http://momentjs.com/) as external dependency.
+
+This example is available with the command `node samples/options.formatters.js`.
 
 ```javascript
-var moment = require('moment');
-var stringify = require('../lib');
-var input = [{
+const stringify = require('../lib')
+const input = [{
   name: 'foo',
   date: new Date(1970, 0)
 }, {
   name: 'bar',
   date: new Date(1971, 0)
 }]
-
 var stringifier = stringify(input, {
   formatters: {
     date: function(value) {
-      return moment(value).format('YYYY-MM-DD');
+      return value.toISOString()
     }
   }
 }, function(err, output) {
-  console.info(output);
-});
+  console.info(output)
+})
 ```
 
 The output on the console will be:
 
 ```csv
-foo,1970-01-01
-bar,1971-01-01
+foo,1969-12-31T23:00:00.000Z
+bar,1970-12-31T23:00:00.000Z
 ```
-
-[ac]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.callback.js
-[as]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.stream.js
-[ap]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.pipe.js
-[oh]: https://github.com/adaltas/node-csv-stringify/blob/master/samples/options.header.js

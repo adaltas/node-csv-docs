@@ -3,7 +3,6 @@ title: Usage
 description: CSV and object generation implementing the Node.js `stream.Readable` API
 keywords: ['intro','page']
 sort: 1
-github: 'https://github.com/adaltas/node-csv-generate'
 ---
 
 # CSV and object generator
@@ -18,7 +17,7 @@ random or user-defined datasets.
 
 Source code for this project is available on [GitHub][generate].
 
-Features includes:
+## Main features
 
 * Scalable `stream.Readable` implementation
 * random or pseudo-random seed based generation

@@ -1,11 +1,12 @@
 ---
 title: Community
-layout: page
 keywords: ['intro','page']
 sort: 3
 ---
 
 # Contribution Guide
+
+## Introduction
 
 This is a community effort. Please be grateful to the people who write code, take time filling bug reports and improve the documentation.
 
