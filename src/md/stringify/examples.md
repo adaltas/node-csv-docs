@@ -18,7 +18,7 @@ The [stream example](https://github.com/adaltas/node-csv-stringify/blob/master/s
 
 This example is available with the command `node samples/api.stream.js`.
 
-```javascript
+```js
 const stringify = require('csv-stringify')
 const assert = require('assert')
 const data = []
@@ -55,7 +55,7 @@ The [pipe example](https://github.com/adaltas/node-csv-stringify/blob/master/sam
 
 This example is available with the command `node samples/api.pipe.js`.
 
-```javascript
+```js
 const stringify = require('csv-stringify')
 const generate = require('csv-generate')
 generator = generate({
@@ -73,7 +73,7 @@ The [stringify example](https://github.com/adaltas/node-csv-stringify/blob/maste
 
 This example is available with the command `node samples/api.callback.js`.
 
-```javascript
+```js
 const stringify = require('csv-stringify')
 const assert = require('assert')
 input = [ [ '1', '2', '3', '4' ], [ 'a', 'b', 'c', 'd' ] ]
@@ -88,7 +88,7 @@ In the [header example](https://github.com/adaltas/node-csv-stringify/blob/maste
 
 This example is available with the command `node samples/options.header.js`.
 
-```javascript
+```js
 const stringify = require('csv-stringify')
 const generate = require('csv-generate')
 const generator = generate({
@@ -117,7 +117,7 @@ OMH,ONKCHhJmjadoA
 
 This example is available with the command `node samples/options.formatters.js`.
 
-```javascript
+```js
 const stringify = require('../lib')
 const input = [{
   name: 'foo',

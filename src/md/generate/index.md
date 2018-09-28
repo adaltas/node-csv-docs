@@ -70,4 +70,4 @@ Run `npm install csv` to install the full csv module or run
 
 
 The source code uses modern JavaScript features and run natively in Node 7.6+.
-For older browsers or older versions of Node, use the module inside "./lib/es5".
+For older browsers or older versions of Node, use the modules inside "./lib/es5".

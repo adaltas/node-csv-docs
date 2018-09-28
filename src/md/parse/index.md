@@ -12,10 +12,8 @@ sort: 1
 [![Build Status](https://api.travis-ci.org/adaltas/node-csv-parse.svg)](https://travis-ci.org/#!/adaltas/node-csv-parse)
 
 This package is a parser converting CSV text input into arrays or objects. It
-implements the Node.js [`stream.Transform`API][stream]. It also
-provides a simple callback-based API for convenience. It is both extremely easy
-to use and powerful. It was first released in 2010 and is used against big data
-sets by a large community.
+implements the Node.js [stream API](/parse/api/#stream-api). It also
+provides alternative APIs for convenience such as the [callback API](/parse/api/#callback-api) and [sync API](/parse/api/#sync-api). It is both extremely easy to use and powerful. It was first released in 2010 and is used against big data sets by a large community.
 
 Source code for this project is available on [GitHub](https://github.com/adaltas/node-csv-parse).
 
@@ -37,9 +35,6 @@ Run `npm install csv` to install the full CSV package or run
 
 Use the stream based API for scalability and the sync or mixed APIs for simplicity.
 
-For additional usage and example, you may refer to
-[example page](/parse/examples/),
-[the "samples" folder](https://github.com/adaltas/node-csv-parse/tree/master/samples) and [the "test" folder](https://github.com/adaltas/node-csv-parse/tree/master/test).
 
 The source code uses modern JavaScript features and run natively in Node 7.6+.
 For older browsers or older versions of Node, use the modules inside "./lib/es5".

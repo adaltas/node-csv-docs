@@ -19,7 +19,7 @@ Source code for this project is available on [GitHub][stringify].
 
 ## Main features
 
-* Follow the Node.js streaming API
+* Extends the native Node.js streaming API
 * Simplicity with the optional callback API
 * Support for custom formatters, delimiters, quotes, escape characters and header
 * Support big datasets

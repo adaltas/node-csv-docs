@@ -60,14 +60,14 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `trim` (boolean)   
   If `true`, ignore whitespace immediately around the delimiter. Defaults to `false`. Does not remove whitespace in a quoted field.
 
-## Casting context
+## Option `cast`
 
 The `cast` option accept a function which provides full control over a field.
 The function is called with 2 arguments: the field value and a context object.
 The context object accept the following properties: 
 
 * `column`   
-  The column name if the `columns` options is defined or the field index.
+  The column name if the `columns` options is defined or the field position.
 * `count`   
   The number of records which have been fully parsed.
 * `index`   
@@ -79,6 +79,34 @@ The context object accept the following properties:
 * `lines`   
   The number of lines which have been processed including the current line.
 
+The [cast example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.cast.js) uses the context to transform the first filed into a date and replace the second field with the injected context:
+
+```js
+const parse = require('csv-parse/lib/sync')
+const assert = require('assert')
+
+const data = `
+  2000-01-01,date1
+  2050-11-27,date2
+`.trim()
+const records = parse(data, {
+  cast: function(value, context){
+    if(context.index === 0){
+      return `${value}T05:00:00.000Z`
+    }else{
+      return context
+    }
+  },
+  trim: true
+})
+assert.deepEqual(records, [
+  [ '2000-01-01T05:00:00.000Z', {
+    quoting: false, lines: 1, count: 0, index: 1, header: false, column: 1 } ],
+  [ '2050-11-27T05:00:00.000Z', {
+    quoting: false, lines: 2, count: 1, index: 1, header: false, column: 1 } ]
+])
+```
+
 ## Option `columns`
 
 By default, the parser generates records in the form of arrays. The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.columns.js)
@@ -86,7 +114,7 @@ illustrates how to generate records in the form of objects using the "columns" o
 
 This example is available with the command `node samples/options.columns.js`.
 
-```javascript
+```js
 const parse = require('csv-parse')
 const assert = require('assert')
 

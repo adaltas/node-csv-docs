@@ -1,3 +1,9 @@
+---
+title: Errors
+description: CSV parsing implementing the Node.js `stream.Transform` API
+keywords: ['intro','page']
+sort: 5
+---
 
 # Commons Error
 

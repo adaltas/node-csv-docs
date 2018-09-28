@@ -9,35 +9,75 @@ sort: 2
 
 ## Introduction
 
-There are multiple APIs available. Under the hood, they are all based on the same implementation. The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity if you are sure that the generated dataset fit in memory.
+There are multiple APIs available. Under the hood, they are all based on the same implementation. The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity, readability and conveniency if you are sure that your datasets fit in memory.
 
 ### Stream API
 
-It implements the native Node.js [transform stream](http://nodejs.org/api/stream.html#stream_class_stream_transform) which is both readable and writable.
+The main module exported by this package implements the native Node.js [transform stream](http://nodejs.org/api/stream.html#stream_class_stream_transform). Transform streams implement both the Readable and Writable interfaces.
 
 This is the recommended approach if you need a maximum of power. It ensures scalability by treating your data as a stream from the source to the destination.
 
-```
+The signature is `const stream = parse([options])`.
+
+In the [stream example](https://github.com/adaltas/node-csv-parse/blob/master/samples/api.stream.js), CSV data is sent through the `write` function and the resulting data is obtained
+within the `readable` event by calling the `read` function.
+
+```js
 const parse = require('csv-parse')
-parse([options]);
+const assert = require('assert')
+const output = []
+// Create the parser
+const parser = parse({
+  delimiter: ':'
+})
+// Write data to the stream
+parser.write("root:x:0:0:root:/root:/bin/bash\n")
+parser.write("someone:x:1022:1022::/home/someone:/bin/bash\n")
+// Close the readable stream
+parser.end()
+// Use the readable stream api
+parser.on('readable', function(){
+  let record
+  while (record = parser.read()) {
+    output.push(record)
+  }
+})
+// Catch any error
+parser.on('error', function(err){
+  console.error(err.message)
+})
+// When we are done, test that the parsed output matched what expected
+parser.on('end', function(){
+  assert.deepEqual(
+    output,
+    [
+      [ 'root','x','0','0','root','/root','/bin/bash' ],
+      [ 'someone','x','1022','1022','','/home/someone','/bin/bash' ]
+    ]
+  )
+})
 ```
 
-### Mixed API
+## Callback API
 
-It leverages the stream transform API but input doesn't have to be an readable
-stream and output doesn't have to be a writable stream. Input may be a string
-passed as first argument. Output may be obtained in the callback passed as last
-argument.
+The [callback example](https://github.com/adaltas/node-csv-parse/blob/master/samples/api.callback.js) trakes the CSV string in the first argument and a user callback in the second argument. The callback will received any error thrown by the CSV parser or an array of records object in the second argument. returns an array inside a user-provided
+callback.
 
-Uses it for convenience in case you are already interacting with a readable
-stream or a writable stream. It is not scalable because it implies that you
-either have all CSV dataset in memory and wish to pipe the generated
-records into a stream writer or that you have a stream reader generating a CSV
-data stream and wish to obtain an object representing all the records.
+This example is available with the command `node samples/api.callback.js`.
 
-```
+```js
 const parse = require('csv-parse')
-parse([data], [options], [callback])
+const assert = require('assert')
+
+const input = '#Welcome\n"1","2","3","4"\n"a","b","c","d"'
+parse(input, {
+  comment: '#'
+}, function(err, output){
+  assert.deepEqual(
+    output,
+    [ [ '1', '2', '3', '4' ], [ 'a', 'b', 'c', 'd' ] ]
+  )
+})
 ```
 
 ### Sync API
@@ -54,24 +94,21 @@ const parse = require('csv-parse/lib/sync')
 parse(records, [options])
 ```
 
-## Internal properties
+The [synchronous example](https://github.com/adaltas/node-csv-parse/blob/master/samples/module.sync.js) illustrates how to use the alternative synchronous module. It is much easier to use at the expense of not being scalable.
 
-Those properties are for internal usage but may be considered useful to the
-final user in some situations. They are accessible from the intance returned by
-the `parse` function.
+This example is available with the command `node samples/module.sync.js`.
 
-* `count` (number)   
-  Internal counter of records being processed.
-* `empty_line_count` (number)   
-  Internal counter of empty lines
-* `skipped_line_count` (number)   
-  Number of non uniform lines skipped when `relax_column_count` is true.
-* `lines` (number)   
-  The number of lines encountered in the source dataset, start at 1 for the
-  first line.
-* `is_int` (regexp, function)   
-  The regular expression or function used to determine if a value should be
-  cast to an integer.
-* `is_float` (regexp, function)   
-  The regular expression or function used to determine if a value should be
-  cast to a float.
+```js
+const parse = require('csv-parse/lib/sync')
+const assert = require('assert')
+
+const input = `
+"key_1","key_2"
+"value 1","value 2"
+`
+const records = parse(input, {
+  columns: true,
+  skip_empty_lines: true
+})
+assert.deepEqual(records, [{ key_1: 'value 1', key_2: 'value 2' }])
+```

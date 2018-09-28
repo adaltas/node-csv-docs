@@ -14,7 +14,7 @@ This package proposes different API flavours. Every example is available on [Git
 
 This example is available with the command `node samples/stream.js`.
 
-```javascript
+```js
 var csv = require('csv');
 
 var generator = csv.generate({seed: 1, columns: 2, length: 20});
@@ -53,7 +53,7 @@ stringifier.on('readable', function(){
 
 This example is available with the command `node samples/pipe_funny.js`.
 
-```javascript
+```js
 // Import the package main module
 const csv = require('csv')
 // Use the module
@@ -70,7 +70,7 @@ csv.stringify ()).pipe(process.stdout)
 
 This example is available with the command `node samples/callback.js`.
 
-```javascript
+```js
 var csv = require('csv');
 
 csv.generate({seed: 1, columns: 2, length: 20}, function(err, data){
