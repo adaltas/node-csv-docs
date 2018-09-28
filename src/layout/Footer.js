@@ -1,6 +1,9 @@
-import React, {Component} from 'react'
-import {Link} from 'gatsby'
-import { TABLET_MEDIA_QUERY, MIN_TABLET_MEDIA_QUERY } from 'typography-breakpoint-constants'
+import React, { Component } from 'react'
+import { Link } from 'gatsby'
+import {
+  TABLET_MEDIA_QUERY,
+  MIN_TABLET_MEDIA_QUERY,
+} from 'typography-breakpoint-constants'
 // Local
 import bck from '../images/footer_bck.svg'
 
@@ -11,7 +14,7 @@ class Footer extends Component {
       backgroundSize: 'cover',
       borderTop: '.1rem solid #FFF',
       marginTop: '3rem',
-      padding: '2rem 0'
+      padding: '2rem 0',
     },
     container: {
       maxWidth: 800,
@@ -83,31 +86,69 @@ class Footer extends Component {
     },
   }
   render() {
-    const {styles} = this
+    const { styles } = this
     return (
       <footer css={styles.root}>
         <div css={styles.container}>
           <nav css={styles.navigate}>
             <h1>Navigate</h1>
             <ul>
-              <li><Link to="/generate/">Generate</Link></li>
-              <li><Link to="/parse/">Parse</Link></li>
-              <li><Link to="/transform/">Transform</Link></li>
-              <li><Link to="/stringify/">Stringify</Link></li>
+              <li>
+                <Link to="/generate/">Generate</Link>
+              </li>
+              <li>
+                <Link to="/parse/">Parse</Link>
+              </li>
+              <li>
+                <Link to="/transform/">Transform</Link>
+              </li>
+              <li>
+                <Link to="/stringify/">Stringify</Link>
+              </li>
             </ul>
           </nav>
           <nav css={styles.contribute}>
             <h1>Contribute</h1>
             <ul>
-              <li><Link to="/learn/contribute/">How to contribute</Link></li>
-              <li><a href="https://github.com/adaltas/node-csv" target="_blank" rel="noopener">GitHub</a></li>
-              <li><a href="https://github.com/adaltas/node-csv/issues" target="_blank" rel="noopener">Issue Tracker</a></li>
-              <li><Link to="/project/license/">License</Link></li>
+              <li>
+                <Link to="/learn/contribute/">How to contribute</Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/adaltas/node-csv"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/adaltas/node-csv/issues"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Issue Tracker
+                </a>
+              </li>
+              <li>
+                <Link to="/project/license/">License</Link>
+              </li>
             </ul>
           </nav>
           <div css={styles.about}>
             <h1>About</h1>
-            <p>Node.js HBase is an open source product hosted on <a href="https://www.github.com" target="_blank" rel="noopener">GitHub</a> and developed by <a href="http://www.adaltas.com" target="_blank" rel="noopener">Adaltas</a>.</p>
+            <p>
+              Node.js HBase is an open source product hosted on{' '}
+              <a href="https://www.github.com" target="_blank" rel="noopener">
+                GitHub
+              </a>{' '}
+              and developed by{' '}
+              <a href="http://www.adaltas.com" target="_blank" rel="noopener">
+                Adaltas
+              </a>
+              .
+            </p>
           </div>
         </div>
       </footer>

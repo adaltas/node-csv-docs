@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -21,37 +21,37 @@ class Layout extends Component {
     },
   }
   constructor(props) {
-    super(props);
+    super(props)
     this.toggle = this.toggle.bind(this)
-    this.state = {open: !props.intro, breakpoint: 980}
+    this.state = { open: !props.intro, breakpoint: 980 }
   }
-  componentDidMount(){
-    if(this.props.intro){
+  componentDidMount() {
+    if (this.props.intro) {
       this.setState({ open: false })
-    }else if(window.innerWidth < this.state.breakpoint){
+    } else if (window.innerWidth < this.state.breakpoint) {
       this.setState({ open: false })
     }
   }
   toggle() {
-    this.setState({open: !this.state.open})
+    this.setState({ open: !this.state.open })
   }
   render() {
     const { children, data, intro, page } = this.props
-    const {styles} = this
+    const { styles } = this
     const toggle = this.toggle
     const handleClickLink = () => {
-      if(window.innerWidth < this.state.breakpoint){
+      if (window.innerWidth < this.state.breakpoint) {
         this.setState({ open: false })
       }
     }
-    const pages = data.pages.edges.map( (page) => {
-      return {...page.node.fields, ...page.node.frontmatter}
+    const pages = data.pages.edges.map(page => {
+      return { ...page.node.fields, ...page.node.frontmatter }
     })
     const project = {}
     project.slug = page.slug ? /\/(\w+)/.exec(page.slug)[1] : 'project'
-    switch(project.slug) {
+    switch (project.slug) {
       case 'project':
-        project.name =  'node-csv'
+        project.name = 'node-csv'
         break
       case 'transform':
         project.name = 'node-stream-transform'
@@ -59,7 +59,8 @@ class Layout extends Component {
       default:
         project.name = 'node-csv-' + project.slug
     }
-    project.label = project.slug.charAt(0).toUpperCase() + project.slug.substr(1)
+    project.label =
+      project.slug.charAt(0).toUpperCase() + project.slug.substr(1)
     project.issue = `https://github.com/adaltas/${project.name}/issues`
     project.github = `https://github.com/adaltas/${project.name}`
     return (
@@ -75,22 +76,24 @@ class Layout extends Component {
         </Helmet>
         <Drawer
           breakpoint={this.state.breakpoint}
-          open={ this.state.open }
-          onClickModal={ () => this.setState({open: false})}
+          open={this.state.open}
+          onClickModal={() => this.setState({ open: false })}
           width={'23%'}
           main={
             <>
-              <Header onMenuClick={ toggle } slug={page.slug} project={project}>
+              <Header onMenuClick={toggle} slug={page.slug} project={project}>
                 {intro && <Intro />}
               </Header>
-              <Main page={page}>
-                {children}
-              </Main>
+              <Main page={page}>{children}</Main>
               <Footer />
             </>
           }
           drawer={
-            <Menu pages={pages} styles={styles.drawer} onClickLink={ handleClickLink } />
+            <Menu
+              pages={pages}
+              styles={styles.drawer}
+              onClickLink={handleClickLink}
+            />
           }
         />
       </>
@@ -125,9 +128,7 @@ const QueryLayout = props => (
         }
       }
     `}
-    render={data => (
-      <Layout data={data} {...props} />
-    )}
+    render={data => <Layout data={data} {...props} />}
   />
 )
 

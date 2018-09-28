@@ -88,7 +88,7 @@ class Drawer extends Component {
     const { styles } = this
     const { drawer, main, open, width } = this.props
     const userStyles = this.props.styles || {}
-    const w = width ? typeof width === 'number' ? width + 'px' : width : 250
+    const w = width ? (typeof width === 'number' ? width + 'px' : width) : 250
     styles.main.paddingLeft = open ? w : 0
     styles.mainOpen['@media (min-width: 980px)'].paddingLeft = w
     styles.mainOpen['@media (max-width: 980px)'].left = w
@@ -126,7 +126,10 @@ class Drawer extends Component {
               isWindow && open && styles.drawerOpen,
               isWindow && !open && styles.drawerClose,
             ]).toString()}
-            overlayClassName={css([styles.overlay, userStyles.overlay]).toString()}
+            overlayClassName={css([
+              styles.overlay,
+              userStyles.overlay,
+            ]).toString()}
             bodyOpenClassName={css([styles.body, userStyles.body]).toString()}
           >
             {drawer}

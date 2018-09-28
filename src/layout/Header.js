@@ -1,23 +1,25 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { css } from 'glamor'
 import ReactTooltip from 'react-tooltip'
 import Button from '../components/Button'
-import { TABLET_MEDIA_QUERY, MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
+import {
+  TABLET_MEDIA_QUERY,
+  MOBILE_MEDIA_QUERY,
+} from 'typography-breakpoint-constants'
 // Local
 import bck from '../images/header_bck.svg'
-import { FaBug, FaGithub, FaBars } from 'react-icons/fa';
+import { FaBug, FaGithub, FaBars } from 'react-icons/fa'
 
 class Header extends Component {
   styles = {
     root: {
       background: `url(${bck})`,
       backgroundSize: 'cover',
-      '@media (max-width: 960px)': {
-      },
+      '@media (max-width: 960px)': {},
       '& a': {
         color: '#FFF',
-        textDecoration: 'none'
+        textDecoration: 'none',
       },
     },
     header: {
@@ -40,7 +42,7 @@ class Header extends Component {
     icon: {
       color: '#FFF',
       position: 'relative',
-      top: '-.1rem'
+      top: '-.1rem',
     },
     menu: {
       position: 'absolute',
@@ -59,20 +61,19 @@ class Header extends Component {
     logo: {
       fontFamily: 'csvlogo',
       letterSpacing: '.2rem',
-      paddingRight: '.2rem'
+      paddingRight: '.2rem',
     },
     nodejs: {
       '@media (max-width:374px)': {
         display: 'none',
-      }
+      },
     },
     grow: {
       flex: '1 1 auto',
     },
-    button: {
-    },
+    button: {},
     quick: {
-      marginLeft: '1rem'
+      marginLeft: '1rem',
     },
     quick_label: {
       [TABLET_MEDIA_QUERY]: {
@@ -80,9 +81,9 @@ class Header extends Component {
       },
     },
   }
-  render () {
-    const {children, onMenuClick, slug, project} = this.props
-    const {styles} = this
+  render() {
+    const { children, onMenuClick, slug, project } = this.props
+    const { styles } = this
     return (
       <div css={styles.root}>
         <div css={styles.menu}>
@@ -101,15 +102,19 @@ class Header extends Component {
             <h1 css={styles.title}>
               <Link to="/">
                 <span css={styles.logo}>CSV</span>
-                { project.slug !== 'project' &&
-                  <span css={styles.project}>{project.label}{' '}</span>
-                  
-                }
+                {project.slug !== 'project' && (
+                  <span css={styles.project}>{project.label} </span>
+                )}
                 <span css={styles.nodejs}>for Node.js</span>
-                </Link>
+              </Link>
             </h1>
             <div css={styles.grow} />
-            <a href={project.issue} css={styles.quick} rel="noopener" target="_blank">
+            <a
+              href={project.issue}
+              css={styles.quick}
+              rel="noopener"
+              target="_blank"
+            >
               <Button
                 color="inherit"
                 aria-label="header-bug"
@@ -121,7 +126,12 @@ class Header extends Component {
               </Button>
               <span css={styles.label}>Issues</span>
             </a>
-            <a href={project.github} css={styles.quick} rel="noopener" target="_blank">
+            <a
+              href={project.github}
+              css={styles.quick}
+              rel="noopener"
+              target="_blank"
+            >
               <Button
                 color="inherit"
                 aria-label="header-github"

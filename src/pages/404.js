@@ -6,7 +6,7 @@ const NotFoundPage = () => (
     page={{
       title: 'Page not found',
       description: 'The requested page does not exist',
-      keywords: 'csv, node.js, 404, not found'
+      keywords: 'csv, node.js, 404, not found',
     }}
   >
     <h1>NOT FOUND</h1>

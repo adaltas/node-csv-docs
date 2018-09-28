@@ -1,7 +1,9 @@
-
 import gray from 'gray-percentage'
 import Typography from 'typography'
-import { MIN_TABLET_MEDIA_QUERY, MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
+import {
+  MIN_TABLET_MEDIA_QUERY,
+  MOBILE_MEDIA_QUERY,
+} from 'typography-breakpoint-constants'
 
 const theme = {
   baseFontSize: '18px',
@@ -17,7 +19,8 @@ const theme = {
       background: '-moz-linear-gradient(-45deg, #445353 0%, #384444 100%)',
       background: '-webkit-linear-gradient(-45deg, #445353 0%,#384444 100%)',
       background: 'linear-gradient(135deg, #445353 0%,#384444 100%)',
-      filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#445353\', endColorstr=\'#384444\',GradientType=1 )',
+      filter:
+        "progid:DXImageTransform.Microsoft.gradient( startColorstr='#445353', endColorstr='#384444',GradientType=1 )",
     },
     'h1,h2,h3,h4,h5,h6': {
       marginTop: rhythm(2),
@@ -26,7 +29,7 @@ const theme = {
     'h1 a svg, h2 a svg, h3 a svg, h4 a svg, h5 a svg, h6 a svg': {
       fill: '#B3C6C8',
     },
-    'a': {
+    a: {
       textDecoration: 'underline',
       color: 'rgba(255,255,255,0.95)',
     },
@@ -56,7 +59,7 @@ const theme = {
     'code[class*="language-"],pre[class*="language-"]': {
       fontFamily: 'DejaVu !important',
     },
-    'blockquote': {
+    blockquote: {
       ...scale(1 / 5),
       color: gray(41),
       paddingLeft: rhythm(13 / 16),

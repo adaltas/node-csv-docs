@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import {Link} from 'gatsby'
-import {css} from 'glamor'
+import React, { Component } from 'react'
+import { Link } from 'gatsby'
+import { css } from 'glamor'
 
 class Nav extends Component {
   styles = {
@@ -16,7 +16,7 @@ class Nav extends Component {
       },
       '& a': {
         textDecoration: 'none',
-      }
+      },
     },
     li: {
       margin: 0,
@@ -30,21 +30,21 @@ class Nav extends Component {
       padding: '.3rem 1rem 0 1rem',
       lineHeight: '1.2rem',
       ':hover': {
-        backgroundColor: 'rgba(255,255,255,.1)'
-      }
+        backgroundColor: 'rgba(255,255,255,.1)',
+      },
     },
     linkActive: {
       color: '#00D0B4',
     },
   }
-  render () {
-    const {title, pages, home, onClickLink} = this.props
-    const {styles} = this
+  render() {
+    const { title, pages, home, onClickLink } = this.props
+    const { styles } = this
     return (
       <nav css={styles.root}>
         <h1>{title}</h1>
         <ul>
-          { home &&
+          {home && (
             <li key="/" css={styles.li}>
               <Link
                 to="/"
@@ -55,9 +55,9 @@ class Nav extends Component {
                 Homepage
               </Link>
             </li>
-          }
+          )}
           {[
-            ...pages.map( page =>
+            ...pages.map(page => (
               <li key={page.slug} css={styles.li}>
                 <Link
                   to={page.slug}
@@ -68,7 +68,7 @@ class Nav extends Component {
                   {page.title}
                 </Link>
               </li>
-            ),
+            )),
           ]}
         </ul>
       </nav>
@@ -99,27 +99,32 @@ class Menu extends Component {
       },
     },
   }
-  render () {
-    const {pages, onClickLink} = this.props
-    const {styles} = this
+  render() {
+    const { pages, onClickLink } = this.props
+    const { styles } = this
     const menus = {
       project: {
-        title: 'Project', pages: []
+        title: 'Project',
+        pages: [],
       },
       generate: {
-        title: 'Generate', pages: []
+        title: 'Generate',
+        pages: [],
       },
       parse: {
-        title: 'Parse', pages: []
+        title: 'Parse',
+        pages: [],
       },
       transform: {
-        title: 'Transform', pages: []
+        title: 'Transform',
+        pages: [],
       },
       stringify: {
-        title: 'stringify', pages: []
+        title: 'stringify',
+        pages: [],
       },
     }
-    pages.map( page => {
+    pages.map(page => {
       const section = /^\/(\w+)/.exec(page.slug)[1]
       menus[section].pages.push(page)
     })

@@ -148,13 +148,13 @@ class Button extends Component {
     } = this.props
     const { styles } = this
     if (userStyles && userStyles.base)
-      styles.base = {...styles.base, ...userStyles.base}
+      styles.base = { ...styles.base, ...userStyles.base }
     if (userStyles && userStyles.button)
-      styles.button = {...styles.button, ...userStyles.button}
+      styles.button = { ...styles.button, ...userStyles.button }
     if (userStyles && userStyles.link)
-      styles.link = {...styles.link, ...userStyles.link}
+      styles.link = { ...styles.link, ...userStyles.link }
     if (userStyles && userStyles.label)
-      styles.label = {...styles.label, ...userStyles.label}
+      styles.label = { ...styles.label, ...userStyles.label }
     const label = <span css={styles.label}>{children}</span>
     const Component = href ? 'a' : 'button'
     const componentProps = {

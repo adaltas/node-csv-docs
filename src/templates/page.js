@@ -7,7 +7,7 @@ export default function Template({
 }) {
   const { page } = data // data.markdownRemark holds our post data
   return (
-    <Layout page={{...page.fields, ...page.frontmatter}}>
+    <Layout page={{ ...page.fields, ...page.frontmatter }}>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </Layout>
   )
