@@ -81,24 +81,8 @@ class Header extends Component {
     },
   }
   render () {
-    const {children, onMenuClick, slug} = this.props
+    const {children, onMenuClick, slug, project} = this.props
     const {styles} = this
-    const project = {}
-    project.slug = slug ? /\/(\w+)/.exec(slug)[1] : 'project'
-    switch(project.slug) {
-      case 'project':
-        project.name =  'node-csv'
-        break
-      case 'transform':
-        project.name = 'node-stream-transform'
-        break
-      default:
-        project.name = 'node-csv-' + project.slug
-    }
-    project.label = project.slug.charAt(0).toUpperCase() + project.slug.substr(1)
-    project.issue = `https://github.com/adaltas/${project.name}/issues`
-    project.github = `https://github.com/adaltas/${project.name}`
-    console.log(project)
     return (
       <div css={styles.root}>
         <div css={styles.menu}>

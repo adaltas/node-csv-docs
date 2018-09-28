@@ -47,10 +47,25 @@ class Layout extends Component {
     const pages = data.pages.edges.map( (page) => {
       return {...page.node.fields, ...page.node.frontmatter}
     })
+    const project = {}
+    project.slug = page.slug ? /\/(\w+)/.exec(page.slug)[1] : 'project'
+    switch(project.slug) {
+      case 'project':
+        project.name =  'node-csv'
+        break
+      case 'transform':
+        project.name = 'node-stream-transform'
+        break
+      default:
+        project.name = 'node-csv-' + project.slug
+    }
+    project.label = project.slug.charAt(0).toUpperCase() + project.slug.substr(1)
+    project.issue = `https://github.com/adaltas/${project.name}/issues`
+    project.github = `https://github.com/adaltas/${project.name}`
     return (
       <>
         <Helmet
-          title={page.title}
+          title={`CSV ${project.label} - ${page.title}`}
           meta={[
             { name: 'description', content: page.description },
             { name: 'keywords', content: page.keywords },
@@ -65,7 +80,7 @@ class Layout extends Component {
           width={'23%'}
           main={
             <>
-              <Header onMenuClick={ toggle } slug={page.slug}>
+              <Header onMenuClick={ toggle } slug={page.slug} project={project}>
                 {intro && <Intro />}
               </Header>
               <Main page={page}>
