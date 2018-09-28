@@ -12,7 +12,12 @@ const theme = {
   headerFontFamily: ['Khula', 'sans-serif'],
   overrideStyles: ({ adjustFontSizeTo, rhythm, scale }, options) => ({
     'body, html': {
-      backgroundColor: '#384444',
+      // backgroundColor: '#384444',
+      backgroundColor: '#445353',
+      background: '-moz-linear-gradient(-45deg, #445353 0%, #384444 100%)',
+      background: '-webkit-linear-gradient(-45deg, #445353 0%,#384444 100%)',
+      background: 'linear-gradient(135deg, #445353 0%,#384444 100%)',
+      filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#445353\', endColorstr=\'#384444\',GradientType=1 )',
     },
     'h1,h2,h3,h4,h5,h6': {
       marginTop: rhythm(2),
@@ -41,14 +46,17 @@ const theme = {
     },
     'main :not(pre) > code[class*="language-"]': {
       padding: '.2em .3em .2em .3em',
-      // background: '#667575',
-      backgroundColor: 'rgba(255,255,255,.1)',
+      backgroundColor: '#282F2F',
+      // backgroundColor: 'rgba(255,255,255,.1)',
       color: '#fff',
     },
     'main div .gatsby-highlight': {
       marginBottom: '1.45rem',
     },
-    blockquote: {
+    'code[class*="language-"],pre[class*="language-"]': {
+      fontFamily: 'DejaVu !important',
+    },
+    'blockquote': {
       ...scale(1 / 5),
       color: gray(41),
       paddingLeft: rhythm(13 / 16),

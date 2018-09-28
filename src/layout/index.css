@@ -17,3 +17,10 @@
   font-weight: 400;
   font-display: optional;
 }
+@font-face {
+  font-family: "DejaVu";
+  src: url("../fonts/DejaVuSansMono.ttf") format("truetype");
+  font-style: normal; 
+  font-weight: 400;
+  font-display: optional;
+}
