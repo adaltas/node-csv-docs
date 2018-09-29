@@ -47,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adaltas/node-csv-docs"
+    "url": "git+https://github.com/adaltas/node-csv-docs"
   }
 }
