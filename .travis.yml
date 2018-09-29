@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "10"
+script:
+  - gatsby build
+  - echo 'csv.js.org' > public/CNAME
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: false
+  local-dir: public
+  on:
+    branch: master
+env:
+  global:
+  - secure: "uaJS8TZQPIjvnTmwp/VkG8V+YcGp4MlgJ/ijI+w49DTsKV0H7ADqFmmKghHPEx2Pss/gsLE4wFuYufUn/wJHF6NDkmrLTvC/SLd28c4w5JGS1Wh+MwgmSpdGnPJ8Oaov0IttI/oF3TU9+DFHbLhYIlMfP+dyl3HHCezalfSALoDYt0543Ujc7wF4SKYeLe/aTUzxeBHIUUFz88XA9KDN6oiwYCg6MOr96mKlM06vVeP5K7MqIYFhlRPVwWLcd7AGs+WWXtYyAioxcVCT4vz2EeXo5z/rvpqCP9EEAV0hG1n4SgOtBh+mvaFAUx96CWrvwr8szyWZDArfB/iNBarYW/XrnN2EhNHbuskhWRWfRTCtHotd1fy1LZS2uxhItkUZS+Wn/K4zNuBkuOjtNO5Zmki2Quk2UsespOoFoI5ZyBb+b7xB3KkiIIaKiJG5YF/rktRhjudNcTWMCnRXLURrZaQYCBUKiSEl22ZQv6NlMbSPqZvezEHE+Am1adxN77//udJ9/gWDdqlFVAi6P66Kp2wN7PRkZyAPzTQEvdr5A4OG53tOHPjOUzMh5Jnba8lTUrcVmgEVQA1cnpCEOxqwSkZvQP5EWpcVnbpDSyKgr9yn4wOsoFGUxaGr1kp+EWDF6ElRKDnu09m4C3kvaRtL5cu7VrbYOVEf2Me2+0MBCeo="
