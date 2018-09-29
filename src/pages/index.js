@@ -58,6 +58,9 @@ class Index extends Component {
       backgroundColor: 'rgba(255,255,255,.1)',
       padding: '1rem 2rem',
       textAlign: 'center',
+      '& a': {
+        textDecoration: 'none'
+      },
       '& h1, & img': {
         marginTop: '0',
         marginBottom: '.5rem',
@@ -82,7 +85,7 @@ class Index extends Component {
       >
         <div css={style.projects}>
           <div css={style.card}>
-            <h1>csv-generate</h1>
+            <h1><Link to="/generate/">csv-generate</Link></h1>
             <a
               href="https://npmjs.org/package/csv-generate"
               title="View this project on NPM"
@@ -106,7 +109,7 @@ class Index extends Component {
             <p>Write random and user-defined strings, objects and arrays</p>
           </div>
           <div css={style.card}>
-            <h1>csv-parse</h1>
+            <h1><Link to="/generate/">csv-parse</Link></h1>
             <a
               href="https://npmjs.org/package/csv-parse"
               title="View this project on NPM"
@@ -132,7 +135,7 @@ class Index extends Component {
             <p>Read CSV strings and buffers and write object and arrays</p>
           </div>
           <div css={style.card}>
-            <h1>stream-transform</h1>
+            <h1><Link to="/generate/">stream-transform</Link></h1>
             <a
               href="https://npmjs.org/package/stream-transform"
               title="View this project on NPM"
@@ -158,7 +161,7 @@ class Index extends Component {
             <p>Read and write objects and arrays</p>
           </div>
           <div css={style.card}>
-            <h1>csv-stringify</h1>
+            <h1><Link to="/generate/">csv-stringify</Link></h1>
             <a
               href="https://npmjs.org/package/csv-stringify"
               title="View this project on NPM"
