@@ -21,8 +21,10 @@ Source code for this project is available on [GitHub][generate].
 
 * Scalable `stream.Readable` implementation
 * random or pseudo-random seed based generation
+* Idempotence with the "seed" option
 * User-defined value generation
 * Multiple types of values (integer, boolean, dates, ...)
+* BSD License
 
 ## Usage
 

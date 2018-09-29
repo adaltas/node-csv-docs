@@ -4008,6 +4008,12 @@ gatsby-plugin-glamor@^2.0.5:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-google-analytics@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.6.tgz#b6bc37ce357125ae9969ee38edf8fd031c57723c"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-manifest@next:
   version "2.0.2-rc.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.2-rc.1.tgz#635cf3febe64b2d6420d6e6bbf3ade660dd5288a"

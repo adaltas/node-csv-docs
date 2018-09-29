@@ -7,6 +7,7 @@
     "gatsby": "^2.0.8",
     "gatsby-plugin-catch-links": "^2.1.0-alpha.f98688ee",
     "gatsby-plugin-glamor": "^2.0.5",
+    "gatsby-plugin-google-analytics": "^2.0.6",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
@@ -31,6 +32,7 @@
   "keywords": [
     "csv, node.js, parser, stringifier, website, gatsby"
   ],
+  "homepage": "https://csv.js.org/",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

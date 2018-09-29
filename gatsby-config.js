@@ -55,12 +55,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-catch-links`,
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: 'UA-XXXXXXX-X',
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-1322093-7',
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
