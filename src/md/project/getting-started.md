@@ -28,7 +28,7 @@ The `csv` package is an umbrella which is itself split into 4 packages:
 *   [`csv-stringify`](https://github.com/adaltas/node-csv-stringify),
     a stringifier converting records into a CSV text.
 
-It means you can either the `csv` package or selectively one of its child project to decrease your dependencies.
+It means you can either the `csv` package directly or selectively one of its child project to decrease your dependencies.
 
 ## Usage
 
@@ -37,8 +37,4 @@ Installation command is `npm install csv`. If using [Yarn](https://yarnpkg.com/e
 The main modules are fully be compatible with the Node.js native [stream API](https://nodejs.org/api/stream.html). Alternative API are also provided for conveniency such as the callback, sync and promise APIs.
 
 For additional usage and examples, you may refer to
-[the example page][examples].
-
-[iconv]: https://github.com/ashtuchkin/iconv-lite
-[examples]: /csv/examples/
-[legacy]: /legacy/
+[the example page](/project/examples/).
