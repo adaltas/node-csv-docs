@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
+import {
+  TABLET_MEDIA_QUERY,
+  MIN_TABLET_MEDIA_QUERY,
+} from 'typography-breakpoint-constants'
 
 class Intro extends Component {
   styles = {
@@ -14,7 +18,13 @@ class Intro extends Component {
       position: 'relative',
       maxWidth: 800,
       margin: '0 auto',
-      padding: '0 1rem 0 3rem',
+      [TABLET_MEDIA_QUERY]: {
+        padding: '1rem 1rem 1rem 1rem',
+      },
+      [MIN_TABLET_MEDIA_QUERY]: {
+        padding: '0 1rem 0 3rem',
+        // boxSizing: 'content-box',
+      },
       boxSizing: 'content-box',
       '& svg': {
         maxHeight: '100%',
@@ -28,9 +38,16 @@ class Intro extends Component {
         margin: '0 auto',
         textAlign: 'center',
         maxWidth: '800',
-        padding: '1rem 1rem .4rem 3rem',
         boxSizing: 'content-box',
         fontSize: '1.6rem',
+        [TABLET_MEDIA_QUERY]: {
+          padding: '2rem 1rem 1rem 1rem',
+          fontSize: '1.2rem',
+        },
+        [MIN_TABLET_MEDIA_QUERY]: {
+          padding: '1rem 1rem .4rem 3rem',
+          // boxSizing: 'content-box',
+        },
       },
       // '& a': {
       //   textDecoration: 'underline',
