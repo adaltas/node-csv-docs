@@ -64,7 +64,10 @@ class Header extends Component {
       paddingRight: '.2rem',
     },
     nodejs: {
-      '@media (max-width:374px)': {
+      // '@media (max-width:374px)': {
+      //   display: 'none',
+      // },
+      [MOBILE_MEDIA_QUERY]: {
         display: 'none',
       },
     },
@@ -124,7 +127,7 @@ class Header extends Component {
               >
                 <FaBug css={styles.icon} />
               </Button>
-              <span css={styles.label}>Issues</span>
+              <span css={styles.quick_label}>Issues</span>
             </a>
             <a
               href={project.github}
@@ -141,7 +144,7 @@ class Header extends Component {
               >
                 <FaGithub css={styles.icon} />
               </Button>
-              <span css={styles.label}>GitHub</span>
+              <span css={styles.quick_label}>GitHub</span>
             </a>
             <ReactTooltip
               id="header-tooltip"
