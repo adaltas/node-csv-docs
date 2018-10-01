@@ -139,7 +139,7 @@ class Footer extends Component {
           <div css={styles.about}>
             <h1>About</h1>
             <p>
-              Node.js HBase is an open source product hosted on{' '}
+              The Node.js CSV project is an open source product hosted on{' '}
               <a href="https://www.github.com" target="_blank" rel="noopener">
                 GitHub
               </a>{' '}
