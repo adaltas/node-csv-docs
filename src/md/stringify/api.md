@@ -13,16 +13,43 @@ There are multiple APIs available. Under the hood, they are all based on the sam
 
 ### Stream API
 
-It implement the native Node.js [transform stream][stream] which is both
-readable and writable.
+The main module of the package implements the native Node.js [transform stream][stream] which is both readable and writable.
 
 This is the recommended approach if you need a maximum of power. It ensure
 scalability by treating your data as a stream from the source to the destination.
 
-```
+The signature is `const stream = stringify(records, [options])`.
+
+The [stream example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.stream.js) write 2 records and register multiple events to read the generated CSV output and get notified when the serialisation is finished.
+
+```js
 const stringify = require('csv-stringify')
-stringify([options]);
+const assert = require('assert')
+const data = []
+const stringifier = stringify({
+  delimiter: ':'
+})
+stringifier.write([ 'root','x','0','0','root','/root','/bin/bash' ])
+stringifier.write([ 'someone','x','1022','1022','','/home/someone','/bin/bash' ])
+stringifier.end()
+stringifier.on('readable', function(){
+  let row;
+  while(row = stringifier.read()){
+    data.push(row)
+  }
+})
+stringifier.on('error', function(err){
+  console.error(err.message)
+})
+stringifier.on('finish', function(){
+  assert.equal(
+    data.join('\n'),
+    "root:x:0:0:root:/root:/bin/bash\n" +
+    "someone:x:1022:1022::/home/someone:/bin/bash\n"
+  )
+})
 ```
+_Run this example with the command `node samples/api.stream.js`._
 
 ### Mixed API
 
@@ -37,10 +64,24 @@ either have all your records in memory and wish to pipe the generated
 CSV into a stream writer or that you have a stream reader generated records and
 wish to obtain a string representing the full CSV text.
 
-```
+## Callback API
+
+The signature is `stringify(records, [options], callback)`.
+
+The [callback example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.callback.js) receives an array and a callback function. The input is serialised into a string unless an error occurred.
+
+```js
 const stringify = require('csv-stringify')
-stringify([data], [options], [callback])
+const assert = require('assert')
+
+stringify([
+  [ '1', '2', '3', '4' ],
+  [ 'a', 'b', 'c', 'd' ]
+], function(err, output){
+  assert.equal(output, '1,2,3,4\na,b,c,d\n')
+})
 ```
+_Run this example with the command `node samples/api.callback.js`._
 
 ### Sync API
 
@@ -50,7 +91,4 @@ This represent a regular direct synchronous call to a function: you pass records
 and it return a CSV text. Because of its simplicity, this is the recommended
 approach if you don't need scalability and if your dataset fit in memory. 
 
-```
-const stringify = require('csv-stringify/lib/sync')
-stringify(records, [options])
-```
+The module to require is `csv-stringify/lib/sync` and the signature is `const data = parse(records, [options])`.

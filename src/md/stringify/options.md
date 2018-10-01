@@ -60,8 +60,8 @@ stringify( {
   { a: '1', b: '2' }
 }, {
   columns: [ { key: 'a' }, { key: 'b' } ]
-}, function(err, csv){
-  assert.equals(csv, '1,2\n')
+}, function(err, data){
+  assert.equals(data, '1,2\n')
 })
 ```
 
@@ -74,8 +74,8 @@ stringify( {
   { a: '1', b: '2' }
 }, {
   columns: [ 'a', 'b' ]
-}, function(err, csv){
-  assert.equals(csv, '1,2\n')
+}, function(err, data){
+  assert.equals(data, '1,2\n')
 })
 ```
 
@@ -87,8 +87,8 @@ stringify( {
 }, {
   header: true,
   columns: [ { key: 'a', header: 'col_a' }, { key: 'b', header: 'col_b' } ]
-}, function(err, csv){
-  assert.equals(csv, 'col_a,col_b\n1,2\n')
+}, function(err, data){
+  assert.equals(data, 'col_a,col_b\n1,2\n')
 })
 ```
 
@@ -100,7 +100,64 @@ stringify( {
 }, {
   header: true,
   columns: [ { 'a': 'col_a' }, { 'b': 'col_b' } ]
-}, function(err, csv){
-  assert.equals(csv, 'col_a,col_b\n1,2\n')
+}, function(err, data){
+  assert.equals(data, 'col_a,col_b\n1,2\n')
 })
 ```
+
+## Option `formatters`
+
+This example is available with the command `node samples/options.formatters.js`.
+
+```js
+const stringify = require('csv-stringify')
+const assert = require('assert')
+
+stringify([{
+  name: 'foo',
+  date: new Date(1970, 0)
+},{
+  name: 'bar',
+  date: new Date(1971, 0)
+}],{
+  formatters: {
+    date: function(value) {
+      return value.toISOString()
+    }
+  }
+}, function(err, data) {
+  assert.equal(
+    data,
+    "foo,1969-12-31T23:00:00.000Z\n" +
+    "bar,1970-12-31T23:00:00.000Z\n"
+  )
+})
+```
+
+_Run this example with the command `node samples/options.formatters.js`._
+
+## Option `header`
+
+In the [header example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/options.header.js), the value is `true` and the header content is obtained from the keys present in the "columns" option.
+
+```js
+const stringify = require('csv-stringify')
+const assert = require('assert')
+
+stringify([
+  { year: 'XXXX', phone: 'XXX XXXX' },
+  { year: 'YYYY', phone: 'YYY YYYY' }
+],{
+  header: true,
+  columns: ['year', 'phone']
+}, function(err, data){
+  assert.equal(
+    data,
+    "year,phone\n" +
+    "XXXX,XXX XXXX\n" +
+    "YYYY,YYY YYYY\n"
+  )
+})
+```
+
+_Run this example with the command `node samples/options.header.js`._

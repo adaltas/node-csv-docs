@@ -17,10 +17,7 @@ The main module of this package implements the native Node.js [readable stream A
 recommended approach if you need a maximum of power. It ensures scalability 
 by treating your data as an input stream. It is however more verbose and harder to use.
 
-```
-const generate = require('csv-generate')
-const readable_stream = generate([options])
-```
+The signature is `const stream = generate([options])`.
 
 The [stream example](https://github.com/adaltas/node-csv-generate/blob/master/samples/api.stream.js) illustrates the various events to listen.
 
@@ -81,7 +78,7 @@ generate({
 The generated output is returned. Like with the callback API, this mode
 implies that the overall dataset will be stored in memory.
 
-The signature is `const records = generate([options])`.
+The module to require is `csv-transform/lib/sync` and the signature is `const records = generate([options])`.
 
 The [sync example](https://github.com/adaltas/node-csv-generate/blob/master/samples/api.callback.js) returns an array of 2 records.
 

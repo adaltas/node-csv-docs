@@ -60,10 +60,10 @@ parser.on('end', function(){
 
 ## Callback API
 
-The [callback example](https://github.com/adaltas/node-csv-parse/blob/master/samples/api.callback.js) trakes the CSV string in the first argument and a user callback in the second argument. The callback will received any error thrown by the CSV parser or an array of records object in the second argument. returns an array inside a user-provided
-callback.
+The signature is `parse(data, [options], callback)`.
 
-This example is available with the command `node samples/api.callback.js`.
+The [callback example](https://github.com/adaltas/node-csv-parse/blob/master/samples/api.callback.js) takes the CSV string in the first argument and a user callback in the second argument. The callback will received any error thrown by the CSV parser or an array of records object in the second argument. returns an array inside a user-provided
+callback.
 
 ```js
 const parse = require('csv-parse')
@@ -89,10 +89,7 @@ This represent a regular direct synchronous call to a function: you pass records
 and it return a CSV text. Because of its simplicity, this is the recommended
 approach if you don't need scalability and if your dataset fit in memory.
 
-```
-const parse = require('csv-parse/lib/sync')
-parse(records, [options])
-```
+The module to require is `csv-parse/lib/sync` and the signature is `const records = parse(data, [options])`.
 
 The [synchronous example](https://github.com/adaltas/node-csv-parse/blob/master/samples/module.sync.js) illustrates how to use the alternative synchronous module. It is much easier to use at the expense of not being scalable.
 
