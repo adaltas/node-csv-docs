@@ -1,8 +1,25 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import Modal from 'react-modal'
 import { css } from 'glamor'
 
 /*
+Breakpoints
+Based on [typography-breakpoint-constants](https://github.com/KyleAMathews/typography.js/blob/master/packages/typography-breakpoint-constants/src/index.js)
+
+
+*/
+
+const breakpoints = {
+  LARGER_DISPLAY: 1600,
+  LARGE_DISPLAY: 1280,
+  DEFAULT: 980,
+  TABLET: 768,
+  MOBILE: 480
+}
+
+/*
+
+* breakpoint: window size when to switch between the temporary and permanent display
 
 * userStyles.main
 * userStyles.body
@@ -10,7 +27,7 @@ import { css } from 'glamor'
 
 */
 
-class Drawer extends Component {
+class Drawer extends PureComponent {
   styles = {
     body: {
       width: '100%',
@@ -20,8 +37,7 @@ class Drawer extends Component {
       position: 'relative',
       margin: 0,
       paddingLeft: 250,
-      // backgroundColor: '#F2F2F2',
-      '@media (max-width: 980px)': {
+      [`@media (max-width: ${breakpoints.DEFAULT}px)`]: {
         paddingLeft: 0,
       },
     },
@@ -30,11 +46,11 @@ class Drawer extends Component {
       left: 0,
     },
     mainOpen: {
-      '@media (min-width: 980px)': {
+      [`@media (min-width: ${breakpoints.DEFAULT}px)`]: {
         paddingLeft: '250px',
         transition: 'padding-left 225ms cubic-bezier(0.0, 0, 0.2, 1)',
       },
-      '@media (max-width: 980px)': {
+      [`@media (max-width: ${breakpoints.DEFAULT}px)`]: {
         left: 250,
         transition: 'left 225ms cubic-bezier(0.0, 0, 0.2, 1)',
       },
@@ -49,7 +65,7 @@ class Drawer extends Component {
       '> *': {
         overflow: 'auto',
       },
-      '@media (max-width: 980px)': {
+      [`@media (max-width: ${breakpoints.DEFAULT}px)`]: {
         left: '-250px',
       },
     },
@@ -86,18 +102,25 @@ class Drawer extends Component {
   }
   render() {
     const { styles } = this
-    const { drawer, main, open, width } = this.props
-    const userStyles = this.props.styles || {}
-    const w = width ? (typeof width === 'number' ? width + 'px' : width) : 250
-    styles.main.paddingLeft = open ? w : 0
-    styles.mainOpen['@media (min-width: 980px)'].paddingLeft = w
-    styles.mainOpen['@media (max-width: 980px)'].left = w
-    styles.drawer.left = open ? 0 : '-' + w
-    styles.drawer.width = w
-    styles.drawer['@media (max-width: 980px)'].left = '-' + w
-    styles.drawerClose.left = '-' + w
     const { isMobile } = this.state
     const isWindow = typeof window !== `undefined`
+    const { drawer, main, open, width } = this.props
+    const userStyles = this.props.styles || {}
+    const getWidth = function(width){
+      let w = width
+      if (typeof w === 'number') w = w + 'px'
+      if (typeof w === 'undefined') w = '250px'
+      if (isMobile) w = 250
+      return w
+    }
+    const w = getWidth(width)
+    styles.main.paddingLeft = open ? w : 0
+    styles.mainOpen[`@media (min-width: ${breakpoints.DEFAULT}px)`].paddingLeft = w
+    styles.mainOpen[`@media (max-width: ${breakpoints.DEFAULT}px)`].left = w
+    styles.drawer.left = open ? 0 : '-' + w
+    styles.drawer.width = w
+    styles.drawer[`@media (max-width: ${breakpoints.DEFAULT}px)`].left = '-' + w
+    styles.drawerClose.left = '-' + w
     return (
       <>
         <div
@@ -148,6 +171,10 @@ class Drawer extends Component {
       </>
     )
   }
+}
+
+Drawer.defaultProps = {
+  breakpoint: 980,
 }
 
 export default Drawer
