@@ -64,11 +64,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'node-csv',
+        short_name: 'csv',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#445353',
+        theme_color: '#445353',
         display: 'minimal-ui',
         icon: 'src/images/csv-icon.png', // This path is relative to the root of the site.
       },
