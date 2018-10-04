@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "csvlogo";
-  src: local("csvlogo"), url("../fonts/csvlogo.woff") format("truetype");
+  src: local("csvlogo"), url("../fonts/csvlogo.woff") format("woff");
   font-style: normal; 
   font-weight: 400;
   font-display: optional;
