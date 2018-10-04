@@ -26,6 +26,8 @@
     "react-syntax-highlighter": "^8.0.1",
     "react-tooltip": "^3.8.4",
     "react-typography": "^0.16.13",
+    "typeface-khula": "^0.0.54",
+    "typeface-overpass-mono": "^0.0.54",
     "typography": "^0.16.17",
     "typography-theme-grand-view": "^0.15.10"
   },

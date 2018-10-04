@@ -57,7 +57,7 @@ const theme = {
       marginBottom: '1.45rem',
     },
     'code[class*="language-"],pre[class*="language-"]': {
-      fontFamily: 'DejaVu !important',
+      fontFamily: 'Overpass Mono !important',
     },
     blockquote: {
       ...scale(1 / 5),

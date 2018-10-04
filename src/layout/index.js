@@ -9,7 +9,7 @@ import Intro from './Intro'
 import Main from './Main'
 import Menu from './Menu'
 import Footer from './Footer'
-import {} from './index.css'
+import {} from '../fonts/index.css'
 
 class Layout extends Component {
   styles = {
