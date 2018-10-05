@@ -109,7 +109,7 @@ class Index extends Component {
             <p>Write random and user-defined strings, objects and arrays</p>
           </div>
           <div css={style.card}>
-            <h1><Link to="/generate/">csv-parse</Link></h1>
+            <h1><Link to="/parse/">csv-parse</Link></h1>
             <a
               href="https://npmjs.org/package/csv-parse"
               title="View this project on NPM"
@@ -135,7 +135,7 @@ class Index extends Component {
             <p>Read CSV strings and buffers and write object and arrays</p>
           </div>
           <div css={style.card}>
-            <h1><Link to="/generate/">stream-transform</Link></h1>
+            <h1><Link to="/transform/">stream-transform</Link></h1>
             <a
               href="https://npmjs.org/package/stream-transform"
               title="View this project on NPM"
@@ -161,7 +161,7 @@ class Index extends Component {
             <p>Read and write objects and arrays</p>
           </div>
           <div css={style.card}>
-            <h1><Link to="/generate/">csv-stringify</Link></h1>
+            <h1><Link to="/stringify/">csv-stringify</Link></h1>
             <a
               href="https://npmjs.org/package/csv-stringify"
               title="View this project on NPM"
