@@ -38,7 +38,7 @@ Use the stream based API for scalability and the sync or mixed APIs for simplici
 The source code uses modern JavaScript features and run natively in Node 7.6+.
 For older browsers or older versions of Node, use the modules inside "./lib/es5".
 
-## Additionnal help
+## Additional help
 
 For usage and examples, you may refer to
 [example page](/stringify/examples/),
