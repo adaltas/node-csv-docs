@@ -48,7 +48,7 @@ JS
 node generator.js
 ```
 
-Another option is to access it through its parent `csv` package, which main module export a `generate` function. For example using the NPM with the command `npm install csv`.
+Another option is to access it through its parent `csv` package, which main module exports a `generate` function. For example using the NPM with the command `npm install csv`.
 
 ```bash
 # Prepare the project directory
@@ -71,5 +71,5 @@ Run `npm install csv` to install the full csv module or run
 
 
 
-The source code uses modern JavaScript features and run natively in Node 7.6+.
+The source code uses modern JavaScript features and runs natively in Node 7.6+.
 For older browsers or older versions of Node, use the modules inside "./lib/es5".
