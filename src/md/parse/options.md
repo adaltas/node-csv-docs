@@ -46,7 +46,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `raw` (boolean)   
   Generate two properties `raw` and `row` where `raw` is the original CSV row content and `row` is the parsed array or object.
 * `rowDelimiter` (chars|array)   
-  One or multiple characters used to delimit record rows; defaults to auto discovery if not provided. Suported auto disvovery method are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters.
+  One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters.
 * `rtrim` (boolean)   
   If `true`, ignore whitespace immediately preceding the delimiter (i.e. right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 * `skip_empty_lines` (boolean)   
