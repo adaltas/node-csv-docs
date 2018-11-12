@@ -120,7 +120,7 @@ class Menu extends Component {
         pages: [],
       },
       stringify: {
-        title: 'stringify',
+        title: 'Stringify',
         pages: [],
       },
     }

@@ -9,7 +9,7 @@ sort: 3
 
 All options are optional. All the options from the [Node.js Stream Writable](https://nodejs.org/api/stream.html#stream_constructor_new_stream_writable_options) are supported and passed as is.
 
-All options accept both the underscore and camel case forms. Thus, `row_delimiter` and `rowDelimiter` are equivalent. For the sake of clarity, we listed Node.js native options in the camel case form while library specific options are listed in the underscore form.
+All options accept both the underscore and camel case forms. Thus, `record_delimiter` and `recordDelimiter` are equivalent. For the sake of clarity, we listed Node.js native options in the camel case form while library specific options are listed in the underscore form.
 
 ## Available options
 

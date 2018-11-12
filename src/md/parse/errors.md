@@ -1,11 +1,11 @@
 ---
-title: Errors
-description: CSV parsing implementing the Node.js `stream.Transform` API
-keywords: ['intro','page']
+title: Commons errors
+description: Commons errors encountered while using the CSV parser
+keywords: ['csv','parse', 'error', 'mistake']
 sort: 5
 ---
 
-# Commons Error
+# Commons errors
 
 ## End notification
 
