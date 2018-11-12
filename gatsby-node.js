@@ -19,11 +19,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `edit_url`,
       value: edit_url,
     })
+    createNodeField({
+      node,
+      name: `redirects`,
+      value: node.frontmatter.redirects || [],
+    })
   }
 }
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
   const pageTemplate = path.resolve(`src/templates/page.js`)
   return graphql(`
     {
@@ -38,6 +43,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
             fields {
               slug
+              redirects
             }
           }
         }
@@ -54,6 +60,16 @@ exports.createPages = ({ actions, graphql }) => {
         component: pageTemplate,
         context: {}, // additional data can be passed via context
       })
+      if (node.fields.redirects) {
+        node.fields.redirects.map(redirect => {
+          createRedirect({
+            fromPath: redirect,
+            toPath: node.fields.slug,
+            isPermanent: true,
+            redirectInBrowser: true,
+          })
+        })
+      }
     })
   })
 }
