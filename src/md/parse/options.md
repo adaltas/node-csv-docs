@@ -25,6 +25,8 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Set the field delimiter. One or multiple character. Defaults to `","` (comma).
 * `escape` (string|Buffer)   
   Set the escape character. One character/byte only, Only apply to quote and escape characters inside quoted fields. Defaults to double quote.
+* `info` (boolean)   
+  Generate two properties `info` and `record` where `info` is a snapshot of the info object at the time the record was created and `record` is the parsed array or object; note, it can be used conjointly with the `raw` option.
 * `from` (number)   
   Start handling records from the requested number of records.
 * `from_line` (number)   
@@ -38,7 +40,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `quote` (char|boolean)   
   Optional character surrounding a field. One character only. Disabled if null, false or empty. Defaults to double quote.
 * `raw` (boolean)   
-  Generate two properties `raw` and `row` where `raw` is the original CSV row content and `row` is the parsed array or object.
+  Generate two properties `raw` and `record` where `raw` is the original CSV content and `record` is the parsed array or object; note, it can be used conjointly with the `info` option.
 * `relax` (boolean)   
   Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
 * `relax_column_count` (boolean)   

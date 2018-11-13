@@ -11,17 +11,18 @@ redirects:
 
 Those properties report internal information such as the number of records which have been processed. They are available in the `info` object of a parser instance and are also exported as the third argument of the user callback.
 
-Note, they are used internally by the parser, don't modify them.
+Note, some properties are used internally by the parser, don't modify them.
 
+* `comment_lines` (number)   
+  Count the number of lines being fully commented.
 * `empty_lines` (number)   
-  Count the number of processed empty lines; was `empty_line_count` until version 3.
+  Count the number of processed empty lines; was `empty_line_count` until version 3; work only with the `skip_empty_lines` option or an error will be thrown if an empty line is found.
 * `lines` (number)   
-  The number of lines encountered in the source dataset, start at 1 for the
-  first line.
+  The number of lines encountered in the source dataset, start at 1 for the first line.
 * `records` (number)   
   Count the number of processed records.
-* `skipped_lines` (number)   
-  Number of non uniform lines skipped when `relax_column_count` is true; was `skipped_line_count` until version 3.
+* `invalid_field_length` (number)   
+  Number of non uniform records when `relax_column_count` is true; was `skipped_line_count` until version 3.
 
 ## Accessing `info`
 
