@@ -1,7 +1,7 @@
 ---
 title: Handler
 description: Stream Transform - user handler function
-keywords: ['intro','page']
+keywords: ['stream', 'transform', 'handler', 'synchronous', 'asynchronous', 'alter', 'skip', 'clone']
 sort: 4
 ---
 

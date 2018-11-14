@@ -1,7 +1,7 @@
 ---
 title: Usage
 description: CSV and object generation implementing the Node.js `stream.Readable` API
-keywords: ['intro','page']
+keywords: ['csv', 'generate', 'node.js', 'stream', 'features', 'usage']
 sort: 1
 ---
 

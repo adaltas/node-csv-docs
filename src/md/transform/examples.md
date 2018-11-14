@@ -1,7 +1,7 @@
 ---
 title: Examples
-keywords: ['csv','transform', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
-sort: 6
+keywords: ['csv', 'transform', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
+sort: 7
 ---
 
 # Stream Transform examples

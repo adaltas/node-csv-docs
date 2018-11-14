@@ -1,7 +1,7 @@
 ---
 title: API
 description: CSV Parse - stream, callback and sync APIs
-keywords: ['intro','page']
+keywords: ['csv', 'parse', 'parser', 'api', 'callback', 'stream', 'sync', 'promise']
 sort: 2
 ---
 

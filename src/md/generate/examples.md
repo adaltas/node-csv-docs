@@ -2,7 +2,7 @@
 title: Examples
 description: Examples on how to generate CSV data sets and streams
 keywords: ['csv','generate', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
-sort: 4
+sort: 5
 ---
 
 # CSV Generate examples

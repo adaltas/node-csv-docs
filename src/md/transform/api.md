@@ -1,7 +1,7 @@
 ---
 title: API
 description: Stream Transform - stream, callback and sync APIs
-keywords: ['intro','page']
+keywords: ['csv', 'transform', 'api', 'callback', 'stream', 'sync', 'promise']
 sort: 2
 ---
 

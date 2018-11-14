@@ -1,7 +1,7 @@
 ---
 title: Usage
 description: CSV parsing implementing the Node.js `stream.Transform` API
-keywords: ['csv','parse', 'parser', 'convert', 'tsv', 'stream']
+keywords: ['csv', 'parse', 'parser', 'tsv', 'node.js', 'stream', 'features', 'usage']
 sort: 1
 ---
 
@@ -26,7 +26,8 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 *   Support big datasets
 *   Complete test coverage and samples for inspiration
 *   No external dependencies
-*   To be used conjointly with `csv-generate`, `stream-transform` and `csv-stringify`
+*   Work nicely with the [csv-generate](https://csv.js.org/generate/), [stream-transform](https://csv.js.org/transform/) and [csv-stringify](https://csv.js.org/stringify/) packages
+*   BSD License
 
 ## Usage
 

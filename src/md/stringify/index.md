@@ -1,7 +1,7 @@
 ---
 title: Usage
 description: CSV stringifier implementing the Node.js `stream.Transform` API
-keywords: ['intro','page']
+keywords: ['csv', 'stringify', 'node.js', 'stream', 'features', 'usage']
 sort: 1
 ---
 
@@ -10,12 +10,12 @@ sort: 1
 [![Build Status](https://api.travis-ci.org/adaltas/node-csv-stringify.svg)](https://travis-ci.org/#!/adaltas/node-csv-stringify)
 
 This package is a stringifier converting records into a CSV text and implementing the
-Node.js `stream.Transform` API. It is also providing the easier synchronous and
+Node.js [`stream.Transform` API](https://nodejs.org/api/stream.html). It also provides the easier synchronous and
 callback-based APIs for conveniency. It is both extremely easy to use and
 powerful. It was first released in 2010 and is tested against big data
 sets by a large community.
 
-Source code for this project is available on [GitHub][stringify].
+Source code for this project is available on [GitHub](https://github.com/adaltas/node-csv-stringify).
 
 ## Main features
 
@@ -42,9 +42,4 @@ For older browsers or older versions of Node, use the modules inside "./lib/es5"
 
 For usage and examples, you may refer to
 [example page](/stringify/examples/),
-[the "samples" folder][stringify-samples] and [the "test" folder][stringify-test].
-
-[travis-csv-stringify]: http://travis-ci.org/adaltas/node-csv-stringify
-[stringify]: https://github.com/adaltas/node-csv-stringify
-[stringify-samples]: https://github.com/adaltas/node-csv-stringify/tree/master/samples
-[stringify-test]: https://github.com/adaltas/node-csv-stringify/tree/master/test
+[the "samples" folder](https://github.com/adaltas/node-csv-stringify/tree/master/samples) and [the "test" folder](https://github.com/adaltas/node-csv-stringify/tree/master/test).

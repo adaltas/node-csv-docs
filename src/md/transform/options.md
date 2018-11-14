@@ -1,7 +1,7 @@
 ---
 title: Options
 description: Options relative to the stream-transform package
-keywords: ['stream', 'transform', 'options']
+keywords: ['stream', 'transform', 'options', 'parallel', 'consume', 'params']
 sort: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: API
 description: CSV Stringify - stream, callback and sync APIs
-keywords: ['intro','page']
+keywords: ['csv', 'stringify', 'api', 'callback', 'stream', 'sync', 'promise']
 sort: 2
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: State
 description: Stream Transform - internal state properties
-keywords: ['intro','page']
+keywords: ['stream', 'transform', 'state', 'running', 'started', 'finished']
 sort: 5
 ---
 

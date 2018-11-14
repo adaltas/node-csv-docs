@@ -1,7 +1,7 @@
 ---
 title: Examples
-keywords: ['csv','parse', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
-sort: 6
+keywords: ['csv', 'parse', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
+sort: 7
 ---
 
 # CSV Parse examples

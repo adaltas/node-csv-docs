@@ -25,12 +25,12 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Set the field delimiter. One or multiple character. Defaults to `","` (comma).
 * `escape` (string|Buffer)   
   Set the escape character. One character/byte only, Only apply to quote and escape characters inside quoted fields. Defaults to double quote.
-* `info` (boolean)   
-  Generate two properties `info` and `record` where `info` is a snapshot of the info object at the time the record was created and `record` is the parsed array or object; note, it can be used conjointly with the `raw` option.
 * `from` (number)   
   Start handling records from the requested number of records.
 * `from_line` (number)   
   Start handling records from the requested line number.
+* `info` (boolean)   
+  Generate two properties `info` and `record` where `info` is a snapshot of the info object at the time the record was created and `record` is the parsed array or object; note, it can be used conjointly with the `raw` option.
 * `ltrim` (boolean)   
   If `true`, ignore whitespace immediately following the delimiter (i.e. left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
 * `max_record_size` (int)   

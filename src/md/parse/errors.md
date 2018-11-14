@@ -1,7 +1,7 @@
 ---
-title: Commons errors
+title: Errors
 description: Commons errors encountered while using the CSV parser
-keywords: ['csv','parse', 'error', 'mistake']
+keywords: ['csv', 'parse', 'error', 'mistake']
 sort: 5
 ---
 
