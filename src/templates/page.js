@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../layout'
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { page } = data // data.markdownRemark holds our post data
+export default ({
+  data,
+}) => {
+  const { page } = data
   return (
     <Layout page={{ ...page.fields, ...page.frontmatter }}>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />

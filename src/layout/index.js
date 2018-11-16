@@ -90,6 +90,7 @@ class Layout extends Component {
           }
           drawer={
             <Menu
+              slug={page.slug}
               pages={pages}
               styles={styles.drawer}
               onClickLink={handleClickLink}
@@ -118,6 +119,7 @@ const QueryLayout = props => (
             node {
               frontmatter {
                 title
+                navtitle
                 sort
               }
               fields {

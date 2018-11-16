@@ -2,33 +2,34 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
 
+const riple_styles = {
+  ripple: {
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    display: 'block',
+    position: 'absolute',
+    overflow: 'hidden',
+    zIndex: 0,
+    pointerEvents: 'none',
+  },
+  child: {
+    transform: 'scale(.0)',
+    opacity: 0.5,
+    display: 'block',
+    width: '100%',
+    height: '100%',
+    borderRadius: '50%',
+    backgroundColor: '#000',
+  },
+  active: {
+    transform: 'scale(1)',
+    transition: 'transform 150ms cubic-bezier(0.4, 0, 0.2, 1)',
+  },
+}
+
 class Ripple extends Component {
-  styles = {
-    ripple: {
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      display: 'block',
-      position: 'absolute',
-      overflow: 'hidden',
-      zIndex: 0,
-      pointerEvents: 'none',
-    },
-    child: {
-      transform: 'scale(.0)',
-      opacity: 0.5,
-      display: 'block',
-      width: '100%',
-      height: '100%',
-      borderRadius: '50%',
-      backgroundColor: '#000',
-    },
-    active: {
-      transform: 'scale(1)',
-      transition: 'transform 150ms cubic-bezier(0.4, 0, 0.2, 1)',
-    },
-  }
   state = {
     active: false,
   }
@@ -49,7 +50,7 @@ class Ripple extends Component {
     this.stop = this.stop.bind(this)
   }
   render() {
-    const { styles } = this
+    const styles = riple_styles
     return (
       <span css={[styles.ripple, this.state.active && styles.active]}>
         <span ref={this.child} css={styles.child} />
@@ -58,44 +59,48 @@ class Ripple extends Component {
   }
 }
 
+const styles = {
+  base: {
+    display: 'inline-flex',
+    position: 'relative',
+    alignItems: 'center',
+    verticalAlign: 'middle',
+    justifyContent: 'center',
+    flex: '0 0 auto',
+    width: '48px',
+    height: '48px',
+    padding: 0,
+    fontSize: '1.5rem',
+    textAlign: 'center',
+    textDecoration: 'none',
+    borderRadius: '50%',
+    transition: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)',
+    backgroundColor: 'transparent',
+    'not(disabled):hover': {
+      backgroundColor: 'rgba(0, 0, 0, .08)',
+    },
+  },
+  button: {
+    cursor: 'pointer',
+    ':disabled': {
+      cursor: 'default',
+    },
+    border: 0,
+    margin: 0,
+    ':focus': {
+      outline: 'none',
+    },
+  },
+  link: {},
+  label: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'inherit',
+    justifyContent: 'inherit',
+  },
+}
+
 class Button extends Component {
-  styles = {
-    base: {
-      display: 'inline-flex',
-      position: 'relative',
-      alignItems: 'center',
-      verticalAlign: 'middle',
-      justifyContent: 'center',
-      flex: '0 0 auto',
-      width: '48px',
-      height: '48px',
-      padding: 0,
-      fontSize: '1.5rem',
-      textAlign: 'center',
-      textDecoration: 'none',
-      borderRadius: '50%',
-      transition: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)',
-      backgroundColor: 'transparent',
-      ':hover': {
-        backgroundColor: 'rgba(0, 0, 0, .08)',
-      },
-    },
-    button: {
-      cursor: 'pointer',
-      border: 0,
-      margin: 0,
-      ':focus': {
-        outline: 'none',
-      },
-    },
-    link: {},
-    label: {
-      width: '100%',
-      display: 'flex',
-      alignItems: 'inherit',
-      justifyContent: 'inherit',
-    },
-  }
   handleBlur(event) {}
   handleFocus(event) {}
   handleKeyDown(event) {}
@@ -146,7 +151,6 @@ class Button extends Component {
       userStyles,
       ...props
     } = this.props
-    const { styles } = this
     if (userStyles && userStyles.base)
       styles.base = { ...styles.base, ...userStyles.base }
     if (userStyles && userStyles.button)
