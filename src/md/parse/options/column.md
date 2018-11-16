@@ -6,7 +6,7 @@ keywords: ['csv', 'parse', 'options', 'delimiter', 'columns', 'comment', 'escape
 sort: 3
 ---
 
-# Option `columns`
+# Option columns
 
 By default, the parser generates records in the form of arrays. The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.columns.js) illustrates how to generate records in the form of objects using the "columns" option.
 

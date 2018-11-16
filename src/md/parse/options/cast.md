@@ -6,7 +6,7 @@ keywords: ['csv', 'parse', 'options', 'delimiter', 'columns', 'comment', 'escape
 sort: 3
 ---
 
-# Option `cast`
+# Option cast
 
 The `cast` option accept a function. It gives full control over a field. It is possible to transform its value or change its type. The [`test/options.cast.coffee`](https://github.com/adaltas/node-csv-parse/blob/master/test/options.cast.coffee) test provides insights on how to use it and its supported functionalities.
 

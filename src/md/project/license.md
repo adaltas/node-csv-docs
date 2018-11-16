@@ -1,4 +1,10 @@
-The MIT License (MIT)
+---
+title: License
+keywords: ['csv', 'license', 'mit', 'copyright', 'permission', 'adaltas']
+sort: 2
+---
+
+# The MIT License (MIT)
 
 Copyright (c) 2010 Adaltas
 
