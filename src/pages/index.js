@@ -13,7 +13,7 @@ import { tomorrow } from 'react-syntax-highlighter/styles/prism'
 registerLanguage('javascript', javascript)
 const codeString = `
 // Import the package main module
-const csv = require('..')
+const csv = require('csv')
 // Use the module
 csv
 // Generate 20 records
@@ -39,39 +39,65 @@ csv
 .pipe(process.stdout)
 `.trim()
 
-class Index extends Component {
-  style = {
-    projects: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-between',
+const styles = {
+  projects: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  card: {
+    // padding: '0 20px',
+    borderRadius: '.6rem',
+    marginBottom: '4%',
+    flex: '0 0 48%',
+    [TABLET_MEDIA_QUERY]: {
+      // width: '50%',
+      flex: '0 0 100%',
     },
-    card: {
-      // padding: '0 20px',
-      borderRadius: '.6rem',
-      marginBottom: '4%',
-      flex: '0 0 48%',
-      [TABLET_MEDIA_QUERY]: {
-        // width: '50%',
-        flex: '0 0 100%',
-      },
-      backgroundColor: 'rgba(255,255,255,.1)',
-      padding: '1rem 2rem',
+    backgroundColor: 'rgba(255,255,255,.1)',
+    padding: '1rem 2rem',
+    textAlign: 'center',
+    '& a': {
+      textDecoration: 'none'
+    },
+    '& h1, & img': {
+      marginTop: '0',
+      marginBottom: '.5rem',
+    },
+    '& p': {
+      marginBottom: '0',
+    },
+  },
+  blog: {
+    // backgroundColor: 'rgba(255,255,255,.1)',
+    border: '.2rem solid rgba(255,255,255,.1)',
+    padding: '.5rem 2rem',
+    borderRadius: '.6rem',
+    marginBottom: '4%',
+    // '& article h1': {
+    //   textAlign: 'left',
+    //   fontSize: '1.4rem !important',
+    //   '& a': {
+    //     textDecoration: 'none !important',
+    //   },
+    // },
+    // '& h1': {
+    //   margin: '0',
+    // },
+    '& h1': {
       textAlign: 'center',
-      '& a': {
-        textDecoration: 'none'
-      },
-      '& h1, & img': {
-        marginTop: '0',
-        marginBottom: '.5rem',
-      },
-      '& p': {
-        marginBottom: '0',
-      },
+    },
+    '& h2': {
+      margin: '.5rem 0',
+    },
+    '& h2 a': {
+      textDecoration: 'none !important',
     },
   }
+}
+
+class Index extends Component {
   render() {
-    const { style } = this
     return (
       <Layout
         intro={true}
@@ -83,8 +109,8 @@ class Index extends Component {
             'csv, node.js, stream, parser, serializer, generation, transformation',
         }}
       >
-        <div css={style.projects}>
-          <div css={style.card}>
+        <section css={styles.projects}>
+          <div css={styles.card}>
             <h1><Link to="/generate/">csv-generate</Link></h1>
             <a
               href="https://npmjs.org/package/csv-generate"
@@ -108,7 +134,7 @@ class Index extends Component {
             </a>
             <p>Write random and user-defined strings, objects and arrays</p>
           </div>
-          <div css={style.card}>
+          <div css={styles.card}>
             <h1><Link to="/parse/">csv-parse</Link></h1>
             <a
               href="https://npmjs.org/package/csv-parse"
@@ -134,7 +160,7 @@ class Index extends Component {
             </a>
             <p>Read CSV strings and buffers and write object and arrays</p>
           </div>
-          <div css={style.card}>
+          <div css={styles.card}>
             <h1><Link to="/transform/">stream-transform</Link></h1>
             <a
               href="https://npmjs.org/package/stream-transform"
@@ -160,7 +186,7 @@ class Index extends Component {
             </a>
             <p>Read and write objects and arrays</p>
           </div>
-          <div css={style.card}>
+          <div css={styles.card}>
             <h1><Link to="/stringify/">csv-stringify</Link></h1>
             <a
               href="https://npmjs.org/package/csv-stringify"
@@ -186,7 +212,27 @@ class Index extends Component {
             </a>
             <p>Read object and arrays and write CSV strings</p>
           </div>
-        </div>
+        </section>
+        <section css={styles.blog}>
+          <h1>Latest news</h1>
+          <article>
+            <h2>
+              <a
+                href="http://www.adaltas.com/en/2018/11/14/nodejs-csv-version-4-performance/"
+              >
+                CSV version 4 - re-writing and performance
+              </a>
+            </h2>
+            <p>
+              Version 4 is a complete re-writing of the project focusing on 
+              performance. It also comes with new functionalities as well as 
+              some cleanup in the option properties and the exported 
+              information. The official website is updated and the changelog 
+              contains the list of changes for this major release. <a
+              href="http://www.adaltas.com/en/2018/11/14/nodejs-csv-version-4-performance/">Learn more!</a>
+            </p>
+          </article>
+        </section>
         <h1>Quick Example</h1>
         <SyntaxHighlighter language="javascript" style={tomorrow}>
           {codeString}

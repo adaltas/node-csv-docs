@@ -36,13 +36,14 @@ const theme = {
     'a:hover, a:active': {
       color: '#00D0B4',
     },
-    'article h1': {
-      textAlign: 'center',
-    },
-    'article h2': {
-      borderBottom: '.5rem solid #fff',
-      lineHeight: rhythm(1.5),
-    },
+    // 181116 no idea why this was activated
+    // 'article h1': {
+    //   textAlign: 'center',
+    // },
+    // 'article h2': {
+    //   borderBottom: '.5rem solid #fff',
+    //   lineHeight: rhythm(1.5),
+    // },
     'main h1': {
       marginTop: '2rem',
       // display: 'inline-block',

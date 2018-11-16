@@ -111,7 +111,7 @@ class Footer extends Component {
             <h1>Contribute</h1>
             <ul>
               <li>
-                <Link to="/learn/contribute/">How to contribute</Link>
+                <Link to="/project/contribute/">How to contribute</Link>
               </li>
               <li>
                 <a
