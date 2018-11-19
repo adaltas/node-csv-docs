@@ -13,12 +13,12 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 
 ## Available options
 
-* `cast` (boolean|function)   
+* [`cast`](/parse/options/cast) (boolean|function)   
   If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2. More information about the context properties is available below.
 * `cast_date` (boolean|function)   
-  If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the "auto_parse" option. This option was named `auto_parse_date` until version 2. Be careful, it relies on `Date.parse`.
-* `columns` (array|boolean|function)   
-  List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
+  If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the `auto_parse` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
+* [`columns`](/parse/options/cast) (array|boolean|function)   
+  Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
 * `comment` (char)   
   Treat all the characters after this one as a comment. Defaults to `''` (disabled).
 * `delimiter` (string|Buffer)   
@@ -61,85 +61,3 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Stop handling records after the requested line number.
 * `trim` (boolean)   
   If `true`, ignore whitespace immediately around the delimiter. Defaults to `false`. Does not remove whitespace in a quoted field.
-
-## Option `cast`
-
-The `cast` option accept a function. It gives full control over a field. It is possible to transform its value or change its type. The [`test/options.cast.coffee`](https://github.com/adaltas/node-csv-parse/blob/master/test/options.cast.coffee) test provides insights on how to use it and its supported functionalities.
-
-The function is called with 2 arguments: the field value and a context object. The context object accept the following properties:
-
-* `column`   
-  The column name if the `columns` options is defined or the field position.
-* `empty_lines`   
-  Internal counter of empty lines encountered until this field.
-* `header`   
-  A boolean indicating if the records being parsed is the header.
-* `index`   
-  The field position.
-* `quoting`   
-  A boolean indicating if the field was surrounded by quotes.
-* `lines`   
-  The number of lines which have been processed including the current line.
-* `records`   
-  The number of records which have been fully parsed. It was named `count` until version 3.
-* `skipped_lines`   
-  Number of non uniform lines skipped when relax_column_count is true.
-
-The [cast example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.cast.js) uses the context to transform the first filed into a date and replace the second field with the injected context:
-
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = `
-  2000-01-01,date1
-  2050-11-27,date2
-`.trim()
-const records = parse(data, {
-  cast: function(value, context){
-    if(context.index === 0){
-      return `${value}T05:00:00.000Z`
-    }else{
-      return context
-    }
-  },
-  trim: true
-})
-assert.deepEqual(records, [
-  [ '2000-01-01T05:00:00.000Z', {
-    column: 1, empty_lines: 0, header: false, index: 1,
-    quoting: false, lines: 1, records: 0, skipped_lines: 0
-  } ],
-  [ '2050-11-27T05:00:00.000Z', {
-    column: 1, empty_lines: 0, header: false, index: 1,
-    quoting: false, lines: 2, records: 1, skipped_lines: 0
-  } ]
-])
-```
-
-## Option `columns`
-
-By default, the parser generates records in the form of arrays. The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.columns.js) illustrates how to generate records in the form of objects using the "columns" option.
-
-This example is available with the command `node samples/options.columns.js`.
-
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-const records = parse(`
-  "key_1","key_2"
-  "value 1","value 2"
-`, {
-  columns: true,
-  trim: true,
-  skip_empty_lines: true
-}, function(err, records){
-  assert.deepEqual(
-    records, [{
-      key_1: 'value 1',
-      key_2: 'value 2'
-    }]
-  )
-})
-```
