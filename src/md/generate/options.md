@@ -35,6 +35,8 @@ All options accept both the underscore and camel case forms. Thus, `record_delim
   The maximum number of bytes to store in the internal buffer before ceasing to read from the underlying resource. The default value is 16384 (16kb), or 16 for objectMode streams.
 * `row_delimiter` (string)   
   One or multiple characters used to delimit records; only apply when `objectMode` is disabled; default to `\n`, the Unix line ending.
+* `sleep` (number)   
+  The time to wait between the generation of each records; since v3.1.0; default to "0" (no wait).
 
 ## Option `objectMode`
 
