@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import { TABLET_MEDIA_QUERY } from 'typography-breakpoint-constants'
+import {
+  MIN_TABLET_MEDIA_QUERY,
+  TABLET_MEDIA_QUERY,
+} from 'typography-breakpoint-constants'
 // Local
 import Layout from '../layout'
 
@@ -74,16 +77,6 @@ const styles = {
     padding: '.5rem 2rem',
     borderRadius: '.6rem',
     marginBottom: '4%',
-    // '& article h1': {
-    //   textAlign: 'left',
-    //   fontSize: '1.4rem !important',
-    //   '& a': {
-    //     textDecoration: 'none !important',
-    //   },
-    // },
-    // '& h1': {
-    //   margin: '0',
-    // },
     '& h1': {
       textAlign: 'center',
     },
@@ -93,6 +86,11 @@ const styles = {
     '& h2 a': {
       textDecoration: 'none !important',
     },
+    '& p': {
+      [MIN_TABLET_MEDIA_QUERY]: {
+        textAlign: 'justify',
+      },
+    }
   },
   sample: {
     '& h1': {
@@ -232,8 +230,9 @@ class Index extends Component {
               Version 4.0.0 is a complete re-writing of the project focusing on 
               performance. It also comes with new functionalities as well as 
               some cleanup in the option properties and the exported 
-              information. The official website is updated and the changelog 
-              contains the list of changes for this major release. <a
+              information. The official website is updated and 
+              the <Link to="/parse/changelog/">changelog</Link> contains the 
+              list of changes for this major release. <a
               href="http://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/">Learn more!</a>
             </p>
           </article>
