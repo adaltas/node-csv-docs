@@ -9,7 +9,7 @@ import Button from '../components/Button'
 //   '100%': { display: '', opacity: ` 1` }
 // })
 
-const styles = {
+const styles_nav = {
   root: {
     '& h1': {
       fontSize: '1.2rem',
@@ -109,7 +109,7 @@ class Nav extends Component {
       
     }
     return (
-      <nav css={[styles.root, current && styles.current]}>
+      <nav css={[styles_nav.root, current && styles_nav.current]}>
         <h1 onClick={onToggle}>
           <span>
             {title}
@@ -121,21 +121,21 @@ class Nav extends Component {
             data-tip="Edit on GitHub"
             target="_blank"
             rel="noopener"
-            className={css(styles.button).toString()}
+            className={css(styles_nav.button).toString()}
             disabled={current}
           >
-            <svg css={[styles.icon, current ? styles.icon_up : styles.icon_down]}>
+            <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
               <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
             </svg>
           </Button>
         </h1>
         <ul>
           {home && (
-            <li key="/" css={styles.li}>
+            <li key="/" css={styles_nav.li}>
               <Link
                 to="/"
-                className={css(styles.link).toString()}
-                activeClassName={css(styles.linkActive).toString()}
+                className={css(styles_nav.link).toString()}
+                activeClassName={css(styles_nav.linkActive).toString()}
                 onClick={onClickLink}
               >
                 Homepage
@@ -144,11 +144,11 @@ class Nav extends Component {
           )}
           {[
             ...pages.map(page => (
-              <li key={page.slug} css={[styles.li, styles['li_'+(page.slug.split('/').length-2)]]}>
+              <li key={page.slug} css={[styles_nav.li, styles_nav['li_'+(page.slug.split('/').length-2)]]}>
                 <Link
                   to={page.slug}
-                  className={css(styles.link).toString()}
-                  activeClassName={css(styles.linkActive).toString()}
+                  className={css(styles_nav.link).toString()}
+                  activeClassName={css(styles_nav.linkActive).toString()}
                   onClick={onClickLink}
                 >
                   {page.navtitle || page.title}
@@ -162,23 +162,36 @@ class Nav extends Component {
   }
 }
 
+const styles = {
+  root: {
+    height: '100%',
+    backgroundColor: 'rgb(79,79,79,1)',
+    borderRight: '1rem solid #95A2A2',
+    '@media (min-width: 960px)': {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  },
+  menu: {
+    flexGrow: 1,
+    overflow: 'auto',
+    backgroundColor: '#343B3B',
+    display: 'block',
+    '&:after': {
+      content: ' ',
+      display: 'block',
+      height: '2rem',
+    }
+  },
+  footer: {
+    borderTop: '1px solid rgb(200, 200, 200)',
+    padding: '1rem',
+    textAlign: 'justify',
+    fontSize: '.8rem',
+  },
+}
+
 class Menu extends Component {
-  styles = {
-    root: {
-      height: '100%',
-      backgroundColor: '#343B3B',
-      borderRight: '1rem solid #95A2A2',
-      // background: 'linear-gradient(to right, #343b3b 0%,#343b3b 95%,#95a2a2 95%,#95a2a2 100%)',
-    },
-    footer: {
-      marginTop: '2rem',
-      borderTop: '1px solid rgb(200, 200, 200)',
-      padding: '1rem',
-      backgroundColor: 'rgb(255,255,255,.1)',
-      textAlign: 'justify',
-      fontSize: '.8rem',
-    },
-  }
   constructor(props) {
     super(props)
     const section = props.slug ? /^\/(\w+)/.exec(props.slug)[1] : 'project'
@@ -219,12 +232,13 @@ class Menu extends Component {
   render() {
     const { pages, onClickLink, slug } = this.props
     const { current } = this.state
-    const { menus, styles } = this
+    const { menus } = this
     const onToggle = (section) => {
       this.setState({current: section})
     }
     return (
       <aside css={[styles.root]}>
+        <div css={styles.menu}>
         {
           Object.keys(menus).map(section => {
             const pkg = menus[section]
@@ -241,6 +255,7 @@ class Menu extends Component {
             )
           })
         }
+        </div>
         <div css={styles.footer}>
           Help us{' '}
           <a
