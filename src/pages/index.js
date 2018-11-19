@@ -7,9 +7,9 @@ import Layout from '../layout'
 // Syntax
 import SyntaxHighlighter, {
   registerLanguage,
-} from 'react-syntax-highlighter/prism-light'
-import javascript from 'react-syntax-highlighter/languages/prism/javascript'
-import { tomorrow } from 'react-syntax-highlighter/styles/prism'
+} from 'react-syntax-highlighter/dist/prism-light'
+import javascript from 'react-syntax-highlighter/dist/languages/prism/javascript'
+import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
 registerLanguage('javascript', javascript)
 const codeString = `
 // Import the package main module
@@ -93,6 +93,11 @@ const styles = {
     '& h2 a': {
       textDecoration: 'none !important',
     },
+  },
+  sample: {
+    '& h1': {
+      textAlign: 'center',
+    }
   }
 }
 
@@ -224,7 +229,7 @@ class Index extends Component {
               </a>
             </h2>
             <p>
-              Version 4 is a complete re-writing of the project focusing on 
+              Version 4.0.0 is a complete re-writing of the project focusing on 
               performance. It also comes with new functionalities as well as 
               some cleanup in the option properties and the exported 
               information. The official website is updated and the changelog 
@@ -233,10 +238,12 @@ class Index extends Component {
             </p>
           </article>
         </section>
-        <h1>Quick Example</h1>
-        <SyntaxHighlighter language="javascript" style={tomorrow}>
-          {codeString}
-        </SyntaxHighlighter>
+        <section css={styles.sample}>
+          <h1>Quick Example</h1>
+          <SyntaxHighlighter language="javascript" style={tomorrow}>
+            {codeString}
+          </SyntaxHighlighter>
+        </section>
       </Layout>
     )
   }

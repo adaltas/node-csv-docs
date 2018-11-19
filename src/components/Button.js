@@ -34,13 +34,13 @@ class Ripple extends Component {
     active: false,
   }
   start(event) {
-    this.child.current.classList.add(css(this.styles.active).toString())
+    this.child.current.classList.add(css(riple_styles.active).toString())
     this.startTimer = setTimeout(() => {
-      this.child.current.classList.remove(css(this.styles.active).toString())
+      this.child.current.classList.remove(css(riple_styles.active).toString())
     }, 200)
   }
   stop(event, callback) {
-    this.child.current.classList.remove(css(this.styles.active).toString())
+    this.child.current.classList.remove(css(riple_styles.active).toString())
     if (callback) callback()
   }
   constructor(props) {
