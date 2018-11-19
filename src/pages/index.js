@@ -223,7 +223,7 @@ class Index extends Component {
           <article>
             <h2>
               <a
-                href="http://www.adaltas.com/en/2018/11/14/nodejs-csv-version-4-performance/"
+                href="http://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/"
               >
                 CSV version 4 - re-writing and performance
               </a>
@@ -234,7 +234,7 @@ class Index extends Component {
               some cleanup in the option properties and the exported 
               information. The official website is updated and the changelog 
               contains the list of changes for this major release. <a
-              href="http://www.adaltas.com/en/2018/11/14/nodejs-csv-version-4-performance/">Learn more!</a>
+              href="http://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/">Learn more!</a>
             </p>
           </article>
         </section>
