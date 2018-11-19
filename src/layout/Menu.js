@@ -11,6 +11,7 @@ import Button from '../components/Button'
 
 const styles_nav = {
   root: {
+    fontWeight: '300',
     '& h1': {
       fontSize: '1.2rem',
       margin: '2rem 0 0 0',
@@ -186,7 +187,7 @@ const styles = {
   footer: {
     borderTop: '1px solid rgb(200, 200, 200)',
     padding: '1rem',
-    textAlign: 'justify',
+    textAlign: 'normal',
     fontSize: '.8rem',
   },
 }
@@ -265,7 +266,7 @@ class Menu extends Component {
           >
             improve the docs
           </a>{' '}
-          by fixing typos and proposing enhancements.
+          by proposing enhancements and fixing typos.
         </div>
       </aside>
     )

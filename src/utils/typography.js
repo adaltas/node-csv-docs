@@ -8,7 +8,7 @@ import {
 const theme = {
   baseFontSize: '18px',
   // baseLineHeight: 1.666,
-  bodyColor: 'rgba(255,255,255,0.95)',
+  bodyColor: '#DEE9EA',
   bodyFontFamily: ['Khula', 'sans-serif'],
   headerColor: 'rgba(255,255,255,0.95)',
   headerFontFamily: ['Khula', 'sans-serif'],
@@ -30,8 +30,8 @@ const theme = {
       fill: '#B3C6C8',
     },
     a: {
-      textDecoration: 'underline',
-      color: 'rgba(255,255,255,0.95)',
+      textDecoration: 'none',
+      color: '#FFF',
     },
     'a:hover, a:active': {
       color: '#00D0B4',
@@ -51,8 +51,10 @@ const theme = {
     'main :not(pre) > code[class*="language-"]': {
       padding: '.2em .3em .2em .3em',
       backgroundColor: '#282F2F',
-      // backgroundColor: 'rgba(255,255,255,.1)',
       color: '#fff',
+    },
+    'main a:hover > code[class*="language-"]': {
+      backgroundColor: '#308484',
     },
     'main div .gatsby-highlight': {
       marginBottom: '1.45rem',

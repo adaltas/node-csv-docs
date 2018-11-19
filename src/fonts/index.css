@@ -19,6 +19,17 @@
     url('../../node_modules/typeface-khula/files/khula-latin-300.woff') format('woff'); /* Modern Browsers */
 }
 @font-face {
+  font-family: 'Khula';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Khula Light '),
+    local('Khula-Light'),
+    url('../../node_modules/typeface-khula/files/khula-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../node_modules/typeface-khula/files/khula-latin-400.woff') format('woff'); /* Modern Browsers */
+}
+@font-face {
   font-family: 'Overpass Mono';
   font-style: normal;
   font-display: swap;
