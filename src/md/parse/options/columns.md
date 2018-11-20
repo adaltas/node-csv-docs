@@ -8,7 +8,7 @@ sort: 4
 
 # Option columns
 
-The `column` option generates record in the form of object literals. By default, the parser generates records in the form of arrays. Its associate value may takes multiple forms:
+The `columns` option generates record in the form of object literals. By default, the parser generates records in the form of arrays. Its associate value may takes multiple forms:
 
 * [`true`](#as-true)    
   Infer the columns names from the first line.
@@ -23,7 +23,7 @@ It is possible to skip one or multiple fields by passing the value equal to `und
 
 If the value is `true`, the first record present in the data set is treated as a header. No record is generated and each field defines a new property.
 
-The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.columns.true.js) generates record literals whose properties match the first line of the data set.
+The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.true.js) generates record literals whose properties match the first line of the data set.
 
 ```js
 const parse = require('csv-parse')
@@ -48,7 +48,7 @@ parse(`
 
 If the value is an array, to each element corresponds a property. The values may be a string or an object literal with the `name` property.
 
-The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.columns.function.js) converts each field of the first to upper case.
+The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.function.js) converts each field of the first to upper case.
 
 ```js
 const parse = require('csv-parse')
@@ -72,7 +72,7 @@ parse(`
 
 If the value is a function, the user is responsible for returning the list of columns.  The first line is treated as a header and will not generate a record. The function receives the first line as a list of fields.
 
-The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.columns.function.js) converts each field of the first to upper case.
+The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.function.js) converts each field of the first to upper case.
 
 ```js
 const parse = require('csv-parse')

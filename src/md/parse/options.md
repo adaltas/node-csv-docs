@@ -13,18 +13,18 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 
 ## Available options
 
-* [`cast`](/parse/options/cast) (boolean|function)   
+* [`cast`](/parse/options/cast/) (boolean|function)   
   If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2. More information about the context properties is available below.
 * `cast_date` (boolean|function)   
   If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the `auto_parse` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
-* [`columns`](/parse/options/cast) (array|boolean|function)   
+* [`columns`](/parse/options/columns/) (array|boolean|function)   
   Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
 * `comment` (char)   
   Treat all the characters after this one as a comment. Defaults to `''` (disabled).
 * `delimiter` (string|Buffer)   
   Set the field delimiter. One or multiple character. Defaults to `","` (comma).
 * `escape` (string|Buffer)   
-  Set the escape character. One character/byte only, Only apply to quote and escape characters inside quoted fields. Defaults to double quote.
+  Set the escape character; one character/byte only; only apply to quote and escape characters inside quoted fields; defaults to double quote.
 * `from` (number)   
   Start handling records from the requested number of records.
 * `from_line` (number)   
@@ -38,13 +38,13 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `objname` (string)   
   Name of header-record title to name objects by.
 * `quote` (char|boolean)   
-  Optional character surrounding a field. One character only. Disabled if null, false or empty. Defaults to double quote.
+  Optional character surrounding a field; one character only; disabled if null, false or empty; defaults to double quote.
 * `raw` (boolean)   
   Generate two properties `raw` and `record` where `raw` is the original CSV content and `record` is the parsed array or object; note, it can be used conjointly with the `info` option.
 * `relax` (boolean)   
   Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
-* `relax_column_count` (boolean)   
-  Discard inconsistent columns count. Default to `false`.
+* [`relax_column_count`](/parse/options/relax_column_count/) (boolean)   
+  Discard inconsistent columns count; disabled if null, false or empty; default to `false`.
 * `record_delimiter` (chars|array)   
   One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters.
 * `rtrim` (boolean)   

@@ -44,7 +44,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 
 ## Option `columns`
 
-The associate value with the `column` option may come in different flavours: an int, an array or an object. Consider the [tests](https://github.com/adaltas/node-csv-stringify/blob/master/test/options.columns.coffee) as an exhaustive source of inspiration, examples and supported features.
+The associate value with the `column` option may come in different flavours: an int, an array or an object. Consider the [tests](https://github.com/adaltas/node-csv-stringify/blob/master/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features.
 
 Once normalised, the final columns option is an array defining each column. Columns are themselves defined as an object with the properties:
 
@@ -107,7 +107,7 @@ stringify( {
 
 ## Option `formatters`
 
-This example is available with the command `node samples/options.formatters.js`.
+This example is available with the command `node samples/option.formatters.js`.
 
 ```js
 const stringify = require('csv-stringify')
@@ -134,11 +134,11 @@ stringify([{
 })
 ```
 
-_Run this example with the command `node samples/options.formatters.js`._
+_Run this example with the command `node samples/option.formatters.js`._
 
 ## Option `header`
 
-In the [header example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/options.header.js), the value is `true` and the header content is obtained from the keys present in the "columns" option.
+In the [header example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header.js), the value is `true` and the header content is obtained from the keys present in the "columns" option.
 
 ```js
 const stringify = require('csv-stringify')
@@ -160,4 +160,4 @@ stringify([
 })
 ```
 
-_Run this example with the command `node samples/options.header.js`._
+_Run this example with the command `node samples/option.header.js`._
