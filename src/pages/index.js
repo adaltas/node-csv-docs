@@ -92,6 +92,13 @@ const styles = {
       },
     }
   },
+  blog_info: {
+    fontSize: '.9rem',
+    // fontStyle: 'italic',
+    // opacity: '.6',
+    fontColor: "rgba(255,255,255,.6)",
+    margin: '0',
+  },
   sample: {
     '& h1': {
       textAlign: 'center',
@@ -221,11 +228,34 @@ class Index extends Component {
           <article>
             <h2>
               <Link
+                to="/project/changelog/"
+              >
+                CSV 5.0.0
+              </Link>
+            </h2>
+            <p css={styles.blog_info}>
+              {"By "}
+              <a href='https://github.com/wdavidw/'>wdavidw</a>
+              {" | November 21th, 2018"}
+            </p>
+            <p>
+              Version 5.0.0 includes the latest csv-parse and csv-stringify 
+              respectively with version 4.0.1 and 5.0.0.
+            </p>
+          </article>
+          <article>
+            <h2>
+              <Link
                 to="/stringify/changelog/"
               >
                 CSV Stringify 5.0.0
               </Link>
             </h2>
+            <p css={styles.blog_info}>
+              {"By "}
+              <a href='https://github.com/wdavidw/'>wdavidw</a>
+              {" | November 21th, 2018"}
+            </p>
             <p>
               Version 5.0.0 introduces the new <code class="language-text">quoted_match</code> option and support 
               options written both in the underscore and camelcase forms. Some 
@@ -241,6 +271,11 @@ class Index extends Component {
                 CSV Parse 4.0.0 - re-writing and performance
               </a>
             </h2>
+            <p css={styles.blog_info}>
+              {"By "}
+              <a href='https://github.com/wdavidw/'>wdavidw</a>
+              {" | November 19th, 2018"}
+            </p>
             <p>
               Version 4.0.0 is a complete re-writing of the project focusing on 
               performance. It also comes with new functionalities as well as 
