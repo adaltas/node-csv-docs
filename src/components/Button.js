@@ -76,9 +76,9 @@ const styles = {
     borderRadius: '50%',
     transition: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)',
     backgroundColor: 'transparent',
-    'not(disabled):hover': {
-      backgroundColor: 'rgba(0, 0, 0, .08)',
-    },
+    // 'not(disabled):hover': {
+    //   backgroundColor: 'rgba(0, 0, 0, .08)',
+    // },
   },
   button: {
     cursor: 'pointer',
@@ -90,8 +90,15 @@ const styles = {
     ':focus': {
       outline: 'none',
     },
+    ':enabled:hover': {
+      backgroundColor: 'rgba(0, 0, 0, .08)',
+    },
   },
-  link: {},
+  link: {
+    ':hover': {
+      backgroundColor: 'rgba(0, 0, 0, .08)',
+    },
+  },
   label: {
     width: '100%',
     display: 'flex',

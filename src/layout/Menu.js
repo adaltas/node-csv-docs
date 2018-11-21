@@ -80,9 +80,9 @@ const styles_nav = {
     color: '#00D0B4',
   },
   button: {
-    width: '1.4rem',
-    height: '1.4rem',
-    lineHeight: '1.6rem',
+    width: '1.4rem !important',
+    height: '1.4rem !important',
+    // lineHeight: '1.6rem',
     float: 'right',
     textAlign: 'center',
     ':enabled:hover': {
