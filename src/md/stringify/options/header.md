@@ -34,13 +34,13 @@ stringify([
 })
 ```
 
-_Run this example with the command `node samples/option.header.js`._
+Run this example with the command `node samples/option.header.js`.
 
 ## With the columns option
 
 The `columns` option may be used conjointly with the `header` option. 
 
-The ["option.header_columns.js" example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header_columns.js) shows the behaviour when a record contains a field not declared as an option and when a column is not present in the records. If a record contains a field not declared as a columns, it will simply be discarded like with the `nocolumn` field below. If a column is declared but it is not present in a record, the header will contains the column name and the records will contains a field with an empty value for this column.
+The ["option.header\_columns.js" example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header_columns.js) shows the behaviour when a record contains a field not declared as an option and when a column is not present in the records. If a record contains a field not declared as a columns, it will simply be discarded like with the `nocolumn` field below. If a column is declared but it is not present in a record, the header will contains the column name and the records will contains a field with an empty value for this column.
 
 ```js
 const stringify = require('csv-stringify')
@@ -62,4 +62,4 @@ stringify([
 })
 ```
 
-_Run this example with the command `node samples/option.header_columns.js`._
+Run this example with the command `node samples/option.header_columns.js`.
