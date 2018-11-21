@@ -14,6 +14,7 @@ const styles_nav = {
     fontWeight: '300',
     '& h1': {
       fontSize: '1.2rem',
+      fontWeight: '300',
       margin: '2rem 0 0 0',
       padding: '0 1rem',
       display: 'flex',
