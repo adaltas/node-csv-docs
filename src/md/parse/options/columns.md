@@ -1,8 +1,8 @@
 ---
 title: Option columns
 navtitle: columns
-description: Options relative to the csv-parse package
-keywords: ['csv', 'parse', 'options', 'delimiter', 'columns', 'comment', 'escape']
+description: Generate records as object literals instead of arrays
+keywords: ['csv', 'parse', 'options', 'columns']
 sort: 4
 ---
 

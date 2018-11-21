@@ -220,10 +220,25 @@ class Index extends Component {
           <h1>Latest news</h1>
           <article>
             <h2>
+              <Link
+                to="/stringify/changelog/"
+              >
+                CSV Stringify 5.0.0
+              </Link>
+            </h2>
+            <p>
+              Version 5.0.0 introduces the new <code class="language-text">quoted_match</code> option and support 
+              options written both in the underscore and camelcase forms. Some 
+              options were renamed. Thus <code class="language-text">rowDelimiter</code> is 
+              now <code class="language-text">record_delimiter</code> and <code class="language-text">formatters</code> is now <code class="language-text">cast</code>. <Link to="/stringify/changelog/">Read the changelog!</Link>
+            </p>
+          </article>
+          <article>
+            <h2>
               <a
                 href="http://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/"
               >
-                CSV version 4 - re-writing and performance
+                CSV Parse 4.0.0 - re-writing and performance
               </a>
             </h2>
             <p>

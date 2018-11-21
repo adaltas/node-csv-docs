@@ -7,6 +7,12 @@ sort: 7
 
 # Changelog
 
+## Version 4.0.1
+
+Fix:
+
+* relax_column_count: handle records with more columns
+
 ## Version 4.0.0
 
 This is a complete rewrite based with a Buffer implementation. There are no major breaking changes but it introduces multiple minor breaking changes:
