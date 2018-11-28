@@ -7,9 +7,9 @@ sort: 3
 
 # CSV Generate options
 
-All options are optional. All the options from the [Node.js Stream Writable](https://nodejs.org/api/stream.html#stream_constructor_new_stream_writable_options) are supported and passed as is.
+All options are optional. The [Node.js Stream Writable](https://nodejs.org/api/stream.html#stream_constructor_new_stream_writable_options) options are supported as well.
 
-All options accept both the underscore and camel case forms. Thus, `record_delimiter` and `recordDelimiter` are equivalent. For the sake of clarity, we listed Node.js native options in the camel case form while library specific options are listed in the underscore form.
+Choose your style! Options may be provided in both the underscore and camel case forms. Thus, `record_delimiter` and `recordDelimiter` are equivalent when initialising a new generation. Internally, only the underscore form is used. For example, in case you need to access the `record_delimiter` option, use `generate().options.record_delimiter` and not `generate().options.recordDelimiter`.
 
 ## Available options
 
@@ -25,17 +25,17 @@ All options accept both the underscore and camel case forms. Thus, `record_delim
   When to stop the generation; could be a numeric value and a date object; default is null.
 * `eof` (boolean|string)   
   One or multiple characters to print at the end of the file; only apply when `objectMode` is disabled; default to `false` or the value of `row_delimiter` if `true`.
-* `fixed_size` (boolean)   
+* `fixed_size`, `fixedSize` (boolean)   
   Generate buffers equals length as defined by the `highWaterMark` option; only apply when `objectMode` is disabled; first record is twice the `highWaterMark` option; default is `false`.
-* `highWaterMark` (integer)   
-  The maximum number of bytes to store in the internal buffer before ceasing to read from the underlying resource. The default value is 16384 (16kb), or 16 for objectMode streams.
+* `high_water_mark`, `highWaterMark` (integer)   
+  The maximum number of bytes to store in the internal buffer before ceasing to read from the underlying resource; for streams operating in object mode, the highWaterMark specifies a total number of objects; default value is 16384 (16kb), or 16 for objectMode streams.
 * `length` (integer)   
   Number of lines or records to generate. The default value is `-1` which is infinite.   
 * `max_word_length` (integer)   
   Maximum number of characters per word. Default to 16.
-* `objectMode` (boolean)   
+* `object_mode`, `objectMode` (boolean)   
   Whether this stream should behave as a stream of objects. Meaning that stream.read(n) returns a single value instead of a Buffer of size n. The default value is `false`. 
-* `row_delimiter` (string)   
+* `row_delimiter`, `rowDelimiter` (string)   
   One or multiple characters used to delimit records; only apply when `objectMode` is disabled; default to `\n`, the Unix line ending.
 * `seed` (integer)   
   Generate idempotent random characters if a number provided. The default value is `false` which disable the feature.
