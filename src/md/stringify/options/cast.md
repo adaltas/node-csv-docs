@@ -23,6 +23,26 @@ The following types are supported:
 * `string`   
   Custom function to transform string values.
   
+The functions will be executed with 2 arguments:
+
+* `value` (any)   
+  The field value being casted.
+* `context` (object)   
+  A context object.
+
+## Context
+
+The context object is passed as the second argument of the user provided function. It contains the following properties:
+
+* `column` (number|string)   
+  The column name if the columns options is defined or the column name was discovered or the field position.
+* `header` (boolean)   
+  A boolean indicating if the provided value is a part of the header.
+* `index` (number)   
+  The field position starting at 0.
+* `records` (number)   
+  The number of records which have been fully processed.
+
 ## Default behavior
 
 ### boolean

@@ -228,6 +228,25 @@ class Index extends Component {
           <article>
             <h2>
               <Link
+                to="/stringify/changelog/"
+              >
+                CSV Stringify 5.1.0
+              </Link>
+            </h2>
+            <p css={styles.blog_info}>
+              {"By "}
+              <a href='https://github.com/wdavidw/'>wdavidw</a>
+              {" | December 5th, 2018"}
+            </p>
+            <p>
+              <Link to="/stringify/options/cast/">Casting user functions</Link> are 
+              now called with a context object. The initial properties are 
+              "column", "header", "index", "records".
+            </p>
+          </article>
+          <article>
+            <h2>
+              <Link
                 to="/project/changelog/"
               >
                 CSV 5.0.0
