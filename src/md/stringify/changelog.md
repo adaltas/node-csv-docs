@@ -7,6 +7,25 @@ sort: 5
 
 # Changelog
 
+## Version 5.1.0
+
+Fix:
+
+* header: ensure column definition
+
+New features
+
+* cast: pass context to functions
+
+Minor enhancements:
+
+* write: validate written records
+* src: extends stream class
+
+Project Management:
+
+* package: latest dev dependencies
+
 ## Version 5.0.0
 
 Breaking changes:
