@@ -23,8 +23,8 @@ All options are optional. All the options from the [Node.js Writable Stream API]
     Custom function to transform object literals.
 * `columns` (array|object)   
   List of properties when records are provided as objects; work with records in the form of arrays based on index position; order matters; auto discovered in the first record when the user write objects, can refer to nested properties of the input JSON, see the "header" option on how to print columns names on the first line.
-* `delimiter`   
-  Set the field delimiter, one character only, defaults to a comma.   
+* `delimiter` (string)   
+  Set the field delimiter, one or multiple characters, defaults to a comma.   
 * `eof`   
   Add the value of "options.rowDelimiter" on the last line, default to true.   
 * `escape`   
