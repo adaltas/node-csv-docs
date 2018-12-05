@@ -27,7 +27,7 @@ The following types are supported:
 
 ### boolean
 
-A value of `true` is converted to the string `1` while a value of `fase` to converted to an empty string. The default implementation is:
+A value of `true` is converted to the string `1` while a value of `false` to converted to an empty string. The default implementation is:
 
 ```js
 function(value){

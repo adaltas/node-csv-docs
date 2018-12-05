@@ -8,11 +8,17 @@ sort: 4
 
 # Option header
 
-The `header` option generate the column names as the first emitted record. The value is expected to be a boolean value.
+The `header` option generates the column names in the first emitted record. The value is expected to be a boolean value.
 
-## Default usage
+This option implies that the knowledge of the columns. Column names can be discovered from the records when those are provided as object. They can also be provided through the [`columns` option](/stringify/options/columns/).
 
-To activate the genration of a header record, set the value to `true` as in the [header example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header.js):
+An error will be emitted at runtime if the `header` option is set because no columns are defined nor discovered in the first record. The error message is `Undiscoverable Columns: header option requires column option or object records`.
+
+## With object records
+
+Columns names are automatically discovered from the first record if it is provided as a literal object. In such case, the keys present in the object are used to set the [`columns` option](/stringify/options/columns/).
+
+To activate the generation of a header record, set the value to `true` as in the [header example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header.js):
 
 ```js
 const stringify = require('csv-stringify')
