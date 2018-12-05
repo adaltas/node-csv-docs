@@ -7,6 +7,12 @@ sort: 5
 
 # Changelog
 
+## Version 5.1.1
+
+Fix:
+
+* ts: add casting context missing type
+
 ## Version 5.1.0
 
 Fix:
