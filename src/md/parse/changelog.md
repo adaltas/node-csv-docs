@@ -7,6 +7,20 @@ sort: 7
 
 # Changelog
 
+## Version 4.1.0
+
+New features:
+
+* options: accept camelize and underscore forms
+* cast: dont call cast for non column-mappable fields
+
+Fix:
+
+* cast: ensure column is a string and not an array
+* stream: handle empty input streams
+* cast: function may return non-string values
+* stream: pass stream options without modification
+
 ## Version 4.0.1
 
 Fix:

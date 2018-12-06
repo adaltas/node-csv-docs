@@ -12,7 +12,7 @@ The `cast` option accept a function. It gives full control over a field. It is p
 
 ## Context
 
-The function is called with 2 arguments: the field value and a context object. The context object accept the following properties:
+The function is called with 2 arguments: the field value and a context object. The context object expose the following properties:
 
 * `column` (number|string)   
   The column name if the `columns` options is defined or the field position.
@@ -22,14 +22,14 @@ The function is called with 2 arguments: the field value and a context object. T
   A boolean indicating if the provided value is a part of the header.
 * `index` (number)   
   The field position starting at 0.
-* `quoting` (boolean)   
-  A boolean indicating if the field was surrounded by quotes.
+* `invalid_field_length` (number)   
+  Number of records with a non uniform length when [`relax_column_count`](/parse/options/relax_column_count/) is true. It was named `skipped_lines` until version 3.
 * `lines` (number)   
   The number of lines which have been processed including the current line.
+* `quoting` (boolean)   
+  A boolean indicating if the field was surrounded by quotes.
 * `records` (number)   
   The number of records which have been fully parsed. It was named `count` until version 3.
-* `skipped_lines` (number)   
-  Number of non uniform lines skipped when relax_column_count is true.
 
 The [cast example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.cast.js) uses the context to transform the first filed into a date and replace the second field with the injected context:
 
