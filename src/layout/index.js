@@ -70,6 +70,7 @@ class Layout extends Component {
           meta={[
             { name: 'description', content: page.description },
             { name: 'keywords', content: page.keywords },
+            { name: 'google-site-verification', content: 'ukvG8Ae6z6Ly-ABtoUMWzRAPMmn07QWlbRnot0AC5FA'}
           ]}
         >
           <html lang="en" />
