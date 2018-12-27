@@ -11,7 +11,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 
 ## Available options
 
-* `cast`
+* [`cast`](/stringify/options/cast/)   
   Defines custom cast for certain data types; was `formatters` until version 4.3.1.
   * `boolean`
     Custom function to transform boolean values.
@@ -21,15 +21,15 @@ All options are optional. All the options from the [Node.js Writable Stream API]
     Custom function to transform number values.
   * `object`
     Custom function to transform object literals.
-* `columns` (array|object)   
+* [`columns`](/stringify/options/columns/) (array|object)   
   List of properties when records are provided as objects; work with records in the form of arrays based on index position; order matters; auto discovered in the first record when the user write objects, can refer to nested properties of the input JSON, see the "header" option on how to print columns names on the first line.
-* `delimiter` (string)   
+* [`delimiter`](/stringify/options/delimiter/) (string)   
   Set the field delimiter, one or multiple characters, defaults to a comma.   
 * `eof`   
   Add the value of "options.rowDelimiter" on the last line, default to true.   
 * `escape`   
   Defaults to the escape read option.   
-* `header` (boolean)   
+* [`header`](/stringify/options/header) (boolean)   
   Display the column names on the first line if the columns option is provided or discovered.   
 * `quote`   
   The quote characters, defaults to the `"`, an empty quote value will preserve the original field.   
