@@ -9,8 +9,6 @@ sort: 3
 
 All options are optional. The [Node.js Stream Writable](https://nodejs.org/api/stream.html#stream_constructor_new_stream_writable_options) options are supported as well.
 
-Choose your style! Options may be provided in both the underscore and camel case forms. Thus, `record_delimiter` and `recordDelimiter` are equivalent when initialising a new generation. Internally, only the underscore form is used. For example, in case you need to access the `record_delimiter` option, use `generate().options.record_delimiter` and not `generate().options.recordDelimiter`.
-
 ## Available options
 
 * `columns` (integer|array|function)   
@@ -41,6 +39,10 @@ Choose your style! Options may be provided in both the underscore and camel case
   Generate idempotent random characters if a number provided. The default value is `false` which disable the feature.
 * `sleep` (number)   
   The time to wait between the generation of each records; since v3.1.0; default to "0" (no wait).
+
+## Choose your style
+
+The code uses snake case as the conventional style for function and variable names. In snake case, all letters are lowercase and underscores separate words. It is however accepted to provide options in camel case. Thus, `record_delimiter` and `recordDelimiter` are equivalent when initialising a new generation. The option will be converted into snake case and exposed as such. For example, in case you need to access the `record_delimiter` option, use `generate().options.record_delimiter` and not `generate().options.recordDelimiter`. Choose the case which best fit your coding style.
 
 ## Option `objectMode`
 

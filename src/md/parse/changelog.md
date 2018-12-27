@@ -11,7 +11,7 @@ sort: 7
 
 New features:
 
-* options: accept camelize and underscore forms
+* options: accept snake case and camel case
 * cast: dont call cast for non column-mappable fields
 
 Fix:
