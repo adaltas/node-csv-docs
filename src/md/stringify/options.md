@@ -35,9 +35,9 @@ All options are optional. All the options from the [Node.js Writable Stream API]
   The quote characters, defaults to the `"`, an empty quote value will preserve the original field.   
 * `quoted`   
   Boolean, default to false, quote all the non-empty fields even if not required.
-* `quotedEmpty`   
-  Boolean, no default, quote empty fields?  If specified, overrides `quotedString` for empty strings.
-* `quotedString`   
+* `quoted_empty`   
+  Boolean, no default, quote empty fields?  If specified, overrides `quoted_string` for empty strings.
+* `quoted_string`   
   Boolean, default to false, quote all fields of type string even if not required.
 * `record_delimiter`   
   String used to delimit record rows or a special value; special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered in source or 'unix' if no source is specified); was `rowDelimiter` until version 4.3.1
