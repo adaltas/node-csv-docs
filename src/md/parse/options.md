@@ -33,8 +33,8 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Generate two properties `info` and `record` where `info` is a snapshot of the info object at the time the record was created and `record` is the parsed array or object; note, it can be used conjointly with the `raw` option.
 * `ltrim` (boolean)   
   If `true`, ignore whitespace immediately following the delimiter (i.e. left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
-* `max_record_size` (int)   
-  Maximum numer of characters to be contained in the field and line buffers before an exception is raised. Used to guard against a wrong `delimiter` or `record_delimiter`. Default to 128,000 characters.
+* `max_record_size` (integer)   
+  Maximum numer of characters to be contained in the field and line buffers before an exception is raised; used to guard against a wrong `delimiter` or `record_delimiter`; a castable string will be converted to an integer; default to 128,000 characters.
 * `objname` (string)   
   Name of header-record title to name objects by.
 * `quote` (char|boolean)   
