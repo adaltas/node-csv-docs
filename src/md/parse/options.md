@@ -16,7 +16,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`cast`](/parse/options/cast/) (boolean|function)   
   If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2. More information about the context properties is available below.
 * `cast_date` (boolean|function)   
-  If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the `auto_parse` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
+  If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the `cast` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
 * [`columns`](/parse/options/columns/) (array|boolean|function)   
   Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
 * `comment` (char)   
@@ -35,8 +35,8 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   If `true`, ignore whitespace immediately following the delimiter (i.e. left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
 * `max_record_size` (integer)   
   Maximum numer of characters to be contained in the field and line buffers before an exception is raised; used to guard against a wrong `delimiter` or `record_delimiter`; a castable string will be converted to an integer; default to 128,000 characters.
-* `objname` (string)   
-  Name of header-record title to name objects by.
+* `objname` (string|Buffer)   
+  Name of header-record title to name objects by; the string or Buffer value must not be empty and it must match a header value.
 * `quote` (char|boolean)   
   Optional character surrounding a field; one character only; disabled if null, false or empty; defaults to double quote.
 * `raw` (boolean)   

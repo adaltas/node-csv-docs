@@ -7,6 +7,41 @@ sort: 7
 
 # Changelog
 
+## Todo
+
+* max_comment_size: new option
+* promise: new API module
+
+## Version 4.3.0
+
+New features:
+
+* objname: accept a buffer
+
+Minor enhancements:
+
+* to_line: validation refinements
+* trim, ltrim, rtrim: validation refinements
+* to: validation refinements
+* from_line: validation refinements
+* objname: validation refinements
+* from: validation refinements
+* escape: validation refinements
+* skip_empty_lines: validation refinements
+* skip_lines_with_empty_values: validation refinements
+* skip_lines_with_error: validation refinements
+* relax_column_count: validation refinements
+* relax: validation refinements
+* delimiter: validation refinements
+* max_record_size: validation refinements
+
+## Version 4.2.0
+
+Fix:
+
+* record_delimiter: fix multi bytes with skip_empty_lines and from_line
+* rtrim: accept tab
+
 ## Version 4.1.0
 
 New features:
