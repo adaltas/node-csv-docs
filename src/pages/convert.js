@@ -2,15 +2,18 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 // Local
 import Layout from '../layout'
-
-const styles = {
-  
-}
+import Convert from '../components/Convert'
 
 class Index extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      current: 'input',
+      options: {},
+      input: ''
+    }
+  }
   render() {
-    const onClick = (e) =>
-      console.log('click')
     return (
       <Layout
         page={{
@@ -21,7 +24,8 @@ class Index extends Component {
             'csv, node.js, demo, parser, serializer, generation, transformation',
         }}
       >
-        <button onClick={onClick}>ok</button>
+        <h1>Convert data between CSV and JSON</h1>
+        <Convert />
       </Layout>
     )
   }

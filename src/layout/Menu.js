@@ -140,9 +140,9 @@ class Nav extends Component {
                 Homepage
               </Link>
             </li>
-            <li key="/convert" css={styles_nav.li}>
+            <li key="/convert/" css={styles_nav.li}>
               <Link
-                to="/convert"
+                to="/convert/"
                 className={css(styles_nav.link).toString()}
                 activeClassName={css(styles_nav.linkActive).toString()}
                 onClick={onClickLink}

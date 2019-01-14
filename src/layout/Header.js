@@ -53,7 +53,7 @@ class Header extends Component {
       marginBottom: 0,
       margin: 0,
       color: '#FFF',
-      fontSize: '1.5rem',
+      fontSize: '1.4rem',
       // '@media (max-width:374px)': {
       //   fontSize: '1.2rem',
       // }
@@ -77,6 +77,9 @@ class Header extends Component {
     button: {},
     quick: {
       marginLeft: '1rem',
+      [TABLET_MEDIA_QUERY]: {
+        marginLeft: '0',
+      },
     },
     quick_label: {
       [TABLET_MEDIA_QUERY]: {
@@ -109,7 +112,7 @@ class Header extends Component {
                 {project.slug !== 'project' && (
                   <span css={styles.project}>{project.label}</span>
                 )}
-                <span css={styles.nodejs}>for Node.js</span>
+                <span css={styles.nodejs}>{' for Node.js'}</span>
               </Link>
             </h1>
             <div css={styles.grow} />

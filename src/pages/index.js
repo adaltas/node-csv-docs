@@ -225,6 +225,26 @@ class Index extends Component {
         </section>
         <section css={styles.blog}>
           <h1>Latest news</h1>
+          : learn, test, prototype
+          <article>
+            <h2>
+              <Link
+                to="/convert/"
+              >
+                Try the new CSV & JSON convertion tool!
+              </Link>
+            </h2>
+            <p css={styles.blog_info}>
+              {"By "}
+              <a href='http://www.adaltas.com/'>wdavidw</a>
+              {" | January 15th, 2019"}
+            </p>
+            <p>
+              <Link to="/stringify/options/cast/">Casting user functions</Link> are 
+              now called with a context object. The initial properties are 
+              "column", "header", "index", "records".
+            </p>
+          </article>
           <article>
             <h2>
               <Link
