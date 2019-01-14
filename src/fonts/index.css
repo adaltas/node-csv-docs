@@ -8,26 +8,26 @@
   font-display: optional;
 }
 @font-face {
-  font-family: 'Khula';
+  font-family: 'Montserrat';
   font-style: normal;
   font-display: swap;
   font-weight: 300;
   src:
-    local('Khula Light '),
-    local('Khula-Light'),
-    url('../../node_modules/typeface-khula/files/khula-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../node_modules/typeface-khula/files/khula-latin-300.woff') format('woff'); /* Modern Browsers */
+    local('Montserrat Light '),
+    local('Montserrat-Light'),
+    url('../../node_modules/typeface-montserrat/files/montserrat-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../node_modules/typeface-montserrat/files/montserrat-latin-300.woff') format('woff'); /* Modern Browsers */
 }
 @font-face {
-  font-family: 'Khula';
+  font-family: 'Montserrat';
   font-style: normal;
   font-display: swap;
   font-weight: 400;
   src:
-    local('Khula Regular'),
-    local('Khula-Regular'),
-    url('../../node_modules/typeface-khula/files/khula-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../node_modules/typeface-khula/files/khula-latin-400.woff') format('woff'); /* Modern Browsers */
+    local('Montserrat Regular '),
+    local('Montserrat-Regular'),
+    url('../../node_modules/typeface-montserrat/files/montserrat-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../node_modules/typeface-montserrat/files/montserrat-latin-400.woff') format('woff'); /* Modern Browsers */
 }
 @font-face {
   font-family: 'Overpass Mono';

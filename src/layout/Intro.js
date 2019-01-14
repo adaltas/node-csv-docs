@@ -135,7 +135,7 @@ class Intro extends Component {
                   <g transform="matrix(1,0,0,1,540.298,430.459)">
                     <text
                       style={{
-                        fontFamily: "'Khula'",
+                        fontFamily: "Montserrat",
                         fontWeight: '400',
                         fontSize: '24px',
                         fontStyle: 'normal',
@@ -194,7 +194,7 @@ class Intro extends Component {
                   <g transform="matrix(1,0,0,1,722.456,555.969)">
                     <text
                       style={{
-                        fontFamily: "'Khula'",
+                        fontFamily: "Montserrat",
                         fontWeight: '400',
                         fontSize: '24px',
                         fontStyle: 'normal',
@@ -253,7 +253,7 @@ class Intro extends Component {
                   <g transform="matrix(1,0,0,1,909.159,499.291)">
                     <text
                       style={{
-                        fontFamily: "'Khula'",
+                        fontFamily: "Montserrat",
                         fontWeight: '400',
                         fontSize: '24px',
                         fontStyle: 'normal',
@@ -312,7 +312,7 @@ class Intro extends Component {
                   <g transform="matrix(1,0,0,1,1119.478,556.117)">
                     <text
                       style={{
-                        fontFamily: "'Khula'",
+                        fontFamily: "Montserrat",
                         fontWeight: '400',
                         fontSize: '24px',
                         fontStyle: 'normal',

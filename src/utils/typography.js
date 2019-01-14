@@ -6,12 +6,12 @@ import {
 } from 'typography-breakpoint-constants'
 
 const theme = {
-  baseFontSize: '18px',
+  baseFontSize: '17px',
   // baseLineHeight: 1.666,
   bodyColor: '#DEE9EA',
-  bodyFontFamily: ['Khula', 'sans-serif'],
+  bodyFontFamily: ['Montserrat', 'sans-serif'],
   headerColor: 'rgba(255,255,255,0.95)',
-  headerFontFamily: ['Khula', 'sans-serif'],
+  headerFontFamily: ['Montserrat', 'sans-serif'],
   overrideStyles: ({ adjustFontSizeTo, rhythm, scale }, options) => ({
     'body, html': {
       // backgroundColor: '#384444',
@@ -36,17 +36,8 @@ const theme = {
     'a:hover, a:active': {
       color: '#00D0B4',
     },
-    // 181116 no idea why this was activated
-    // 'article h1': {
-    //   textAlign: 'center',
-    // },
-    // 'article h2': {
-    //   borderBottom: '.5rem solid #fff',
-    //   lineHeight: rhythm(1.5),
-    // },
     'main h1': {
       marginTop: '2rem',
-      // display: 'inline-block',
     },
     'main :not(pre) > code[class*="language-"]': {
       padding: '.2em .3em .2em .3em',
