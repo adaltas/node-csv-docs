@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { css } from 'glamor'
 import ReactTooltip from 'react-tooltip'
-import Button from '../components/Button'
+import Icon from '../components/Icon'
 import {
   TABLET_MEDIA_QUERY,
   MOBILE_MEDIA_QUERY,
@@ -90,7 +90,7 @@ class Header extends Component {
     return (
       <div css={styles.root}>
         <div css={styles.menu}>
-          <Button
+          <Icon
             aria-label="header-menu"
             data-for="header-tooltip"
             data-tip="Toggle the menu"
@@ -99,7 +99,7 @@ class Header extends Component {
             ripple={true}
           >
             <FaBars css={styles.icon} />
-          </Button>
+          </Icon>
         </div>
         <div css={styles.header}>
           <header css={styles.headerContainer}>
@@ -107,7 +107,7 @@ class Header extends Component {
               <Link to="/">
                 <span css={styles.logo}>CSV</span>
                 {project.slug !== 'project' && (
-                  <span css={styles.project}>{project.label} </span>
+                  <span css={styles.project}>{project.label}</span>
                 )}
                 <span css={styles.nodejs}>for Node.js</span>
               </Link>
@@ -119,7 +119,7 @@ class Header extends Component {
               rel="noopener"
               target="_blank"
             >
-              <Button
+              <Icon
                 color="inherit"
                 aria-label="header-bug"
                 data-for="header-tooltip"
@@ -128,7 +128,7 @@ class Header extends Component {
                 ripple={true}
               >
                 <FaBug css={styles.icon} />
-              </Button>
+              </Icon>
               <span css={styles.quick_label}>Issues</span>
             </a>
             <a
@@ -137,7 +137,7 @@ class Header extends Component {
               rel="noopener"
               target="_blank"
             >
-              <Button
+              <Icon
                 color="inherit"
                 aria-label="header-github"
                 data-for="header-tooltip"
@@ -146,7 +146,7 @@ class Header extends Component {
                 ripple={true}
               >
                 <FaGithub css={styles.icon} />
-              </Button>
+              </Icon>
               <span css={styles.quick_label}>GitHub</span>
             </a>
             <ReactTooltip

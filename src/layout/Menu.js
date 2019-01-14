@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { css } from 'glamor'
-import Button from '../components/Button'
+import Icon from '../components/Icon'
 
 // make the keyframes with glamor
 // const display = css.keyframes({
@@ -74,7 +74,7 @@ const styles_nav = {
     color: '#FFFFFF',
     display: 'block',
     lineHeight: '1.2rem',
-    paddingTop: '.3rem',
+    padding: '.2rem 0',
   },
   linkActive: {
     color: '#00D0B4',
@@ -116,13 +116,8 @@ class Nav extends Component {
           <span>
             {title}
           </span>
-          <Button
+          <Icon
             color="inherit"
-            aria-label="content-edit"
-            data-for="content-tooltip"
-            data-tip="Edit on GitHub"
-            target="_blank"
-            rel="noopener"
             ripple={true}
             className={css(styles_nav.button).toString()}
             disabled={current}
@@ -130,10 +125,11 @@ class Nav extends Component {
             <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
               <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
             </svg>
-          </Button>
+          </Icon>
         </h1>
         <ul>
           {home && (
+            <>
             <li key="/" css={styles_nav.li}>
               <Link
                 to="/"
@@ -144,6 +140,17 @@ class Nav extends Component {
                 Homepage
               </Link>
             </li>
+            <li key="/convert" css={styles_nav.li}>
+              <Link
+                to="/convert"
+                className={css(styles_nav.link).toString()}
+                activeClassName={css(styles_nav.linkActive).toString()}
+                onClick={onClickLink}
+              >
+                Convertor
+              </Link>
+            </li>
+            </>
           )}
           {[
             ...pages.map(page => (

@@ -67,18 +67,11 @@ const styles = {
     verticalAlign: 'middle',
     justifyContent: 'center',
     flex: '0 0 auto',
-    width: '48px',
-    height: '48px',
     padding: 0,
     fontSize: '1.5rem',
     textAlign: 'center',
     textDecoration: 'none',
-    borderRadius: '50%',
-    transition: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)',
     backgroundColor: 'transparent',
-    // 'not(disabled):hover': {
-    //   backgroundColor: 'rgba(0, 0, 0, .08)',
-    // },
   },
   button: {
     cursor: 'pointer',
@@ -90,14 +83,8 @@ const styles = {
     ':focus': {
       outline: 'none',
     },
-    ':enabled:hover': {
-      backgroundColor: 'rgba(0, 0, 0, .08)',
-    },
   },
   link: {
-    ':hover': {
-      backgroundColor: 'rgba(0, 0, 0, .08)',
-    },
   },
   label: {
     width: '100%',
@@ -168,15 +155,10 @@ class Button extends Component {
       userStyles,
       ...props
     } = this.props
-    if (userStyles && userStyles.base)
-      styles.base = { ...styles.base, ...userStyles.base }
-    if (userStyles && userStyles.button)
-      styles.button = { ...styles.button, ...userStyles.button }
-    if (userStyles && userStyles.link)
-      styles.link = { ...styles.link, ...userStyles.link }
-    if (userStyles && userStyles.label)
-      styles.label = { ...styles.label, ...userStyles.label }
-    const label = <span css={styles.label}>{children}</span>
+    userStyles.base = { ...styles.base, ...userStyles.base }
+    userStyles.button = { ...styles.button, ...userStyles.button }
+    userStyles.link = { ...styles.link, ...userStyles.link }
+    userStyles.label = { ...styles.label, ...userStyles.label }
     const Component = href ? 'a' : 'button'
     const componentProps = {
       title: title,
@@ -201,12 +183,12 @@ class Button extends Component {
         onTouchEnd={this.handleTouchEnd.bind(this)}
         onTouchMove={this.handleTouchMove.bind(this)}
         onTouchStart={this.handleTouchStart.bind(this)}
-        css={[styles.base, href ? styles.link : styles.button]}
+        css={[userStyles.base, href ? userStyles.link : userStyles.button]}
         className={className}
         {...componentProps}
         {...props}
       >
-        {label}
+        <span css={userStyles.label}>{children}</span>
         {ripple && <Ripple ref={this.ripple} />}
       </Component>
     )
@@ -222,6 +204,7 @@ Button.propTypes = {
 Button.defaultProps = {
   role: 'button',
   tabIndex: 0,
+  userStyles: {},
   // disabled: false,
 }
 
