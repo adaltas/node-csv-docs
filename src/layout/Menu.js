@@ -123,6 +123,7 @@ class Nav extends Component {
             data-tip="Edit on GitHub"
             target="_blank"
             rel="noopener"
+            ripple={true}
             className={css(styles_nav.button).toString()}
             disabled={current}
           >

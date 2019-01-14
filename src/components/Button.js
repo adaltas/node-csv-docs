@@ -115,16 +115,22 @@ class Button extends Component {
     const key = event.key
     if (key === 'space' || key === 'enter') {
       event.persist()
-      this.ripple.current.stop(event, () => {
-        this.ripple.current.start(event)
-      })
+      const {ripple} = this.props
+      if(ripple){
+        this.ripple.current.stop(event, () => {
+          this.ripple.current.start(event)
+        })
+      }
     }
   }
   handleMouseDown(event) {
     event.persist()
-    this.ripple.current.stop(event, () => {
-      this.ripple.current.start(event)
-    })
+    const {ripple} = this.props
+    if(ripple){
+      this.ripple.current.stop(event, () => {
+        this.ripple.current.start(event)
+      })
+    }
   }
   handleMouseLeave(event) {}
   handleMouseUp(event) {}
@@ -132,9 +138,12 @@ class Button extends Component {
   handleTouchEnd(event) {}
   handleTouchStart(event) {
     event.persist()
-    this.ripple.current.stop(event, () => {
-      this.ripple.current.start(event)
-    })
+    const {ripple} = this.props
+    if(ripple){
+      this.ripple.current.stop(event, () => {
+        this.ripple.current.start(event)
+      })
+    }
   }
   constructor(props) {
     super(props)
@@ -155,6 +164,7 @@ class Button extends Component {
       href,
       role,
       className,
+      ripple,
       userStyles,
       ...props
     } = this.props
@@ -197,7 +207,7 @@ class Button extends Component {
         {...props}
       >
         {label}
-        <Ripple ref={this.ripple} />
+        {ripple && <Ripple ref={this.ripple} />}
       </Component>
     )
   }

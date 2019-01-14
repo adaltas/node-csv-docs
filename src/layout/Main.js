@@ -133,6 +133,7 @@ class Main extends Component {
             data-for="content-tooltip"
             data-tip="Edit on GitHub"
             href={page.edit_url}
+            ripple={true}
             target="_blank"
             rel="noopener"
             className={css(styles.button).toString()}
@@ -152,6 +153,7 @@ class Main extends Component {
             data-tip="Toggle table of content"
             onClick={toggleToc}
             className={css(styles.button).toString()}
+            ripple={true}
           >
             <svg viewBox="0 0 24 24" css={styles.icon}>
               <path fill="none" d="M0,0h24v24H0V0z" />

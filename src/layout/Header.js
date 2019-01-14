@@ -96,6 +96,7 @@ class Header extends Component {
             data-tip="Toggle the menu"
             onClick={onMenuClick}
             className={css(styles.button).toString()}
+            ripple={true}
           >
             <FaBars css={styles.icon} />
           </Button>
@@ -124,6 +125,7 @@ class Header extends Component {
                 data-for="header-tooltip"
                 data-tip="Report an issue"
                 className={css(styles.button).toString()}
+                ripple={true}
               >
                 <FaBug css={styles.icon} />
               </Button>
@@ -139,8 +141,9 @@ class Header extends Component {
                 color="inherit"
                 aria-label="header-github"
                 data-for="header-tooltip"
-                data-tip="Toggle the menu"
+                data-tip="GitHub repository"
                 className={css(styles.button).toString()}
+                ripple={true}
               >
                 <FaGithub css={styles.icon} />
               </Button>
