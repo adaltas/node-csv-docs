@@ -240,9 +240,9 @@ class Index extends Component {
               {" | January 15th, 2019"}
             </p>
             <p>
-              <Link to="/stringify/options/cast/">Casting user functions</Link> are 
-              now called with a context object. The initial properties are 
-              "column", "header", "index", "records".
+              We just published a new conversion tool which takes a CSV input 
+              and convert it to JSON. Use it as a playground to learn how to 
+              use our packages and as a full-featured CSV parsing tool.
             </p>
           </article>
           <article>
