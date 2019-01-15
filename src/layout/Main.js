@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDom from 'react-dom'
 import { css } from 'glamor'
 import ReactTooltip from 'react-tooltip'
-import Button from '../components/Button'
+import Icon from '../components/Icon'
 import {
   TABLET_MEDIA_QUERY,
   MIN_TABLET_MEDIA_QUERY,
@@ -47,7 +47,7 @@ class Main extends Component {
         borderRadius: '0 0 1.4rem 1.4rem',
       },
     },
-    icon: {
+    svg: {
       fill: '#fff',
       '@media (max-width: 960px)': {
         width: '1.4rem',
@@ -58,7 +58,7 @@ class Main extends Component {
         height: '1.8rem',
       },
     },
-    button: {
+    icon: {
       outline: 'none',
       '@media (max-width: 960px)': {
         width: '1.8rem !important',
@@ -127,7 +127,7 @@ class Main extends Component {
         <div ref={this.toc} css={styles.toc} />
         {page && page.edit_url &&
         <div css={styles.tools}>
-          <Button
+          <Icon
             color="inherit"
             aria-label="content-edit"
             data-for="content-tooltip"
@@ -136,31 +136,31 @@ class Main extends Component {
             ripple={true}
             target="_blank"
             rel="noopener"
-            className={css(styles.button).toString()}
+            className={css(styles.icon).toString()}
           >
-            <svg viewBox="0 0 24 24" css={styles.icon}>
+            <svg viewBox="0 0 24 24" css={styles.svg}>
               <path
                 d="M14.06,9.02l0.92,0.92L5.92,19H5v-0.92L14.06,9.02 M17.66,3c-0.25,0-0.51,0.1-0.7,0.29l-1.83,1.83
           		l3.75,3.75l1.83-1.83c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34C18.17,3.09,17.92,3,17.66,3L17.66,3z M14.06,6.19L3,17.25V21h3.75
           		L17.81,9.94L14.06,6.19L14.06,6.19z"
               />
             </svg>
-          </Button>
-          <Button
+          </Icon>
+          <Icon
             color="inherit"
             aria-label="content-toc"
             data-for="content-tooltip"
-            data-tip="Toggle table of content"
+            data-tip="Toggle the table of content"
             onClick={toggleToc}
-            className={css(styles.button).toString()}
+            className={css(styles.icon).toString()}
             ripple={true}
           >
-            <svg viewBox="0 0 24 24" css={styles.icon}>
+            <svg viewBox="0 0 24 24" css={styles.svg}>
               <path fill="none" d="M0,0h24v24H0V0z" />
               <path fill="none" d="M0,0h24v24H0V0z" />
               <path d="M3,9h14V7H3V9z M3,13h14v-2H3V13z M3,17h14v-2H3V17z M19,17h2v-2h-2V17z M19,7v2h2V7H19z M19,13h2v-2h-2V13z" />
             </svg>
-          </Button>
+          </Icon>
           <ReactTooltip
             id="content-tooltip"
             delayShow={300}

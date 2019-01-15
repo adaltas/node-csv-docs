@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { css } from 'glamor'
 import Button from '../Button'
-import Icons from './icons/icons.svg'
+import Icons from './icons/index.svg'
 import {
   TABLET_MEDIA_QUERY,
   MOBILE_MEDIA_QUERY,
