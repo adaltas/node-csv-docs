@@ -5,8 +5,6 @@ import { css } from 'glamor'
 /*
 Breakpoints
 Based on [typography-breakpoint-constants](https://github.com/KyleAMathews/typography.js/blob/master/packages/typography-breakpoint-constants/src/index.js)
-
-
 */
 
 const breakpoints = {
@@ -93,7 +91,7 @@ class Drawer extends PureComponent {
   constructor(props) {
     super(props)
     this.state = { isMobile: false }
-    this.main = React.createRef()
+    this.mainRef = React.createRef()
   }
   componentDidMount() {
     if (window.innerWidth < this.props.breakpoint) {
@@ -124,7 +122,7 @@ class Drawer extends PureComponent {
     return (
       <>
         <div
-          ref={this.main}
+          ref={this.mainRef}
           className={css([
             styles.main,
             userStyles.main,
@@ -142,7 +140,7 @@ class Drawer extends PureComponent {
               labelledby: 'Menu',
               describedby: 'Navigate through the site',
             }}
-            appElement={this.main.current}
+            appElement={this.mainRef.current}
             className={css([
               styles.drawer,
               userStyles.drawer,
