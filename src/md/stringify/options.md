@@ -27,8 +27,8 @@ All options are optional. All the options from the [Node.js Writable Stream API]
   Set the field delimiter, one or multiple characters, defaults to a comma.   
 * `eof`   
   Add the value of "options.rowDelimiter" on the last line, default to true.   
-* `escape`   
-  Defaults to the escape read option.   
+* `escape` (string|Buffer)   
+  Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.   
 * [`header`](/stringify/options/header) (boolean)   
   Display the column names on the first line if the columns option is provided or discovered.   
 * `quote`   
