@@ -38,6 +38,10 @@ class Header extends Component {
       '& *': {
         verticalAlign: 'baseline',
       },
+      '& a:hover button': {
+        backgroundColor: 'rgba(0, 0, 0, .08)',
+        
+      }
     },
     icon: {
       color: '#FFF',
