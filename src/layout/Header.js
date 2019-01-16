@@ -98,7 +98,7 @@ class Header extends Component {
       <div css={styles.root}>
         <div css={styles.menu}>
           <Icon
-            aria-label="header-menu"
+            aria-label="Toggle the menu"
             data-for="header-tooltip"
             data-tip="Toggle the menu"
             onClick={onMenuClick}
@@ -125,36 +125,36 @@ class Header extends Component {
               css={styles.quick}
               rel="noopener"
               target="_blank"
+              data-for="header-tooltip"
+              data-tip="Report an issue"
             >
               <Icon
                 color="inherit"
-                aria-label="header-bug"
-                data-for="header-tooltip"
-                data-tip="Report an issue"
+                aria-labelledby="header-bug"
                 className={css(styles.button).toString()}
                 ripple={true}
               >
                 <FaBug css={styles.icon} />
               </Icon>
-              <span css={styles.quick_label}>Issues</span>
+              <span id="header-bug" css={styles.quick_label}>Issues</span>
             </a>
             <a
               href={project.github}
               css={styles.quick}
               rel="noopener"
               target="_blank"
+              data-for="header-tooltip"
+              data-tip="GitHub repository"
             >
               <Icon
                 color="inherit"
-                aria-label="header-github"
-                data-for="header-tooltip"
-                data-tip="GitHub repository"
+                aria-labelledby="header-github"
                 className={css(styles.button).toString()}
                 ripple={true}
               >
                 <FaGithub css={styles.icon} />
               </Icon>
-              <span css={styles.quick_label}>GitHub</span>
+              <span id="header-github" css={styles.quick_label}>GitHub</span>
             </a>
             <ReactTooltip
               id="header-tooltip"
