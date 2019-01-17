@@ -30,7 +30,7 @@ class Output extends Component {
   }
   render() {
     const {props} = this
-    const {fullscreen, input, options} = props
+    const {fullscreen, input, options, transform} = props
     const opts = {}
     for(let property in options) {
       const option = options[property]
@@ -52,12 +52,27 @@ class Output extends Component {
     }
     let output
     let error
+    // Parse
     try{
       output = csv.parse(input, opts)
-      output = JSON.stringify(output, null, '  ')
     }catch(e){
       error = e
     }
+    // Transform
+    if(transform){
+      try {
+        const transformCtx= {}
+        eval(`transformCtx.value = ${transform}`)
+        output = csv.transform(output, transformCtx.value)
+      }
+      catch(e) {
+        console.log('!!!', e)
+        error = e
+      }
+    }
+    output = JSON.stringify(output, null, '  ')
+    
+    
     return (
       <div css={styles.root}>
         {error ? (

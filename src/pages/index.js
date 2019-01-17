@@ -3,9 +3,11 @@ import { Link } from 'gatsby'
 import {
   MIN_TABLET_MEDIA_QUERY,
   TABLET_MEDIA_QUERY,
+  MOBILE_MEDIA_QUERY,
 } from 'typography-breakpoint-constants'
 // Local
 import Layout from '../layout'
+import convert_icon from '../images/convert.svg'
 
 // Syntax
 import SyntaxHighlighter, {
@@ -43,6 +45,32 @@ csv
 `.trim()
 
 const styles = {
+  convert: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    background: `#BF5E13`,
+    borderRadius: '.6rem',
+    padding: '1rem',
+    marginBottom: '4%',
+    '& span': {
+      display: 'inline-block',
+    },
+    '& img': {
+      margin: '0 1rem 0 0',
+      width: '6rem',
+      height: '6rem',
+    },
+    '& h1': {
+      color: '#fff',
+      margin: '0 0 .4rem 0',
+    },
+    '& p': {
+      // display: 'inline',
+      color: '#fff',
+      margin: 0,
+    },
+  },
   projects: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -119,6 +147,17 @@ class Index extends Component {
             'csv, node.js, stream, parser, serializer, generation, transformation',
         }}
       >
+        <section css={styles.convert}>
+          <div>
+            <h1><Link to="/generate/"><span>CSV & JSON</span> <span>convertor tool</span></Link></h1>
+            <p>
+              This is a full-featured CSV parsing tool running entirely on your brower. 
+              No data leave your computer ! 
+              Use it also to learn how to use our packages and to test the various options interactively.
+            </p>
+          </div>
+          <img src={convert_icon} />
+        </section>
         <section css={styles.projects}>
           <div css={styles.card}>
             <h1><Link to="/generate/">csv-generate</Link></h1>
@@ -225,7 +264,6 @@ class Index extends Component {
         </section>
         <section css={styles.blog}>
           <h1>Latest news</h1>
-          : learn, test, prototype
           <article>
             <h2>
               <Link
@@ -242,7 +280,8 @@ class Index extends Component {
             <p>
               We just published a new conversion tool which takes a CSV input 
               and convert it to JSON. Use it as a playground to learn how to 
-              use our packages and as a full-featured CSV parsing tool.
+              use our packages, test your options interactively or as a 
+              full-featured CSV parsing tool.
             </p>
           </article>
           <article>

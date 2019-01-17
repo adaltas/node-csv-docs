@@ -95,7 +95,8 @@ class Convert extends Component {
           css={styles.content}
           fullscreen={fullscreen}
           options={options}
-          input={input} />}
+          input={input}
+          transform={transform} />}
       </div>
     )
     return (

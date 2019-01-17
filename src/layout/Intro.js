@@ -39,7 +39,7 @@ class Intro extends Component {
         textAlign: 'center',
         maxWidth: '800',
         boxSizing: 'content-box',
-        fontSize: '1.6rem',
+        fontSize: '1.4rem',
         [TABLET_MEDIA_QUERY]: {
           padding: '2rem 1rem 1rem 1rem',
           fontSize: '1.2rem',
