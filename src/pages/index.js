@@ -149,14 +149,14 @@ class Index extends Component {
       >
         <section css={styles.convert}>
           <div>
-            <h1><Link to="/generate/"><span>CSV & JSON</span> <span>convertor tool</span></Link></h1>
+            <h1><Link to="/convert/"><span>CSV & JSON</span> <span>convertor tool</span></Link></h1>
             <p>
               This is a full-featured CSV parsing tool running entirely on your brower. 
               No data leave your computer ! 
               Use it also to learn how to use our packages and to test the various options interactively.
             </p>
           </div>
-          <img src={convert_icon} />
+          <img src={convert_icon} alt="Convertor tool" />
         </section>
         <section css={styles.projects}>
           <div css={styles.card}>
