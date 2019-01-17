@@ -132,16 +132,16 @@ class Tabs extends Component {
     const {current} = state
     const {onTab, onFullscreen} = props
     const tabs = [{
-      key: 'options',
-      label: 'Options',
-      svg: <svg css={styles.icon} fill={'#fff'}>
-        <use xlinkHref={`${Icons}#icon-options`} />
-      </svg>
-    },{
       key: 'input',
       label: 'Input',
       svg: <svg css={styles.icon} fill={'#fff'}>
         <use xlinkHref={`${Icons}#icon-input`} />
+      </svg>
+    },{
+      key: 'options',
+      label: 'Options',
+      svg: <svg css={styles.icon} fill={'#fff'}>
+        <use xlinkHref={`${Icons}#icon-options`} />
       </svg>
     },{
       key: 'transform',
