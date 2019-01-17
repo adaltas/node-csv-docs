@@ -236,7 +236,7 @@ const defs = {
     variants: {
       'default': {
         label: 'default',
-        form: () => <p>{"Handle records from the begining of the dataset."}</p>
+        form: () => <p>{"Handle records from the first record of the dataset."}</p>
       },
       'integer': {
         label: 'integer',
@@ -312,7 +312,7 @@ const defs = {
     variants: {
       'default': {
         label: 'default',
-        form: () => <p>{"Whitespaces will be preserved on the left side."}</p>
+        form: () => <p>{"Whitespaces and tabs will be preserved on the left side."}</p>
       },
       'boolean': {
         label: 'boolean',
@@ -325,7 +325,7 @@ const defs = {
               onChange={function(e){onChange(!!e.target.checked)}}
               {...props}
             />
-            <p>If checked, whitespaces on the left side will be trimmed.</p>
+          <p>If checked, whitespaces and tabs on the left side will be removed.</p>
           </>
       },
     },
@@ -560,7 +560,7 @@ const defs = {
     variants: {
       'default': {
         label: 'default',
-        form: () => <p>{"Whitespaces will be preserved on the right side."}</p>
+        form: () => <p>{"Whitespaces and tabs will be preserved on the right side."}</p>
       },
       'boolean': {
         label: 'boolean',
@@ -573,7 +573,7 @@ const defs = {
               onChange={function(e){onChange(!!e.target.checked)}}
               {...props}
             />
-            <p>If checked, whitespaces on the right side will be trimmed.</p>
+          <p>If checked, whitespaces and tabs on the right side will be removed.</p>
           </>
       },
     },
@@ -597,7 +597,131 @@ const defs = {
               onChange={function(e){onChange(!!e.target.checked)}}
               {...props}
             />
-          <p>If checked, empty lines will be disregarded and no error will occur.</p>
+            <p>If checked, empty lines will be disregarded and no error will occur.</p>
+          </>
+      },
+    },
+  },
+  skip_lines_with_error: {
+    label: 'skip_lines_with_error',
+    variant: 'default',
+    variants: {
+      'default': {
+        label: 'default',
+        form: () => <p>{"Processing will stop if an error is encountered."}</p>
+      },
+      'boolean': {
+        label: 'boolean',
+        value: false,
+        form: ({state, props, value, onChange}) =>
+          <>
+            <input
+              type="checkbox"
+              defaultChecked={value}
+              onChange={function(e){onChange(!!e.target.checked)}}
+              {...props}
+            />
+            <p>If checked, no error will be thrown and the processing will continue.</p>
+          </>
+      },
+    },
+  },
+  skip_lines_with_empty_values: {
+    label: 'skip_lines_with_empty_values',
+    variant: 'default',
+    variants: {
+      'default': {
+        label: 'default',
+        form: () => <p>{"Empty lines inside the dataset are treated as a valid record which will often result in an error."}</p>
+      },
+      'boolean': {
+        label: 'boolean',
+        value: false,
+        form: ({state, props, value, onChange}) =>
+          <>
+            <input
+              type="checkbox"
+              defaultChecked={value}
+              onChange={function(e){onChange(!!e.target.checked)}}
+              {...props}
+            />
+          <p>If checked, empty lines will simply be disregarded.</p>
+          </>
+      },
+    },
+  },
+  to: {
+    label: 'to',
+    variant: 'default',
+    variants: {
+      'default': {
+        label: 'default',
+        form: () => <p>{"Handle records until the last record of the dataset."}</p>
+      },
+      'integer': {
+        label: 'integer',
+        value: 0,
+        form: ({state, props, value, onChange}) =>
+          <>
+            <input
+              css={styles.cast_function}
+              defaultValue={value}
+              onChange={function(e){
+                onChange(e.target.value)
+              }}
+              {...props}
+            />
+            <p>The value must be a valid integer greater than zero.</p>
+          </>
+      },
+    },
+  },
+  to_line: {
+    label: 'to_line',
+    variant: 'default',
+    variants: {
+      'default': {
+        label: 'default',
+        form: () => <p>{"Handle records until the last line."}</p>
+      },
+      'integer': {
+        label: 'integer',
+        value: 0,
+        form: ({state, props, value, onChange}) =>
+          <>
+            <input
+              css={styles.cast_function}
+              defaultValue={value}
+              onChange={function(e){
+                onChange(e.target.value)
+              }}
+              {...props}
+            />
+            <p>The value must be a valid integer greater than zero.</p>
+          </>
+      },
+    },
+  },
+  trim: {
+    label: 'trim',
+    variant: 'default',
+    variants: {
+      'default': {
+        label: 'default',
+        form: () => <p>{"Whitespaces and tabs will be preserved on both sides."}</p>
+      },
+      'boolean': {
+        label: 'boolean',
+        value: false,
+        form: ({state, props, value, onChange}) =>
+          <>
+            <input
+              type="checkbox"
+              defaultChecked={value}
+              onChange={function(e){onChange(!!e.target.checked)}}
+              {...props}
+            />
+          <p>If checked, whitespaces and tabs on both sides will be removed.</p>
           </>
       },
     },
