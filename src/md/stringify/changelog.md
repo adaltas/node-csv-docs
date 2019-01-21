@@ -7,10 +7,20 @@ sort: 5
 
 # Changelog
 
-## Trunk
+## Version 5.3.0
 
 New feature:
+* quote: may be a boolean value
+* delimiter: accept buffer and enforce validation
+* delimiter: disabled if value is empty
 * cast: overwrite options if value is an object
+
+Fix:
+* record_delimiter: enforce validation
+
+Project management:
+* package: latest dependencies
+* ts: type tests
 
 ## Version 5.2.0
 
@@ -35,43 +45,35 @@ Fix:
 ## Version 5.1.0
 
 Fix:
-
 * header: ensure column definition
 
-New features
-
+New features:
 * cast: pass context to functions
 
 Minor enhancements:
-
 * write: validate written records
 * src: extends stream class
 
-Project Management:
-
+Project management:
 * package: latest dev dependencies
 
 ## Version 5.0.0
 
 Breaking changes:
-
 * `cast`: was `formatters`
 * `record_delimiter`: was `row_delimiter`
 * options: instance options stored in snake case
 * nodejs: drop support for version 7, use './lib/es5'
 
 New features:
-
 * `quoted_match`: new option
 * options: accept snake case and camel case
 
 Minor enhancements:
-
 * stream: pass all options to the transform stream
 * stream: use writableObjectMode
 
-Project Management:
-
+Project management:
 * package: update license to MIT
 * travis: test agains Node.js 11
 * samples: improve some scripts
@@ -105,15 +107,12 @@ Project Management:
 ## Version 4.0.0
 
 Backward incompatibilities:
-
 * `formatters`: rename bool to boolean
 
 New features:
-
 * `formatters`: handle number
 
 Cleanup
-
 * src: cache call to `typeof`
 * package: latest dependencies
 

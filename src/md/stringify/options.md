@@ -31,16 +31,18 @@ All options are optional. All the options from the [Node.js Writable Stream API]
   Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.   
 * [`header`](/stringify/options/header) (boolean)   
   Display the column names on the first line if the columns option is provided or discovered.   
-* `quote`   
+* `quote` (string|Buffer|boolean)   
   The quote characters, defaults to the `"`, an empty quote value will preserve the original field.   
-* `quoted`   
+* `quoted` (boolean)   
   Boolean, default to false, quote all the non-empty fields even if not required.
-* `quoted_empty`   
-  Boolean, no default, quote empty fields?  If specified, overrides `quoted_string` for empty strings.
-* `quoted_string`   
-  Boolean, default to false, quote all fields of type string even if not required.
-* `record_delimiter`   
-  String used to delimit record rows or a special value; special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered in source or 'unix' if no source is specified); was `rowDelimiter` until version 4.3.1
+* `quoted_empty` (boolean)   
+  Quote empty strings and overrides `quoted_string` on empty strings when defined; default is `false`.
+* `quoted_match` (boolean)   
+  Quote all fields matching a regular expression; default is `false`.
+* `quoted_string` (boolean)   
+  Quote all fields of type string even if not required; default is `false`.
+* `record_delimiter` (string|Buffer)   
+  String used to delimit record rows or a special value; special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered in source or 'unix' if no source is specified); was `rowDelimiter` until version 4.3.1.
   
 ## Choose your style
 
