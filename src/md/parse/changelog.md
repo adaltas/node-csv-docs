@@ -12,6 +12,15 @@ sort: 7
 * max_comment_size: new option
 * promise: new API module
 
+## Version 4.3.1
+
+Minor enhancements:
+* ts: distribute definitions with es5
+* ts: unused MatcherFunc type
+
+Project managements:
+* babel: include .babelrc to git
+
 ## Version 4.3.0
 
 New features:
@@ -66,7 +75,7 @@ Fix:
 
 This is a complete rewrite based with a Buffer implementation. There are no major breaking changes but it introduces multiple minor breaking changes:
 
-* options `rowDelimiter` is now `record_delimiter`
+* option `rowDelimiter` is now `record_delimiter`
 * option `max_limit_on_data_read` is now `max_record_size`
 * drop the record event
 * normalise error message as `{error type}: {error description}`
@@ -92,11 +101,13 @@ New features:
 * cast: catch error in user functions
 * ts: mark info as readonly with required properties
 * comment_lines: count the number of commented lines with no records
+* callback: pass undefined instead of null
 
 API management
 
 * Multiple tests have been rewritten with easier data sample
 * Source code is now written in ES6 instead of CoffeeScript
+* package: switch to MIT license
 
 ## Version 3.2.0
 
