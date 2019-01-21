@@ -7,10 +7,29 @@ sort: 5
 
 # Changelog
 
+## Trunk
+
+New feature:
+* cast: overwrite options if value is an object
+
+## Version 5.2.0
+
+Fix:
+* escape: enforce validation
+
+Project management:
+* babel: include .babelrc to git
+* ts: rename RowDelimiter to RecordDelimiter
+* ts: convert camel case to snake case
+
+## Version 5.1.2
+
+Fix:
+* write: immutable input chunks
+
 ## Version 5.1.1
 
 Fix:
-
 * ts: add casting context missing type
 
 ## Version 5.1.0

@@ -30,6 +30,14 @@ The functions will be executed with 2 arguments:
 * `context` (object)   
   A context object.
 
+The accepted return values are:
+* `null`, `undefined`   
+  The field will be empty.
+* `string`   
+  The string value of the field.
+* `object`   
+  An object containing the `value` property of the field as a well as options applied at the field level in case of a need to overwrite global options.
+
 ## Context
 
 The context object is passed as the second argument of the user provided function. It contains the following properties:
@@ -43,7 +51,25 @@ The context object is passed as the second argument of the user provided functio
 * `records` (number)   
   The number of records which have been fully processed.
 
-## Default behavior
+## Field level options
+
+By returning an object instead of a string, a `cast` function can overwrite the default options on a field level. The field value must be provided in the `value` property. The supported options are: `delimiter`, `escape`, `quote`, `quoted`, `quoted_empty`, `quoted_string`, `quoted_match` and `record_delimiter`.
+
+The following example disable the quoting of the field, leaving it to the responsibility of the `cast` function:
+
+```
+stringify( [ [1], [2] ], {
+  cast: {
+    number: function(value){
+      return {value: `="${value}"`, quote: false}
+    }
+  }
+}, function(err, data){
+  assert.equal(data, '="1"\n="2"\n')
+})
+``` 
+
+## Default behaviour
 
 ### boolean
 
