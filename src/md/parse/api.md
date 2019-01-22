@@ -11,7 +11,7 @@ sort: 2
 
 There are multiple APIs available. Under the hood, they are all based on the same implementation. The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity, readability and conveniency if you are sure that your datasets fit in memory.
 
-### Stream API
+## Stream API
 
 The main module exported by this package implements the native Node.js [transform stream](http://nodejs.org/api/stream.html#stream_class_stream_transform). Transform streams implement both the Readable and Writable interfaces.
 
@@ -80,7 +80,7 @@ parse(input, {
 })
 ```
 
-### Sync API
+## Sync API
 
 It accepts a full data set as text and returns the full result set as an array
 or an object.
