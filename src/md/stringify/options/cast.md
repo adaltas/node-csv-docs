@@ -57,7 +57,7 @@ By returning an object instead of a string, a `cast` function can overwrite the 
 
 The following example disable the quoting of the field, leaving it to the responsibility of the `cast` function:
 
-```
+```js
 stringify( [ [1], [2] ], {
   cast: {
     number: function(value){
