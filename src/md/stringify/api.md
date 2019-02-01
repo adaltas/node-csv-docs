@@ -91,4 +91,4 @@ This represent a regular direct synchronous call to a function: you pass records
 and it return a CSV text. Because of its simplicity, this is the recommended
 approach if you don't need scalability and if your dataset fit in memory. 
 
-The module to require is `csv-stringify/lib/sync` and the signature is `const data = parse(records, [options])`.
+The module to require is `csv-stringify/lib/sync` and the signature is `const data = stringify(records, [options])`.
