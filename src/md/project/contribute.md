@@ -10,7 +10,7 @@ sort: 5
 
 This is a community effort. Please be grateful to the people who write code, take time filling bug reports and improve the documentation.
 
-We encourage you to contribute to the project. Sometime, great contributions take a second. As an example, correcting a typo on this page would as simple as editing this page on GitHub and everyone will benefit from it.
+We encourage you to contribute to the project. Sometimes, great contributions take a second. As an example, correcting a typo on this page would be as simple as editing this page on GitHub and everyone would benefit from it.
 
 ## Development
 
