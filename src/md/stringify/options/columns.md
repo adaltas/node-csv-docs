@@ -43,7 +43,7 @@ stringify( {
 })
 ```
 
-In case you wish to output the headers on the first line, you can used this option conjointly with the `header` option. The column definition object can receive an optional `header` property which default to the `key` property:
+In case you wish to output the headers on the first line, you can use this option conjointly with the `header` option. The column definition object can receive an optional `header` property which default to the `key` property:
 
 ```js
 stringify( {
