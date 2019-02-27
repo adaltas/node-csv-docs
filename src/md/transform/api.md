@@ -62,7 +62,7 @@ transformer.end()
 
 The callback API support all the available options and will fit all the data into memory. It must be used only when the input source is not too big.
 
-The signature is `const stream = transform(data, [options], handler, callback)`.
+The signature is `const stream = transform(data, [options], handler, [callback])`.
 
 In the [callback example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.callback.js), the user function shift the cells of every records.
 
