@@ -48,7 +48,7 @@ parse(`
 
 If the value is an array, to each element corresponds a property. The values may be a string or an object literal with the `name` property.
 
-The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.function.js) converts each field of the first to upper case.
+The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.array.js) generates record literals whose properties match the values of `columns` option.
 
 ```js
 const parse = require('csv-parse')
