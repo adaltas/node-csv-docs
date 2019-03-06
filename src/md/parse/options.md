@@ -26,7 +26,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `escape` (string|Buffer)   
   Set the escape character; one character/byte only; only apply to quote and escape characters inside quoted fields; defaults to double quote.
 * `from` (number)   
-  Start handling records from the requested number of records. One-based, first line is 1 (not 0)
+  Start handling records from the requested number of records. One-based, to emit first record provide 1 (not 0)
 * `from_line` (number)   
   Start handling records from the requested line number.
 * `info` (boolean)   
