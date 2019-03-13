@@ -12,7 +12,7 @@ The `delimiter` option set the delimiter between the fields of a record. It can 
 
 ## Default behavior
 
-by default the generated CSV data set will have field value sepated by `,`:
+by default the generated CSV data set will have field value separated by `,`:
 
 ```js
 const stringify = require('csv-stringify')

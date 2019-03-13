@@ -151,7 +151,7 @@ class Index extends Component {
           <div>
             <h1><Link to="/convert/"><span>CSV & JSON</span> <span>convertor tool</span></Link></h1>
             <p>
-              This is a full-featured CSV parsing tool running entirely on your brower. 
+              This is a full-featured CSV parsing tool running entirely on your browser. 
               No data leave your computer ! 
               Use it also to learn how to use our packages and to test the various options interactively.
             </p>
@@ -269,7 +269,7 @@ class Index extends Component {
               <Link
                 to="/convert/"
               >
-                Try the new CSV & JSON convertion tool!
+                Try the new CSV & JSON conversion tool!
               </Link>
             </h2>
             <p css={styles.blog_info}>

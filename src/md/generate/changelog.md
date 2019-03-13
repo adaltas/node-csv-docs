@@ -35,7 +35,7 @@ New features and bug fixes:
 * options: accept snake case and came case keys
 * eof: new option
 * row_delimiter: new option
-* travis: test agains Node.js 11
+* travis: test against Node.js 11
 
 ## Version 2.2.2
 
@@ -67,7 +67,7 @@ New features and bug fixes:
 
 ## Version 2.0.1
 
-* package: es5 backward compatiblity
+* package: es5 backward compatibility
 * package: ignore yarn lock file
 
 ## 2.0.0

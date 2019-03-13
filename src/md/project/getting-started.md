@@ -34,7 +34,7 @@ It means you can either install the `csv` package directly or selectively instal
 
 Installation command is `npm install csv`. If using [Yarn](https://yarnpkg.com/en/), run `yarn add csv`.
 
-The main modules are fully compatible with the Node.js native [stream API](https://nodejs.org/api/stream.html). Alternative API are also provided for conveniency such as the callback, sync and promise APIs.
+The main modules are fully compatible with the Node.js native [stream API](https://nodejs.org/api/stream.html). Alternative API are also provided for convenience such as the callback, sync and promise APIs.
 
 For additional usage and examples, you may refer to
 [the example page](/project/examples/).
