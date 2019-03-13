@@ -12,7 +12,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 ## Available options
 
 *   `parallel` (number)   
-     The number of transformation callbacks to run in parallel; only appy with asynchronous handlers; default to "100".
+     The number of transformation callbacks to run in parallel; only apply with asynchronous handlers; default to "100".
 *   `consume` (boolean)   
     In the absence of a consumer, like a stream.Readable, trigger the
     consumption of the stream.

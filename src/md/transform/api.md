@@ -13,13 +13,13 @@ The "csv-transform" package proposes different API flavours available through di
 
 The stream and callback API are exported by the main module, using `require('csv-transform')` or `require('csv').transform`. The sync package is available using `require('csv-transform/lib/sync')` or `require('csv/lib/sync').transform`.
 
-Both modules target ECMAScript Edition 6 (ES6 or ES2015), Node.js version 7.6 and above. For older version of JavaScript, every module is transpiled into ECMAScript Edition 5 (ES5) inside the folder "lib/es5". The ES5 modules share the exact same API with their ES6 counterpart. For exemple, the `sync` module compatible with ES5 is located available using `require('csv-transform/lib/es5/sync')`.
+Both modules target ECMAScript Edition 6 (ES6 or ES2015), Node.js version 7.6 and above. For older version of JavaScript, every module is transpiled into ECMAScript Edition 5 (ES5) inside the folder "lib/es5". The ES5 modules share the exact same API with their ES6 counterpart. For example, the `sync` module compatible with ES5 is located available using `require('csv-transform/lib/es5/sync')`.
 
-The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity, readability and conveniency if you are sure that your datasets fit in memory. Note, it is possible to mix the stream and callback APIs.
+The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity, readability and convenience if you are sure that your datasets fit in memory. Note, it is possible to mix the stream and callback APIs.
 
 ### Node.js Stream API
 
-The main module exporterted by the package is a native Node.js [Transform stream](https://nodejs.org/api/stream.html#stream_class_stream_transform). Transform streams implement both the Readable and Writable interfaces.
+The main module exported by the package is a native Node.js [Transform stream](https://nodejs.org/api/stream.html#stream_class_stream_transform). Transform streams implement both the Readable and Writable interfaces.
 
 This is the recommended approach if you need a maximum of power. It ensures scalability by treating your data as a stream from the source to the destination and support all the options available.
 

@@ -9,7 +9,7 @@ sort: 2
 
 ## Introduction
 
-There are multiple APIs available. Under the hood, they are all based on the same implementation. The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity, readability and conveniency if you are sure that your datasets fit in memory.
+There are multiple APIs available. Under the hood, they are all based on the same implementation. The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity, readability and convenience if you are sure that your datasets fit in memory.
 
 ### Stream API
 

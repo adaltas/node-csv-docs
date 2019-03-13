@@ -9,7 +9,7 @@ sort: 6
 
 ## Trunk
 
-* travis: test agains Node.js 11
+* travis: test against Node.js 11
 
 ## Version 1.0.7
 
