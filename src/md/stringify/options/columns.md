@@ -20,9 +20,9 @@ Once normalised, the final columns option is an array defining each column. Colu
 Here is an example:
 
 ```js
-stringify( {
+stringify( [
   { a: '1', b: '2' }
-}, {
+], {
   columns: [ { key: 'a' }, { key: 'b' } ]
 }, function(err, data){
   assert.equals(data, '1,2\n')
@@ -34,9 +34,9 @@ The order definition matters. Reverse the order of the column option in the abov
 This example could have been simplified by defining the column definitions as simple strings:
 
 ```js
-stringify( {
+stringify( [
   { a: '1', b: '2' }
-}, {
+], {
   columns: [ 'a', 'b' ]
 }, function(err, data){
   assert.equals(data, '1,2\n')
@@ -46,9 +46,9 @@ stringify( {
 In case you wish to output the headers on the first line, you can use this option conjointly with the `header` option. The column definition object can receive an optional `header` property which default to the `key` property:
 
 ```js
-stringify( {
+stringify( [
   { a: '1', b: '2' }
-}, {
+], {
   header: true,
   columns: [ { key: 'a', header: 'col_a' }, { key: 'b', header: 'col_b' } ]
 }, function(err, data){
@@ -59,9 +59,9 @@ stringify( {
 This example could have been simplified by defining the column option as an object. This approach is not recommended as it implies relying on object property order which JavaScript doesn't guarantee.
 
 ```js
-stringify( {
+stringify( [
   { a: '1', b: '2' }
-}, {
+], {
   header: true,
   columns: [ { 'a': 'col_a' }, { 'b': 'col_b' } ]
 }, function(err, data){
