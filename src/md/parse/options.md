@@ -13,6 +13,8 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 
 ## Available options
 
+* `bom` (boolean)   
+  If true, detect and exclude the byte order mark (BOM) from the CSV input if present.
 * [`cast`](/parse/options/cast/) (boolean|function)   
   If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2. More information about the context properties is available below.
 * `cast_date` (boolean|function)   
