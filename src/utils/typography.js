@@ -7,11 +7,11 @@ import {
 
 const theme = {
   baseFontSize: '17px',
-  // baseLineHeight: 1.666,
+  baseLineHeight: 1.666,
   bodyColor: '#DEE9EA',
-  bodyFontFamily: ['Montserrat', 'sans-serif'],
+  bodyFontFamily: ['Open Sans', 'sans-serif'],
   headerColor: 'rgba(255,255,255,0.95)',
-  headerFontFamily: ['Montserrat', 'sans-serif'],
+  headerFontFamily: ['Open Sans', 'sans-serif'],
   overrideStyles: ({ adjustFontSizeTo, rhythm, scale }, options) => ({
     'body, html': {
       // backgroundColor: '#384444',
@@ -40,8 +40,8 @@ const theme = {
       marginTop: '2rem',
     },
     'main :not(pre) > code[class*="language-"]': {
-      padding: '.2em .3em .2em .3em',
-      backgroundColor: '#282F2F',
+      padding: '.1em .2em .1em .2em',
+      backgroundColor: '#5D6F6F',
       color: '#fff',
     },
     'main a:hover > code[class*="language-"]': {
@@ -51,7 +51,7 @@ const theme = {
       marginBottom: '1.45rem',
     },
     'code[class*="language-"],pre[class*="language-"]': {
-      fontFamily: 'Overpass Mono !important',
+      fontFamily: 'Fira Mono !important',
     },
     blockquote: {
       ...scale(1 / 5),

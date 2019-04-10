@@ -8,35 +8,38 @@
   font-display: optional;
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-display: swap;
   font-weight: 300;
   src:
-    local('Montserrat Light '),
-    local('Montserrat-Light'),
-    url('../../node_modules/typeface-montserrat/files/montserrat-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../node_modules/typeface-montserrat/files/montserrat-latin-300.woff') format('woff'); /* Modern Browsers */
+    /* See https://github.com/KyleAMathews/typefaces/blob/master/packages/open-sans/index.css#L8-L9 */
+    local('Open Sans Light '),
+    local('Open Sans-Light'),
+    url('../../node_modules/typeface-open-sans/files/open-sans-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../node_modules/typeface-open-sans/files/open-sans-latin-300.woff') format('woff'); /* Modern Browsers */
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-style: normal;
   font-display: swap;
   font-weight: 400;
   src:
-    local('Montserrat Regular '),
-    local('Montserrat-Regular'),
-    url('../../node_modules/typeface-montserrat/files/montserrat-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../node_modules/typeface-montserrat/files/montserrat-latin-400.woff') format('woff'); /* Modern Browsers */
+    /* See https://github.com/KyleAMathews/typefaces/blob/master/packages/open-sans/index.css#L34-L35 */
+    local('Open Sans Regular '),
+    local('Open Sans-Regular'),
+    url('../../node_modules/typeface-open-sans/files/open-sans-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../node_modules/typeface-open-sans/files/open-sans-latin-400.woff') format('woff'); /* Modern Browsers */
 }
 @font-face {
-  font-family: 'Overpass Mono';
+  font-family: 'Fira Mono';
   font-style: normal;
   font-display: swap;
   font-weight: 400;
   src:
-    local('Overpass Mono Regular '),
-    local('Overpass Mono-Regular'),
-    url('../../node_modules/typeface-overpass-mono/files/overpass-mono-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../../node_modules/typeface-overpass-mono/files/overpass-mono-latin-400.woff') format('woff'); /* Modern Browsers */
+    /* See https://github.com/KyleAMathews/typefaces/blob/master/packages/fira-mono/index.css#L8-L9 */
+    local('Fira Mono Regular '),
+    local('Fira Mono-Regular'),
+    url('../../node_modules/typeface-fira-mono/files/fira-mono-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../node_modules/typeface-fira-mono/files/fira-mono-latin-400.woff') format('woff'); /* Modern Browsers */
 }
