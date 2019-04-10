@@ -14,54 +14,79 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 ## Available options
 
 * `bom` (boolean)   
+  _Since version 4.4.0_   
   If true, detect and exclude the byte order mark (BOM) from the CSV input if present.
 * [`cast`](/parse/options/cast/) (boolean|function)   
+  _Since version 2.2.0_   
   If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2. More information about the context properties is available below.
 * `cast_date` (boolean|function)   
+  _Since version 1.0.5_   
   If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the `cast` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
 * [`columns`](/parse/options/columns/) (array|boolean|function)   
+  _Since early days_   
   Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
 * `comment` (string|buffer)   
+  _Since early days_   
   Treat all the characters after this one as a comment; one or multiple characters; disabled by default by defining an empty string `''`.
 * `delimiter` (string|Buffer)   
+  _Since early days_   
   Set the field delimiter. One or multiple character. Defaults to `","` (comma).
 * `escape` (string|Buffer)   
+  _Since early days_   
   Set the escape character; one character/byte only; only apply to quote and escape characters inside quoted fields; defaults to double quote.
 * `from` (number)   
+  _Since version 1.2.0_   
   Start handling records from the requested number of records. One-based, to emit first record provide 1 (not 0)
 * `from_line` (number)   
+  _Since version 4.0.0_   
   Start handling records from the requested line number.
 * `info` (boolean)   
+  _Since version 4.0.0_   
   Generate two properties `info` and `record` where `info` is a snapshot of the info object at the time the record was created and `record` is the parsed array or object; note, it can be used conjointly with the `raw` option.
 * `ltrim` (boolean)   
+  _Since early days_   
   If `true`, ignore whitespace immediately following the delimiter (i.e. left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
 * `max_record_size` (integer)   
-  Maximum numer of characters to be contained in the field and line buffers before an exception is raised; used to guard against a wrong `delimiter` or `record_delimiter`; a castable string will be converted to an integer; default to 128,000 characters.
+  _Since version 4.0.0_   
+  Maximum number of characters to be contained in the field and line buffers before an exception is raised. It was previously named "max_limit_on_data_read".
 * `objname` (string|Buffer)   
+  _Since early days_   
   Name of header-record title to name objects by; the string or Buffer value must not be empty and it must match a header value.
 * `quote` (char|boolean)   
+  _Since early days_   
   Optional character surrounding a field; one character only; disabled if null, false or empty; defaults to double quote.
 * `raw` (boolean)   
+  _Since version 1.1.6_   
   Generate two properties `raw` and `record` where `raw` is the original CSV content and `record` is the parsed array or object; note, it can be used conjointly with the `info` option.
 * `relax` (boolean)   
+  _Since early days_   
   Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
 * [`relax_column_count`](/parse/options/relax_column_count/) (boolean)   
+  _Since version 1.0.6_   
   Discard inconsistent columns count; disabled if null, false or empty; default to `false`.
 * `record_delimiter` (chars|array)   
-  One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters.
+  _Since version 4.0.0_   
+  One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters. It was previously named `rowDelimiter`.
 * `rtrim` (boolean)   
+  _Since early days_   
   If `true`, ignore whitespace immediately preceding the delimiter (i.e. right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 * `skip_empty_lines` (boolean)   
+  _Since version 0.0.5_   
   Don't generate records for empty lines (line matching `/\s*/`), defaults to `false`.
 * [`skip_lines_with_error`](/parse/options/skip_lines_with_error/) (boolean)   
+  _Since version 2.1.0_   
   Skip a line with error found inside and directly go process the next line.
 * `skip_lines_with_empty_values` (boolean)   
+  _Since version 1.1.8_   
   Don't generate records for lines containing empty column values (column matching `/\s*/`), defaults to `false`.
-* `to`, (number)   
+* `to` (number)   
+  _Since version 1.2.0_   
   Stop handling records after the requested number of records.
-* `to_line`, (number)   
+* `to_line` (number)   
+  _Since version 4.0.0_   
   Stop handling records after the requested line number.
 * `trim` (boolean)   
+  _Since early days_   
   If `true`, ignore whitespace immediately around the delimiter. Defaults to `false`. Does not remove whitespace in a quoted field.
 
 ## Choose your style
