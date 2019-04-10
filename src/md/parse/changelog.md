@@ -13,6 +13,17 @@ sort: 7
 * max_comment_size: new option
 * promise: new API module
 
+## Version 4.4.0
+
+New features:
+* options: new bom option
+
+## Version 4.3.4
+
+* columns: enrich error message when provided as literal object
+* cast: handle undefined columns
+* skip_lines_with_error: new sample
+
 ## Version 4.3.3
 
 Fix:
