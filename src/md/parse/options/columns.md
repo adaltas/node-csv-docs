@@ -1,14 +1,21 @@
 ---
 title: Option columns
 navtitle: columns
-description: Generate records as object literals instead of arrays
+description: Option "columns" generate records as object literals instead of arrays.
 keywords: ['csv', 'parse', 'options', 'columns']
 sort: 4
 ---
 
-# Option columns
+# Option `columns`
 
-The `columns` option generates record in the form of object literals. By default, the parser generates records in the form of arrays. Its associate value may takes multiple forms:
+The `columns` option generates record in the form of object literals.
+
+* Type: `boolean` | `array` | `function`
+* Optional
+* Default: `false`
+* Since: early days
+
+By default, the parser generates records in the form of arrays. Its associate value may takes multiple forms:
 
 * [`true`](#as-true)    
   Infer the columns names from the first line.

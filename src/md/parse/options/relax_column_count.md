@@ -1,7 +1,7 @@
 ---
 title: Option relax_column_count
 navtitle: relax_column_count
-description: Options relative to the csv-parse package
+description: Option "relax_column_count" tolerates data sets with inconsistent number of fields.
 keywords: ['csv', 'parse', 'options', 'relax_column_count', 'columns']
 sort: 4
 ---
@@ -9,6 +9,11 @@ sort: 4
 # Option relax\_column\_count
 
 The `relax_column_count` option tolerates data sets with inconsistent number of fields between records. By default, an error is thrown if two records have a different number of fields.
+
+* Type: `boolean`
+* Optional
+* Default: `false`
+* Since: 1.0.6
 
 The option can be used conjointly with the `columns` option. The expected number of fields is determined by the length of the `columns` option, wether it is defined by the user or dynamically discovered.
 
@@ -19,7 +24,7 @@ The [`option.relax_column_count.js` example](https://github.com/adaltas/node-csv
 ```js
 const parse = require('csv-parse')
 const assert = require('assert')
-
+-->
 parse(`
 "a 1","a 2"
 "b 1"

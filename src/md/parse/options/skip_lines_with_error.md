@@ -1,7 +1,7 @@
 ---
 title: Option skip_lines_with_error
 navtitle: skip_lines_with_error
-description: Skip to the next line if a parsing error occurred
+description: Option "skip_lines_with_error" skip to the next line if a parsing error occurred.
 keywords: ['csv', 'parse', 'options', 'skip_lines_with_error', 'columns']
 sort: 4
 ---

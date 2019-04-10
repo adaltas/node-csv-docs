@@ -1,14 +1,21 @@
 ---
 title: Option cast
 navtitle: cast
-description: Options relative to the csv-parse package
-keywords: ['csv', 'parse', 'options', 'delimiter', 'columns', 'comment', 'escape']
+description: Option "cast" alter a field value.
+keywords: ['csv', 'parse', 'options', 'cast', 'context', 'lines', 'quoting']
 sort: 4
 ---
 
 # Option cast
 
-The `cast` option accept a function. It gives full control over a field. It is possible to transform its value or change its type. The [`test/options.cast.coffee`](https://github.com/adaltas/node-csv-parse/blob/master/test/options.cast.coffee) test provides insights on how to use it and its supported functionalities.
+The `cast` option alter a value. It works at the field level of a record. It is possible to transform its value or change its type.
+
+* Type: `function`
+* Optional
+* Default: none
+* Since: 2.2.0
+
+Its value is expected to be a function which receive a context rich of information. It gives full control over a field. The [`test/options.cast.coffee`](https://github.com/adaltas/node-csv-parse/blob/master/test/options.cast.coffee) test provides insights on how to use it and its supported functionalities.
 
 ## Context
 

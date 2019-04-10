@@ -1,14 +1,21 @@
 ---
 title: Option bom
 navtitle: bom
-description: Options relative to the csv-parse package
+description: Option "bom" strip the byte order mark (BOM).
 keywords: ['csv', 'parse', 'options', 'bom', 'utf', 'unicode', 'utf8']
 sort: 4
 ---
 
-# Option cast
+# Option bom
 
-The `bom` option strip the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) from the input string or buffer. When activated, the BOM will be automatically detect and the parsing will occur whether a BOM was found or not.
+The `bom` option strip the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) from the input string or buffer. When activated, the BOM is automatically detected and the parsing will occur whether a BOM was found or not.
+
+* Type: `boolean`
+* Optional
+* Default: `false`
+* Since: 4.4.0
+
+## About
 
 The UTF-8 BOM is a sequence of Bytes at the start of a text-stream (EF BB BF) that allows the reader to more reliably guess a file as being encoded in UTF-8.
 
