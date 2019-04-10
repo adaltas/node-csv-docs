@@ -46,7 +46,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `ltrim` (boolean)   
   _Since early days_   
   If `true`, ignore whitespace immediately following the delimiter (i.e. left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
-* `max_record_size` (integer)   
+* [`max_record_size`](/parse/options/max_record_size/) (integer)   
   _Since version 4.0.0_   
   Maximum number of characters to be contained in the field and line buffers before an exception is raised. It was previously named "max_limit_on_data_read".
 * `objname` (string|Buffer)   
