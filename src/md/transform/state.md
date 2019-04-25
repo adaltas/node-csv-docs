@@ -9,12 +9,12 @@ sort: 5
 
 The transform instance export a few properties which are also available from the user callback function:
 
-* `transform.running`   
-  The number of transformation callback being run at a given time.
-* `transform.started`   
-  The number of transformation callback which have been initiated.
-* `transform.finished`   
-  The number of transformation callback which have been executed.
+* `transform.state.finished`   
+  The number of transformation callback which have been executed; was `transform.finished` before version 2.
+* `transform.state.running`   
+  The number of transformation callback being run at a given time; was `transform.finished` before version 2.
+* `transform.state.started`   
+  The number of transformation callback which have been initiated; was `transform.finished` before version 2.
 
 ## Get state information
 
@@ -26,14 +26,14 @@ const records = 'record\n'.repeat(5).trim().split('\n')
 // Initialize the transformation
 const transformer = transform(records, (record, callback) => {
   setTimeout( () => {
-    const {running, started, finished} = transformer
+    const {running, started, finished} = transformer.state
     callback(null, `${running}_${started}_${finished}\n`)
   }, 100)
 })
 // Get notify when done
 transformer.on('end', () => {
   process.stdout.write('-------\n')
-  const {running, started, finished} = transformer
+  const {running, started, finished} = transformer.state
   process.stdout.write(`${running}_${started}_${finished}\n`)
 })
 // Print the transformed records to the standard output
@@ -55,7 +55,7 @@ let test_finished = 0
 // Execute the transformation
 transform(records, function(record, callback){
   setTimeout( () => {
-    const {running, started, finished} = this
+    const {running, started, finished} = this.state
     assert.equal(running, test_running--)
     assert.equal(started, test_started)
     assert.equal(finished, test_finished++)
@@ -65,7 +65,7 @@ transform(records, function(record, callback){
 // Get notify on error
 .on('end', function(){
   process.stdout.write('-------\n')
-  const {running, started, finished} = this
+  const {running, started, finished} = this.state
   process.stdout.write(`${running}_${started}_${finished}\n`)
 })
 // Print the transformed records to the standard output
