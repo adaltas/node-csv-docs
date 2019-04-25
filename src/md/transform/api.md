@@ -23,10 +23,9 @@ The main module exported by the package is a native Node.js [Transform stream](h
 
 This is the recommended approach if you need a maximum of power. It ensures scalability by treating your data as a stream from the source to the destination and support all the options available.
 
-The signature is `const stream = transform(data, [options], handler, [options], [callback])`.
+The signature is `const stream = transform(records, [options], handler, [options], [callback])`.
 
-In the [stream example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.stream.js), CSV data is sent through the `write` function and the resulted data is obtained
-within the "readable" event by calling the `read` function.
+In the [stream example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.stream.js), records in the form of an array are sent through the `write` function and the transformed records are obtained within the "readable" event by calling the `read` function.
 
 This example is available with the command `node samples/api.stream.js`.
 
@@ -60,9 +59,9 @@ transformer.end()
 
 ### Callback API
 
-The callback API support all the available options and will fit all the data into memory. It must be used only when the input source is not too big.
+The callback API support all the available options and will fit all the records into memory. It must be used only when the input source is not too big.
 
-The signature is `const stream = transform(data, [options], handler, [callback])`.
+The signature is `const stream = transform(records, [options], handler, [callback])`.
 
 In the [callback example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.callback.js), the user function shift the cells of every records.
 
@@ -75,9 +74,9 @@ const assert = require('assert')
 transform([
   ['1','2','3','4'],
   ['a','b','c','d']
-], function(data){
-  data.push(data.shift())
-  return data
+], function(record){
+  record.push(record.shift())
+  return record
 }, function(err, output){
   assert.deepEqual(output, [
     [ '2', '3', '4', '1' ],
@@ -88,25 +87,25 @@ transform([
 
 ### Sync API
 
-The sync API is here for conveniency. Due to its synchronous nature, not all options are honoured. The user handler functions must only be written as synchronous.
+The sync API is here for conveniency. Due to its synchronous nature, not all options are honoured. The user handler function must only be written in synchronous mode, with expecting a callback in its second argument.
 
-The signature is `const data = transform(data, [options], handler)`.
+The signature is `const records = transform(records, [options], handler)`.
 
-The [sync example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.callback.js) illustrates how convenient it is to use this API.
+The [sync example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.sync.js) illustrates how convenient it is to use this API.
 
 ```js
 const transform = require('stream-transform/lib/sync')
 const assert = require('assert')
 
-const data = transform([
+const records = transform([
   [ 'a', 'b', 'c', 'd' ],
   [ '1', '2', '3', '4' ]
-], function(data){
-  data.push(data.shift())
-  return data
+], function(record){
+  record.push(record.shift())
+  return record
 })
 
-assert.deepEqual(data, [
+assert.deepEqual(records, [
   [ 'b', 'c', 'd', 'a' ],
   [ '2', '3', '4', '1' ]
 ])
