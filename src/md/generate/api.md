@@ -78,13 +78,13 @@ generate({
 The generated output is returned. Like with the callback API, this mode
 implies that the overall dataset will be stored in memory.
 
-The module to require is `csv-transform/lib/sync` and the signature is `const records = generate([options])`.
+The module to require is `csv-generate/lib/sync` and the signature is `const records = generate([options])`.
 
 The [sync example](https://github.com/adaltas/node-csv-generate/blob/master/samples/api.callback.js) returns an array of 2 records.
 
 
 ```js
-const generate = require('../lib/sync')
+const generate = require('csv-generate/lib/sync')
 const assert = require('assert')
 
 const records = generate({
