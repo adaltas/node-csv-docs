@@ -9,11 +9,11 @@ sort: 2
 
 ## Introduction
 
-The "csv-transform" package proposes different API flavours available through different modules. Under the hood, they are all based on the same implementation.
+The "stream-transform" package proposes different API flavours available through different modules. Under the hood, they are all based on the same implementation.
 
-The stream and callback API are exported by the main module, using `require('csv-transform')` or `require('csv').transform`. The sync package is available using `require('csv-transform/lib/sync')` or `require('csv/lib/sync').transform`.
+The stream and callback API are exported by the main module, using `require('stream-transform')` or `require('csv').transform`. The sync package is available using `require('stream-transform/lib/sync')` or `require('csv/lib/sync').transform`.
 
-Both modules target ECMAScript Edition 6 (ES6 or ES2015), Node.js version 7.6 and above. For older version of JavaScript, every module is transpiled into ECMAScript Edition 5 (ES5) inside the folder "lib/es5". The ES5 modules share the exact same API with their ES6 counterpart. For example, the `sync` module compatible with ES5 is located available using `require('csv-transform/lib/es5/sync')`.
+Both modules target ECMAScript Edition 6 (ES6 or ES2015), Node.js version 7.6 and above. For older version of JavaScript, every module is transpiled into ECMAScript Edition 5 (ES5) inside the folder "lib/es5". The ES5 modules share the exact same API with their ES6 counterpart. For example, the `sync` module compatible with ES5 is located available using `require('stream-transform/lib/es5/sync')`.
 
 The stream API might not be the most pleasant API to use but is scalable. Use the callback style API or the sync API for simplicity, readability and convenience if you are sure that your datasets fit in memory. Note, it is possible to mix the stream and callback APIs.
 
