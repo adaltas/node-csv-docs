@@ -7,8 +7,27 @@ sort: 6
 
 # Changelog
 
-## Trunk
 
+## Version 2.0.0
+
+Breaking changes:
+* state: isolate properties into the "state" property
+
+New Features:
+* typescript: new ts definitions
+
+Minor enhancements:
+* api: clone options
+* api: simplify argument discovery
+* project: fix license in package.json
+* babel: include .babelrc to git
+* package: latest dependencies
+
+## Version 1.0.8
+
+Project Management
+
+* package: update license to MIT
 * travis: test against Node.js 11
 
 ## Version 1.0.7
