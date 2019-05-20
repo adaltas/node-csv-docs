@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
+    siteUrl: `https://csv.js.org`,
   },
   plugins: [
     // Fix https://github.com/gatsbyjs/gatsby/issues/2049
@@ -74,5 +75,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    `gatsby-plugin-sitemap`,
   ],
 }

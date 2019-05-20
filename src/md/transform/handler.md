@@ -36,7 +36,7 @@ transform([
 
 The output on the console will be:
 
-```csv
+```bash
 2,3,4,1
 b,c,d,a
 ```
@@ -63,7 +63,7 @@ transform([
 
 The output on the console will be:
 
-```csv
+```bash
 2,3,4,1
 b,c,d,a
 ```
