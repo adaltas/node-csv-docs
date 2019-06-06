@@ -13,8 +13,8 @@ import convert_icon from '../images/convert.svg'
 import SyntaxHighlighter, {
   registerLanguage,
 } from 'react-syntax-highlighter/dist/prism-light'
-import javascript from 'react-syntax-highlighter/dist/languages/prism/javascript'
-import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
+import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javascript'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 registerLanguage('javascript', javascript)
 const codeString = `
 // Import the package main module
@@ -173,8 +173,6 @@ class Index extends Component {
             <a
               href="https://travis-ci.org/#!/adaltas/node-csv-generate"
               title="View this project on Travis"
-              rel="noopener"
-              target="_blank"
             >
               <img
                 src="https://api.travis-ci.org/adaltas/node-csv-generate.svg"
@@ -188,8 +186,6 @@ class Index extends Component {
             <a
               href="https://npmjs.org/package/csv-parse"
               title="View this project on NPM"
-              rel="noopener"
-              target="_blank"
             >
               <img
                 src="https://img.shields.io/npm/v/csv-parse.svg"
@@ -199,8 +195,6 @@ class Index extends Component {
             <a
               href="https://travis-ci.org/#!/adaltas/node-csv-parse"
               title="View this project on Travis"
-              rel="noopener"
-              target="_blank"
             >
               <img
                 src="https://api.travis-ci.org/adaltas/node-csv-parse.svg"
@@ -214,8 +208,6 @@ class Index extends Component {
             <a
               href="https://npmjs.org/package/stream-transform"
               title="View this project on NPM"
-              rel="noopener"
-              target="_blank"
             >
               <img
                 src="https://img.shields.io/npm/v/stream-transform.svg"
@@ -225,8 +217,6 @@ class Index extends Component {
             <a
               href="https://travis-ci.org/#!/adaltas/node-stream-transform"
               title="View this project on Travis"
-              rel="noopener"
-              target="_blank"
             >
               <img
                 src="https://api.travis-ci.org/adaltas/node-stream-transform.svg"
@@ -240,8 +230,6 @@ class Index extends Component {
             <a
               href="https://npmjs.org/package/csv-stringify"
               title="View this project on NPM"
-              rel="noopener"
-              target="_blank"
             >
               <img
                 src="https://img.shields.io/npm/v/csv-stringify.svg"
@@ -251,8 +239,6 @@ class Index extends Component {
             <a
               href="https://travis-ci.org/#!/adaltas/node-csv-stringify"
               title="View this project on Travis"
-              rel="noopener"
-              target="_blank"
             >
               <img
                 src="https://api.travis-ci.org/adaltas/node-csv-stringify.svg"

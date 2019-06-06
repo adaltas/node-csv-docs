@@ -116,8 +116,6 @@ class Footer extends Component {
               <li>
                 <a
                   href="https://github.com/adaltas/node-csv"
-                  target="_blank"
-                  rel="noopener"
                 >
                   GitHub
                 </a>
@@ -125,8 +123,6 @@ class Footer extends Component {
               <li>
                 <a
                   href="https://github.com/adaltas/node-csv/issues"
-                  target="_blank"
-                  rel="noopener"
                 >
                   Issue Tracker
                 </a>
@@ -140,11 +136,11 @@ class Footer extends Component {
             <h1>About</h1>
             <p>
               The Node.js CSV project is an open source product hosted on{' '}
-              <a href="https://www.github.com" target="_blank" rel="noopener">
+              <a href="https://www.github.com">
                 GitHub
               </a>{' '}
               and developed by{' '}
-              <a href="http://www.adaltas.com" target="_blank" rel="noopener">
+              <a href="http://www.adaltas.com">
                 Adaltas
               </a>
               .

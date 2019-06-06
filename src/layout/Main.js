@@ -134,8 +134,6 @@ class Main extends Component {
             data-tip="Edit on GitHub"
             href={page.edit_url}
             ripple={true}
-            target="_blank"
-            rel="noopener"
             className={css(styles.icon).toString()}
           >
             <svg viewBox="0 0 24 24" css={styles.svg}>

@@ -123,8 +123,6 @@ class Header extends Component {
             <a
               href={project.issue}
               css={styles.quick}
-              rel="noopener"
-              target="_blank"
               data-for="header-tooltip"
               data-tip="Report an issue"
             >
@@ -141,8 +139,6 @@ class Header extends Component {
             <a
               href={project.github}
               css={styles.quick}
-              rel="noopener"
-              target="_blank"
               data-for="header-tooltip"
               data-tip="GitHub repository"
             >

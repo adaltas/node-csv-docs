@@ -270,8 +270,6 @@ class Menu extends Component {
           Help us{' '}
           <a
             href="https://github.com/adaltas/node-nikita-docs/issues"
-            target="_blank"
-            rel="noopener"
           >
             improve the docs
           </a>{' '}
