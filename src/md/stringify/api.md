@@ -15,7 +15,7 @@ There are multiple APIs available. Under the hood, they are all based on the sam
 
 The main module of the package implements the native Node.js [transform stream][https://nodejs.org/api/stream.html#stream_object_mode_duplex_streams] which is both readable and writable.
 
-This is the recommended approach if you need a maximum of power. It ensure
+This is the recommended approach if you need a maximum of power. It ensures
 scalability by treating your data as a stream from the source to the destination.
 
 The signature is `const stream = stringify([options])`.
