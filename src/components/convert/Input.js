@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import TextArea from './form/TextArea'
-import { css } from 'glamor'
 
 const styles = {
   root: {

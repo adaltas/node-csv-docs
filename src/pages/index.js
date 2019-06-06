@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import {
   MIN_TABLET_MEDIA_QUERY,
   TABLET_MEDIA_QUERY,
-  MOBILE_MEDIA_QUERY,
 } from 'typography-breakpoint-constants'
 // Local
 import Layout from '../layout'

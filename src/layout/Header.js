@@ -92,7 +92,7 @@ class Header extends Component {
     },
   }
   render() {
-    const { children, onMenuClick, slug, project } = this.props
+    const { children, onMenuClick, project } = this.props
     const { styles } = this
     return (
       <div css={styles.root}>

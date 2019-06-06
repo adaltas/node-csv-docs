@@ -16,8 +16,8 @@ const theme = {
     'body, html': {
       // backgroundColor: '#384444',
       backgroundColor: '#445353',
-      background: '-moz-linear-gradient(-45deg, #445353 0%, #384444 100%)',
-      background: '-webkit-linear-gradient(-45deg, #445353 0%,#384444 100%)',
+      // background: '-moz-linear-gradient(-45deg, #445353 0%, #384444 100%)',
+      // background: '-webkit-linear-gradient(-45deg, #445353 0%,#384444 100%)',
       background: 'linear-gradient(135deg, #445353 0%,#384444 100%)',
       filter:
         "progid:DXImageTransform.Microsoft.gradient( startColorstr='#445353', endColorstr='#384444',GradientType=1 )",

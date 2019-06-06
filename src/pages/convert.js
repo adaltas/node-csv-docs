@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 // Local
 import Layout from '../layout'
 import Convert from '../components/Convert'

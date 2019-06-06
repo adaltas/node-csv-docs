@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { css } from 'glamor'
 import Button from '../Button'
 import Icons from './icons/index.svg'
 import {

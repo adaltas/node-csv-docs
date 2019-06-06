@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import Modal from 'react-modal'
 import { css } from 'glamor'
 import {

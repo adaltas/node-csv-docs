@@ -25,16 +25,13 @@ const styles = {
 }
 
 class Output extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     const {props} = this
     const {fullscreen, input, options, transform} = props
     const opts = {}
     for(let property in options) {
       const option = options[property]
-      const value = option.variants[option.variant]
+      let value = option.variants[option.variant]
       switch(option.variant){
         case 'function':
           try {
@@ -47,6 +44,8 @@ class Output extends Component {
         case 'buffer':
           value = Buffer.from(value)
           break
+        default:
+          throw Error("Invalid variant: " + options.variant)
       }
       opts[property] = value
     }

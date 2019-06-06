@@ -18,7 +18,7 @@ const styles = {
 
 class Transform extends Component {
   render() {
-    const {state, props} = this
+    const {props} = this
     const {fullscreen, onTransform, transform} = props
     return (
       <div css={styles.root}>
@@ -26,7 +26,6 @@ class Transform extends Component {
           css={[styles.input, fullscreen && styles.fullscreen]}
           value={transform || "function(record){\n  return record;\n}"}
           onChange={ value => {
-            console.log('onchange ', value)
             onTransform(value)
           }}
           validate={ value => {

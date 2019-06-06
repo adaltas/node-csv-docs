@@ -107,9 +107,6 @@ const styles_nav = {
 class Nav extends Component {
   render() {
     const { current, title, pages, home, onClickLink, onToggle} = this.props
-    const handleMouseOver = e => {
-      
-    }
     return (
       <nav css={[styles_nav.root, current && styles_nav.current]}>
         <h1 onClick={onToggle}>
@@ -236,11 +233,11 @@ class Menu extends Component {
       if(page.current === true){
         this.menus[section].current = true
       }
-      this.menus[section].pages.push(page)
+      return this.menus[section].pages.push(page)
     })
   }
   render() {
-    const { pages, onClickLink, slug } = this.props
+    const { onClickLink } = this.props
     const { current } = this.state
     const { menus } = this
     const onToggle = (section) => {
