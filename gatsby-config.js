@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'CSV for Node.js',
     siteUrl: `https://csv.js.org`,
   },
   plugins: [
