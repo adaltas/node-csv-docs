@@ -76,5 +76,13 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://csv.js.org',
+        sitemap: 'https://csv.js.org/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
   ],
 }
