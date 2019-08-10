@@ -25,7 +25,7 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 * Support big datasets
 * Complete test coverage and samples for inspiration
 * No external dependency
-* to be used conjointly with `csv-generate`, `csv-parse` and `stream-transform`
+* To be used conjointly with `csv-generate`, `csv-parse` and `stream-transform`
 * BSD License
 
 ## Usage
