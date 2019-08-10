@@ -26,6 +26,8 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 * Sequential or user-defined concurrent execution
 * Skip and multiply records
 * Alter or clone input records
+* Work nicely with the [csv-generate](https://csv.js.org/generate/), [csv-parse](https://csv.js.org/parse/) and [csv-stringify](https://csv.js.org/stringify/) packages
+* MIT License
 
 ## Usage
 

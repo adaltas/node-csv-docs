@@ -19,15 +19,15 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 
 ## Main features
 
-*   Follow the Node.js streaming API
-*   Simplicity with the optional callback and sync API
-*   Support delimiters, quotes, escape characters and comments
-*   Line break discovery
-*   Support big datasets
-*   Complete test coverage and samples for inspiration
-*   No external dependencies
-*   Work nicely with the [csv-generate](https://csv.js.org/generate/), [stream-transform](https://csv.js.org/transform/) and [csv-stringify](https://csv.js.org/stringify/) packages
-*   BSD License
+* Follow the Node.js streaming API
+* Simplicity with the optional callback and sync API
+* Support delimiters, quotes, escape characters and comments
+* Line break discovery
+* Support big datasets
+* Complete test coverage and samples for inspiration
+* No external dependencies
+* Work nicely with the [csv-generate](https://csv.js.org/generate/), [stream-transform](https://csv.js.org/transform/) and [csv-stringify](https://csv.js.org/stringify/) packages
+* MIT License
 
 ## Usage
 

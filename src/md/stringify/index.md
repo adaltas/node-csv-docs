@@ -25,8 +25,8 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 * Support big datasets
 * Complete test coverage and samples for inspiration
 * No external dependency
-* To be used conjointly with `csv-generate`, `csv-parse` and `stream-transform`
-* BSD License
+* Work nicely with the [csv-generate](https://csv.js.org/generate/), [csv-parse](https://csv.js.org/parse/) and [stream-transform](https://csv.js.org/transform/) packages
+* MIT License
 
 ## Usage
 
