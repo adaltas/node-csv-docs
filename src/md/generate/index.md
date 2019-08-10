@@ -24,7 +24,7 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 * Idempotence with the "seed" option
 * User-defined value generation
 * Multiple types of values (integer, boolean, dates, ...)
-* Work nicely with the [csv-parse](https://csv.js.org/parse/), [csv-stringify](https://csv.js.org/stringify/) and [stream-transform](https://csv.js.org/transform/) packages
+* Work nicely with the [csv-parse](/parse/), [csv-stringify](/stringify/) and [stream-transform](/transform/) packages
 * MIT License
 
 ## Usage
