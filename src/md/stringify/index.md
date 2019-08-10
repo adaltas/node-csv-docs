@@ -24,7 +24,7 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 * Support for custom formatters, delimiters, quotes, escape characters and header
 * Support big datasets
 * Complete test coverage and samples for inspiration
-* Only 1 external dependency
+* No external dependency
 * to be used conjointly with `csv-generate`, `csv-parse` and `stream-transform`
 * BSD License
 
