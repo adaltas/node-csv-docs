@@ -38,7 +38,7 @@ The function is called with 2 arguments: the field value and a context object. T
 * `records` (number)   
   The number of records which have been fully parsed. It was named `count` until version 3.
 
-The [cast example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.cast.js) uses the context to transform the first filed into a date and replace the second field with the injected context:
+The [cast example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.cast.js) uses the context to transform the first filed into a date and replace the second field with the injected context:
 
 ```js
 const parse = require('csv-parse/lib/sync')
