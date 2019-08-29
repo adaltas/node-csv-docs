@@ -21,7 +21,7 @@ The UTF-8 BOM is a sequence of Bytes at the start of a text-stream (EF BB BF) th
 
 ## Example
 
-It is a boolean value which default to `false`. The [bom example](https://github.com/adaltas/node-csv-parse/blob/master/samples/options.bom.js) simply activate the option:
+It is a boolean value which default to `false`. The [bom example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.bom.js) simply activate the option:
 
 ```js
 const parse = require('csv-parse/lib/sync')
