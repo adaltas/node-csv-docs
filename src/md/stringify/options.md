@@ -37,7 +37,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
   Boolean, default to false, quote all the non-empty fields even if not required.
 * `quoted_empty` (boolean)   
   Quote empty strings and overrides `quoted_string` on empty strings when defined; default is `false`.
-* `quoted_match` (boolean)   
+* `quoted_match` (String|RegExp)   
   Quote all fields matching a regular expression; default is `false`.
 * `quoted_string` (boolean)   
   Quote all fields of type string even if not required; default is `false`.
