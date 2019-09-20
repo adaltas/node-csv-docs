@@ -266,7 +266,7 @@ class Menu extends Component {
         <div css={styles.footer}>
           Help us{' '}
           <a
-            href="https://github.com/adaltas/node-nikita-docs/issues"
+            href="https://github.com/adaltas/node-csv-docs/issues"
           >
             improve the docs
           </a>{' '}
