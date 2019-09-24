@@ -51,6 +51,7 @@ class Drawer extends PureComponent {
       [`@media (max-width: ${breakpoints.DEFAULT}px)`]: {
         left: 250,
         transition: 'left 225ms cubic-bezier(0.0, 0, 0.2, 1)',
+        overflow: 'hidden',
       },
     },
     drawer: {
