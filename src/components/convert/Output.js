@@ -1,12 +1,10 @@
 import React, {Component} from 'react'
 import csv from 'csv/lib/sync'
 // Syntax
-import SyntaxHighlighter, {
-  registerLanguage,
-} from 'react-syntax-highlighter/dist/prism-light'
-import json from 'react-syntax-highlighter/dist/languages/prism/json'
-import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
-registerLanguage('json', json)
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+SyntaxHighlighter.registerLanguage('json', json)
 
 const styles = {
   root: {

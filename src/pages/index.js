@@ -9,12 +9,11 @@ import Layout from '../layout'
 import convert_icon from '../images/convert.svg'
 
 // Syntax
-import SyntaxHighlighter, {
-  registerLanguage,
-} from 'react-syntax-highlighter/dist/prism-light'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javascript'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-registerLanguage('javascript', javascript)
+SyntaxHighlighter.registerLanguage('javascript', javascript)
+
 const codeString = `
 // Import the package main module
 const csv = require('csv')
