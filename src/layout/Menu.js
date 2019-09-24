@@ -59,9 +59,11 @@ const styles_nav = {
     padding: '0 1rem 0 1rem',
     textIndent: 0,
     listStyleType: 'none',
-    ':hover': {
-      backgroundColor: 'rgba(255,255,255,.1)',
-    }
+    '@media not all and (pointer: coarse)': {
+      ':hover': {
+        backgroundColor: 'rgba(255,255,255,.1)',
+      },
+    },
   },
   li_3: {
     margin: '0',
