@@ -195,6 +195,9 @@ const styles = {
     padding: '1rem',
     textAlign: 'normal',
     fontSize: '.8rem',
+    '@media (max-width: 960px)': {
+      paddingBottom: '6rem',
+    },
   },
 }
 
