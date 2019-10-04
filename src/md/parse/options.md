@@ -78,7 +78,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Skip a line with error found inside and directly go process the next line.
 * `skip_lines_with_empty_values` (boolean)   
   _Since version 1.1.8_   
-  Don't generate records for lines containing empty column values (column matching `/\s*/`), defaults to `false`.
+  Don't generate records for lines containing empty column values (column matching `/\s*/`), empty Buffer or equals to `null` and `undefined` if their value was casted, defaults to `false`.
 * `to` (number)   
   _Since version 1.2.0_   
   Stop handling records after the requested number of records.
