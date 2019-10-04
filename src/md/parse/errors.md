@@ -9,14 +9,33 @@ sort: 6
 
 > Important: errors appeared recently with version 4.5. The coverage is not yet exhaustive. The code, message and properties documented below may change in the near future.
 
-All errors instantiate the `CsvError` class which extends the JavaScript `Error` class. They share the following properties:
+All errors instantiate the `CsvError` class which extends the JavaScript `Error` class. The 2 main properties of an error are:
 
 * `code`   
   Identify the error type, unique for each error thrown by the parser, see below for the list of error codes.
 * `message`   
-  The error message.
+  A descriptive and sometime verbose error message introduced by a readable version of the code.
 
-Each error code may include additional properties.
+The error is also enriched by multiple contextual properties:
+
+* `column` (number|string)   
+  The column name if the `columns` options is defined or the field position.
+* `empty_lines` (number)   
+  Internal counter of empty lines encountered until this field.
+* `header` (boolean)   
+  A boolean indicating if the provided value is a part of the header.
+* `index` (number)   
+  The field position starting at 0.
+* `invalid_field_length` (number)   
+  Number of records with a non uniform length when [`relax_column_count`](/parse/options/relax_column_count/) is true. It was named `skipped_lines` until version 3.
+* `lines` (number)   
+  The number of lines which have been processed including the current line.
+* `quoting` (boolean)   
+  A boolean indicating if the field was surrounded by quotes.
+* `records` (number)   
+  The number of records which have been fully parsed. It was named `count` until version 3.
+
+Finally, each type of error identified by its code property may include additional properties.
 
 ## `CSV_QUOTE_NOT_CLOSED`
 
