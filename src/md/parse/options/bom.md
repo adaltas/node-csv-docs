@@ -17,7 +17,7 @@ The `bom` option strip the [byte order mark (BOM)](https://en.wikipedia.org/wiki
 
 ## About
 
-The UTF-8 BOM is a sequence of Bytes at the start of a text-stream (EF BB BF) that allows the reader to more reliably guess a file as being encoded in UTF-8.
+The UTF-8 BOM is a sequence of Bytes at the start of a text-stream (EF BB BF) that allows the reader to reliably determine if file is being encoded in UTF-8.
 
 ## Example
 
