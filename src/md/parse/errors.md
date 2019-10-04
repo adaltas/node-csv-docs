@@ -7,7 +7,7 @@ sort: 6
 
 # Errors
 
-> Important: errors appeared recently with version 4.5. The coverage below is not exhaustive. The code, message and properties documented below may change in the near future.
+> Important: errors appeared recently with version 4.5. The coverage is not yet exhaustive. The code, message and properties documented below may change in the near future.
 
 All errors instantiate the `CsvError` class which extends the JavaScript `Error` class. They share the following properties:
 
@@ -30,21 +30,21 @@ Thrown when a quote is found at an unexpected location. The parser can be made t
 
 Thrown when a record don't match the same amount of fields as the previous records. The parser can be made tolerant to the number of fields with the [`relax_column_count`](/parse/options/relax_column_count/) option. Additional properties include:
 
-* `record`
+* `record`   
   The invalid encountered record.
 
 ## `CSV_INVALID_RECORD_LENGTH_DONT_MATCH_COLUMNS`   
 
 Thrown when a record don't match the same amount of columns. This error is only present when the [`columns`](/parse/options/columns/) option is active. Additional properties include:
 
-* `record`
+* `record`   
   The invalid encountered record.
 
 ## `CSV_INVALID_COLUMN_MAPPING`
 
 Thrown when the [`columns`](/parse/options/columns/) option is a function and it does not return an array of header fields as expected.
 
-* `headers`
+* `headers`   
   The invalid headers value returned by the function.
 
 ## Common Errors
