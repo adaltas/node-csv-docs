@@ -40,9 +40,9 @@ mkdir generator && cd generator
 npm install csv-generate
 # Write a sample module
 cat > generator.js <<JS
-# Require the csv module
+// Require the csv module
 const generate = require('csv-generate')
-# Print 10 records
+// Print 10 records
 generate({length: 10}).pipe(process.stdout)
 JS
 # Execute the module
@@ -58,9 +58,9 @@ mkdir generator && cd generator
 npm install csv
 # Write a sample module
 cat > generator.js <<JS
-# Require the csv module
+// Require the csv module
 const csv = require('csv')
-# Print 10 records
+// Print 10 records
 csv.generate({length: 10}).pipe(process.stdout)
 JS
 # Execute the module
