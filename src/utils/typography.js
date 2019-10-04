@@ -59,6 +59,7 @@ const theme = {
       paddingLeft: rhythm(13 / 16),
       marginLeft: 0,
       borderLeft: `${rhythm(3 / 16)} solid #fca206`,
+      color: '#DEE9EA',
     },
     'blockquote > :last-child': {
       marginBottom: 0,

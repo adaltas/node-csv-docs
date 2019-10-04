@@ -17,7 +17,7 @@ The `skip_lines_with_error` option tolerates parsing errors. It skips the record
 
 Be careful, this functionality can not suit every data set. It implies a good knowledge in your data in the sense that you must be confident that no field contains any record delimiters. By nature, CSV fields can contains records delimiters if quoted. On error, the parser has no indication to know if a record delimiter is one or if it is inside a quoted field or not. Thus, using this option confidently implies that your fields do not contain any records delimiter inside.
 
-A `skip` event is emitted when an error is found and when the record is skipped. The `error` object is passed as the first argument of the event callback and optionally object with additional data is passed as second argument.
+A `skip` event is emitted when an error is found and when the record is skipped. The `error` object is passed as the first argument of the event callback and it can expose additional information depending on the type of errors. The [error documentation](/parse/errors/) list of the error types as well as the contextual properties they expose.
 
 ## Listening to the `skip` event
 

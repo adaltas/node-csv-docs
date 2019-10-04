@@ -7,6 +7,8 @@ sort: 6
 
 # Errors
 
+> Important: errors appeared recently with version 4.5. The coverage below is not exhaustive. The code, message and properties documented below may change in the near future.
+
 All errors instantiate the `CsvError` class which extends the JavaScript `Error` class. They share the following properties:
 
 * `code`   
@@ -15,6 +17,10 @@ All errors instantiate the `CsvError` class which extends the JavaScript `Error`
   The error message.
 
 Each error code may include additional properties.
+
+## `CSV_QUOTE_NOT_CLOSED`
+
+Thrown when the parsing of data end while an opening quote is not closed. 
 
 ## `CSV_INVALID_CLOSING_QUOTE`
 
