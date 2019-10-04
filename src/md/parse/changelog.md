@@ -7,11 +7,66 @@ sort: 7
 
 # Changelog
 
+# Changelog
+
 ## Todo
 
 * skip_lines_with_error: rename to skip_records_with_error
 * max_comment_size: new option
 * promise: new API module
+* errors: finish normalisation of all errors
+
+## Version 4.6.0
+
+* skip_lines_with_empty_values: handle non string value
+* errors: add context information
+* tests: new error assertion framework
+* buffer: serialize to json as string
+* errors: expose INVALID_OPENING_QUOTE
+
+## Version 4.5.0
+
+* errors: start normalizing errors with unique codes and context
+* errors: expose CSV_INVALID_CLOSING_QUOTE
+* errors: expose CSV_QUOTE_NOT_CLOSED
+* errors: expose CSV_INVALID_RECORD_LENGTH_DONT_PREVIOUS_RECORDS
+* errors: expose CSV_INVALID_RECORD_LENGTH_DONT_MATCH_COLUMNS
+* errors: expose CSV_INVALID_COLUMN_MAPPING
+
+## Version 4.4.7
+
+* travis: remove node.js 8 and add 12
+* destroy: test inside readable event
+
+## Version 4.4.6
+
+* security: remove regexp vulnerable to DOS in cast option, npm report 69742
+
+## Version 4.4.5
+
+* ts: add buffer as allowed type for input, fix #248
+
+## Version 4.4.4
+
+* package: latest dependencies
+* bom: detection when buffer smaller than bom
+* package: remove deprecated @types/should dependency
+* package: update file path
+
+## Version 4.4.3
+
+* package: fix files declaration
+
+## Version 4.4.2
+
+* bom: parsing for BOM character #239
+* ts: add sync definition
+* package: replace npm ignore with file field
+
+## Version 4.4.1
+
+Fix:
+* columns: allows returning an array of string, undefined, null or false
 
 ## Version 4.4.0
 
