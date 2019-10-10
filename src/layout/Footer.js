@@ -28,18 +28,9 @@ class Footer extends Component {
       display: 'flex',
       flexWrap: 'wrap',
       margin: '0 auto',
-      // '@media (max-width: 960px)': {
-      //   margin: '0 1rem',
-      // },
-      // '@media (min-width: 960px)': {
-      //   margin: '0 2rem 0 15%',
-      //   textAlign: 'justify',
-      // },
       '& h1': {
         margin: '1rem 0 .5rem 0',
-        // fontWeight: 'normal',
         fontSize: '1.4rem',
-        // textAlign: 'left',
       },
       '& ul, & p': {
         margin: '0 0 0 0',
@@ -51,36 +42,26 @@ class Footer extends Component {
       },
       '& a': {
         textDecoration: 'none',
-        // color: 'hsla(0,0%,0%,0.8)',
-        // ':hover': {
-        //   color: '#34BF1C',
-        // },
       },
       '& p a': {
         textDecoration: 'underline',
       },
     },
     navigate: {
-      // width: '25%',
       flex: '1',
       '@media (max-width: 960px)': {
-        // width: '50%',
         flex: '0 0 50%',
       },
     },
     contribute: {
-      // width: '25%',
       flex: '1',
       '@media (max-width: 960px)': {
-        // width: '50%',
         flex: '0 0 50%',
       },
     },
     about: {
-      // width: '100%',
       flex: '2',
       '@media (max-width: 960px)': {
-        // width: '100%',
         flex: '0 0 100%',
       },
     },
