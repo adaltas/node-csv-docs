@@ -68,7 +68,11 @@ Thrown when the [`columns`](/parse/options/columns/) option is a function and it
 
 ## `CSV_MAX_RECORD_SIZE`
 
-Throw when a field is longer than the value defined by the `max_record_size` option.
+Thrown when a field is longer than the value defined by the `max_record_size` option.
+
+## `CSV_NON_TRIMABLE_CHAR_AFTER_CLOSING_QUOTE`
+
+Thrown when a field is no longer quoted and that new non-trimable characters are found after the closing quote. Only apply if the `trim` or the `rtrim` options are activated.
 
 ## Common Errors
 
