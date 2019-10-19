@@ -66,6 +66,10 @@ Thrown when the [`columns`](/parse/options/columns/) option is a function and it
 * `headers`   
   The invalid headers value returned by the function.
 
+## `CSV_MAX_RECORD_SIZE`
+
+Throw when a field is longer than the value defined by the `max_record_size` option.
+
 ## Common Errors
 
 ### End notification
