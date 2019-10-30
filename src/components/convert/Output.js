@@ -42,8 +42,10 @@ class Output extends Component {
         case 'buffer':
           value = Buffer.from(value)
           break
+        case 'default':
+          break
         default:
-          throw Error("Invalid variant: " + options.variant)
+          throw Error(`Invalid variant: property ${property} value ${options.variant}`)
       }
       opts[property] = value
     }
@@ -63,7 +65,6 @@ class Output extends Component {
         output = csv.transform(output, transformCtx.value)
       }
       catch(e) {
-        console.log('!!!', e)
         error = e
       }
     }
