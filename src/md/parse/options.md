@@ -18,7 +18,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   If true, detect and exclude the byte order mark (BOM) from the CSV input if present.
 * [`cast`](/parse/options/cast/) (boolean|function)   
   _Since version 2.2.0_   
-  If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2. More information about the context properties is available below.
+  Alter the value of a field. If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2.
 * `cast_date` (boolean|function)   
   _Since version 1.0.5_   
   If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the `cast` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
