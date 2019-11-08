@@ -42,30 +42,30 @@ stringify([
 
 Run this example with the command `node samples/option.header.js`.
 
-## With the columns option
+## Using `header` conjointly with `columns`
 
-The `columns` option may be used conjointly with the `header` option. 
-
-The ["option.header\_columns.js" example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header_columns.js) shows the behaviour when a record contains a field not declared as an option and when a column is not present in the records. If a record contains a field not declared as a columns, it will simply be discarded like with the `nocolumn` field below. If a column is declared but it is not present in a record, the header will contains the column name and the records will contains a field with an empty value for this column.
+In case you wish to output the headers on the first line, you can use this option conjointly with the `header` option. The column definition object can receive an optional [`header` property which default to the `key` property](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header_with_columns_array_strings.js):
 
 ```js
-const stringify = require('csv-stringify')
-const assert = require('assert')
-
-stringify([
-  { year: 'XXXX', phone: 'XXX XXXX', nocolumn: 'XXX' },
-  { year: 'YYYY', phone: 'YYY YYYY', nocolumn: 'XXX' }
-],{
+stringify( [
+  { a: '1', b: '2' }
+], {
   header: true,
-  columns: ['phone', 'year', 'nofield']
+  columns: [ { key: 'a', header: 'col_a' }, { key: 'b', header: 'col_b' } ]
 }, function(err, data){
-  assert.equal(
-    data,
-    "phone,year,nofield\n" +
-    "XXX XXXX,XXXX,\n" +
-    "YYY YYYY,YYYY,\n"
-  )
+  assert.equal(data, 'col_a,col_b\n1,2\n')
 })
 ```
 
-Run this example with the command `node samples/option.header_columns.js`.
+This example could have been simplified by defining the [column option as an object](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header_width_columns_object.js). This approach is not recommended as it implies relying on object property order which JavaScript doesn't guarantee.
+
+```js
+stringify( [
+  { a: '1', b: '2' }
+], {
+  header: true,
+  columns: { 'a': 'col_a', 'b': 'col_b' }
+}, function(err, data){
+  assert.equal(data, 'col_a,col_b\n1,2\n')
+})
+```
