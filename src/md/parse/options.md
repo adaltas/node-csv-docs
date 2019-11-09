@@ -52,6 +52,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `objname` (string|Buffer)   
   _Since early days_   
   Name of header-record title to name objects by; the string or Buffer value must not be empty and it must match a header value.
+* `on_record` (function)   
+  _Since 4.7.0_   
+  Alter and filter records by executing a user defined function.
 * `quote` (char|boolean)   
   _Since early days_   
   Optional character surrounding a field; one character only; disabled if null, false or empty; defaults to double quote.
