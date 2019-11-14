@@ -37,44 +37,60 @@ The error is also enriched by multiple contextual properties:
 
 Finally, each type of error identified by its code property may include additional properties.
 
-## `CSV_QUOTE_NOT_CLOSED`
+## Runtime errors
 
-Thrown when the parsing of data end while an opening quote is not closed. 
-
-## `CSV_INVALID_CLOSING_QUOTE`
-
-Thrown when a quote is found at an unexpected location. The parser can be made tolerant to this error by activating the `relax` option.
-
-## `CSV_INVALID_RECORD_LENGTH_DONT_PREVIOUS_RECORDS`
-
-Thrown when a record don't match the same amount of fields as the previous records. The parser can be made tolerant to the number of fields with the [`relax_column_count`](/parse/options/relax_column_count/) option. Additional properties include:
-
+* `CSV_INVALID_CLOSING_QUOTE`
+  Thrown when a quote is found at an unexpected location. The parser can be made tolerant to this error by activating the `relax` option.
+* `CSV_INVALID_RECORD_LENGTH_DONT_PREVIOUS_RECORDS`
+  Thrown when a record don't match the same amount of fields as the previous records. The parser can be made tolerant to the number of fields with the [`relax_column_count`](/parse/options/relax_column_count/) option. Additional properties include:
 * `record`   
   The invalid encountered record.
-
-## `CSV_INVALID_RECORD_LENGTH_DONT_MATCH_COLUMNS`   
-
-Thrown when a record don't match the same amount of columns. This error is only present when the [`columns`](/parse/options/columns/) option is active. Additional properties include:
-
+* `CSV_INVALID_RECORD_LENGTH_DONT_MATCH_COLUMNS`   
+  Thrown when a record don't match the same amount of columns. This error is only present when the [`columns`](/parse/options/columns/) option is active. Additional properties include:
 * `record`   
   The invalid encountered record.
-
-## `CSV_INVALID_COLUMN_MAPPING`
-
-Thrown when the [`columns`](/parse/options/columns/) option is a function and it does not return an array of header fields as expected.
-
+* `CSV_INVALID_COLUMN_MAPPING`
+  Thrown when the [`columns`](/parse/options/columns/) option is a function and it does not return an array of header fields as expected.
 * `headers`   
   The invalid headers value returned by the function.
+* `CSV_MAX_RECORD_SIZE`
+  Thrown when a field is longer than the value defined by the `max_record_size` option.
+* `CSV_NON_TRIMABLE_CHAR_AFTER_CLOSING_QUOTE`
+  Thrown when a field is no longer quoted and that new non-trimable characters are found after the closing quote. Only apply if the `trim` or the `rtrim` options are activated.
+* `CSV_QUOTE_NOT_CLOSED`
+  Thrown when the parsing of data end while an opening quote is not closed.
 
-## `CSV_MAX_RECORD_SIZE`
+## API Errors
 
-Thrown when a field is longer than the value defined by the `max_record_size` option.
+* code: `CSV_INVALID_ARGUMENT`   
+  message: `Invalid argument: got {value} at index {index}`   
+  Thrown when calling the `parse` exported function with incorrect arguments.
+* code: `CSV_INVALID_OPTION_BOM`   
+  message: `Invalid option bom: bom must be true, got {value}`   
+  Thrown when the cast option is incorrect.
+* code: `CSV_INVALID_OPTION_CAST`   
+  message: `Invalid option cast: cast must be true or a function, got {value}`   
+  Thrown when the cast option is incorrect.
+* code: `CSV_INVALID_OPTION_CAST_DATE`   
+  message: `Invalid option cast_date: cast_date must be true or a function, got {value}`   
+  Thrown when a column definition does not contain the `name` property.
+* code: `CSV_INVALID_COLUMN_DEFINITION`  
+  message: `Invalid column definition: expect a string or a literal object, got true at position {position}`   
+  Thrown when a column definition is incorrect.
+* code: `CSV_OPTION_COLUMNS_MISSING_NAME`   
+  message: `Option columns missing name: property "name" is required at position {position} when column is an object literal`   
+  Thrown when a column definition is an object without a name property.
+* code: `CSV_INVALID_OPTION_COLUMNS`   
+  message: `Invalid option columns: expect an object, a function or true, got {value}`   
+  Thrown when the column option is incorrect.
+* code: `CSV_INVALID_OPTION_COMMENT`   
+  message: `Invalid option comment: comment must be a buffer or a string, got {value`   
+  Thrown when the comment option is incorrect.
+* code: `CSV_INVALID_OPTION_DELIMITER`   
+  message: `Invalid option delimiter: delimiter must be a non empty string or buffer, got {value}`    
+  Thrown when the delimiter option is incorrect.
 
-## `CSV_NON_TRIMABLE_CHAR_AFTER_CLOSING_QUOTE`
-
-Thrown when a field is no longer quoted and that new non-trimable characters are found after the closing quote. Only apply if the `trim` or the `rtrim` options are activated.
-
-## Common Errors
+## Common issues
 
 ### End notification
 
