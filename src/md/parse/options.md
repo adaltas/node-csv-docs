@@ -13,7 +13,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 
 ## Available options
 
-* `bom` (boolean)   
+* [`bom`](/parse/options/bom/) (boolean)   
   _Since version 4.4.0_   
   If true, detect and exclude the byte order mark (BOM) from the CSV input if present.
 * [`cast`](/parse/options/cast/) (boolean|function)   
@@ -37,7 +37,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `from` (number)   
   _Since version 1.2.0_   
   Start handling records from the requested number of records. One-based, to emit first record provide 1 (not 0)
-* `from_line` (number)   
+* [`from_line`](/parse/options/from_line/) (number)   
   _Since version 4.0.0_   
   Start handling records from the requested line number.
 * `info` (boolean)   
@@ -52,7 +52,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `objname` (string|Buffer)   
   _Since early days_   
   Name of header-record title to name objects by; the string or Buffer value must not be empty and it must match a header value.
-* `on_record` (function)   
+* [`on_record`](/parse/options/on_record/) (function)   
   _Since 4.7.0_   
   Alter and filter records by executing a user defined function.
 * `quote` (char|boolean)   
