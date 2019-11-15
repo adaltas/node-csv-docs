@@ -16,6 +16,63 @@ sort: 7
 * promise: new API module
 * errors: finish normalisation of all errors
 
+## Version 4.8.1
+
+* package: move pad dependency to dev
+
+## Version 4.8.0
+
+* relax_column_count: new less and more options
+* columns: skip empty records before detecting headers
+* errors: rename CSV_INCONSISTENT_RECORD_LENGTH
+* errors: rename CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH
+
+## Version 4.7.0
+
+New Feature:
+* on_record: user function to alter and filter records
+
+Minor improvements:
+* test: ensure every sample is valid
+* from_line: honours inferred column names
+* from_line: new sample
+* errors: expose CSV_INVALID_ARGUMENT
+* errors: expose CSV_INVALID_COLUMN_DEFINITION
+* errors: expose CSV_OPTION_COLUMNS_MISSING_NAME
+* errors: expose CSV_INVALID_OPTION_BOM
+* errors: expose CSV_INVALID_OPTION_CAST
+* errors: expose CSV_INVALID_OPTION_CAST_DATE
+* errors: expose CSV_INVALID_OPTION_COLUMNS
+* errors: expose CSV_INVALID_OPTION_COMMENT
+* errors: expose CSV_INVALID_OPTION_DELIMITER
+* error: fix call to supper
+
+Project management:
+* package: contributing
+* package: code of conduct
+
+## Version 4.6.5
+
+* context: column is null when cast force the context creation, fix #260
+
+## Version 4.6.4
+
+* errors: don't stringify/parse undefined and null values
+* errors: expose CSV_NON_TRIMABLE_CHAR_AFTER_CLOSING_QUOTE
+* errors: expose CSV_MAX_RECORD_SIZE
+
+## Version 4.6.3
+
+* lint: integrate eslint
+
+## Version 4.6.2
+
+* context: null column when columns number inferieur to record length
+
+## Version 4.6.1
+
+* src: set const in for loop
+
 ## Version 4.6.0
 
 * skip_lines_with_empty_values: handle non string value
@@ -95,7 +152,7 @@ Minor enhancements:
 * ts: distribute definitions with es5
 * ts: unused MatcherFunc type
 
-Project managements:
+Project management:
 * babel: include .babelrc to git
 
 ## Version 4.3.0
@@ -173,7 +230,7 @@ New features:
 * comment_lines: count the number of commented lines with no records
 * callback: pass undefined instead of null
 
-API management
+API management:
 * Multiple tests have been rewritten with easier data sample
 * Source code is now written in ES6 instead of CoffeeScript
 * package: switch to MIT license
