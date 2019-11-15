@@ -41,11 +41,11 @@ Finally, each type of error identified by its code property may include addition
 
 * `CSV_INVALID_CLOSING_QUOTE`
   Thrown when a quote is found at an unexpected location. The parser can be made tolerant to this error by activating the `relax` option.
-* `CSV_INVALID_RECORD_LENGTH_DONT_PREVIOUS_RECORDS`
+* `CSV_INCONSISTENT_RECORD_LENGTH`
   Thrown when a record don't match the same amount of fields as the previous records. The parser can be made tolerant to the number of fields with the [`relax_column_count`](/parse/options/relax_column_count/) option. Additional properties include:
 * `record`   
   The invalid encountered record.
-* `CSV_INVALID_RECORD_LENGTH_DONT_MATCH_COLUMNS`   
+* `CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH`   
   Thrown when a record don't match the same amount of columns. This error is only present when the [`columns`](/parse/options/columns/) option is active. Additional properties include:
 * `record`   
   The invalid encountered record.
