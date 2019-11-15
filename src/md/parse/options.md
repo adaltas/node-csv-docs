@@ -67,6 +67,12 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`relax_column_count`](/parse/options/relax_column_count/) (boolean)   
   _Since version 1.0.6_   
   Discard inconsistent columns count; disabled if null, false or empty; default to `false`.
+* [`relax_column_count_less`](/parse/options/relax_column_count/) (boolean)   
+  _Since version 4.8.0_   
+  Similar to `relax_column_count` but only apply when the record contains less fields than expected.
+* [`relax_column_count_more`](/parse/options/relax_column_count/) (boolean)   
+  _Since version 4.8.0_   
+  Similar to `relax_column_count` but only apply when the record contains more fields than expected.
 * `record_delimiter` (chars|array)   
   _Since version 4.0.0_   
   One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters. It was previously named `rowDelimiter`.
