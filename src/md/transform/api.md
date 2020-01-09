@@ -87,7 +87,7 @@ transform([
 
 ### Sync API
 
-The sync API is here for conveniency. Due to its synchronous nature, not all options are honoured. The user handler function must only be written in synchronous mode, with expecting a callback in its second argument.
+The sync API is here for convenience. Due to its synchronous nature, not all options are honoured. The user handler function must only be written in synchronous mode, with expecting a callback in its second argument.
 
 The signature is `const records = transform(records, [options], handler)`.
 
