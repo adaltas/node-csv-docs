@@ -8,26 +8,26 @@ sort: 4
 
 # Option `on_record`
 
-The `on_record` option provide an option to alter and filter records. It expect a function which receives the record and a context as arguments and which returns the new altered record or nothing if the record is to be filtered.
+The `on_record` option provides an option to alter and filter records. It expects a function which receives the record and a context as arguments and which returns the new altered record or nothing if the record is to be filtered.
 
 * Type: `function`
 * Optional
 * Default: `undefined`
 * Since: 4.7.0
 
-This option work at the record level. It complement the `cast` option which is adapted to field level transformations. Also, the [stream-transform](/transform/) package provides more advanced control on the record and the stream of records such asynchronous execution and concurrently control.
+This option works at the record level. It complements the `cast` option which is adapted to field-level transformations. Also, the [stream-transform](/transform/) package provides more advanced control on the record and stream of records with asynchronous execution and concurrent control.
 
 ## Use cases
 
-Use this option to filter, enrich and apply any transformation on a record.
+Use this option to filter, enrich, and apply any transformations on a record.
 
 ## Usage
 
-The option take a function which accept two arguments: the input record and the context. The return value is the new record. The record is filtered if `null` or `undefined`.
+The option takes a function which accepts two arguments: the input record and the context. The return value is the new record or is filtered if `null` or `undefined` are returned.
 
 ## Altering records
 
-In the [alter example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.on_record.alter.js), for every record, the second field is striped out and the two other fields are re-ordered.
+In the [alter example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.on_record.alter.js), for every record, the second field is stripped out and the two other fields are re-ordered.
 
 ```
 parse(`
@@ -48,7 +48,7 @@ b.1,b.2,b.3
 
 ## Filtering records
 
-In the [filter example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.on_record.filter.js), the function returns `null` for the second record.
+In the [filter example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.on_record.filter.js), the function returns `null` for the second record, filtering it from the result.
 
 ```
 parse(`
