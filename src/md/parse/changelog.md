@@ -16,6 +16,14 @@ sort: 7
 * promise: new API module
 * errors: finish normalisation of all errors
 
+## Version 4.8.4
+
+* ts: fix `types` declaration to a single file
+
+## Version 4.8.3
+
+* `errors`: handle undefined captureStackTrace
+
 ## Version 4.8.2
 
 * `relax_column_count`: ts definitions for less and more
