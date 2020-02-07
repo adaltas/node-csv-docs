@@ -18,10 +18,10 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   If true, detect and exclude the byte order mark (BOM) from the CSV input if present.
 * [`cast`](/parse/options/cast/) (boolean|function)   
   _Since version 2.2.0_   
-  Alter the value of a field. If true, the parser will attempt to convert input string to native types. If a function, receive the value as first argument, a context as second argument and return a new value. This option was named `auto_parse` until version 2.
+  Alter the value of a field. If true, the parser will attempt to convert input strings to native types. A function must return the new value and the received arguments are the value to cast and the context object. This option was named `auto_parse` until version 2.
 * `cast_date` (boolean|function)   
   _Since version 1.0.5_   
-  If true, the parser will attempt to convert input string to dates. If a function, receive the value as argument and return a new value. It requires the `cast` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
+  If true, the parser will attempt to convert input string to dates. A function return a new value and the receive argument is the value to cast. It requires the `cast` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
 * [`columns`](/parse/options/columns/) (array|boolean|function)   
   _Since early days_   
   Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
@@ -30,13 +30,13 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Treat all the characters after this one as a comment; one or multiple characters; disabled by default by defining an empty string `''`.
 * `delimiter` (string|Buffer)   
   _Since early days_   
-  Set the field delimiter. One or multiple character. Defaults to `","` (comma).
+  Set the field delimiter as one or multiple characters. It defaults to `,` (comma).
 * `escape` (string|Buffer)   
   _Since early days_   
-  Set the escape character; one character/byte only; only apply to quote and escape characters inside quoted fields; defaults to double quote.
+  Set the escape character as one character/byte only. It only applies to quote and escape characters inside quoted fields and it defaults to `"` (double quote).
 * `from` (number)   
   _Since version 1.2.0_   
-  Start handling records from the requested number of records. One-based, to emit first record provide 1 (not 0)
+  Start handling records from the requested number of records. Count is 1-based, for example, provides `1` (and not `0`) to emit first record.
 * [`from_line`](/parse/options/from_line/) (number)   
   _Since version 4.0.0_   
   Start handling records from the requested line number.
@@ -55,9 +55,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`on_record`](/parse/options/on_record/) (function)   
   _Since 4.7.0_   
   Alter and filter records by executing a user defined function.
-* `quote` (char|boolean)   
+* `quote` (char|Buffer|boolean)   
   _Since early days_   
-  Optional character surrounding a field; one character only; disabled if null, false or empty; defaults to double quote.
+  Optional character surrounding a field as one character only; disabled if null, false or empty; defaults to double quote.
 * `raw` (boolean)   
   _Since version 1.1.6_   
   Generate two properties `raw` and `record` where `raw` is the original CSV content and `record` is the parsed array or object; note, it can be used conjointly with the `info` option.

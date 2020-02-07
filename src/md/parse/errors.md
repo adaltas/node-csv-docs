@@ -7,7 +7,7 @@ sort: 6
 
 # Errors
 
-> Important: errors appeared recently with version 4.5. The coverage is not yet exhaustive. The code, message and properties documented below may change in the near future.
+> Important: errors support appeared recently with version 4.5. The coverage is not yet exhaustive. The code, message and properties documented below may change in the near future.
 
 All errors instantiate the `CsvError` class which extends the JavaScript `Error` class. The 2 main properties of an error are:
 
