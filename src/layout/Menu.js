@@ -106,70 +106,65 @@ const styles_nav = {
   }
 }
 
-class Nav extends Component {
-  render() {
-    const { current, title, pages, home, onClickLink, onToggle} = this.props
-    return (
-      <nav css={[styles_nav.root, current && styles_nav.current]}>
-        <h1 onClick={onToggle}>
-          <span>
-            {title}
-          </span>
-          <Icon
-            color="inherit"
-            ripple={true}
-            className={css(styles_nav.button).toString()}
-            disabled={current}
+const Nav = ({current, title, pages, home, onClickLink, onToggle}) => (
+  <nav css={[styles_nav.root, current && styles_nav.current]}>
+    <h1 onClick={onToggle}>
+      <span>
+        {title}
+      </span>
+      <Icon
+        color="inherit"
+        ripple={true}
+        className={css(styles_nav.button).toString()}
+        disabled={current}
+      >
+        <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
+          <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
+        </svg>
+      </Icon>
+    </h1>
+    <ul>
+      {home && (
+        <>
+        <li key="/" css={styles_nav.li}>
+          <Link
+            to="/"
+            className={css(styles_nav.link).toString()}
+            activeClassName={css(styles_nav.linkActive).toString()}
+            onClick={onClickLink}
           >
-            <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
-              <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
-            </svg>
-          </Icon>
-        </h1>
-        <ul>
-          {home && (
-            <>
-            <li key="/" css={styles_nav.li}>
-              <Link
-                to="/"
-                className={css(styles_nav.link).toString()}
-                activeClassName={css(styles_nav.linkActive).toString()}
-                onClick={onClickLink}
-              >
-                Homepage
-              </Link>
-            </li>
-            <li key="/convert/" css={styles_nav.li}>
-              <Link
-                to="/convert/"
-                className={css(styles_nav.link).toString()}
-                activeClassName={css(styles_nav.linkActive).toString()}
-                onClick={onClickLink}
-              >
-                Convertor
-              </Link>
-            </li>
-            </>
-          )}
-          {[
-            ...pages.map(page => (
-              <li key={page.slug} css={[styles_nav.li, styles_nav['li_'+(page.slug.split('/').length-2)]]}>
-                <Link
-                  to={page.slug}
-                  className={css(styles_nav.link).toString()}
-                  activeClassName={css(styles_nav.linkActive).toString()}
-                  onClick={onClickLink}
-                >
-                  {page.navtitle || page.title}
-                </Link>
-              </li>
-            )),
-          ]}
-        </ul>
-      </nav>
-    )
-  }
-}
+            Homepage
+          </Link>
+        </li>
+        <li key="/convert/" css={styles_nav.li}>
+          <Link
+            to="/convert/"
+            className={css(styles_nav.link).toString()}
+            activeClassName={css(styles_nav.linkActive).toString()}
+            onClick={onClickLink}
+          >
+            Convertor
+          </Link>
+        </li>
+        </>
+      )}
+      {[
+        ...pages.map(page => (
+          <li key={page.slug} css={[styles_nav.li, styles_nav['li_'+(page.slug.split('/').length-2)]]}>
+            <Link
+              to={page.slug}
+              className={css(styles_nav.link).toString()}
+              activeClassName={css(styles_nav.linkActive).toString()}
+              onClick={onClickLink}
+            >
+              {page.navtitle || page.title}
+            </Link>
+          </li>
+        )),
+      ]}
+    </ul>
+  </nav>
+)
 
 const styles = {
   root: {
