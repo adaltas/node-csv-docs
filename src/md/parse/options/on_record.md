@@ -67,3 +67,9 @@ line 3
   )
 })
 ```
+
+## Error behaviour
+
+Errors throw inside the `on_record` function are caught and handled as any other errors.
+
+They won't be honoured by the [`skip_lines_with_error` option](/parse/options/skip_lines_with_error/). The "error" in `skip_lines_with_error` must be interpreted as a parsing error and not as a user thrown error.
