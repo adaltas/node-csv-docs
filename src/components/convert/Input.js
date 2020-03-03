@@ -16,21 +16,18 @@ const styles = {
   },
 }
 
-class Input extends Component {
-  render() {
-    const {props} = this
-    const {fullscreen, input, onInput} = props
-    console.log('input', input)
-    return (
-      <div css={styles.root}>
-        <TextArea
-          css={[styles.input, fullscreen && styles.fullscreen]}
-          value={input}
-          onChange={ value => onInput(value) }
-        />
-      </div>
-    )
-  }
-}
+const Input = ({
+  fullscreen,
+  input,
+  onInput
+}) => (
+  <div css={styles.root}>
+    <TextArea
+      css={[styles.input, fullscreen && styles.fullscreen]}
+      value={input}
+      onChange={ value => onInput(value) }
+    />
+  </div>
+)
 
 export default Input

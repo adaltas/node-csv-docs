@@ -42,7 +42,12 @@ class Output extends Component {
         case 'buffer':
           value = Buffer.from(value)
           break
+        case 'array':
+        case 'boolean':
         case 'default':
+        case 'integer':
+        case 'string':
+          console.log('|', property, value)
           break
         default:
           throw Error(`Invalid variant: property ${property} value ${options.variant}`)

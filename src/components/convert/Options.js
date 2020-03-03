@@ -47,8 +47,6 @@ const styles = {
       padding: '0 30px 0 10px',
       // disable default appearance
       // outline: 'none',
-      '-mozAppearance': 'none',
-      '-webkitAppearance': 'none',
       appearance: 'none',
       '::-ms-expand': {
         display: 'none',
