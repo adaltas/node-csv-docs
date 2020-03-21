@@ -12,7 +12,7 @@ The `cast` option alter a value. It works at the field level of a record. It is 
 
 * Type: `function`
 * Optional
-* Default: none
+* Default: `undefined`
 * Since: 2.2.0
 
 Its value is expected to be a function which receive a context rich of information. It gives full control over a field. The [`test/option.cast.coffee`](https://github.com/adaltas/node-csv-parse/blob/master/test/option.cast.coffee) test provides insights on how to use it and its supported functionalities.

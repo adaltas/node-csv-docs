@@ -25,9 +25,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`columns`](/parse/options/columns/) (array|boolean|function)   
   _Since early days_   
   Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
-* `comment` (string|buffer)   
+* [`comment`](/parse/options/comment/) (string|buffer)   
   _Since early days_   
-  Treat all the characters after this one as a comment; one or multiple characters; disabled by default by defining an empty string `''`.
+  Treat all the characters after this one as a comment; one or multiple characters; disabled by default by defining an empty string `""`.
 * `delimiter` (string|Buffer)   
   _Since early days_   
   Set the field delimiter as one or multiple characters. It defaults to `,` (comma).

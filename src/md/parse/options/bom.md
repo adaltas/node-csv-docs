@@ -44,10 +44,10 @@ The option is disabled by default. When importing UTF-8 input, such as when read
 
 Handling BOM header without this option may create unexpected behaviors. The BOM bytes will be present in the output and invisible, either in the values or in the object properties when using the `column` option.
 
-Consider the following example, it illustrate how the property name is not the one printed in the console:
+Consider the [following example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.bom.hidden.js), it illustrate how the property name is not the one printed in the console:
 
 ```js
-const parse = require('../lib/sync')
+const parse = require('csv-parse/lib/sync')
 const assert = require('assert')
 
 const data = "\ufeffkey\nvalue"
