@@ -94,9 +94,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`to_line`](/parse/options/to_line/) (number)   
   _Since version 4.0.0_   
   Stop handling records after the requested line number.
-* `trim` (boolean)   
+* [`trim`](/parse/options/trim/) (boolean)   
   _Since early days_   
-  If `true`, ignore whitespace immediately around the delimiter. Defaults to `false`. Does not remove whitespace in a quoted field.
+  If `true`, ignore whitespaces immediately around the delimiter. Defaults to `false`. Does not remove whitespace in a quoted field.
 
 ## Choose your style
 

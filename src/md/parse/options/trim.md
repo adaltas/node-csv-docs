@@ -1,0 +1,49 @@
+---
+title: Option trim
+navtitle: trim
+description: Option "trim" ignore whitespaces immediately around the delimiter.
+keywords: ['csv', 'parse', 'options', 'columns']
+sort: 4
+---
+
+# Option `to_line`
+
+The `trim` option ignore whitespace characters immediately around the delimiter. Defaults to `false`. It does not remove whitespace present inside the quotes of a field.
+
+* Type: `boolean`
+* Optional
+* Default: `false`
+* Since: early days
+* Related: `ltrim`, `rtrim`
+
+The characters interpreted as whitespaces are identical to the `\s` meta character in regular expressions:
+
+* Horizontal tab, `String.fromCharCode(9)`
+* NL line feed, new line, `String.fromCharCode(10)`
+* NP Form feed, new page, `String.fromCharCode(12)`
+* Carriage return, `String.fromCharCode(13)`
+* Space, `String.fromCharCode(32)`
+
+## Example
+
+This [example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.trim.js) insert spaces around fields at multiple locations.
+
+```js
+const parse = require('csv-parse/lib/sync')
+const assert = require('assert')
+
+const records = parse(`
+a ,1
+b, 2
+ c,3
+`, {
+  trim: true
+})
+assert.deepEqual(
+  records, [
+    [ 'a', '1' ],
+    [ 'b', '2' ],
+    [ 'c', '3' ]
+  ]
+)
+```
