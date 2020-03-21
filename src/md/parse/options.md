@@ -91,7 +91,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `to` (number)   
   _Since version 1.2.0_   
   Stop handling records after the requested number of records.
-* `to_line` (number)   
+* [`to_line`](/parse/options/to_line/) (number)   
   _Since version 4.0.0_   
   Stop handling records after the requested line number.
 * `trim` (boolean)   

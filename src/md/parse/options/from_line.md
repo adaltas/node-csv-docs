@@ -8,12 +8,14 @@ sort: 4
 
 # Option `from_line`
 
-The `from_line` handles records starting from a requested line number with the first line being `1`.
+The `from_line` option handles records starting from a requested line number. The counting of lines start at `1` which is the default value, thus the first line is `1`.
 
 * Type: `number`
+* Coercion: `string` to `number`
 * Optional
 * Default: `1`
 * Since: 4.0.0
+* Related: [`to_line`](/parse/options/to_line/), `from`, `to`
 
 ## Simple example with inferred column names
 
