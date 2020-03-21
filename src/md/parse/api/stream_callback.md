@@ -1,6 +1,6 @@
 ---
-title: Callback API
-navtitle: Callback
+title: Mixing the stream and callback APIs
+navtitle: Stream + callback
 description: Replace the writable stream with a string or buffer and the readable stream with a callback function.
 keywords: ['csv', 'parse', 'api', 'stream', 'callback', 'function', 'mixin']
 sort: 2.3
