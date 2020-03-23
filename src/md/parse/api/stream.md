@@ -56,29 +56,4 @@ parser.end()
 
 ## Using the pipe function
 
-One useful function of the Stream API is `pipe` to interact between multiple streams. You may use this function to connect a `stream.Readable` source to a `stream.Writable` destination.
-
-The [pipe example](https://github.com/adaltas/node-csv-parse/blob/master/samples/api.pipe.js) reads a file, parses its content, transforms it and print the result to the standard output.
-
-This example is available with the command `node samples/api.pipe.js`.
-
-```js
-const parse = require('csv-parse')
-const generate = require('csv-generate')
-const transform = require('stream-transform')
-
-const generator = generate({
-  length: 20
-})
-const parser = parse({
-  delimiter: ':'
-})
-const transformer = transform(function(record, callback){
-  setTimeout(function(){
-    callback(null, record.join(' ')+'\n')
-  }, 500)
-}, {
-  parallel: 5
-})
-generator.pipe(parser).pipe(transformer).pipe(process.stdout)
-```
+The stream API is extensive and connecting multiple streams toguether is a complex task for newcomers. Part of the stream API, the pipe function does just that. The [pipe recipe][/recipies/pipe/] explains its usage and provides an example.
