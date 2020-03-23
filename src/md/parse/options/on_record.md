@@ -3,7 +3,6 @@ title: Option on_record
 navtitle: on_record
 description: Option "on_record" alter a record before producing it.
 keywords: ['csv', 'parse', 'options', 'transform', 'alter', 'filter', 'field']
-sort: 4
 ---
 
 # Option `on_record`

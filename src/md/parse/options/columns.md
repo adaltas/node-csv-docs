@@ -3,7 +3,6 @@ title: Option columns
 navtitle: columns
 description: Option "columns" generate records as object literals instead of arrays.
 keywords: ['csv', 'parse', 'options', 'columns']
-sort: 4
 ---
 
 # Option `columns`

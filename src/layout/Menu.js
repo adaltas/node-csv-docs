@@ -1,13 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { Link } from 'gatsby'
 import { css } from 'glamor'
 import Icon from '../components/Icon'
-
-// make the keyframes with glamor
-// const display = css.keyframes({
-//   '0%': { display: '', opacity: `0` },
-//   '100%': { display: '', opacity: ` 1` }
-// })
 
 const styles_nav = {
   root: {
@@ -26,13 +20,40 @@ const styles_nav = {
         backgroundColor: 'rgba(255, 255, 255, .2)',
       },
     },
-    '& ul': {
+    '& > ul': {
       margin: '0',
       paddingTop: '0',
       boxSizing: 'border-box',
       overflow: 'hidden',
       height: '0',
       opacity: '0',
+      '& ul': {
+        margin: 0,
+        '& li': {
+          padding: '0 1rem 0 1rem',
+          '& a': {
+            padding: '.2rem 1rem .2rem 1rem',
+          },
+        },
+      },
+      '& li': {
+        margin: '0 0',
+        padding: '0',
+        textIndent: 0,
+        listStyleType: 'none',
+        '& a': {
+          padding: '.5rem 1rem .5rem 1rem',
+        },
+      },
+      '& > li': {
+        '& > a, & li': {
+          '@media not all and (pointer: coarse)': {
+            ':hover': {
+              backgroundColor: 'rgba(255,255,255,.1)',
+            },
+          },
+        },
+      }
     },
     '& a': {
       textDecoration: 'none',
@@ -45,31 +66,13 @@ const styles_nav = {
         backgroundColor: 'rgba(255, 255, 255, 0)',
       },
     },
-    '& ul': {
+    '& > ul': {
       // display: '',
       paddingTop: '1rem',
       overflow: 'visible',
       height: 'auto',
       opacity: '1',
       transition: 'opacity 1s',
-    },
-  },
-  li: {
-    margin: '.3rem 0',
-    padding: '0 1rem 0 1rem',
-    textIndent: 0,
-    listStyleType: 'none',
-    '@media not all and (pointer: coarse)': {
-      ':hover': {
-        backgroundColor: 'rgba(255,255,255,.1)',
-      },
-    },
-  },
-  li_3: {
-    margin: '0',
-    '& a': {
-      borderLeft: '1px solid #fff',
-      paddingLeft: '1rem',
     },
   },
   link: {
@@ -106,7 +109,65 @@ const styles_nav = {
   }
 }
 
-const Nav = ({current, title, pages, home, onClickLink, onToggle}) => (
+const List1 = ({
+  onClickLink,
+  pages
+}) => (
+  <ul>
+    {pages.map( page => (
+      <li key={'li'+page.slug} css={styles_nav.li}>
+        <Link
+          to={page.slug}
+          className={css(styles_nav.link).toString()}
+          activeClassName={css(styles_nav.linkActive).toString()}
+          onClick={onClickLink}
+        >
+          {page.navtitle || page.title}
+        </Link>
+        { page.children &&
+          <List
+            onClickLink={onClickLink}
+            pages={page.children}
+          />
+        }
+      </li>
+    ))}
+  </ul>
+)
+
+const List = ({
+  onClickLink,
+  pages
+}) => (
+  <ul>
+    {pages.map( page => (
+      <li key={page.slug} css={styles_nav.li}>
+        <Link
+          to={page.slug}
+          className={css(styles_nav.link).toString()}
+          activeClassName={css(styles_nav.linkActive).toString()}
+          onClick={onClickLink}
+        >
+          {page.navtitle || page.title}
+        </Link>
+        { page.children &&
+          <List1
+            onClickLink={onClickLink}
+            pages={page.children}
+          />
+        }
+      </li>
+    ))}
+  </ul>
+)
+
+const Nav = ({
+  current,
+  onClickLink,
+  onToggle,
+  pages,
+  title
+}) => (
   <nav css={[styles_nav.root, current && styles_nav.current]}>
     <h1 onClick={onToggle}>
       <span>
@@ -123,46 +184,10 @@ const Nav = ({current, title, pages, home, onClickLink, onToggle}) => (
         </svg>
       </Icon>
     </h1>
-    <ul>
-      {home && (
-        <>
-        <li key="/" css={styles_nav.li}>
-          <Link
-            to="/"
-            className={css(styles_nav.link).toString()}
-            activeClassName={css(styles_nav.linkActive).toString()}
-            onClick={onClickLink}
-          >
-            Homepage
-          </Link>
-        </li>
-        <li key="/convert/" css={styles_nav.li}>
-          <Link
-            to="/convert/"
-            className={css(styles_nav.link).toString()}
-            activeClassName={css(styles_nav.linkActive).toString()}
-            onClick={onClickLink}
-          >
-            Convertor
-          </Link>
-        </li>
-        </>
-      )}
-      {[
-        ...pages.map(page => (
-          <li key={page.slug} css={[styles_nav.li, styles_nav['li_'+(page.slug.split('/').length-2)]]}>
-            <Link
-              to={page.slug}
-              className={css(styles_nav.link).toString()}
-              activeClassName={css(styles_nav.linkActive).toString()}
-              onClick={onClickLink}
-            >
-              {page.navtitle || page.title}
-            </Link>
-          </li>
-        )),
-      ]}
-    </ul>
+    <List
+      onClickLink={onClickLink}
+      pages={pages}
+    />
   </nav>
 )
 
@@ -198,83 +223,121 @@ const styles = {
   },
 }
 
-class Menu extends Component {
-  constructor(props) {
-    super(props)
-    const section = props.slug ? /^\/(\w+)/.exec(props.slug)[1] : 'project'
-    this.state = { current: section }
-    this.menus = {
-      project: {
-        title: 'Project',
-        home: true,
-        pages: [],
-      },
-      generate: {
-        title: 'Generate',
-        pages: [],
-      },
-      parse: {
-        // current: true,
-        title: 'Parse',
-        pages: [],
-      },
-      transform: {
-        title: 'Transform',
-        pages: [],
-      },
-      stringify: {
-        title: 'Stringify',
-        pages: [],
-      },
-    }
-    props.pages.map(page => {
-      const section = /^\/(\w+)/.exec(page.slug)[1]
-      page.current = page.slug === props.slug
-      if(page.current === true){
-        this.menus[section].current = true
-      }
-      return this.menus[section].pages.push(page)
-    })
+const Menu = ({
+  onClickLink,
+  pages,
+  slug
+}) => {
+  const extractMenuSlug = (slug) => {
+    slug = slug && slug !== '/' ? /^(\/\w+\/)/.exec(slug)[1] : '/'
+    slug = slug === '/project/' ? '/' : slug
+    return slug
   }
-  render() {
-    const { onClickLink } = this.props
-    const { current } = this.state
-    const { menus } = this
-    const onToggle = (section) => {
-      this.setState({current: section})
-    }
-    return (
-      <aside css={[styles.root]}>
-        <div css={styles.menu}>
-        {
-          Object.keys(menus).map(section => {
-            const pkg = menus[section]
-            return (
-              <Nav
-                key={section}
-                current={current ? current === section : pkg.current}
-                home={pkg.home}
-                title={pkg.title}
-                pages={pkg.pages}
-                onClickLink={onClickLink}
-                onToggle={() => onToggle(section)}
-              />
-            )
-          })
+  const defaultSlug = extractMenuSlug(slug)
+  const [currentSlug, setCurrentSlug] = useState(defaultSlug)
+  const onToggle = (slug) => {
+    setCurrentSlug(extractMenuSlug(slug))
+  }
+  let menus = { children: {
+    project: {
+      title: 'Project',
+      sort: 1,
+      slug: '/',
+      children: {
+        'home': {
+          slug: '/',
+          title: 'Homepage'
+        },
+        'convert': {
+          slug: '/convert/',
+          title: 'Convertor'
         }
-        </div>
-        <div css={styles.footer}>
-          Help us{' '}
-          <a
-            href="https://github.com/adaltas/node-csv-docs/issues"
-          >
-            improve the docs
-          </a>{' '}
-          by proposing enhancements and fixing typos.
-        </div>
-      </aside>
-    )
+      }
+    },
+    generate: {
+      title: 'Generate',
+      sort: 2,
+    },
+    parse: {
+      // current: true,
+      title: 'Parse',
+      sort: 3,
+    },
+    transform: {
+      title: 'Transform',
+      sort: 4,
+    },
+    stringify: {
+      title: 'Stringify',
+      sort: 5,
+    },
+  } }
+  // Build hierarchy, result is made of nested objects
+  pages.map( page => {
+    const namespace = page.slug.split('/').filter( name => !!name)
+    let local = menus
+    namespace.map( (name, i) => {
+      if( namespace.length === 1){
+        // Main section have child pages matching the section slug
+        local.children[name].slug = page.slug
+        local.children[name].children = {
+          [name]: page
+        }
+      }else if( i < namespace.length - 1 ){
+        // Build the tree
+        if( !local.children[name] ) local.children[name] = {}
+        // Navigate the tree
+        local = local.children[name]
+      }else{
+        // Insert the page
+        if(!local.children) local.children = {}
+        local.children[name] = page
+      }
+    })
+  })
+  // Sort hierachy, result is made of nested arrays
+  const sort = (pages) => {
+    return Object.keys(pages)
+    .map( name => {
+      let page = {}
+      Object.keys(pages[name]).map( property => {
+        page[property] = pages[name][property]
+      })
+      if( page.children ){
+        page.children = sort(page.children)
+      }
+      return page
+    })
+    .sort( (p1, p2) => (p1.sort || p1.navtitle || p1.title) > (p2.sort || p2.navtitle || p2.title))
   }
+  menus = sort(menus.children)
+  return (
+    <aside css={[styles.root]}>
+      <div css={styles.menu}>
+      {
+        menus.map( (page) => (
+          <Nav
+            key={page.slug}
+            current={currentSlug === page.slug}
+            title={page.title}
+            pages={page.children}
+            onClickLink={onClickLink}
+            onToggle={() => onToggle(page.slug)}
+          />
+        ))
+      }
+      </div>
+      <div css={styles.footer}>
+        Help us{' '}
+        <a
+          href="https://github.com/adaltas/node-csv-docs/issues"
+        >
+          improve the docs
+        </a>{' '}
+        by proposing enhancements and fixing typos.
+      </div>
+    </aside>
+  )
 }
 
 export default Menu

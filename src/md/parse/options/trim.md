@@ -3,10 +3,9 @@ title: Option trim
 navtitle: trim
 description: Option "trim" ignore whitespaces immediately around the delimiter.
 keywords: ['csv', 'parse', 'options', 'columns']
-sort: 4
 ---
 
-# Option `to_line`
+# Option `trim`
 
 The `trim` option ignore whitespace characters immediately around the delimiter. Defaults to `false`. It does not remove whitespace present inside the quotes of a field.
 

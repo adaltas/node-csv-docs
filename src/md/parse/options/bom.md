@@ -3,10 +3,9 @@ title: Option bom
 navtitle: bom
 description: Option "bom" strip the byte order mark (BOM).
 keywords: ['csv', 'parse', 'options', 'bom', 'utf', 'unicode', 'utf8']
-sort: 4
 ---
 
-# Option bom
+# Option `bom`
 
 The `bom` option strip the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) from the input string or buffer. When activated, the BOM is automatically detected and the parsing will occur whether a BOM was found or not.
 

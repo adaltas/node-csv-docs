@@ -3,7 +3,6 @@ title: Option from_line
 navtitle: from_line
 description: Option "from_line" handles records starting from a requested line number.
 keywords: ['csv', 'parse', 'options', 'columns']
-sort: 4
 ---
 
 # Option `from_line`

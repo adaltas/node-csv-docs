@@ -3,10 +3,9 @@ title: Option cast
 navtitle: cast
 description: Option "cast" alter a field value.
 keywords: ['csv', 'parse', 'options', 'cast', 'context', 'lines', 'quoting']
-sort: 4
 ---
 
-# Option cast
+# Option `cast`
 
 The `cast` option alter a value. It works at the field level of a record. It is possible to transform its value or change its type.
 

@@ -3,10 +3,9 @@ title: Option relax_column_count
 navtitle: relax_column_count
 description: Option "relax_column_count" tolerates data sets with inconsistent number of fields.
 keywords: ['csv', 'parse', 'options', 'relax_column_count', 'columns']
-sort: 4
 ---
 
-# Option relax\_column\_count
+# Option `relax_column_count`
 
 The `relax_column_count` option tolerates data sets with inconsistent number of fields between records. By default, an error is thrown if two records have a different number of fields.
 

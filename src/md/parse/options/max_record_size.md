@@ -3,10 +3,9 @@ title: Option max_record_size
 navtitle: max_record_size
 description: Option "max_record_size" set a limit on the maximum number of characters of a record.
 keywords: ['csv', 'parse', 'options', 'max_record_size', 'buffer', 'overflow', 'security']
-sort: 4
 ---
 
-# Option max\_record\_size
+# Option `max_record_size`
 
 The `max_record_size` option set a limit on the maximum number of characters to be contained in the field and line before an exception is raised.
 

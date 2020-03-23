@@ -3,7 +3,6 @@ title: Option to_line
 navtitle: to_line
 description: Option "to_line" handles records until a requested line number.
 keywords: ['csv', 'parse', 'options', 'columns']
-sort: 4
 ---
 
 # Option `to_line`
