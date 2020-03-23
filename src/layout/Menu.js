@@ -246,11 +246,13 @@ const Menu = ({
       children: {
         'home': {
           slug: '/',
-          title: 'Homepage'
+          title: 'Homepage',
+          sort: 1,
         },
         'convert': {
           slug: '/convert/',
-          title: 'Convertor'
+          title: 'Convertor',
+          sort: 2,
         }
       }
     },

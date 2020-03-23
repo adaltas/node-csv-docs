@@ -1,7 +1,7 @@
 ---
 title: License
 keywords: ['csv', 'license', 'mit', 'copyright', 'permission', 'adaltas']
-sort: 3
+sort: 5
 ---
 
 # The MIT License (MIT)
