@@ -10,7 +10,7 @@ This package proposes different API flavours. Every example is available on [Git
 
 For additional usages and examples, you may refer to:
 
-* [the API page](/parse/api/)
+* [the API page](/transform/api/)
 * [the "samples" folder](https://github.com/adaltas/node-stream-transform/tree/master/samples)
 * [the "test" folder](https://github.com/adaltas/node-stream-transform/tree/master/test).
 
