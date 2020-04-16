@@ -9,7 +9,7 @@ sort: 4
 
 Learn how to use the parser with multiple examples.
 
-* [File interaction](/parse/recipies/file_iteraction/)   
+* [File interaction](/parse/recipies/file_interaction/)   
   Read and write CSV content into a file.
 * [Stream Pipe](/parse/api/callback/)   
   When using the stream API, plug multiple readable and writable streams to parse CSV data.
