@@ -11,6 +11,9 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 
 ## Available options
 
+* `bom` (boolean)   
+  _Since version 5.4.0_
+  Prepend the byte order mark (BOM) to the output stream.
 * [`cast`](/stringify/options/cast/)   
   Defines custom cast for certain data types; was `formatters` until version 4.3.1.
   * `boolean`
