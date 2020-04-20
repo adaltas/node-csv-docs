@@ -7,6 +7,42 @@ sort: 5
 
 # Changelog
 
+## Version 5.4.0
+
+* src: complete require in javascript
+* bom: new option
+
+## Version 5.3.6
+
+* cast: fix header context property on first record
+
+## Version 5.3.5
+
+* stream: passing options to parent constructor, fix #104
+
+## Version 5.3.4
+
+* src: strengthen conditions
+* test: ensure every sample is valid
+* package: contributing
+* package: code of conduct
+* quoted_match: ts types string or RegExp
+
+## Version 5.3.3
+
+* columns: can still access fields with dots, fix #98
+
+## Version 5.3.2
+
+* columns: get on undefined objects, fix #97
+
+## Version 5.3.1
+
+* package: latest dependencies
+* package: replace npm ignore with file field
+* project: fix license in package.json
+* package: simplify pretest command
+
 ## Version 5.3.0
 
 New feature:
