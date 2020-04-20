@@ -16,6 +16,38 @@ sort: 7
 * promise: new API module
 * errors: finish normalisation of all errors
 
+## Version 4.8.9
+
+Fix:
+* sync: disregard emitted null records
+
+New Feature:
+* trim: support form feed character
+
+Minor improvements:
+* src: cache length in loops
+* trim: new sample
+* to_line: simple sample
+* comment: simple sample
+* bom: sample with hidden bom
+* bom: test behavior with the column option
+
+## Version 4.8.8
+
+* api: fix regression in browser environments
+
+## Version 4.8.7
+
+* api: fix input string with output stream
+
+## Version 4.8.6
+
+* on_record: catch and handle user errors
+
+## Version 4.8.5
+
+* ts: fix `types` declaration
+
 ## Version 4.8.4
 
 * ts: fix `types` declaration to a single file
