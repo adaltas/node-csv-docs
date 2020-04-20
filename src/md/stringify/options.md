@@ -35,7 +35,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 * [`header`](/stringify/options/header) (boolean)   
   Display the column names on the first line if the columns option is provided or discovered.   
 * `quote` (string|Buffer|boolean)   
-  The quote characters, defaults to the `"`, an empty quote value will preserve the original field.   
+  The quote characters surrounding a field, defaults to the `"` (double quotation marks), an empty quote value will preserve the original field, wether it contains quotation marks or not.   
 * `quoted` (boolean)   
   Boolean, default to false, quote all the non-empty fields even if not required.
 * `quoted_empty` (boolean)   
