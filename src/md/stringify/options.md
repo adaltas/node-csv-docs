@@ -32,17 +32,17 @@ All options are optional. All the options from the [Node.js Writable Stream API]
   Add the value of "options.rowDelimiter" on the last line, default to true.   
 * `escape` (string|Buffer)   
   Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.   
-* [`header`](/stringify/options/header) (boolean)   
+* [`header`](/stringify/options/header/) (boolean)   
   Display the column names on the first line if the columns option is provided or discovered.   
 * `quote` (string|Buffer|boolean)   
   The quote characters surrounding a field, defaults to the `"` (double quotation marks), an empty quote value will preserve the original field, wether it contains quotation marks or not.   
-* `quoted` (boolean)   
+* [`quoted`](/stringify/options/quoted/) (boolean)   
   Boolean, default to false, quote all the non-empty fields even if not required.
-* `quoted_empty` (boolean)   
+* [`quoted_empty`](/stringify/options/quoted_empty/) (boolean)   
   Quote empty strings and overrides `quoted_string` on empty strings when defined; default is `false`.
-* `quoted_match` (String|RegExp)   
+* [`quoted_match`](/stringify/options/quoted_match/) (String|RegExp)   
   Quote all fields matching a regular expression; default is `false`.
-* `quoted_string` (boolean)   
+* [`quoted_string`](/stringify/options/quoted_string/) (boolean)   
   Quote all fields of type string even if not required; default is `false`.
 * `record_delimiter` (string|Buffer)   
   String used to delimit record rows or a special value; special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered in source or 'unix' if no source is specified); was `rowDelimiter` until version 4.3.1.

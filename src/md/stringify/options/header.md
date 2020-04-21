@@ -3,10 +3,9 @@ title: Option header
 navtitle: header
 description: Display the column names on the first line if the columns option is provided or discovered
 keywords: ['csv', 'stringify', 'options', 'header']
-sort: 4
 ---
 
-# Option header
+# Option `header`
 
 The `header` option generates the column names in the first emitted record. The value is expected to be a boolean value.
 

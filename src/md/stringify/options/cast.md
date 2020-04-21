@@ -3,10 +3,9 @@ title: Option cast
 navtitle: cast
 description: Defines custom cast for certain data types
 keywords: ['csv', 'stringify', 'options', 'cast']
-sort: 4
 ---
 
-# Option cast
+# Option `cast`
 
 The `cast` option define multiple function to transform values based on their type. It is an object where the keys represent the type and their associated values are the transform functions.
 

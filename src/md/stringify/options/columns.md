@@ -3,10 +3,9 @@ title: Option columns
 navtitle: columns
 description: List of properties when records are provided as objects
 keywords: ['csv', 'stringify', 'options', 'columns']
-sort: 4
 ---
 
-# Option columns
+# Option `columns`
 
 The associate value with the `column` option may come in different flavours: an int, an array or an object. Consider the [tests](https://github.com/adaltas/node-csv-stringify/blob/master/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features.
 

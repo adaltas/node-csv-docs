@@ -3,10 +3,9 @@ title: Option delimiter
 navtitle: delimiter
 description: Set the delimiter between fields of a record
 keywords: ['csv', 'stringify', 'options', 'delimiter']
-sort: 4
 ---
 
-# Option delimiter
+# Option `delimiter`
 
 The `delimiter` option set the delimiter between the fields of a record. It can be one or multiple characters. The default value is a comma `,`.
 
