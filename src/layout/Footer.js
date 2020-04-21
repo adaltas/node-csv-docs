@@ -121,7 +121,7 @@ class Footer extends Component {
                 GitHub
               </a>{' '}
               and developed by{' '}
-              <a href="http://www.adaltas.com">
+              <a href="https://www.adaltas.com">
                 Adaltas
               </a>
               .

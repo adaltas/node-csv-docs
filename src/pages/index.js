@@ -256,7 +256,7 @@ const Index = () => (
         </h2>
         <p css={styles.blog_info}>
           {"By "}
-          <a href='http://www.adaltas.com/'>wdavidw</a>
+          <a href='https://www.adaltas.com/'>wdavidw</a>
           {" | January 15th, 2019"}
         </p>
         <p>
@@ -326,7 +326,7 @@ const Index = () => (
       <article>
         <h2>
           <a
-            href="http://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/"
+            href="https://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/"
           >
             CSV Parse 4.0.0 - re-writing and performance
           </a>
@@ -343,7 +343,7 @@ const Index = () => (
           information. The official website is updated and 
           the <Link to="/parse/changelog/">changelog</Link> contains the 
           list of changes for this major release. <a
-          href="http://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/">Learn more!</a>
+          href="https://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/">Learn more!</a>
         </p>
       </article>
     </section>
