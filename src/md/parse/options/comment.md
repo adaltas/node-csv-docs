@@ -5,7 +5,7 @@ description: Option "comment" discard characters.
 keywords: ['csv', 'parse', 'options', 'comment', 'escape']
 ---
 
-# Option `bom`
+# Option `comment`
 
 Treat all the characters after this one as a comment. It can be made of one or multiple escape characters. It is disabled by default by defining an empty string `""`.
 
