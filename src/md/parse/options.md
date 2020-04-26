@@ -28,11 +28,11 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`comment`](/parse/options/comment/) (string|buffer)   
   _Since early days_   
   Treat all the characters after this one as a comment; one or multiple characters; disabled by default by defining an empty string `""`.
-* `delimiter` (string|Buffer)   
-  _Since early days_   
-  Set the field delimiter as one or multiple characters. It defaults to `,` (comma).
+* [`delimiter`](/parse/options/delimiter/) (string|Buffer|[string|Buffer])   
+  _Since version 0.0.1_   
+  Set one or several field delimiters containing one or several characters. It defaults to `,` (comma).
 * `escape` (string|Buffer)   
-  _Since early days_   
+  _Since version 0.0.1_   
   Set the escape character as one character/byte only. It only applies to quote and escape characters inside quoted fields and it defaults to `"` (double quote).
 * `from` (number)   
   _Since version 1.2.0_   
@@ -56,7 +56,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   _Since 4.7.0_   
   Alter and filter records by executing a user defined function.
 * `quote` (char|Buffer|boolean)   
-  _Since early days_   
+  _Since version 0.0.1_   
   Optional character surrounding a field as one character only; disabled if null, false or empty; defaults to double quote.
 * `raw` (boolean)   
   _Since version 1.1.6_   

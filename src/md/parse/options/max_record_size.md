@@ -18,7 +18,7 @@ A castable string will be converted to an integer and it is not activated by def
 
 ## Use cases
 
-This feature guards against a wrong `delimiter` or `record_delimiter`. It also prevent a CSV dataset from an uncontrolled source to fill the internal buffer memory.
+This feature guards against a wrong [`delimiter`](/parse/options/delimiter/) or `record_delimiter`. It also prevent a CSV dataset from an uncontrolled source to fill the internal buffer memory.
 
 ## Example
 

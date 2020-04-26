@@ -7,7 +7,7 @@ keywords: ['csv', 'parse', 'options', 'columns']
 
 # Option `trim`
 
-The `trim` option ignore whitespace characters immediately around the delimiter. Defaults to `false`. It does not remove whitespace present inside the quotes of a field.
+The `trim` option ignore whitespace characters immediately around the [delimiter](/parse/options/delimiter/). Defaults to `false`. It does not remove whitespace present inside the quotes of a field.
 
 * Type: `boolean`
 * Optional
