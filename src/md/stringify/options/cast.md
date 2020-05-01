@@ -11,16 +11,18 @@ The `cast` option define multiple function to transform values based on their ty
 
 The following types are supported:
 
+* `bigint`   
+  Custom function to transform `BigInt` values.
 * `boolean`   
-  Custom function to transform boolean values.
+  Custom function to transform `boolean` values.
 * `date`   
-  Custom function to transform date values.
+  Custom function to transform `Date` values.
 * `number`   
-  Custom function to transform number values.
+  Custom function to transform `Number` values.
 * `object`   
-  Custom function to transform object literals.
+  Custom function to transform `Object` literals.
 * `string`   
-  Custom function to transform string values.
+  Custom function to transform `String` values.
   
 The functions will be executed with 2 arguments:
 
