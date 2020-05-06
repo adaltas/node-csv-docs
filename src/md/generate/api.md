@@ -34,7 +34,7 @@ generate({
 .on('readable', function(){
   let record
   while(record = this.read()){
-    records.push(d)
+    records.push(record)
   }
 })
 .on('error', function(err){
