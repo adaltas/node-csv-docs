@@ -10,7 +10,7 @@ sort: 2.2
 
 The signature is `parse(data, [options], callback)`.
 
-The [callback example](https://github.com/adaltas/node-csv-parse/blob/master/samples/api.callback.js) takes the CSV string in the first argument and a user callback in the second argument. The callback will received any error thrown by the CSV parser or an array of records object in the second argument. returns an array inside a user-provided callback.
+The [callback example](https://github.com/adaltas/node-csv-parse/blob/master/samples/api.callback.js) takes the CSV string in the first argument (`input`), options in the second argument, and a user callback in the third argument. The callback receives any error thrown by the CSV parser in the first parameter (`err`), or an array of records in the second argument (`output`). It returns an array.
 
 ```js
 const parse = require('csv-parse')
