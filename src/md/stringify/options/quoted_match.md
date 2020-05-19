@@ -13,7 +13,7 @@ Quote all fields matching a regular expression.
 * Optional
 * Default: `false`
 * Since: 5.0.0
-* Related: [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)
+* Related: [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
 
 Note, several options are available to control when to quote fields under certain conditions. Make sure to review the alternatives.
 

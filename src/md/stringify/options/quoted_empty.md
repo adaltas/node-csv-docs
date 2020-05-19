@@ -13,7 +13,7 @@ Quote empty strings and overrides `quoted_string` on empty strings when defined.
 * Optional
 * Default: `false`
 * Since: 0.0.4
-* Related: [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)
+* Related: [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
 
 Note, several options are available to control when to quote fields under certain conditions. Make sure to review the alternatives.
 
