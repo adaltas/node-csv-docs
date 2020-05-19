@@ -7,7 +7,7 @@ keywords: ['csv', 'parse', 'options', 'delimiter', 'separator', 'tsv', 'fields',
 
 # Option `delimiter`
 
-It defines the characters used to delimitate the fields inside a record. One or multiple values are accepted. A value can be a string or a Buffer. It can not be empty but it can contains several characters. When not defined, the default value is a comma.
+Defines the character(s) used to delimitate the fields inside a record. A single value or an array of values are accepted. A value can be a string or a Buffer. It can not be empty, and it can contain several characters. When not defined, the default value is a comma.
 
 * Type: `string|Buffer|[string|Buffer]`
 * Optional
@@ -25,12 +25,12 @@ In the [delimiter example](https://github.com/adaltas/node-csv-parse/blob/master
 const parse = require('csv-parse/lib/sync')
 const assert = require('assert')
 
-const data = 'a key => a value'
+const data = 'a key => a value \n b key \t b value'
 const records = parse(data, {
-  delimiter: "=>",
+  delimiter: ["=>", "\t"]
   trim: true
 })
 assert.deepEqual(records, [
-  [ "a key", "a value" ]
+  [ "a key", "a value" ], ["b key", "b value"]
 ])
 ```
