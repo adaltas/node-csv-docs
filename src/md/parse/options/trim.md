@@ -13,7 +13,7 @@ The `trim` option ignore whitespace characters immediately around the [delimiter
 * Optional
 * Default: `false`
 * Since: early days
-* Related: `ltrim`, `rtrim`  &mdash; see [Available Options](/parse/options/#available-options)
+* Related: `ltrim`, `rtrim` &mdash; see [Available Options](/parse/options/#available-options)
 
 The characters interpreted as whitespaces are identical to the `\s` meta character in regular expressions:
 

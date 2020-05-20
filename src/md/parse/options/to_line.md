@@ -14,7 +14,7 @@ The `to_line` option handles records until a requested line number is reached. I
 * Optional
 * Default: `-1`
 * Since: 4.0.0
-* Related: [`from_line`](/parse/options/from_line/), `from`, `to`  &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`from_line`](/parse/options/from_line/), `from`, `to` &mdash; see [Available Options](/parse/options/#available-options)
 
 The line matching the value is parsed and the record is including the output. If the record does not end on the line, for example when the new line character is escaped or quoted, it will be disregarded.
 

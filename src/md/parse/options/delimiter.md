@@ -36,6 +36,7 @@ assert.deepEqual(records, [
 ```
 
 # Example of an array of delimiter values
+
 An example of providing multiple delimiter values for parsing.  Also shows:
 * the `columns` option, used for naming the fields of each record
 * how `trim` affects whitespace on values
