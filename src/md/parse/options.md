@@ -61,6 +61,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * `raw` (boolean)   
   _Since version 1.1.6_   
   Generate two properties `raw` and `record` where `raw` is the original CSV content and `record` is the parsed array or object; note, it can be used conjointly with the `info` option.
+* `record_delimiter` (chars|array)   
+  _Since version 4.0.0_   
+  One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters. It was previously named `rowDelimiter`.
 * `relax` (boolean)   
   _Since early days_   
   Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
@@ -73,21 +76,18 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`relax_column_count_more`](/parse/options/relax_column_count/) (boolean)   
   _Since version 4.8.0_   
   Similar to `relax_column_count` but only apply when the record contains more fields than expected.
-* `record_delimiter` (chars|array)   
-  _Since version 4.0.0_   
-  One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters. It was previously named `rowDelimiter`.
 * `rtrim` (boolean)   
   _Since early days_   
   If `true`, ignore whitespace immediately preceding the delimiter (i.e. right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 * `skip_empty_lines` (boolean)   
   _Since version 0.0.5_   
   Don't generate records for empty lines (line matching `/\s*/`), defaults to `false`.
-* [`skip_lines_with_error`](/parse/options/skip_lines_with_error/) (boolean)   
-  _Since version 2.1.0_   
-  Skip a line with error found inside and directly go process the next line.
 * `skip_lines_with_empty_values` (boolean)   
   _Since version 1.1.8_   
   Don't generate records for lines containing empty column values (column matching `/\s*/`), empty Buffer or equals to `null` and `undefined` if their value was casted, defaults to `false`.
+* [`skip_lines_with_error`](/parse/options/skip_lines_with_error/) (boolean)   
+  _Since version 2.1.0_   
+  Skip a line with error found inside and directly go process the next line.
 * `to` (number)   
   _Since version 1.2.0_   
   Stop handling records after the requested number of records.
