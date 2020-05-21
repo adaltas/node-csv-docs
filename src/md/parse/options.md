@@ -25,6 +25,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`columns`](/parse/options/columns/) (array|boolean|function)   
   _Since early days_   
   Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
+* [`columns_duplicates_to_array`](/parse/options/columns_duplicates_to_array/) (boolean)   
+  _Since version 4.10.0_  
+  Convert values into an array of values when columns are activated and when multiple columns of the same name are found.
 * [`comment`](/parse/options/comment/) (string|buffer)   
   _Since early days_   
   Treat all the characters after this one as a comment; one or multiple characters; disabled by default by defining an empty string `""`.
