@@ -2,7 +2,7 @@
 title: Option columns_duplicates_to_array
 navtitle: columns_duplicates_to_array
 description: Option "columns_duplicates_to_array" convert values into an array of values for duplicated column names.
-keywords: ['csv', 'parse', 'options', 'columns', 'array' 'duplicates']
+keywords: ['csv', 'parse', 'options', 'columns', 'array', 'duplicates']
 ---
 
 # Option `columns_duplicates_to_array`
