@@ -17,7 +17,7 @@ CSV parser and stringifier.
 
 ## Project organisation
 
-The `csv` package is an umbrella which is itself split into 4 packages:
+The `csv` package is an umbrella which is itself split into many packages:
 
 *   [`csv-generate`](https://github.com/adaltas/node-csv-generate),
     a flexible generator of CSV string and Javascript objects.
