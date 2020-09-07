@@ -13,9 +13,7 @@ There are multiple APIs available. Under the hood, they are all based on the sam
 
 ## Stream API
 
-The main module of this package implements the native Node.js [readable stream API](http://nodejs.org/api/stream.html#stream_class_stream_transform). This is the 
-recommended approach if you need a maximum of power. It ensures scalability 
-by treating your data as an input stream. It is however more verbose and harder to use.
+The main module of this package implements the native Node.js [readable stream API](http://nodejs.org/api/stream.html#stream_class_stream_transform). This is the recommended approach if you need a maximum of power. It ensures scalability by treating your data as an input stream. It is however more verbose and harder to use.
 
 The signature is `const stream = generate([options])`.
 
