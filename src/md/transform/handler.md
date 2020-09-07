@@ -13,7 +13,7 @@ The handler function is the responsible for handling all the record transformati
 
 The mode is defined by the signature of transformation function. It is expected to run synchronously when it declares only one argument, the data to transform. It is expected to run asynchronously when it declares two arguments, the data to transform and the callback to be called once the transformed data is ready.
 
-In synchronous mode, you may simply return the altered data or throw an error. In asynchronous mode, you must call the provided callback with 2 arguments, the error if any and the altered data.
+In synchronous mode, you may simply return the altered data or throw an error. In asynchronous mode, you must call the provided callback with 2 arguments, the error if any or the altered data.
 
 Using the asynchronous mode present the advantage that more than one record may be emitted per transform callback.
 
