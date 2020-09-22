@@ -49,7 +49,7 @@ const parse = require('csv-parse/lib/sync');
   // Print records to the console
   records.map( record => console.log(record) )
   // Write a file with one JSON per line for each record
-  json = records.map( JSON.stringify ).join('\n')
+  const json = records.map( JSON.stringify ).join('\n')
   fs.writeFile(`${os.tmpdir()}/output.csv`, json)
 })()
 ```
