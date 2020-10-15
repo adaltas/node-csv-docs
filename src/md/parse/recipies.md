@@ -5,7 +5,7 @@ keywords: ['csv', 'parse', 'parser', 'recipies', 'example', 'tutorial']
 sort: 4
 ---
 
-# Recipies
+# Recipes
 
 Learn how to use the parser with multiple examples.
 
