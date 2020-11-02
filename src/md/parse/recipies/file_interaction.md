@@ -50,8 +50,30 @@ const parse = require('csv-parse/lib/sync');
   records.map( record => console.log(record) )
   // Write a file with one JSON per line for each record
   const json = records.map( JSON.stringify ).join('\n')
-  fs.writeFile(`${os.tmpdir()}/output.csv`, json)
+  fs.writeFile(`${os.tmpdir()}/output.json`, json)
 })()
 ```
 
 Alternatively, you could use the [Stream API](/parse/api/stream/) by [piping a file readable stream](/parse/recipes/stream_pipe/) to the parser transform stream which is itself piped into a writable stream.
+
+## Alternative encoding
+
+The parser shall comply without interfering with the file encoding. You can specify the file encoding when calling `fs.readFile` by passing the encoding property as a second argument. If the second argument is a string, then it specifies the encoding the source file.
+
+```js
+const os = require('os');
+const fs = require('fs').promises;
+const parse = require('csv-parse/lib/sync');
+
+(async function(){
+  // Read the content
+  const content = await fs.readFile(`${os.tmpdir()}/input.csv`, 'utf16le')
+  // Parse the CSV content
+  const records = parse(content)
+  // Write a file with one JSON per line for each record
+  const json = records.map( JSON.stringify ).join('\n')
+  fs.writeFile(`${os.tmpdir()}/output.json`, json)
+})()
+```
+
+At the time of this writing, the list of Node.js [supported encodings](https://github.com/nodejs/node/blob/master/lib/buffer.js) includes 'utf8', 'ucs2', 'utf16le', 'latin1', 'ascii', 'base64', 'hex'.
