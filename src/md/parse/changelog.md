@@ -17,6 +17,14 @@ Please join and contribute:
 * `max_comment_size`: new option (medium)
 * promise: new API module (medium)
 * errors: finish normalisation of all errors (easy)
+* encoding: new encoding_input and encoding_output options (medium)
+
+## Version 4.13.1
+
+* encoding: buffer, detection and options samples
+* encoding: return buffer when null or false
+* encoding: support boolean values
+* api: remove commented code
 
 ## Version 4.13.0
 
