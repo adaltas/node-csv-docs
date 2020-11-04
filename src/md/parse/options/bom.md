@@ -15,6 +15,7 @@ It is recommended to always activate this option when working with UTF-8 files.
 * Optional
 * Default: `false`
 * Since: 4.4.0
+* Related: [`encoding`](/parse/options/encoding/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## About
 

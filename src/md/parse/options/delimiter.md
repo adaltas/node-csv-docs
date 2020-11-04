@@ -13,7 +13,7 @@ Defines the character(s) used to delimitate the fields inside a record. A single
 * Optional
 * Default: `","` (a one character comma)
 * Since: 0.0.1
-* Related: `record_delimiter`, `quote`, `escape` &mdash; see [Available Options](/parse/options/#available-options)
+* Related: `record_delimiter`, `quote`, [`escape`](/parse/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
 
 In the data, it is not possible to escape a delimiter. A field must be quoted to ensure the delimiter value it contains is not interpreted.
 

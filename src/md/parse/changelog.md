@@ -9,12 +9,72 @@ sort: 7
 
 ## Todo
 
-* `skip_lines_with_empty_values`: rename to skip_records_with_empty_values
-* `skip_lines_with_error`: rename to skip_records_with_error
-* `relax`: rename to relax_quotes_when_unquoted
-* `max_comment_size`: new option
-* promise: new API module
-* errors: finish normalisation of all errors
+Please join and contribute:
+
+* `skip_lines_with_empty_values`: rename to skip_records_with_empty_values (easy)
+* `skip_lines_with_error`: rename to skip_records_with_error (easy)
+* `relax`: rename to relax_quotes_when_unquoted (easy)
+* `max_comment_size`: new option (medium)
+* promise: new API module (medium)
+* errors: finish normalisation of all errors (easy)
+
+## Version 4.13.0
+
+New features:
+* encoding: auto-detect from the bom
+* encoding: new option
+* bom: multi bom encoding
+
+Fixes & enhancements:
+* delimiter: fix buffer size computation
+* quote: compatibility with buffer size
+* api: partial cache for needMoreData
+* escape: support multiple characters
+* quote: support multiple characters
+* api: fix internal argument name
+
+## Version 4.12.0
+
+New feature:
+* ts: error types
+* ts: support camelcase options (fix #287)
+
+## Version 4.11.1
+
+New feature:
+* escape: disabled when null or false
+
+Project management:
+* travis: test node version 14
+
+## Version 4.11
+
+Project management:
+* mistake in the release
+
+## Version 4.10.1
+
+Minor improvements:
+* columns_duplicates_to_array: error and type
+
+## Version 4.10.0
+
+New feature:
+* columns_duplicates_to_array: new option
+
+Project management:
+* samples: new file recipie
+
+## Version 4.9.1
+
+Minor improvements:
+* delimiter: update ts definition
+* delimiter: new sample
+
+## Version 4.9.0
+
+New Feature:
+* delimiter: accept multiple values
 
 ## Version 4.8.9
 
