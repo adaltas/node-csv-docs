@@ -22,7 +22,7 @@ const { finished } = require('stream/promises');
 const processFile = async () => {
   records = []
   const parser = fs
-  .createReadStream(`./fs_read.csv`)
+  .createReadStream(`./input.csv`)
   .pipe(parse({
     // CSV options if any
   }));
