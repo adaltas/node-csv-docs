@@ -11,6 +11,8 @@ Learn how to use the parser with multiple examples.
 
 * [File interaction](/parse/recipes/file_interaction/)   
   Read and write CSV content into a file.
+* [Promises usage](/parse/recipes/promises/)   
+  How to use promises with the latest Nodejs Stream API.
 * [Stream Pipe](/parse/api/callback/)   
   When using the stream API, plug multiple readable and writable streams to parse CSV data.
   

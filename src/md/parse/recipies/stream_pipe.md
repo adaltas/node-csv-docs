@@ -2,7 +2,6 @@
 title: Stream pipe
 description: CSV Parse - stream, callback and sync APIs
 keywords: ['csv', 'parse', 'parser', 'recipe', 'stream', 'sync', 'pipe', 'read', 'write']
-sort: 5
 ---
 
 # Using pipe to connect multiple streams
