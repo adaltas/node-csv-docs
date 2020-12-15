@@ -12,9 +12,10 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 ## Available options
 
 * `bom` (boolean)   
-  _Since version 5.4.0_
+  _Since version 5.4.0_   
   Prepend the byte order mark (BOM) to the output stream.
 * [`cast`](/stringify/options/cast/)   
+  _Since version 1.1.0_   
   Defines custom cast for certain data types; was `formatters` until version 4.3.1.
   * `boolean`
     Custom function to transform boolean values.
@@ -25,26 +26,37 @@ All options are optional. All the options from the [Node.js Writable Stream API]
   * `object`
     Custom function to transform object literals.
 * [`columns`](/stringify/options/columns/) (array|object)   
+  _Since version 0.0.1_   
   List of properties when records are provided as objects; work with records in the form of arrays based on index position; order matters; auto discovered in the first record when the user write objects, can refer to nested properties of the input JSON, see the "header" option on how to print columns names on the first line.
 * [`delimiter`](/stringify/options/delimiter/) (string)   
+  _Since version 0.0.1_   
   Set the field delimiter, one or multiple characters, defaults to a comma.   
-* `eof`   
+* `eof` (boolean)   
+  _Since version 0.0.2_   
   Add the value of "options.rowDelimiter" on the last line, default to true.   
 * `escape` (string|Buffer)   
+  _Since version 0.0.1_   
   Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.   
 * [`header`](/stringify/options/header/) (boolean)   
+  _Since version 0.0.1_   
   Display the column names on the first line if the columns option is provided or discovered.   
 * `quote` (string|Buffer|boolean)   
+  _Since version 0.0.1_   
   The quote characters surrounding a field, defaults to the `"` (double quotation marks), an empty quote value will preserve the original field, wether it contains quotation marks or not.   
-* [`quoted`](/stringify/options/quoted/) (boolean)   
+* [`quoted`](/stringify/options/quoted/) (boolean)    
+  _Since version 0.0.1_   
   Boolean, default to false, quote all the non-empty fields even if not required.
 * [`quoted_empty`](/stringify/options/quoted_empty/) (boolean)   
+  _Since version 5.1.0_   
   Quote empty strings and overrides `quoted_string` on empty strings when defined; default is `false`.
 * [`quoted_match`](/stringify/options/quoted_match/) (String|RegExp)   
+  _Since version 5.1.0_   
   Quote all fields matching a regular expression; default is `false`.
 * [`quoted_string`](/stringify/options/quoted_string/) (boolean)   
+  _Since version 5.1.0_   
   Quote all fields of type string even if not required; default is `false`.
-* `record_delimiter` (string|Buffer)   
+* `record_delimiter` (string|Buffer)    
+  _Since version 0.0.1_   
   String used to delimit record rows or a special value; special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered in source or 'unix' if no source is specified); was `rowDelimiter` until version 4.3.1.
   
 ## Choose your style
