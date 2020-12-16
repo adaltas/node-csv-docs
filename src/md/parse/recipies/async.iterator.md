@@ -37,3 +37,27 @@ const processFile = async () => {
   console.info(records);
 })()
 ```
+
+Async iteration is also supported in CoffeeScript. It is expressed with the [`for...from`](https://coffeescript.org/#generators) syntax available since version 1.12.0. The [async example in coffeescript](https://github.com/adaltas/node-csv-parse/blob/master/samples/recipe.async.iterator.coffee) is:
+
+```coffee
+parse = require('..')
+fs = require('fs')
+ 
+processFile = () ->
+  records = []
+  parser = fs
+  .createReadStream "#{__dirname}/fs_read.csv"
+  .pipe parse(
+    # CSV options if any
+  )
+  for await record from parser
+    # Work with each record
+    records.push(record)
+  records
+
+(() ->
+  records = await processFile()
+  console.info records
+)()
+```
