@@ -13,7 +13,7 @@ keywords: ['csv', 'parse', 'options', 'columns', 'ssa']
 * Since: 4.15.0
 * Related: [`columns`](/parse/options/columns/), [`delimiter`](/parse/options/delimiter/) &mdash; see [Available Options](/parse/options/#available-options)
 
-The `ignore_last_delimiters` option disregard any [delimiters](/parse/options/delimiter/) present in the last field of the record. It requires the presence of the `column` option to know how many fields are expected.
+The `ignore_last_delimiters` option disregard any [delimiters](/parse/options/delimiter/) present in the last field of the record. It requires the presence of the `column` option to know how many fields are expected when it is defined as `true`.
 
 Some formats which claim to be partially compatible with csv formats assume that it's ok to have unescaped commas in the last field because the number of fields was registered when the header line was parsed.
 
