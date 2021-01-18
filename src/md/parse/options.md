@@ -46,6 +46,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`from_line`](/parse/options/from_line/) (number)   
   _Since version 4.0.0_   
   Start handling records from the requested line number.
+* [`ignore_last_delimiters`](/parse/options/ignore_last_delimiters/) (boolean)   
+  _Since version 4.15.0_   
+  Disregard any delimiters present in the last field of the record, require the [`column`](/parse/options/columns/) option.
 * `info` (boolean)   
   _Since version 4.0.0_   
   Generate two properties `info` and `record` where `info` is a snapshot of the info object at the time the record was created and `record` is the parsed array or object; note, it can be used conjointly with the `raw` option.
