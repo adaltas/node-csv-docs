@@ -42,10 +42,10 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Set the escape character as one character/byte only. It only applies to quote and escape characters inside quoted fields and it defaults to `"` (double quote).
 * `from` (number)   
   _Since version 1.2.0_   
-  Start handling records from the requested number of records. Count is 1-based, for example, provides `1` (and not `0`) to emit first record.
+  Start handling records from a requested number of records. Count is 1-based, for example, provides `1` (and not `0`) to emit first record.
 * [`from_line`](/parse/options/from_line/) (number)   
   _Since version 4.0.0_   
-  Start handling records from the requested line number.
+  Start handling records from a requested line number.
 * [`ignore_last_delimiters`](/parse/options/ignore_last_delimiters/) (boolean)   
   _Since version 4.15.0_   
   Disregard any delimiters present in the last field of the record, require the [`column`](/parse/options/columns/) option when `true`.

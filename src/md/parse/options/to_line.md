@@ -13,6 +13,7 @@ The `to_line` option handles records until a requested line number is reached. I
 * Coercion: `string` to `number`
 * Optional
 * Default: `-1`
+* Validation: positive integer
 * Since: 4.0.0
 * Related: [`from_line`](/parse/options/from_line/), `from`, `to` &mdash; see [Available Options](/parse/options/#available-options)
 

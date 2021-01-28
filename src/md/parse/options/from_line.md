@@ -13,8 +13,9 @@ The `from_line` option handles records starting from a requested line number. Th
 * Coercion: `string` to `number`
 * Optional
 * Default: `1`
+* Validation: positive integer
 * Since: 4.0.0
-* Related: [`to_line`](/parse/options/to_line/), `from`, `to` &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`to_line`](/parse/options/to_line/), [`from`](/parse/options/from/), `to` &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Simple example with inferred column names
 
