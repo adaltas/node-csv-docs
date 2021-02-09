@@ -13,6 +13,7 @@ The `skip_lines_with_error` option tolerates parsing errors. It skips the record
 * Optional
 * Default: `false`
 * Since: 1.0.6
+* Related: [`skip_empty_lines`](/parse/options/skip_empty_lines/) &mdash; see [Available Options](/parse/options/#available-options)
 
 Be careful, this functionality can not suit every data set. It implies a good knowledge in your data in the sense that you must be confident that no field contains any record delimiters. By nature, CSV fields can contains records delimiters if quoted. On error, the parser has no indication to know if a record delimiter is one or if it is inside a quoted field or not. Thus, using this option confidently implies that your fields do not contain any records delimiter inside.
 
