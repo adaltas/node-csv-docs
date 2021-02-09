@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../layout'
 
-export default ({
+const Page = ({
   data,
 }) => {
   const { page } = data
@@ -12,6 +12,8 @@ export default ({
     </Layout>
   )
 }
+
+export default Page
 
 export const pageQuery = graphql`
   query($path: String!) {
