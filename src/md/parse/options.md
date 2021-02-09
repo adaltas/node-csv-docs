@@ -90,7 +90,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   If `true`, ignore whitespace immediately preceding the delimiter (i.e. right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 * `skip_empty_lines` (boolean)   
   _Since version 0.0.5_   
-  Don't generate records for empty lines (line matching `/\s*/`), defaults to `false`.
+  Don't generate records for empty lines (line matching `/^$/`), defaults to `false`.
 * `skip_lines_with_empty_values` (boolean)   
   _Since version 1.1.8_   
   Don't generate records for lines containing empty column values (column matching `/\s*/`), empty Buffer or equals to `null` and `undefined` if their value was casted, defaults to `false`.
