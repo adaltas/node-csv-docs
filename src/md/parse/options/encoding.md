@@ -19,6 +19,8 @@ The default encoding value is `utf8`. The default 'utf8' encoding is also used w
 
 ## Default behavior
 
+The list of [available supported encoding in Node.js](https://github.com/nodejs/node/blob/master/lib/buffer.js) is available inside its source code. At the time of this writing, it includes 'utf8', 'ucs2', 'utf16le', 'latin1', 'ascii', 'base64', 'hex'.
+
 The default encoding in Node.js is UTF-8. When using UTF-8, you do not need to specify anything.
 
 When an alternative encoding is used, it can be discovered with the [BOM](/parse/options/bom/) (byte order mark) present at the begining of the input data or it can be defined with this option.
@@ -46,7 +48,7 @@ assert.deepEqual(records, [
 
 ## Bom automatic detection
 
-The BOM is a special Unicode character sequence at the begining of a text stream to indicate the encoding. The list of [available supported encoding in Node.js](https://github.com/nodejs/node/blob/master/lib/buffer.js) is available inside its source code. At the time of this writing, it includes 'utf8', 'ucs2', 'utf16le', 'latin1', 'ascii', 'base64', 'hex'.
+The BOM is a special Unicode character sequence at the begining of a text stream to indicate the encoding.
 
 Because the BOM is specific to unicode, only the UTF-8 and UTF-16LE encoding are natively detected by the parser. Here is an example [detecting the encoding](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.encoding.detection.js), UTF-16LE in this case:
 
