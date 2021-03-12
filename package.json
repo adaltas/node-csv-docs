@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "author": "David Worms <david@adaltas.com>",
   "dependencies": {
-    "csv": "^5.3.2",
-    "gatsby": "^3.0.3",
+    "csv": "^5.4.0",
+    "gatsby": "^3.0.4",
     "gatsby-plugin-catch-links": "^3.0.0",
     "gatsby-plugin-glamor": "^3.0.0",
     "gatsby-plugin-google-analytics": "^3.0.0",
