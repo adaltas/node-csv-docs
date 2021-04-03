@@ -31,13 +31,13 @@ porthos,d_artagnan,athos
   columns: true,
   columns_duplicates_to_array: true
 }, function(err, records){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     records, [{
       username: 'porthos',
-      email: ['athos', 'aramis']
+      friend: ['athos', 'aramis']
     }, {
       username: 'd_artagnan',
-      email: ['porthos', 'athos']
+      friend: ['porthos', 'athos']
     }]
   )
 })

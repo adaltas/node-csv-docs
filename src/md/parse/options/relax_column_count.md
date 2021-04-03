@@ -25,7 +25,7 @@ The [`option.relax_column_count.js` example](https://github.com/adaltas/node-csv
 ```js
 const parse = require('csv-parse')
 const assert = require('assert')
--->
+
 parse(`
 "a 1","a 2"
 "b 1"
@@ -33,7 +33,7 @@ parse(`
 `.trim(), {
   relax_column_count: true
 }, function(err, records){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     records, [
       ['a 1', 'a 2'],
       ['b 1'],
@@ -59,7 +59,7 @@ Lovelace,Ada,"Augusta Ada King, Countess of Lovelace"
   relax_column_count: true,
   columns: true
 }, function(err, records){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     records, [
       { lastname: 'Ritchie' },
       { lastname: 'Lovelace',
@@ -91,7 +91,7 @@ const records = parse( '1,2\nin:va:lid\n3,4', {
     }
   }
 })
-assert.deepEqual(
+assert.deepStrictEqual(
   records, [
     [ '1', '2' ],
     [ 'in', 'va', 'lid' ],
@@ -118,7 +118,7 @@ const records = parse( '1,2\nin:va:lid\n3,4', {
     }
   }
 })
-assert.deepEqual(
+assert.deepStrictEqual(
   records, [
     { a: '1', b: '2' },
     [ 'in', 'va', 'lid' ],

@@ -29,7 +29,7 @@ When an alternative encoding is used, it can be discovered with the [BOM](/parse
 
 When providing options, the values must internally reflect the data source encoding. If the value is a string, the parser will convert the value into a buffer representation using the selected encoding input value.
 
-However, if the value is a buffer, you must make sure the buffer was created with the right encoding, here is an exemple [encoding an option as buffer](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.encoding.buffer.js), the `delimiter` option in this case:
+However, if the value is a buffer, you must make sure the buffer was created with the right encoding, here is an exemple [encoding an option as buffer](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.encoding.options.js), the `delimiter` option in this case:
 
 ```js
 const parse = require('../lib/sync')
@@ -40,7 +40,7 @@ const records = parse(data, {
   encoding: 'utf16le',
   delimiter: Buffer.from(':', 'utf16le')
 })
-assert.deepEqual(records, [
+assert.deepStrictEqual(records, [
   ['a', 'b'],
   ['1', '2']
 ])
@@ -60,7 +60,7 @@ const data = Buffer.from(`\uFEFFa,b,c\n1,2,3`, 'utf16le')
 const records = parse(data, {
   bom: true
 })
-assert.deepEqual(records, [
+assert.deepStrictEqual(records, [
   [ 'a', 'b', 'c' ],
   [ '1', '2', '3' ]
 ])
@@ -80,7 +80,7 @@ const data = Buffer.from(`a,b\n1,2`)
 const records = parse(data, {
   encoding: null
 })
-assert.deepEqual(records, [
+assert.deepStrictEqual(records, [
   [ Buffer.from('a'), Buffer.from('b') ],
   [ Buffer.from('1'), Buffer.from('2') ]
 ])

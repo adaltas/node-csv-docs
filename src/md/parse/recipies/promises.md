@@ -22,13 +22,14 @@ const { finished } = require('stream/promises');
 const processFile = async () => {
   records = []
   const parser = fs
-  .createReadStream(`./input.csv`)
+  .createReadStream(`${__dirname}/fs_read.csv`)
   .pipe(parse({
     // CSV options if any
   }));
   parser.on('readable', function(){
     let record;
     while (record = parser.read()) {
+      // Work with each record
       records.push(record)
     }
   });

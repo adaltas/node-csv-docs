@@ -31,14 +31,10 @@ This [example](https://github.com/adaltas/node-csv-parse/blob/master/samples/opt
 const parse = require('csv-parse/lib/sync')
 const assert = require('assert')
 
-const records = parse(`
-a ,1
-b, 2
- c,3
-`, {
+const records = parse('a ,1\nb, 2\n c,3', {
   trim: true
 })
-assert.deepEqual(
+assert.deepStrictEqual(
   records, [
     [ 'a', '1' ],
     [ 'b', '2' ],

@@ -21,6 +21,7 @@ In the [stream example](https://github.com/adaltas/node-csv-parse/blob/master/sa
 ```js
 const parse = require('csv-parse')
 const assert = require('assert')
+
 const output = []
 // Create the parser
 const parser = parse({
@@ -39,7 +40,7 @@ parser.on('error', function(err){
 })
 // When we are done, test that the parsed output matched what expected
 parser.on('end', function(){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     output,
     [
       [ 'root','x','0','0','root','/root','/bin/bash' ],

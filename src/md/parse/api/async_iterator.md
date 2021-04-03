@@ -8,12 +8,9 @@ sort: 2.4
 
 # Async iterator API
 
-The Async iterator API is both scalable and elegant. It takes advantage of
-the native Readable Stream API upon which the parser is build to iterate
-over the parsed records.
+The Async iterator API is both scalable and elegant. It takes advantage of the native Readable Stream API upon which the parser is build to iterate over the parsed records.
 
-The [async iterator example](https://github.com/adaltas/node-csv-parse/blob/master/samples/async.iterator.js) below generate a CSV stream which is then parsed and iterated. For
-each record, we simulate a slow asynchronous operation. This example is available with the command `node samples/async.iterator.js`.
+The [async iterator example](https://github.com/adaltas/node-csv-parse/blob/master/samples/async.iterator.js) below generate a CSV stream which is then parsed and iterated. For each record, we simulate a slow asynchronous operation. This example is available with the command `node samples/async.iterator.js`.
 
 ```js
 const assert = require('assert');
@@ -24,7 +21,7 @@ const parse = require('..');
   // Initialise the parser by generating random records
   const parser = generate({
     high_water_mark: 64 * 64,
-    length: 1000
+    length: 100
   }).pipe(
     parse()
   )
@@ -42,6 +39,6 @@ const parse = require('..');
   // Report end
   process.stdout.write('...done\n')
   // Validation
-  assert.strictEqual(count, 10000)
+  assert.strictEqual(count, 100)
 })()
 ```

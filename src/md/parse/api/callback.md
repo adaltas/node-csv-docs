@@ -20,7 +20,7 @@ const input = '#Welcome\n"1","2","3","4"\n"a","b","c","d"'
 parse(input, {
   comment: '#'
 }, function(err, output){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     output,
     [ [ '1', '2', '3', '4' ], [ 'a', 'b', 'c', 'd' ] ]
   )

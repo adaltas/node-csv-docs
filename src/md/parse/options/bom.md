@@ -33,7 +33,7 @@ const data = "\ufeffa,b,c\n"
 const records = parse(data, {
   bom: true
 })
-assert.deepEqual(records, [
+assert.deepStrictEqual(records, [
   [ 'a', 'b', 'c' ]
 ])
 ```

@@ -26,7 +26,7 @@ const assert = require('assert')
 
 const data = `a,"b""c",d`
 const records = parse(data)
-assert.deepEqual(records, [
+assert.deepStrictEqual(records, [
   [ 'a', 'b"c', 'd' ]
 ])
 ```
@@ -39,9 +39,9 @@ The [custom example](https://github.com/adaltas/node-csv-parse/blob/master/sampl
 const parse = require('csv-parse/lib/sync')
 const assert = require('assert')
 
-const data = `a,"b\"c",d`
+const data = `a,"b\\"c",d`
 const records = parse(data, { escape: '\\' })
-assert.deepEqual(records, [
+assert.deepStrictEqual(records, [
   [ 'a', 'b"c', 'd' ]
 ])
 ```

@@ -34,7 +34,7 @@ const data = `
 const records = parse(data, {
   comment: "#"
 })
-assert.deepEqual(records, [
+assert.deepStrictEqual(records, [
   [ "hello" ],
   [ "world" ]
 ])

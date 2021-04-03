@@ -41,7 +41,7 @@ parse(`
 `.trim(), {
   columns: true
 }, function(err, records){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     records, [{
       key_1: 'value 1',
       key_2: 'value 2'
@@ -65,7 +65,7 @@ parse(`
 `.trim(), {
   columns: ['key_1', 'key_2']
 }, function(err, records){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     records, [{
       key_1: 'value 1',
       key_2: 'value 2'
@@ -91,7 +91,7 @@ parse(`
   columns: header =>
     header.map( column => column.toUpperCase() )
 }, function(err, records){
-  assert.deepEqual(
+  assert.deepStrictEqual(
     records, [{
       KEY_1: 'value 1',
       KEY_2: 'value 2'
