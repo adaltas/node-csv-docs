@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import csv from 'csv/lib/sync'
+import csv from 'csv/lib/browser/sync'
 // Syntax
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
@@ -47,7 +47,6 @@ class Output extends Component {
         case 'default':
         case 'integer':
         case 'string':
-          console.log('|', property, value)
           break
         default:
           throw Error(`Invalid variant: property ${property} value ${options.variant}`)
@@ -74,8 +73,6 @@ class Output extends Component {
       }
     }
     output = JSON.stringify(output, null, '  ')
-    
-    
     return (
       <div css={styles.root}>
         {error ? (
