@@ -53,7 +53,7 @@ const records = parse(data, {
     if(context.index === 0){
       return `${value}T05:00:00.000Z`
     }else{
-      return context
+      return value
     }
   },
   trim: true
