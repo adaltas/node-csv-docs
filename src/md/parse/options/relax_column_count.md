@@ -103,7 +103,7 @@ assert.deepStrictEqual(
 If the [`columns`](/parse/options/on_record/) option is active, the behavior is similar but the error throw is now `CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH`. The `on_record` function can return any value. For example in [the inconsistent columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.relax_column_count.record_inconsistent_columns.js), the `columns` option is activated and an array is returned instead of an object literal.
 
 ```js
-const parse = require('csv-parse')
+const parse = require('csv-parse/lib/sync')
 const assert = require('assert')
 
 const records = parse( '1,2\nin:va:lid\n3,4', {
