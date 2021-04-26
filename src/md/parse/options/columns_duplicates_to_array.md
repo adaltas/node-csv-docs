@@ -7,7 +7,9 @@ keywords: ['csv', 'parse', 'options', 'columns', 'array', 'duplicates']
 
 # Option `columns_duplicates_to_array`
 
-When activated by settings its value to `true`, the `columns_duplicates_to_array` option will convert the return values into arrays of values when multiple columns of the same name are found. This imply the usage of the `columns` mode where records are returned as literal objects.
+When activated by settings its value to `true`, the `columns_duplicates_to_array` option will convert the return values into arrays of values when multiple columns of the same name are found.
+
+The option implies the usage of the `columns` mode where records are returned as literal objects. An error is thrown if the `columns` mode is not activated.
 
 * Type: `boolean`
 * Optional
