@@ -15,7 +15,7 @@ The option implies the usage of the `columns` mode where records are returned as
 * Optional
 * Default: `false` (a one character comma)
 * Since: 0.0.1
-* Related: `columns` &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`columns`](/parse/options/columns/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Exemple
 

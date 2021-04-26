@@ -13,6 +13,7 @@ The `columns` option generates record in the form of object literals.
 * Optional
 * Default: `false`
 * Since: early days
+* Related: [`columns_duplicates_to_array`](/parse/options/columns_duplicates_to_array/) &mdash; see [Available Options](/parse/options/#available-options)
 
 By default, the parser generates records in the form of arrays. Its associate value may takes multiple forms:
 
@@ -24,6 +25,8 @@ By default, the parser generates records in the form of arrays. Its associate va
   Obtain the columns definition dynamically from the user.
 
 It is possible to skip one or multiple fields by passing the value equal to `undefined`, `null` or `false` in the definition array.
+
+When multiple columns share the same name, only the last value is retained. Previous values are swallowed. The [`columns_duplicates_to_array` option](/parse/options/columns_duplicates_to_array/) detects duplicate column names and inserts all the values into an array.
 
 ## As true
 
