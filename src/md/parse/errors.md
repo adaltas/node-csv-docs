@@ -39,25 +39,25 @@ Finally, each type of error identified by its code property may include addition
 
 ## Runtime errors
 
-* `CSV_INVALID_CLOSING_QUOTE`
+* code: `CSV_INVALID_CLOSING_QUOTE`   
   Thrown when a quote is found at an unexpected location. The parser can be made tolerant to this error by activating the `relax` option.
-* `CSV_INCONSISTENT_RECORD_LENGTH`
+* code: `CSV_INCONSISTENT_RECORD_LENGTH`   
   Thrown when a record don't match the same amount of fields as the previous records. The parser can be made tolerant to the number of fields with the [`relax_column_count`](/parse/options/relax_column_count/) option. Additional properties include:
   * `record`   
     The invalid encountered record.
-* `CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH`   
+* code: `CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH`   
   Thrown when a record don't match the same amount of columns. This error is only present when the [`columns`](/parse/options/columns/) option is active. Additional properties include:
   * `record`   
     The invalid encountered record.
-* `CSV_INVALID_COLUMN_MAPPING`
+* code: `CSV_INVALID_COLUMN_MAPPING`   
   Thrown when the [`columns`](/parse/options/columns/) option is a function and it does not return an array of header fields as expected.
   * `headers`   
     The invalid headers value returned by the function.
-* `CSV_MAX_RECORD_SIZE`
+* code: `CSV_MAX_RECORD_SIZE`   
   Thrown when a field is longer than the value defined by the `max_record_size` option.
-* `CSV_NON_TRIMABLE_CHAR_AFTER_CLOSING_QUOTE`
+* code: `CSV_NON_TRIMABLE_CHAR_AFTER_CLOSING_QUOTE`   
   Thrown when a field is no longer quoted and that new non-trimable characters are found after the closing quote. Only apply if the `trim` or the `rtrim` options are activated.
-* `CSV_QUOTE_NOT_CLOSED`
+* code: `CSV_QUOTE_NOT_CLOSED`   
   Thrown when the parsing of data end while an opening quote is not closed.
 
 ## API Errors
