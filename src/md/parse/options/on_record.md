@@ -13,6 +13,7 @@ The `on_record` option provides an option to alter and filter records. It expect
 * Optional
 * Default: `undefined`
 * Since: 4.7.0
+* Related: [`cast`](/parse/options/cast/), [`info`](/parse/options/info/) &mdash; see [Available Options](/parse/options/#available-options)
 
 This option works at the record level. It complements the `cast` option which is adapted to field-level transformations. Also, the [stream-transform](/transform/) package provides more advanced control on the record and stream of records with asynchronous execution and concurrent control.
 
@@ -22,7 +23,7 @@ Use this option to filter, enrich, and apply any transformations on a record.
 
 ## Usage
 
-The option takes a function which accepts two arguments: the input record and the context. The return value is the new record or is filtered if `null` or `undefined` are returned.
+The option takes a function which is called with two arguments: the input record and the context. The return value is the new record or is filtered if `null` or `undefined` are returned.
 
 ## Altering records
 

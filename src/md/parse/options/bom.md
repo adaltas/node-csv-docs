@@ -7,7 +7,7 @@ keywords: ['csv', 'parse', 'options', 'bom', 'utf', 'unicode', 'utf8']
 
 # Option `bom`
 
-The `bom` option strip the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) from the input string or buffer. When activated, the BOM is automatically detected and the parsing will occur whether a BOM was found or not.
+The `bom` option strips the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) from the input string or buffer. When activated, the BOM is automatically detected and the parsing will occur whether a BOM was found or not.
 
 It is recommended to always activate this option when working with UTF-8 files.
 
