@@ -17,7 +17,7 @@ The option implies the usage of the `columns` mode where records are returned as
 * Since: 0.0.1
 * Related: [`columns`](/parse/options/columns/) &mdash; see [Available Options](/parse/options/#available-options)
 
-## Exemple
+## Example
 
 The [columns_duplicates_to_array example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns_duplicates_to_array.true.js) contains a CSV data set with two columns named "email". Without the `columns_duplicates_to_array` option, only the last email will be available. Instead, every email is returned in the form of an array:
 
