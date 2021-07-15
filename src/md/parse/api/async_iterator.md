@@ -15,7 +15,7 @@ The [async iterator example](https://github.com/adaltas/node-csv-parse/blob/mast
 ```js
 const assert = require('assert');
 const generate = require('csv-generate');
-const parse = require('csv-parse')
+const parse = require('csv-parse');
 
 (async () => {
   // Initialise the parser by generating random records
