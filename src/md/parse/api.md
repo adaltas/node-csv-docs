@@ -32,5 +32,5 @@ There are multiple APIs available, each with their own advantages and disadvanta
 For additional usages and examples, you may refer to:
 
 * [the API page](/parse/api/),
-* [the "samples" folder](https://github.com/adaltas/node-csv-parse/tree/master/samples)
-* [the "test" folder](https://github.com/adaltas/node-csv-parse/tree/master/test).
+* [the "samples" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/samples)
+* [the "test" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/test).
