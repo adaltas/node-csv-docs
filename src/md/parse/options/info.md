@@ -1,7 +1,7 @@
 ---
 title: Option info
 navtitle: info
-description: Option "info" generates two properties info and record to provide additionnal context information.
+description: Option "info" generates two properties info and record to provide additional context information.
 keywords: ['csv', 'parse', 'options', 'bom', 'utf', 'unicode', 'utf8']
 ---
 
