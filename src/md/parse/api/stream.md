@@ -57,4 +57,4 @@ parser.end()
 
 ## Using the pipe function
 
-The stream API is extensive and connecting multiple streams together is a complex task for newcomers. Part of the stream API, the pipe function does just that. The [pipe recipe](/parse/recipies/stream_pipe/) explains its usage and provides an example.
+The stream API is extensive and connecting multiple streams together is a complex task for newcomers. Part of the stream API, the pipe function does just that. The [pipe recipe](/parse/recipes/stream_pipe/) explains its usage and provides an example.

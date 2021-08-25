@@ -71,7 +71,7 @@ New feature:
 * columns_duplicates_to_array: new option
 
 Project management:
-* samples: new file recipie
+* samples: new file recipe
 
 ## Version 4.9.1
 
