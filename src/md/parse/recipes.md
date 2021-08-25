@@ -9,7 +9,7 @@ sort: 4
 
 Learn how to use the parser with multiple examples.
 
-* [Async iterators](/parse/recipes/async.iterator/)   
+* [Async iterators](/parse/recipes/async_iterator/)   
   An elegant method to iterate over records with the `for await...of` construct.
 * [File interaction](/parse/recipes/file_interaction/)   
   Read and write CSV content into a file.
