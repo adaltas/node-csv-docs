@@ -52,7 +52,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`info`](/parse/options/info/) (boolean)   
   _Since version 4.0.0_   
   Generate two properties `info` and `record` where `info` is a snapshot of the info object at the time the record was created and `record` is the parsed array or object; note, it can be used conjointly with the `raw` option.
-* `ltrim` (boolean)   
+* [`ltrim`](/parse/options/ltrim/) (boolean)   
   _Since early days_   
   If `true`, ignore whitespace immediately following the delimiter (i.e. left-trim all fields). Defaults to `false`. Does not remove whitespace in a quoted field.
 * [`max_record_size`](/parse/options/max_record_size/) (integer)   
@@ -85,7 +85,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`relax_column_count_more`](/parse/options/relax_column_count/) (boolean)   
   _Since version 4.8.0_   
   Similar to `relax_column_count` but only apply when the record contains more fields than expected.
-* `rtrim` (boolean)   
+* [`rtrim`](/parse/options/rtrim/) (boolean)   
   _Since early days_   
   If `true`, ignore whitespace immediately preceding the delimiter (i.e. right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.
 * [`skip_empty_lines`](/parse/options/skip_empty_lines/) (boolean)   
