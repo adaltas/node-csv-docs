@@ -47,7 +47,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row-reverse',
     alignItems: 'center',
-    background: `#BF5E13`,
+    background: `#08797e`,
     borderRadius: '.6rem',
     padding: '1rem',
     marginBottom: '4%',
@@ -143,17 +143,6 @@ const Index = () => (
         'csv, node.js, stream, parser, serializer, generation, transformation',
     }}
   >
-    <section css={styles.convert}>
-      <div>
-        <h1><Link to="/convert/"><span>CSV & JSON</span> <span>convertor tool</span></Link></h1>
-        <p>
-          This is a full-featured CSV parsing tool running entirely on your browser. 
-          No data leave your computer ! 
-          Use it also to learn how to use our packages and to test the various options interactively.
-        </p>
-      </div>
-      <img src={convert_icon} alt="Convertor tool" />
-    </section>
     <section css={styles.projects}>
       <div css={styles.card}>
         <h1><Link to="/generate/">csv-generate</Link></h1>
@@ -244,8 +233,41 @@ const Index = () => (
         <p>Read object and arrays and write CSV strings</p>
       </div>
     </section>
+      <section css={styles.convert}>
+        <div>
+          <h1><Link to="/convert/"><span>CSV & JSON</span> <span>convertor tool</span></Link></h1>
+          <p>
+            This is a full-featured CSV parsing tool running entirely on your browser. 
+            No data leave your computer ! 
+            Use it also to learn how to use our packages and to test the various options interactively.
+          </p>
+        </div>
+        <img src={convert_icon} alt="Convertor tool" />
+      </section>
     <section css={styles.blog}>
       <h1>Latest news</h1>
+      <article>
+        <h2>
+          <a
+            href="https://www.adaltas.com/en/2021/05/21/js-monorepos-merging-git-repositories/"
+            alt="Merging Git repositories and preserve commit history"
+          >
+            Migrating all the projects as one Git monorepo.
+          </a>
+        </h2>
+        <p css={styles.blog_info}>
+          {"By "}
+          <a href='https://www.adaltas.com/'>wdavidw</a>
+          {" | August 27th, 2021"}
+        </p>
+        <p>
+          A few weeks ago, we migrated the 5 repositories in one Git monorepo. If
+          interested in the details, read our article on how we <a
+          href="https://www.adaltas.com/en/2021/05/21/js-monorepos-merging-git-repositories/"
+          alt="Git monorepo">merged the repositories</a> while preserving the
+          commit history.
+        </p>
+      </article>
       <article>
         <h2>
           <Link
