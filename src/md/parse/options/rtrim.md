@@ -1,13 +1,13 @@
 ---
 title: Option rtrim
 navtitle: rtrim
-description: Option "rtrim" ignore whitespaces from the left side of a CSV field.
+description: Option "rtrim" ignore whitespaces from the right side of a CSV field.
 keywords: ['csv', 'parse', 'options', 'columns']
 ---
 
 # Option `rtrim`
 
-The `rtrim` option ignore whitespace characters from the left side of a CSV field. Defaults to `false`. It does not remove whitespace present inside the quotes of a field.
+The `rtrim` option ignore whitespace characters from the right side of a CSV field. Defaults to `false`. It does not remove whitespace present inside the quotes of a field.
 
 * Type: `boolean`
 * Optional
@@ -19,7 +19,7 @@ Refer to the [`trim`](/parse/options/trim/) documentation to learn about which c
 
 ## Example
 
-This [example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.rtrim.js) declare spaces around fields at multiple locations. The ones on the left side are trimmed while the other ones are preserved.
+This [example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.rtrim.js) declare spaces around fields at multiple locations. The ones on the right side are trimmed while the other ones are preserved.
 
 ```js
 const parse = require('csv-parse/lib/sync')
