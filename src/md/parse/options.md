@@ -19,9 +19,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`cast`](/parse/options/cast/) (boolean|function)   
   _Since version 2.2.0_   
   Alter the value of a field. If true, the parser will attempt to convert input strings to native types. A function must return the new value and the received arguments are the value to cast and the context object. This option was named `auto_parse` until version 2.
-* `cast_date` (boolean|function)   
+* [`cast_date`](/parse/options/cast_date/) (boolean|function)   
   _Since version 1.0.5_   
-  If true, the parser will attempt to convert input string to dates. A function must return a new value and the receive argument is the value to cast. It requires the `cast` option to be active. This option was named `auto_parse_date` until version 2. Be careful, it relies on [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
+  Convert the CSV field to a date. It requires the `cast` option to be active. This option was named `auto_parse_date` until version 2.
 * [`columns`](/parse/options/columns/) (array|boolean|function)   
   _Since early days_   
   Generate records as object literals instead of arrays. List of fields as an array, a user defined callback accepting the first line and returning the column names, or `true` if auto-discovered in the first CSV line. Defaults to `null`. Affects the result data set in the sense that records will be objects instead of arrays. A value "false" "null", or "undefined" inside the column array skips the column from the output.
