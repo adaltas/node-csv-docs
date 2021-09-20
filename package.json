@@ -21,7 +21,7 @@
     "gatsby-source-filesystem": "^3.12.0",
     "gatsby-transformer-remark": "^4.9.0",
     "glamor": "^2.20.40",
-    "prismjs": "^1.24.1",
+    "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
