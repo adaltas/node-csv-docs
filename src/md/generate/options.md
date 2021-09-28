@@ -26,7 +26,7 @@ All options are optional. The [Node.js Stream Writable](https://nodejs.org/api/s
 * `fixed_size`, `fixedSize` (boolean)   
   Generate buffers equals length as defined by the `highWaterMark` option; only apply when `objectMode` is disabled; first record is twice the `highWaterMark` option; default is `false`.
 * `high_water_mark`, `highWaterMark` (integer)   
-  The maximum number of bytes to store in the internal buffer before ceasing to read from the underlying resource; for streams operating in object mode, the highWaterMark specifies a total number of objects; default value is 16384 (16kb), or 16 for objectMode streams.
+  The maximum amount of bytes to store in the internal buffer before ceasing to read from the underlying resource; for streams operating in object mode, the highWaterMark specifies a total number of objects; default value is 16384 (16kb), or 16 for objectMode streams.
 * `length` (integer)   
   Number of lines or records to generate. The default value is `-1` which is infinite.   
 * `max_word_length` (integer)   
