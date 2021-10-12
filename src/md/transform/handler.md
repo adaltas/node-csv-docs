@@ -20,10 +20,11 @@ Using the asynchronous mode present the advantage that more than one record may 
 
 ## Defining synchronous transformations
 
-In the [synchronous example](https://github.com/adaltas/node-stream-transform/blob/master/samples/module.sync.js), the transformation function is run synchronously because it only declares one argument, the data to be transformed. It is expected to return the transformed data or to throw an error.
+In the [synchronous example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/module.sync.js), the transformation function is run synchronously because it only declares one argument, the data to be transformed. It is expected to return the transformed data or to throw an error.
 
 ```js
-const transform = require('stream-transform')
+const {transform} = require('stream-transform')
+
 transform([
   ['1','2','3','4'],
   ['a','b','c','d']
@@ -43,7 +44,7 @@ b,c,d,a
 
 ## Defining asynchronous transformations
 
-In the [asynchronous example](https://github.com/adaltas/node-stream-transform/blob/master/samples/module.async.js), the transformation callback declares two arguments, the data to transform and the callback to call once the data is ready. The transformation callback is executed concurrently with a maximum of 20 parallel executions.
+In the [asynchronous example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/module.async.js), the transformation callback declares two arguments, the data to transform and the callback to call once the data is ready. The transformation callback is executed concurrently with a maximum of 20 parallel executions.
 
 ```js
 const transform = require('stream-transform')

@@ -48,7 +48,7 @@ The code uses snake case as the conventional style for function and variable nam
 
 By the default, the generator will generate a CSV dataset in the form of a string. It is however possible to generate objects but passing the [`objectMode` option](https://nodejs.org/api/stream.html#stream_constructor_new_stream_writable_options) native to the writable stream.
 
-In the [stream example](https://github.com/adaltas/node-csv-generate/blob/master/samples/options.objectmode.stream.js), each record is returned by the `read` function in the form of an array.
+In the [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/options.objectmode.stream.js), each record is returned by the `read` function in the form of an array.
 
 ```js
 const generate = require('csv-generate')
@@ -69,7 +69,7 @@ generate({
 })
 ```
 
-In the [callback example](https://github.com/adaltas/node-csv-generate/blob/master/samples/options.objectmode.stream.js), the dataset is passed in the callback an array of array.
+In the [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/options.objectmode.stream.js), the dataset is passed in the callback an array of array.
 
 ```js
 const generate = require('csv-generate')

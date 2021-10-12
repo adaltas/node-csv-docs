@@ -19,7 +19,7 @@ Refer to the [`trim`](/parse/options/trim/) documentation to learn about which c
 
 ## Example
 
-This [example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.rtrim.js) declare spaces around fields at multiple locations. The ones on the right side are trimmed while the other ones are preserved.
+This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.rtrim.js) declare spaces around fields at multiple locations. The ones on the right side are trimmed while the other ones are preserved.
 
 ```js
 const parse = require('csv-parse/lib/sync')

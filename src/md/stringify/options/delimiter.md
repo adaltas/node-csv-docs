@@ -25,7 +25,7 @@ stringify([
 })
 ```
 
-See [`csv-stringify/samples/option.delimiter_single.js`](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.delimiter_single.js)
+See [`csv-stringify/samples/option.delimiter_single.js`](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.delimiter_single.js)
 
 ## Custom behaviour
 
@@ -45,4 +45,4 @@ stringify([
 })
 ```
 
-See [`csv-stringify/samples/option.delimiter_multiple.js`](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.delimiter_multiple.js)
+See [`csv-stringify/samples/option.delimiter_multiple.js`](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.delimiter_multiple.js)

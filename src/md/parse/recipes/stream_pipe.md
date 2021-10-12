@@ -8,14 +8,14 @@ keywords: ['csv', 'parse', 'parser', 'recipe', 'stream', 'sync', 'pipe', 'read',
 
 Part of the [Stream API](https://nodejs.org/api/stream.html), the [`pipe` function](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options) is a precious tool used to wire multiple streams. The function is meant to connect a `stream.Readable` source to a `stream.Writable` destination.
 
-The [pipe example](https://github.com/adaltas/node-csv-parse/blob/master/samples/recipe.pipe.js) reads a file, parses its content, transforms it and print the result to the standard output.
+The [pipe example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/recipe.pipe.js) reads a file, parses its content, transforms it and print the result to the standard output.
 
 This example is available with the command `node samples/recipe.pipe.js`.
 
 ```js
-const parse = require('csv-parse')
-const generate = require('csv-generate')
-const transform = require('stream-transform')
+import { parse } from 'csv-parse'
+import { generate } from 'csv-generate'
+import { transform } from 'stream-transform'
 
 const generator = generate({
   length: 20
@@ -23,8 +23,8 @@ const generator = generate({
 const parser = parse({
   delimiter: ':'
 })
-const transformer = transform(function(record, callback){
-  setTimeout(function(){
+const transformer = transform((record, callback) => {
+  setTimeout(() => {
     callback(null, record.join(' ')+'\n')
   }, 500)
 }, {

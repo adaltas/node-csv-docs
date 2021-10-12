@@ -10,7 +10,7 @@ Async iterators provides an elegant method to iterate over each parsed records w
 
 CSV parse rely on and leverages the Node.js stream readable API. It implements the [Symbol.asyncIterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) or [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) iterable protocol.
 
-This is kind of an obscure JS functionnality and we don't have to deal with it. The end result very comprehensive and illustrated with the [async iterator example](https://github.com/adaltas/node-csv-parse/blob/master/samples/recipe.async.iterator.js)
+This is kind of an obscure JS functionnality and we don't have to deal with it. The end result very comprehensive and illustrated with the [async iterator example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/recipe.async.iterator.js)
 
 This example is available with the command `node samples/recipe.async.iterator.js`.
 

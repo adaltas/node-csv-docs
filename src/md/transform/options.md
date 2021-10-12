@@ -22,7 +22,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 
 This option control the sequential versus concurrent execution of handlers. Note, parallelism only has effect with asynchronous user functions.
 
-In sequential mode, only 1 transformation function is running at a given time. The [mode sequential example](https://github.com/adaltas/node-stream-transform/blob/master/samples/mode.sequential.js) force a sequential execution by setting the value to "1".
+In sequential mode, only 1 transformation function is running at a given time. The [mode sequential example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/mode.sequential.js) force a sequential execution by setting the value to "1".
 
 ```js
 const transform = require('stream-transform')

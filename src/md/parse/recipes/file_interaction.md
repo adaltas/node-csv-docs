@@ -27,7 +27,7 @@ We can now access the CSV content of this file with the native Node.js File Syst
 
 You must first choose the right API. This package exposed multiple API all backed by the same parsing algorythm and supporting the same options. Wether you select one API over another one encompass the scope of this page and is documented inside the [API section]('/parse/api/').
 
-The easiest way is using the sync API. You read the file and get its content. You then inject this content into the parser and get the result as an array of records. Records may be printed to the console and written to a file one JSON per line for each record. The [final code](https://github.com/adaltas/node-csv-parse/blob/master/samples/recipe.file.js) looks like:
+The easiest way is using the sync API. You read the file and get its content. You then inject this content into the parser and get the result as an array of records. Records may be printed to the console and written to a file one JSON per line for each record. The [final code](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/recipe.file.js) looks like:
 
 ```js
 const os = require('os');

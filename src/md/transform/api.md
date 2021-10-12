@@ -25,7 +25,7 @@ This is the recommended approach if you need a maximum of power. It ensures scal
 
 The signature is `const stream = transform(records, [options], handler, [options], [callback])`.
 
-In the [stream example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.stream.js), records in the form of an array are sent through the `write` function and the transformed records are obtained within the "readable" event by calling the `read` function.
+In the [stream example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.stream.js), records in the form of an array are sent through the `write` function and the transformed records are obtained within the "readable" event by calling the `read` function.
 
 This example is available with the command `node samples/api.stream.js`.
 
@@ -63,7 +63,7 @@ The callback API support all the available options and will fit all the records 
 
 The signature is `const stream = transform(records, [options], handler, [callback])`.
 
-In the [callback example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.callback.js), the user function shift the cells of every records.
+In the [callback example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.callback.js), the user function shift the cells of every records.
 
 This example is available with the command `node samples/api.callback.js`.
 
@@ -91,7 +91,7 @@ The sync API is here for convenience. Due to its synchronous nature, not all opt
 
 The signature is `const records = transform(records, [options], handler)`.
 
-The [sync example](https://github.com/adaltas/node-stream-transform/blob/master/samples/api.sync.js) illustrates how convenient it is to use this API.
+The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.sync.js) illustrates how convenient it is to use this API.
 
 ```js
 const transform = require('stream-transform/lib/sync')

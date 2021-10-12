@@ -17,7 +17,7 @@ The `skip_empty_lines` skips any line which is empty.
 
 ## Example
 
-The [`option.skip_empty_line.js` option example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.skip_empty_line.js) activates the option by setting its value to `true`:
+The [`option.skip_empty_line.js` option example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_empty_line.js) activates the option by setting its value to `true`:
 
 ```js
 const parse = require('csv-parse/lib/sync')
@@ -41,7 +41,7 @@ assert.deepStrictEqual(
 
 ## Whitespace characters
 
-The line must be completely empty, without any characters including spaces and tabs. If you happens to have such characters, you can [associate the `skip_empty_lines` option with the `trim` option](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.skip_empty_line.trim.js):
+The line must be completely empty, without any characters including spaces and tabs. If you happens to have such characters, you can [associate the `skip_empty_lines` option with the `trim` option](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_empty_line.trim.js):
 
 ```js
 const parse = require('csv-parse/lib/sync')

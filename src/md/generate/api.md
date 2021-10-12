@@ -17,7 +17,7 @@ The main module of this package implements the native Node.js [readable stream A
 
 The signature is `const stream = generate([options])`.
 
-The [stream example](https://github.com/adaltas/node-csv-generate/blob/master/samples/api.stream.js) illustrates the various events to listen.
+The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.stream.js) illustrates the various events to listen.
 
 ```js
 const generate = require('csv-generate')
@@ -53,7 +53,7 @@ implies that the overall dataset will be stored in memory.
 
 The signature is `const stream = generate([options], callback)`.
 
-The [callback example](https://github.com/adaltas/node-csv-generate/blob/master/samples/api.callback.js) generate a dataset with 2 records.
+The [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.callback.js) generate a dataset with 2 records.
 
 ```js
 const generate = require('csv-generate')
@@ -78,7 +78,7 @@ implies that the overall dataset will be stored in memory.
 
 The module to require is `csv-generate/lib/sync` and the signature is `const records = generate([options])`.
 
-The [sync example](https://github.com/adaltas/node-csv-generate/blob/master/samples/api.callback.js) returns an array of 2 records.
+The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.callback.js) returns an array of 2 records.
 
 
 ```js

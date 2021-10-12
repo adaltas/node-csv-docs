@@ -32,7 +32,7 @@ When multiple columns share the same name, only the last value is retained. Prev
 
 If the value is `true`, the first record present in the data set is treated as a header. No record is generated and each field defines a new property.
 
-The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.true.js) generates record literals whose properties match the first line of the data set.
+The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.true.js) generates record literals whose properties match the first line of the data set.
 
 ```js
 const parse = require('csv-parse')
@@ -57,7 +57,7 @@ parse(`
 
 If the value is an array, to each element corresponds a property. The values may be a string or an object literal with the `name` property.
 
-The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.array.js) generates record literals whose properties match the values of `columns` option.
+The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.array.js) generates record literals whose properties match the values of `columns` option.
 
 ```js
 const parse = require('csv-parse')
@@ -81,7 +81,7 @@ parse(`
 
 If the value is a function, the user is responsible for returning the list of columns.  The first line is treated as a header and will not generate a record. The function receives the first line as a list of fields.
 
-The [columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.columns.function.js) converts each field of the first to upper case.
+The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.function.js) converts each field of the first to upper case.
 
 ```js
 const parse = require('csv-parse')

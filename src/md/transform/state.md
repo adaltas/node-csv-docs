@@ -18,7 +18,7 @@ The transform instance export a few properties which are also available from the
 
 ## Get state information
 
-The [state instance example](https://github.com/adaltas/node-stream-transform/blob/master/samples/state.instance.js) illustrates how to accessed the state from a running instance.
+The [state instance example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/state.instance.js) illustrates how to accessed the state from a running instance.
 
 ```js
 // Generate a dataset of 5 records
@@ -44,7 +44,7 @@ transformer.pipe(process.stdout)
 
 The handler and event functions are bound with the context of the transformer. Thus, it is possible to access the state properties from inside the functions. Also, the Node.js stream API will call the functions associated with events with the context of the stream instance. Of course, this won't work with fat arrow functions.
 
-The [state handler example](https://github.com/adaltas/node-stream-transform/blob/master/samples/state.handler.js) references the state properties from inside the user function and check their values.
+The [state handler example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/state.handler.js) references the state properties from inside the user function and check their values.
 
 ```js
 // Generate a dataset of 5 records

@@ -19,7 +19,7 @@ In the data, it is not possible to escape a delimiter. A field must be quoted to
 
 # Example of single-value delimiter
 
-In the [delimiter example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.delimiter.js), fields are separated by a two characters delimiter value.
+In the [delimiter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.js), fields are separated by a two characters delimiter value.
 
 ```js
 const parse = require('csv-parse/lib/sync')

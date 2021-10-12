@@ -7,7 +7,7 @@ keywords: ['csv', 'parse', 'options', 'bom', 'utf', 'unicode', 'utf8']
 
 # Option `info`
 
-The `info` option provide additionnal context. Instead of generating records, in the form of objects literal or arrays, it generates two properties, `info` and `record`. The `info` property is a snapshot of the info object at the time the record was created. The `record` property is the actual record.
+The `info` option provide additionnal context. Instead of generating records, in the form of objects literal or arrays, it generates two properties, `info` and `record`. The `info` property is a snapshot of the [info object](/parse/info/) at the time the record was created. The `record` property is the actual record.
 
 Note, it can be used conjointly with the raw option.
 
@@ -19,7 +19,7 @@ Note, it can be used conjointly with the raw option.
 
 ## Example
 
-It is a boolean value which default to `false`. When activated, each field is made of the two properties `info` and `record`:
+When the [`info` property is activated](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.info.js) with the value `true`, field is made of the two properties `info` and `record`:
 
 ```js
 const parse = require('../lib/sync')
