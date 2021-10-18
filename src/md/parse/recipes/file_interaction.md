@@ -23,9 +23,9 @@ const fs = require('fs').promises
 })()
 ```
 
-We can now access the CSV content of this file with the native Node.js File System module named `fs`. The parser doesn't not provide any file access method, it is not its reponsibilty and using the native `fs` module conjointly with the `csv-parse` is easy and natural.
+We can now access the CSV content of this file with the native Node.js File System module named `fs`. The parser doesn't provide any file access method, it is not its responsibility, and using the native `fs` module conjointly with the `csv-parse` is easy and natural.
 
-You must first choose the right API. This package exposed multiple API all backed by the same parsing algorythm and supporting the same options. Wether you select one API over another one encompass the scope of this page and is documented inside the [API section]('/parse/api/').
+You must first choose the right API. This package exposed multiple API all backed by the same parsing algorithm and supporting the same options. Whether you select one API over another one encompasses the scope of this page and is documented inside the [API section]('/parse/api/').
 
 The easiest way is using the sync API. You read the file and get its content. You then inject this content into the parser and get the result as an array of records. Records may be printed to the console and written to a file one JSON per line for each record. The [final code](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/recipe.file.js) looks like:
 
@@ -57,7 +57,7 @@ Alternatively, you could use the [Stream API](/parse/api/stream/) by [piping a f
 
 ## Alternative encoding
 
-The parser shall comply without interfering with the file encoding. You can specify the file encoding when calling `fs.readFile` by passing the encoding property as a second argument. If the second argument is a string, then it specifies the encoding the source file.
+The parser shall comply without interfering with the file encoding. You can specify the file encoding when calling `fs.readFile` by passing the encoding property as a second argument. If the second argument is a string, then it specifies the encoding of the source file.
 
 ```js
 const os = require('os');
