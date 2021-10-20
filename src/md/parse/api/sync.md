@@ -18,7 +18,7 @@ The [synchronous example](https://github.com/adaltas/node-csv/blob/master/packag
 
 ```js
 import assert from 'assert'
-import {parse} from 'csv-parse/sync'
+import {parse} from 'csv-parse/lib/sync'
 
 const input = `
 "key_1","key_2"
