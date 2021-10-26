@@ -7,7 +7,7 @@ sort: 6
 
 # CSV Generate examples
 
-This package proposes different API flavors. Every example is available on [GitHub](https://github.com/adaltas/node-csv-generate/tree/master/samples).
+This package proposes different API flavors. Every example is available on [GitHub](https://github.com/adaltas/node-csv/tree/master/packages/csv-generate/samples).
 
 ## Using the pipe function
 

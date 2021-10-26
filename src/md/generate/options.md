@@ -12,7 +12,7 @@ All options are optional. The [Node.js Stream Writable](https://nodejs.org/api/s
 ## Available options
 
 * `columns` (integer|array|function)   
-  Define the number of generated fields and the generation method. If columns is an integer, it corresponds to the number of fields. If it is an array, each element correspond to a field. If the field is a function, the function is expected to return a value, if a string, it call the registered function of the same name (eg `Generator.int` for the value "int"), current values are "ascii", "int" and "bool", more could be added by the user or on demand by opening a [pull request](https://github.com/adaltas/node-csv-generate/issues/new). Default to 8 ascii columns.
+  Define the number of generated fields and the generation method. If columns is an integer, it corresponds to the number of fields. If it is an array, each element correspond to a field. If the field is a function, the function is expected to return a value, if a string, it call the registered function of the same name (eg `Generator.int` for the value "int"), current values are "ascii", "int" and "bool", more could be added by the user or on demand by opening a [pull request](https://github.com/adaltas/node-csv/issues/new). Default to 8 ascii columns.
 * `delimiter` (string)   
   Set the field delimiter. One or multiple character. Defaults to "," (comma).
 * `duration` (integer)   

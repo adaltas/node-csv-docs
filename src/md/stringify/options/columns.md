@@ -9,7 +9,7 @@ keywords: ['csv', 'stringify', 'options', 'columns']
 
 The `columns` option controls the generation of records at the field level. For example, it is used to name headers, to order columns in the generated records, and to filter columns. It applies when records are provided as objects and arrays.
 
-Consider the [tests](https://github.com/adaltas/node-csv-stringify/blob/master/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features. Also, refer to the ["header" option](/stringify/options/group_columns_by_name/) to learn how to print columns names on the first line.
+Consider the [tests](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features. Also, refer to the ["header" option](/stringify/options/group_columns_by_name/) to learn how to print columns names on the first line.
 
 * Type: `array` | `object`
 * Optional

@@ -29,6 +29,7 @@ The `csv` package is an umbrella project exposing 4 packages:
     A stringifier converting records into a CSV text.
 
 It means you can either install the `csv` package directly or selectively install one of its child projects to decrease your dependencies.
+Each package's code is versioned under the [Node.js CSV monorepo](https://github.com/adaltas/node-csv).
 
 ## Usage
 

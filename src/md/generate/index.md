@@ -11,7 +11,7 @@ sort: 1
 
 This package provides a flexible generator of CSV strings and Javascript objects implementing the Node.js `stream.Readable` API. It may be used to generate random or user-defined datasets.
 
-Source code for this project is available on [GitHub](https://github.com/adaltas/node-csv/tree/master/packages/csv-generate).
+Source code for this project is available on [GitHub](https://github.com/adaltas/node-csv).
 
 ## Main features
 
