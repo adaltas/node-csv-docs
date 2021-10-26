@@ -17,6 +17,7 @@
     "gatsby-plugin-sitemap": "^5.0.0",
     "gatsby-plugin-typography": "^4.0.0",
     "gatsby-remark-autolink-headers": "^5.0.0",
+    "gatsby-remark-embed-snippet": "^7.0.0",
     "gatsby-remark-prismjs": "^6.0.0",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-remark": "^5.0.0",

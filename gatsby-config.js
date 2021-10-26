@@ -30,6 +30,12 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-embed-snippet`,
+            options: {
+              directory: `${__dirname}/csv/packages/`
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-',
