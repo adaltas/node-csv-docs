@@ -16,7 +16,7 @@ For additional usages and examples, you may refer to:
 
 ## Mixing the stream and callback APIs
 
-The [output stream example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/mixed.string_input.js) send the data in the form of a string and read the resulted dataset as a stream.
+The [output stream example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/mixed.output_stream.js) send the data in the form of a string and read the resulted dataset as a stream.
 
 ```js
 const transform = require('stream-transform')
