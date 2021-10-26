@@ -19,7 +19,7 @@ Note, several options are available to control when to quote fields under certai
 
 ## Example
 
-In the [quoted_empty example](https://github.com/adaltas/node-csv-strinigify/blob/master/samples/option.quoted.js), every field evaluated as empty is quoted. It includes an empty string and values of `false`, `null` and `undefined`.
+In the [quoted_empty example](https://github.com/adaltas/node-csv/blob/master/packages/csv-strinigify/samples/option.quoted.js), every field evaluated as empty is quoted. It includes an empty string and values of `false`, `null` and `undefined`.
 
 ```js
 const stringify = require('../lib')

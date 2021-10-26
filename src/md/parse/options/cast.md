@@ -15,7 +15,7 @@ The `cast` option alter a value. It works at the field level of a record. It is 
 * Since: 2.2.0
 * Related: `cast_date`, [`info`](/parse/options/info/), [`on_record`](/parse/options/on_record/) &mdash; see [Available Options](/parse/options/#available-options)
 
-Its value is expected to be a function which receive a context rich of information. It gives full control over a field. The [`test/option.cast.coffee`](https://github.com/adaltas/node-csv-parse/blob/master/test/option.cast.coffee) test provides insights on how to use it and its supported functionalities.
+Its value is expected to be a function which receive a context rich of information. It gives full control over a field. The [`test/option.cast.coffee`](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/test/option.cast.coffee) test provides insights on how to use it and its supported functionalities.
 
 ## Context
 

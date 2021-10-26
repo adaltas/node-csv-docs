@@ -19,7 +19,7 @@ Note, several options are available to control when to quote fields under certai
 
 ## Example
 
-The [quoted_string example](https://github.com/adaltas/node-csv-strinigify/blob/master/samples/option.quoted.js) illustrates that only fields of type `string`, empty or not, are quoted.
+The [quoted_string example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.quoted.js) illustrates that only fields of type `string`, empty or not, are quoted.
 
 ```js
 const parse = require('csv-parse')

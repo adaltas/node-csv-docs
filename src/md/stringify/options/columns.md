@@ -7,7 +7,7 @@ keywords: ['csv', 'stringify', 'options', 'columns']
 
 # Option `columns`
 
-The associate value with the `column` option may come in different flavours: an int, an array or an object. Consider the [tests](https://github.com/adaltas/node-csv-stringify/blob/master/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features.
+The associate value with the `column` option may come in different flavours: an int, an array or an object. Consider the [tests](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features.
 
 Once normalised, the final columns option is an array defining each column. Columns are themselves defined as an object with the properties:
 

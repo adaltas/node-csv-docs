@@ -19,7 +19,7 @@ Note, several options are available to control when to quote fields under certai
 
 ## Example with a string
 
-In the [quoted_match_string example](https://github.com/adaltas/node-csv-strinigify/blob/master/samples/option.quoted_match_string.js), fields containing the string `"."` are quoted.
+In the [quoted_match_string example](https://github.com/adaltas/node-csv/blob/master/packages/csv-strinigify/samples/option.quoted_match_string.js), fields containing the string `"."` are quoted.
 
 ```js
 const stringify = require('../lib')
@@ -36,7 +36,7 @@ stringify([
 
 ## Example with a regular expression
 
-In the [quoted_match_regexp example](https://github.com/adaltas/node-csv-strinigify/blob/master/samples/option.quoted_match_regexp.js), fields matching the regular expression `/\./` are quoted.
+In the [quoted_match_regexp example](https://github.com/adaltas/node-csv/blob/master/packages/csv-strinigify/samples/option.quoted_match_regexp.js), fields matching the regular expression `/\./` are quoted.
 
 ```js
 const stringify = require('../lib')
