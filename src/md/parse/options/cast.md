@@ -78,3 +78,25 @@ assert.deepStrictEqual(records, [
   } ]
 ])
 ```
+
+## Using the `cast` and `columns` functions conjointly
+
+The `cast` function is called field by field, whether it is considered a header or not. The `columns` function is called once the first record is created (if treated as a header). For this reason, `cast` is executed before `columns`.
+
+To distinguish a header field from a data field in the `cast` function, use the [`context.header` property](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.header.js) in the second argument of the `cast` function:
+
+`embed:csv-parse/samples/option.cast.header.js`
+
+Note, in the above example, it is possible to implement the `columns` logic directly inside `cast`, by setting `columns: true` and by replacing `if(context.header) return value;` by `if(context.header) return value.toUpperCase();`:
+
+```js
+parse('a,b,c\n1,2,3\n4,5,6', {
+  cast: (value, context) => {
+    if(context.header) return value.toUpperCase();
+    if (context.column === 'B') return Number(value);
+    return String(value);
+  },
+  columns: true,
+  trim: true
+})
+```
