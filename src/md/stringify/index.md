@@ -42,4 +42,4 @@ For older browsers or older versions of Node, use the modules inside "./lib/es5"
 
 For usage and examples, you may refer to
 [example page](/stringify/examples/),
-[the "samples" folder](https://github.com/adaltas/node-csv-stringify/tree/master/samples) and [the "test" folder](https://github.com/adaltas/node-csv-stringify/tree/master/test).
+[the "samples" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify/samples) and [the "test" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify/test).
