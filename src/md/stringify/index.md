@@ -15,7 +15,7 @@ callback-based APIs for conveniency. It is both extremely easy to use and
 powerful. It was first released in 2010 and is tested against big data
 sets by a large community.
 
-Source code for this project is available on [GitHub](https://github.com/adaltas/node-csv-stringify).
+Source code for this project is available on [GitHub](https://github.com/adaltas/node-csv).
 
 ## Main features
 

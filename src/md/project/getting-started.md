@@ -19,16 +19,17 @@ CSV parser and stringifier.
 
 The `csv` package is an umbrella which is itself split into 4 packages:
 
-*   [`csv-generate`](https://github.com/adaltas/node-csv-generate),
+*   [`csv-generate`](https://github.com/adaltas/node-csv/tree/master/packages/csv-generate),
     a flexible generator of CSV string and Javascript objects.
-*   [`csv-parse`](https://github.com/adaltas/node-csv-parse),
+*   [`csv-parse`](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse),
     a parser converting CSV text into arrays or objects.
-*   [`stream-transform`](https://github.com/adaltas/node-stream-transform),
+*   [`stream-transform`](https://github.com/adaltas/node-csv/tree/master/packages/stream-transform),
     a transformation framework.
-*   [`csv-stringify`](https://github.com/adaltas/node-csv-stringify),
+*   [`csv-stringify`](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify),
     a stringifier converting records into a CSV text.
 
 It means you can either install the `csv` package directly or selectively install one of its child projects to decrease your dependencies.
+Each package's code is versioned under the [Node.js CSV monorepo](https://github.com/adaltas/node-csv).
 
 ## Usage
 
