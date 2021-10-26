@@ -20,7 +20,7 @@ Escaping is disabled inside a quoted field. The escape sequence will be preserve
 
 # Example
 
-The [comment example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.comment.js) insert two comments, one at the begining of the file and another one after a record.
+The [comment example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.comment.js) insert two comments, one at the begining of the file and another one after a record.
 
 ```js
 const parse = require('csv-parse/lib/sync')

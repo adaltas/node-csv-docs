@@ -20,7 +20,7 @@ scalability by treating your data as a stream from the source to the destination
 
 The signature is `const stream = stringify([options])`.
 
-The [stream example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.stream.js) write 2 records and register multiple events to read the generated CSV output and get notified when the serialisation is finished.
+The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/api.stream.js) write 2 records and register multiple events to read the generated CSV output and get notified when the serialisation is finished.
 
 ```js
 const stringify = require('csv-stringify')
@@ -68,7 +68,7 @@ wish to obtain a string representing the full CSV text.
 
 The signature is `stringify(records, [options], callback)`.
 
-The [callback example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.callback.js) receives an array and a callback function. The input is serialised into a string unless an error occurred.
+The [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/api.callback.js) receives an array and a callback function. The input is serialised into a string unless an error occurred.
 
 ```js
 const stringify = require('csv-stringify')

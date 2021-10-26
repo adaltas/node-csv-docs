@@ -18,7 +18,7 @@ The default value is `"` (double quote) when no option is provided and when the 
 
 ## Default behavior
 
-The [default example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.escape.default.js) doesn't need to declare the `escape` option. It is activated by default with the `"` character. Note how it only apply inside a quoted field.
+The [default example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.escape.default.js) doesn't need to declare the `escape` option. It is activated by default with the `"` character. Note how it only apply inside a quoted field.
 
 ```js
 const parse = require('csv-parse/lib/sync')
@@ -33,7 +33,7 @@ assert.deepStrictEqual(records, [
 
 ## Custom behavior
 
-The [custom example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.escape.custom.js) change the default behavior by setting the escape character to `\` (backslash).
+The [custom example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.escape.custom.js) change the default behavior by setting the escape character to `\` (backslash).
 
 ```js
 const parse = require('csv-parse/lib/sync')

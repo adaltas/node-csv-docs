@@ -21,7 +21,7 @@ The `from` option handles records starting from a requested number of records. C
 
 When the `column` option is active, the first record is treated as a header. It is not accounted as a record. Thus, the first record is used to retrieve the properties names and the count start from the next record.
 
-This [example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.from.js) read the first `a,b` record to determine column names, skip the next record and return records afterward.
+This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.from.js) read the first `a,b` record to determine column names, skip the next record and return records afterward.
 
 ```js
 const parse = require('csv-parse')

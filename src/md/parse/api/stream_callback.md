@@ -12,7 +12,7 @@ The main module exported by the package leverages the Node.js [stream transform 
 
 Uses it for convenience in case you are already interacting with a readable stream or a writable stream. It is not scalable because it implies that you either have all CSV dataset in memory and wish to pipe the generated records into a stream writer or that you have a stream reader generating a CSV data stream and wish to obtain a full dataset with all the records.
 
-The signature of the [output stream example](https://github.com/adaltas/node-csv-parse/blob/master/samples/mixed.output_stream.js) is `const stream = parse(input, options)`. It takes an input string and an options object as arguments and return a readable stream.
+The signature of the [output stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/mixed.output_stream.js) is `const stream = parse(input, options)`. It takes an input string and an options object as arguments and return a readable stream.
 
 ```js
 const parse = require('csv-parse')
@@ -45,7 +45,7 @@ parse(`
 })
 ```
 
-Inversely, the signature of the [input stream example](https://github.com/adaltas/node-csv-parse/blob/master/samples/mixed.input_stream.js) is `const stream = parse(options, callback)`. It takes an options object and a callback function as arguments and return a writable stream.
+Inversely, the signature of the [input stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/mixed.input_stream.js) is `const stream = parse(options, callback)`. It takes an options object and a callback function as arguments and return a writable stream.
 
 ```js
 const parse = require('csv-parse')

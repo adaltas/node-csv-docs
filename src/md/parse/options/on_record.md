@@ -27,7 +27,7 @@ The option takes a function which is called with two arguments: the input record
 
 ## Altering records
 
-In the [alter example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.on_record.alter.js), for every record, the second field is stripped out and the two other fields are re-ordered.
+In the [alter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.on_record.alter.js), for every record, the second field is stripped out and the two other fields are re-ordered.
 
 ```js
 const parse = require('csv-parse')
@@ -51,7 +51,7 @@ b.1,b.2,b.3
 
 ## Filtering records
 
-In the [filter example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.on_record.filter.js), the function returns `null` for the second record, filtering it from the result.
+In the [filter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.on_record.filter.js), the function returns `null` for the second record, filtering it from the result.
 
 ```js
 const parse = require('csv-parse')

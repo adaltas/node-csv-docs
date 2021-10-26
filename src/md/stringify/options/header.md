@@ -17,7 +17,7 @@ An error will be emitted at runtime if the `header` option is set because no col
 
 Columns names are automatically discovered from the first record if it is provided as a literal object. In such case, the keys present in the object are used to set the [`columns` option](/stringify/options/columns/).
 
-To activate the generation of a header record, set the value to `true` as in the [header example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header.js):
+To activate the generation of a header record, set the value to `true` as in the [header example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.header.js):
 
 ```js
 const stringify = require('csv-stringify')
@@ -43,7 +43,7 @@ Run this example with the command `node samples/option.header.js`.
 
 ## Using `header` conjointly with `columns`
 
-In case you wish to output the headers on the first line, you can use this option conjointly with the `header` option. The column definition object can receive an optional [`header` property which default to the `key` property](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header_with_columns_array_strings.js):
+In case you wish to output the headers on the first line, you can use this option conjointly with the `header` option. The column definition object can receive an optional [`header` property which default to the `key` property](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.header_with_columns_array_strings.js):
 
 ```js
 stringify( [
@@ -56,7 +56,7 @@ stringify( [
 })
 ```
 
-This example could have been simplified by defining the [column option as an object](https://github.com/adaltas/node-csv-stringify/blob/master/samples/option.header_width_columns_object.js). This approach is not recommended as it implies relying on object property order which JavaScript doesn't guarantee.
+This example could have been simplified by defining the [column option as an object](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.header_width_columns_object.js). This approach is not recommended as it implies relying on object property order which JavaScript doesn't guarantee.
 
 ```js
 stringify( [

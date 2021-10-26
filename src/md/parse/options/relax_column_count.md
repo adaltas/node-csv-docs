@@ -20,7 +20,7 @@ The option can be used conjointly with the `columns` option. The expected number
 
 ## Default behavior
 
-The [`option.relax_column_count.js` example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.relax_column_count.js) expect records with 2 fields. The second line contains less than 2 fields and the third line contains more than 2 fields. Both lines would have generated an error if the `relax_column_count` option was not `true`.
+The [`option.relax_column_count.js` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.relax_column_count.js) expect records with 2 fields. The second line contains less than 2 fields and the third line contains more than 2 fields. Both lines would have generated an error if the `relax_column_count` option was not `true`.
 
 ```js
 const parse = require('csv-parse')
@@ -45,7 +45,7 @@ parse(`
 
 ## Working with columns and objects
 
-When using the `columns` option, the records are generated as objects whose properties are found in the column option and associated based on their index position. If a record has fewer fields than the number of columns, then the unmatched columns are discarded. Inversely, if a record has more fields than the number of columns, then the unmatched fields are discarded. The [`option.relax_column_count.columns.js` example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.relax_column_count.columns.js) illustrates both behavior:
+When using the `columns` option, the records are generated as objects whose properties are found in the column option and associated based on their index position. If a record has fewer fields than the number of columns, then the unmatched columns are discarded. Inversely, if a record has more fields than the number of columns, then the unmatched fields are discarded. The [`option.relax_column_count.columns.js` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.relax_column_count.columns.js) illustrates both behavior:
 
 ```js
 const parse = require('csv-parse')
@@ -74,7 +74,7 @@ Lovelace,Ada,"Augusta Ada King, Countess of Lovelace"
 
 When used conjointly with other options, it is possible to accept inconsistent records and provide you own parsing implementation. For exemple, the [`on_record`](/parse/options/on_record/) option let you insert your custom code. If needed, the [`raw`](/parse/options/raw/) option expose the raw record. Finally, the full error is available including the error code.
 
-This is an example to [handle inconsistent record field lengths](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.relax_column_count.record_inconsistent_length.js).
+This is an example to [handle inconsistent record field lengths](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.relax_column_count.record_inconsistent_length.js).
 
 ```js
 const parse = require('csv-parse/lib/sync')
@@ -100,7 +100,7 @@ assert.deepStrictEqual(
 )
 ```
 
-If the [`columns`](/parse/options/on_record/) option is active, the behavior is similar but the error throw is now `CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH`. The `on_record` function can return any value. For example in [the inconsistent columns example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.relax_column_count.record_inconsistent_columns.js), the `columns` option is activated and an array is returned instead of an object literal.
+If the [`columns`](/parse/options/on_record/) option is active, the behavior is similar but the error throw is now `CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH`. The `on_record` function can return any value. For example in [the inconsistent columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.relax_column_count.record_inconsistent_columns.js), the `columns` option is activated and an array is returned instead of an object literal.
 
 ```js
 const parse = require('csv-parse/lib/sync')

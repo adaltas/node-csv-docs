@@ -15,7 +15,7 @@ This package proposes different API flavours. Every example is available on [Git
 One useful function part of the Stream API is `pipe`. It is used to connect
 multiple `stream.Readable` sources to `stream.Writable` destinations.
 
-The [pipe example](https://github.com/adaltas/node-csv-stringify/blob/master/samples/api.pipe.js) generates object records, stringifies them and print the generated CSV to the standard output.
+The [pipe example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/api.pipe.js) generates object records, stringifies them and print the generated CSV to the standard output.
 
 This example is available with the command `node samples/api.pipe.js`.
 

@@ -9,10 +9,18 @@ redirects:
 
 # CSV Parse info properties
 
-Those properties report internal information such as the number of records which have been processed. They are available in the `info` object of a parser instance and are also exported as the third argument of the user callback.
+Info properties report internal information such as the number of records which have been processed.
 
-Note, some properties are used internally by the parser, don't modify them.
+Information have multiple level of granularity depending on how and where you access them. They apply to the overall dataset, a record or a field. Record information extends data information. Field information extends record and dataset information.
 
+## Dataset information
+
+They are available in the `info` object of a parser instance and are also exported as the third argument of the user callback.
+
+* `bytes` (number)   
+  Number of processed bytes.
+* `columns` (boolean || object)   
+  Normalized verion of `options.columns`.
 * `comment_lines` (number)   
   Count the number of lines being fully commented.
 * `empty_lines` (number)   
@@ -20,25 +28,51 @@ Note, some properties are used internally by the parser, don't modify them.
 * `invalid_field_length` (number)   
   Number of non uniform records when `relax_column_count` is true; was `skipped_line_count` until version 3.
 * `lines` (number)   
-  The number of lines encountered in the source dataset, start at 1 for the first line.
+  Number of lines encountered in the source dataset, start at 1 for the first line.
 * `records` (number)   
   Count the number of processed records.
 
-## Accessing `info`
+## Record information
 
-The `info` object is directly available from the parser instance.
+It is exposed with the [`info` option](/parse/options/info/) and the [`on_record` option](/parse/options/on_record/). Refers to their respective documentation to learn their usage as well as any additionnal properties they might expose.
+
+It contains all the dataset information with additionnal properties:
+
+* `error` (Error)   
+  The error that was encountered, useful with the variuos relax options.
+* `header` (boolean)   
+  True when the [`columns` option](/parse/options/columns/) is activated.
+* `index` (number)   
+  Position of the last processed field.
+
+## Field information
+
+It is exposed by the [`cast` option](/parse/options/cast/) and [`cast_date` option](/parse/options/cast_date/) when defined as functions.
+
+Runtime errors are enriched with the field information as well as some additionnal properties when appropriate.
+
+It contains all the dataset and record information with additionnal properties:
+
+* `column` (string || index)   
+  The column name if the `columns` option is active or the field index position in the record.
+* `quoting` (boolean)   
+  Indicates that the field is surrounded by quotes.
+
+## Accessing the internal `info` object
+
+The `info` object is directly available from the parser instance. Don't modify the object, some properties are used internally by the parser.
 
 ```js
 const parse = require('csv-parse')
 const parser = parse('1,2,3\na,b,c')
-// Using a function declaration
-parser.on('readable', function(){
+// Report information for every record
+parser.on('readable', () => {
   while(let record = this.read()){
     const {lines, records} = this.info
     console.info(`Current state is ${lines} lines and ${records} records.`)
   }
 })
-// Using a fat arrow
+// Report information when the process is finished
 parser.on('end', () => {
   const {lines, records} = parser.info
   console.info(`There are ${lines} lines with ${records} records.`)
@@ -55,9 +89,3 @@ parse('1,2,3\na,b,c', function(err, data, {lines, records}){
   console.info(`There are ${lines} lines with ${records} records.`)
 })
 ```
-
-## Additional usage of `info`
-
-The `info` properties are exposed with the usage of the [`cast`](/parse/options/cast/), [`info`](/parse/options/info/) and [`on_record`](/parse/options/on_record/) options. Refers to their respective documentation to learn their usage as well as any additionnal properties they might expose.
-
-Some error objects are enriched with the `info` properties as well as some additionnal properties when appropriate.

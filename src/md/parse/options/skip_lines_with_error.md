@@ -21,7 +21,7 @@ A `skip` event is emitted when an error is found and when the record is skipped.
 
 ## Listening to the `skip` event
 
-The [`option.skip_lines_with_error.js` example](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.skip_lines_with_error.js) catch an invalid closing quote error and continue parsing the next records.
+The [`option.skip_lines_with_error.js` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_lines_with_error.js) catch an invalid closing quote error and continue parsing the next records.
 
 ```js
 const parse = require('csv-parse')

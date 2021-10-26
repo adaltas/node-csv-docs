@@ -29,7 +29,7 @@ When an alternative encoding is used, it can be discovered with the [BOM](/parse
 
 When providing options, the values must internally reflect the data source encoding. If the value is a string, the parser will convert the value into a buffer representation using the selected encoding input value.
 
-However, if the value is a buffer, you must make sure the buffer was created with the right encoding, here is an exemple [encoding an option as buffer](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.encoding.options.js), the `delimiter` option in this case:
+However, if the value is a buffer, you must make sure the buffer was created with the right encoding, here is an exemple [encoding an option as buffer](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.options.js), the `delimiter` option in this case:
 
 ```js
 const parse = require('../lib/sync')
@@ -50,7 +50,7 @@ assert.deepStrictEqual(records, [
 
 The BOM is a special Unicode character sequence at the begining of a text stream to indicate the encoding.
 
-Because the BOM is specific to unicode, only the UTF-8 and UTF-16LE encoding are natively detected by the parser. Here is an example [detecting the encoding](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.encoding.detection.js), UTF-16LE in this case:
+Because the BOM is specific to unicode, only the UTF-8 and UTF-16LE encoding are natively detected by the parser. Here is an example [detecting the encoding](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.detection.js), UTF-16LE in this case:
 
 ```js
 const parse = require('csv-parse/lib/sync')
@@ -70,7 +70,7 @@ Notice how the BOM is declared as `\uFEFF`. You can see how it is converted to t
 
 ## Buffer output
 
-A value of `null` or `false` disables output encoding and [returns the raw buffer](https://github.com/adaltas/node-csv-parse/blob/master/samples/option.encoding.buffer.js).
+A value of `null` or `false` disables output encoding and [returns the raw buffer](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.buffer.js).
 
 ```js
 const parse = require('csv-parse/lib/sync')
