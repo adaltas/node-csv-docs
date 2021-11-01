@@ -29,50 +29,13 @@ The option takes a function which is called with two arguments: the input record
 
 In the [alter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.on_record.alter.js), for every record, the second field is stripped out and the two other fields are re-ordered.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-parse(`
-a.1,a.2,a.3
-b.1,b.2,b.3
-`.trim(), {
-  on_record: (record, {lines}) =>
-    [lines, record[2], record[0]]
-}, function(err, records){
-  assert.deepStrictEqual(
-    records, [
-      [1, 'a.3', 'a.1'],
-      [2, 'b.3', 'b.1']
-    ]
-  )
-})
-```
+`embed:csv-parse/samples/option.on_record.alter.js`
 
 ## Filtering records
 
 In the [filter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.on_record.filter.js), the function returns `null` for the second record, filtering it from the result.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-parse(`
-line 1
-line 2
-line 3
-`.trim(), {
-  on_record: (record, {lines}) =>
-    lines === 2 ? null : record
-}, function(err, records){
-  assert.deepStrictEqual(
-    records, [
-      [`line 1`],
-      [`line 3`]
-    ]
-  )
-})
-```
+`embed:csv-parse/samples/option.on_record.filter.js`
 
 ## Handling inconsistent number of fields
 

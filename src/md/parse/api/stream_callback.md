@@ -14,57 +14,8 @@ Uses it for convenience in case you are already interacting with a readable stre
 
 The signature of the [output stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/mixed.output_stream.js) is `const stream = parse(input, options)`. It takes an input string and an options object as arguments and return a readable stream.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-const output = []
-parse(`
-  "1","2","3"
-  "a","b","c"
-`, {
-  trim: true,
-  skip_empty_lines: true
-})
-// Use the readable stream api
-.on('readable', function(){
-  let record
-  while (record = this.read()) {
-    output.push(record)
-  }
-})
-// When we are done, test that the parsed output matched what expected
-.on('end', function(){
-  assert.deepStrictEqual(
-    output,
-    [
-      [ '1','2','3' ],
-      [ 'a','b','c' ]
-    ]
-  )
-})
-```
+`embed:csv-parse/samples/mixed.output_stream.js`
 
 Inversely, the signature of the [input stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/mixed.input_stream.js) is `const stream = parse(options, callback)`. It takes an options object and a callback function as arguments and return a writable stream.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-// Create the parser
-const parser = parse({
-  delimiter: ':'
-}, function(err, records){
-  assert.deepStrictEqual(
-    records,
-    [
-      [ 'root','x','0','0','root','/root','/bin/bash' ],
-      [ 'someone','x','1022','1022','','/home/someone','/bin/bash' ]
-    ]
-  )
-})
-// Write data to the stream
-parser.write("root:x:0:0:root:/root:/bin/bash\n")
-parser.write("someone:x:1022:1022::/home/someone:/bin/bash\n")
-// Close the readable stream
-parser.end()
-```
+`embed:csv-parse/samples/mixed.input_stream.js`

@@ -50,38 +50,8 @@ By the default, the generator will generate a CSV dataset in the form of a strin
 
 In the [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/options.objectmode.stream.js), each record is returned by the `read` function in the form of an array.
 
-```js
-const generate = require('csv-generate')
-const assert = require('assert')
-generate({
-  seed: 1,
-  objectMode: true,
-  columns: 2,
-  length: 1
-})
-.on('readable', function(){
-  let record
-  while(record = this.read()){
-    assert.deepEqual(record, [
-      'OMH', 'ONKCHhJmjadoA'
-    ])
-  }
-})
-```
+`embed:csv-generate/samples/options.objectmode.stream.js`
 
-In the [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/options.objectmode.stream.js), the dataset is passed in the callback an array of array.
+In the [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/options.objectmode.callback.js), the dataset is passed in the callback an array of array.
 
-```js
-const generate = require('csv-generate')
-generate({
-  seed: 1,
-  objectMode: true,
-  columns: 2,
-  length: 2
-}, function(err, records){
-  assert.deepEqual(records, [
-    [ 'OMH', 'ONKCHhJmjadoA' ],
-    [ 'D', 'GeACHiN' ]
-  ])
-})
-```
+`embed:csv-generate/samples/options.objectmode.callback.js`

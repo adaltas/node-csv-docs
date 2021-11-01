@@ -21,23 +21,4 @@ Refer to the [`trim`](/parse/options/trim/) documentation to learn about which c
 
 This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.rtrim.js) declare spaces around fields at multiple locations. The ones on the right side are trimmed while the other ones are preserved.
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = [
-  'a ,1',
-  'b, 2 ',
-  ' c,3'
-].join('\n')
-const records = parse(data, {
-  rtrim: true
-})
-assert.deepStrictEqual(
-  records, [
-    [ 'a', '1' ],
-    [ 'b', ' 2' ],
-    [ ' c', '3' ]
-  ]
-)
-```
+`embed:csv-parse/samples/option.rtrim.js`

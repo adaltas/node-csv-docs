@@ -21,62 +21,15 @@ In the data, it is not possible to escape a delimiter. A field must be quoted to
 
 In the [delimiter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.js), fields are separated by a two characters delimiter value.
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = 'a key => a value'
-const records = parse(data, {
-  delimiter: "=>",
-  trim: true
-})
-assert.deepStrictEqual(records, [
-  [ "a key", "a value" ]
-])
-```
+`embed:csv-parse/samples/option.delimiter.js`
 
 # Example of an array of delimiter values
 
-An example of providing multiple delimiter values for parsing.  Also shows:
+An example of providing [multiple delimiter values](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.array.js) for parsing. Also shows:
+
 * the `columns` option, used for naming the fields of each record
 * how `trim` affects whitespace on values
 * quoting field values with double-quotes to escape a delimiter
 * use of different delimiters in the same record
 
-```js
-const parse = require('csv-parse/lib/sync')
-
-const data = `color name::red::green::blue
-Cyan :: 0 :: 255 :: 255
-"Yellow":: " 255 " \t  "255"  ::"0"
-Hot Pink\t255\t" :: 105"\t180`
-
-const records = parse(data, {
-  delimiter: ["::","\t"],
-  trim: true,
-  columns: true,
-})
-
-records.forEach((rec,index) => {
-  let indent = ""
-  Object.entries(rec).forEach(([key, value]) => {
-    console.log(`${indent}${key}: <${value}>`)
-    indent = (indent.length === 0 ? "    " : indent)
-  })
-})
-
-// Output is:
-//
-//  color name: <Cyan>
-//      red: <0>
-//      green: <255>
-//      blue: <255>
-//  color name: <Yellow>
-//      red: < 255 >
-//      green: <255>
-//      blue: <0>
-//  color name: <Hot Pink>
-//      red: <255>
-//      green: < :: 105>
-//      blue: <180>
-```
+`embed:csv-parse/samples/option.delimiter.array.js`

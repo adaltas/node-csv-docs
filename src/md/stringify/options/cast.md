@@ -56,19 +56,11 @@ The context object is passed as the second argument of the user provided functio
 
 By returning an object instead of a string, a `cast` function can overwrite the default options on a field level. The field value must be provided in the `value` property. The supported options are: `delimiter`, `escape`, `quote`, `quoted`, `quoted_empty`, `quoted_string`, `quoted_match` and `record_delimiter`.
 
-The following example disable the quoting of the field, leaving it to the responsibility of the `cast` function:
+The following [`cast` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.cast.js) disable the quoting of the field, leaving it to the responsibility of the `cast` function:
 
-```js
-stringify( [ [1], [2] ], {
-  cast: {
-    number: function(value){
-      return {value: `="${value}"`, quote: false}
-    }
-  }
-}, function(err, data){
-  assert.equal(data, '="1"\n="2"\n')
-})
-``` 
+`embed:csv-stringify/samples/option.cast.js` 
+
+_Run this example with the command `node samples/option.cast.js`._
 
 ## Default behaviour
 
@@ -124,31 +116,8 @@ function(value){
 
 ## Casting a date
 
-This example is available with the command `node samples/option.cast.js`.
+This [`cast` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.cast.js) convert date objects into ISO 8601 dates.
 
-```js
-const stringify = require('csv-stringify')
-const assert = require('assert')
+`embed:csv-stringify/samples/option.cast.date.js`
 
-stringify([{
-  name: 'foo',
-  date: new Date(1970, 0)
-},{
-  name: 'bar',
-  date: new Date(1971, 0)
-}],{
-  cast: {
-    date: function(value) {
-      return value.toISOString()
-    }
-  }
-}, function(err, data) {
-  assert.equal(
-    data,
-    "foo,1969-12-31T23:00:00.000Z\n" +
-    "bar,1970-12-31T23:00:00.000Z\n"
-  )
-})
-```
-
-_Run this example with the command `node samples/option.cast.js`._
+_Run this example with the command `node samples/option.cast.date.js`._

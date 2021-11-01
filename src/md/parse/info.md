@@ -62,30 +62,10 @@ It contains all the dataset and record information with additionnal properties:
 
 The `info` object is directly available from the parser instance. Don't modify the object, some properties are used internally by the parser.
 
-```js
-const parse = require('csv-parse')
-const parser = parse('1,2,3\na,b,c')
-// Report information for every record
-parser.on('readable', () => {
-  while(let record = this.read()){
-    const {lines, records} = this.info
-    console.info(`Current state is ${lines} lines and ${records} records.`)
-  }
-})
-// Report information when the process is finished
-parser.on('end', () => {
-  const {lines, records} = parser.info
-  console.info(`There are ${lines} lines with ${records} records.`)
-})
-```
+`embed:csv-parse/samples/api.info.internal.js`
 
 ## Accessing `info` in the callback
 
 The `info` object in provided in the third argument of the callback, after the `error` and `data` arguments.
 
-```js
-const parse = require('csv-parse')
-parse('1,2,3\na,b,c', function(err, data, {lines, records}){
-  console.info(`There are ${lines} lines with ${records} records.`)
-})
-```
+`embed:csv-parse/samples/api.info.callback.js`

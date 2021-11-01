@@ -12,33 +12,4 @@ The Async iterator API is both scalable and elegant. It takes advantage of the n
 
 The [async iterator example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/async.iterator.js) below generates a CSV stream which is then parsed and iterated over. For each record, we simulate a slow asynchronous operation. This example is available with the command `node samples/async.iterator.js`.
 
-```js
-const assert = require('assert');
-const generate = require('csv-generate');
-const parse = require('csv-parse');
-
-(async () => {
-  // Initialise the parser by generating random records
-  const parser = generate({
-    high_water_mark: 64 * 64,
-    length: 100
-  }).pipe(
-    parse()
-  )
-  // Intialise count
-  let count = 0;
-  // Report start
-  process.stdout.write('start\n')
-  // Iterate through each records
-  for await (const record of parser) {
-    // Report current line
-    process.stdout.write(`${count++} ${record.join(',')}\n`)
-    // Fake asynchronous operation
-    await new Promise((resolve) => setTimeout(resolve, 100))
-  }
-  // Report end
-  process.stdout.write('...done\n')
-  // Validation
-  assert.strictEqual(count, 100)
-})()
-```
+`embed:csv-parse/samples/async.iterator.js`

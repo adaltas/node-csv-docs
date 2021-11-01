@@ -14,31 +14,4 @@ The [promises example](https://github.com/adaltas/node-csv/blob/master/packages/
 
 This example is available with the command `node samples/recipe.promises.js`.
 
-```js
-const parse = require('csv-parse');
-const fs = require('fs');
-const { finished } = require('stream/promises');
- 
-const processFile = async () => {
-  records = []
-  const parser = fs
-  .createReadStream(`${__dirname}/fs_read.csv`)
-  .pipe(parse({
-    // CSV options if any
-  }));
-  parser.on('readable', function(){
-    let record;
-    while (record = parser.read()) {
-      // Work with each record
-      records.push(record)
-    }
-  });
-  await finished(parser);
-  return records
-}
-
-(async () => {
-  const records = await processFile()
-  console.info(records);
-})()
-```
+`embed:csv-parse/samples/recipe.promises.js`

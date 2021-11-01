@@ -20,28 +20,10 @@ The default value is `"` (double quote) when no option is provided and when the 
 
 The [default example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.escape.default.js) doesn't need to declare the `escape` option. It is activated by default with the `"` character. Note how it only apply inside a quoted field.
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = `a,"b""c",d`
-const records = parse(data)
-assert.deepStrictEqual(records, [
-  [ 'a', 'b"c', 'd' ]
-])
-```
+`embed:csv-parse/samples/option.escape.default.js`
 
 ## Custom behavior
 
 The [custom example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.escape.custom.js) change the default behavior by setting the escape character to `\` (backslash).
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = `a,"b\\"c",d`
-const records = parse(data, { escape: '\\' })
-assert.deepStrictEqual(records, [
-  [ 'a', 'b"c', 'd' ]
-])
-```
+`embed:csv-parse/samples/option.escape.custom.js`

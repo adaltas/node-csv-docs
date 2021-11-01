@@ -19,32 +19,7 @@ The signature is `const stream = generate([options])`.
 
 The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.stream.js) illustrates the various events to listen.
 
-```js
-const generate = require('csv-generate')
-const assert = require('assert')
-const records = []
-generate({
-  seed: 1,
-  objectMode: true,
-  columns: 2,
-  length: 2
-})
-.on('readable', function(){
-  let record
-  while(record = this.read()){
-    records.push(record)
-  }
-})
-.on('error', function(err){
-  console.error(err)
-})
-.on('end', function(){
-  assert.deepEqual(records, [
-    [ 'OMH', 'ONKCHhJmjadoA' ],
-    [ 'D', 'GeACHiN' ]
-  ])
-})
-```
+`embed:csv-generate/samples/api.stream.js`
 
 ## Callback API
 
@@ -55,21 +30,7 @@ The signature is `const stream = generate([options], callback)`.
 
 The [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.callback.js) generate a dataset with 2 records.
 
-```js
-const generate = require('csv-generate')
-const assert = require('assert')
-generate({
-  seed: 1,
-  objectMode: true,
-  columns: 2,
-  length: 2
-}, function(err, records){
-  assert.deepEqual(records, [
-    [ 'OMH', 'ONKCHhJmjadoA' ],
-    [ 'D', 'GeACHiN' ]
-  ])
-})
-```
+`embed:csv-generate/samples/api.callback.js`
 
 ## Sync API
 
@@ -78,21 +39,7 @@ implies that the overall dataset will be stored in memory.
 
 The module to require is `csv-generate/lib/sync` and the signature is `const records = generate([options])`.
 
-The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.callback.js) returns an array of 2 records.
+The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.sync.js) returns an array of 2 records.
 
 
-```js
-const generate = require('csv-generate/lib/sync')
-const assert = require('assert')
-
-const records = generate({
-  seed: 1,
-  objectMode: true,
-  columns: 2,
-  length: 2
-})
-assert.deepEqual(records, [
-  [ 'OMH', 'ONKCHhJmjadoA' ],
-  [ 'D', 'GeACHiN' ]
-])
-```
+`embed:csv-generate/samples/api.sync.js`

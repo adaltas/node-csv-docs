@@ -32,30 +32,4 @@ and here:
 
 In this [example](/https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.ignore_last_delimiters.js), the CSV data is made of 2 fields, `format` and `description`. Fields are separated by commans, the default [delimiter](/parse/options/delimiter/). The last field, `description`, can contains any number of commas without breaking the record.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-parse(`
-format;description
-CSV;CSV delimited text file that uses a comma, by default, to separate values.
-SSA;SSA is a subtitle file format that allows for more advanced subtitles than the conventional SRT and similar formats.
-ASS;Advanced SubStation Alpha (ASS), technically SSA v4+, is a script for more advanced subtitles than SSA.
-`.trim(), {
-  delimiter: ";",
-  columns: true,
-  ignore_last_delimiters: 10
-}, function(err, records){
-  assert.deepStrictEqual(records, [{
-      format: 'CSV',
-      description: 'CSV delimited text file that uses a comma, by default, to separate values.'
-    },{
-      format: 'SSA',
-      description: 'SSA is a subtitle file format that allows for more advanced subtitles than the conventional SRT and similar formats.'
-    },{
-      format: 'ASS',
-      description: 'Advanced SubStation Alpha (ASS), technically SSA v4+, is a script for more advanced subtitles than SSA.'
-    }
-  ])
-})
-```
+`embed:csv-parse/samples/option.ignore_last_delimiters.js`

@@ -27,18 +27,4 @@ The characters interpreted as whitespaces are identical to the `\s` meta charact
 
 This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.trim.js) insert spaces around fields at multiple locations.
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const records = parse('a ,1\nb, 2\n c,3', {
-  trim: true
-})
-assert.deepStrictEqual(
-  records, [
-    [ 'a', '1' ],
-    [ 'b', '2' ],
-    [ 'c', '3' ]
-  ]
-)
-```
+`embed:csv-parse/samples/option.trim.js`

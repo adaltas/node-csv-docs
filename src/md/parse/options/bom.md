@@ -25,18 +25,7 @@ The UTF-8 BOM is a sequence of Bytes at the start of a text-stream (`EF BB BF` o
 
 It is a boolean value which default to `false`. The [bom example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.bom.js) simply activate the option:
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = "\ufeffa,b,c\n"
-const records = parse(data, {
-  bom: true
-})
-assert.deepStrictEqual(records, [
-  [ 'a', 'b', 'c' ]
-])
-```
+`embed:csv-parse/samples/option.bom.js`
 
 ## Hidden BOM in output
 
@@ -46,17 +35,4 @@ Handling BOM header without this option may create unexpected behaviors. The BOM
 
 Consider the [following example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.bom.hidden.js), it illustrate how the property name is not the one printed in the console:
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = "\ufeffkey\nvalue"
-const records = parse(data, {
-  bom: false,
-  columns: true
-})
-// It seems that the output is perfectly fine
-assert.equal(JSON.stringify(records[0]), '{"﻿key":"value"}')
-// However, the first property include the BOM bytes
-assert.equal(Object.keys(records[0])[0], '\ufeffkey')
-```
+`embed:csv-parse/samples/option.bom.hidden.js`

@@ -12,76 +12,32 @@ This package proposes different API flavours. Every example is available on [Git
 
 ## Using the stream API
 
-This example is available with the command `node samples/stream.js`.
+The Node.js stream API is scallable and offers the greatest control over the data flow. It comes at the cost of being more verbose and harder to write. Data is consumed inside the `readable` event with the `stream.read` function. It is then written by calling the `stream.write` function. The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/stream.js) illustrates how to initialize each packages and how to plug them.
 
-```js
-var csv = require('csv');
-
-var generator = csv.generate({seed: 1, columns: 2, length: 20});
-var parser = csv.parse();
-var transformer = csv.transform(function(data){
-  return data.map(function(value){return value.toUpperCase()});
-});
-var stringifier = csv.stringify();
-
-generator.on('readable', function(){
-  while(data = generator.read()){
-    parser.write(data);
-  }
-});
-
-parser.on('readable', function(){
-  while(data = parser.read()){
-    transformer.write(data);
-  }
-});
-
-transformer.on('readable', function(){
-  while(data = transformer.read()){
-    stringifier.write(data);
-  }
-});
-
-stringifier.on('readable', function(){
-  while(data = stringifier.read()){
-    process.stdout.write(data);
-  }
-});
-```
+`embed:csv/samples/stream.js`
 
 ## Using the pipe API
 
-This example is available with the command `node samples/pipe_funny.js`.
+Piping in Node.js is part of the stream API and behave just like Unix pipes where the output of a process, here a function, is redirected as the input of the following process. A [pipe example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/pipe.funny.js) is provided with an unconventional syntax:
 
-```js
-// Import the package main module
-const csv = require('csv')
-// Use the module
-csv.generate  ({seed: 1, length: 20}).pipe(
-csv.parse     ()).pipe(
-csv.transform (function(record){
-                return record.map(function(value){
-                  return value.toUpperCase()
-              })})).pipe(
-csv.stringify ()).pipe(process.stdout)
-```
+`embed:csv/samples/pipe.funny.js`
+
+A [more conventional pipe example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/pipe.js) is:
+
+`embed:csv/samples/pipe.js`
 
 ## Using the callback API
 
-This example is available with the command `node samples/callback.js`.
+Also available in the `csv` module is the callback API. The all dataset is available in the second callback argument. Thus it will not scale with large dataset. The [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/callback.js) initialize each CSV function sequentially, with the output of the previous one. Note, for the sake of clarity, the example doesn't deal with error management. It is enough spaghetti code.
 
-```js
-var csv = require('csv');
+`embed:csv/samples/callback.js`
 
-csv.generate({seed: 1, columns: 2, length: 20}, function(err, data){
-  csv.parse(data, function(err, data){
-    csv.transform(data, function(data){
-      return data.map(function(value){return value.toUpperCase()});
-    }, function(err, data){
-      csv.stringify(data, function(err, data){
-        process.stdout.write(data);
-      });
-    });
-  });
-});
-```
+## Using the sync API
+
+The sync API behave like [pure functions](https://en.wikipedia.org/wiki/Pure_function). For a given input, it always produce the same output.
+
+Because of its simplicity, this is the recommended approach if you don't need scalability and if your dataset fit in memory. 
+
+The module to import is `csv/sync`. The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/sync.js) illustrate its usage.
+
+```embed:csv/samples/sync.js```

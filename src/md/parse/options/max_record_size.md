@@ -24,18 +24,4 @@ This feature guards against a wrong [`delimiter`](/parse/options/delimiter/) or 
 
 This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.max_record_size.js) will throw an error with the message "Max Record Size: record exceed the maximum number of tolerated bytes of 10 on line 2" because the second record is longer than 10 characters.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-parse(`
-"first","last"
-"Paul-Émile","Victor"
-`.trim(), {
-  max_record_size: 10
-}, function(err, records){
-  assert.ok(
-    /Max Record Size/.test(err.message)
-  )
-})
-```
+`embed:csv-parse/samples/option.max_record_size.js`

@@ -34,24 +34,7 @@ If the value is `true`, the first record present in the data set is treated as a
 
 The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.true.js) generates record literals whose properties match the first line of the data set.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-parse(`
-"key_1","key_2"
-"value 1","value 2"
-`.trim(), {
-  columns: true
-}, function(err, records){
-  assert.deepStrictEqual(
-    records, [{
-      key_1: 'value 1',
-      key_2: 'value 2'
-    }]
-  )
-})
-```
+`embed:csv-parse/samples/option.columns.true.js`
 
 ## As an array
 
@@ -59,23 +42,7 @@ If the value is an array, to each element corresponds a property. The values may
 
 The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.array.js) generates record literals whose properties match the values of `columns` option.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-parse(`
-"value 1","value 2"
-`.trim(), {
-  columns: ['key_1', 'key_2']
-}, function(err, records){
-  assert.deepStrictEqual(
-    records, [{
-      key_1: 'value 1',
-      key_2: 'value 2'
-    }]
-  )
-})
-```
+`embed:csv-parse/samples/option.columns.array.js`
 
 ## As a function
 
@@ -83,22 +50,4 @@ If the value is a function, the user is responsible for returning the list of co
 
 The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.function.js) converts each field of the first to upper case.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-parse(`
-"key_1","key_2"
-"value 1","value 2"
-`.trim(), {
-  columns: header =>
-    header.map( column => column.toUpperCase() )
-}, function(err, records){
-  assert.deepStrictEqual(
-    records, [{
-      KEY_1: 'value 1',
-      KEY_2: 'value 2'
-    }]
-  )
-})
-```
+`embed:csv-parse/samples/option.columns.function.js`

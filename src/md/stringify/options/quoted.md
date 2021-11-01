@@ -19,20 +19,6 @@ Note, several options are available to control when to quote fields under certai
 
 ## Example using "quote"
 
-In the [quoted example](https://github.com/adaltas/node-csv-strinigify/blob/master/samples/option.quoted.js), every field evaluated as empty is not quoted. It includes an empty string and values of `false`, `null` and `undefined`.
+In the [quoted example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.quoted.js), every field evaluated as empty is not quoted. It includes an empty string and values of `false`, `null` and `undefined`.
 
-```js
-const parse = require('csv-parse')
-const assert = require('assert')
-
-stringify([
-  ['1', ''],
-  [false, '2'],
-  ['3', null],
-  [undefined, '4']
-], {
-  quoted: true
-}, function(err, records){
-  assert.equal(records, '"1",\n,"2"\n"3",\n,"4"\n')
-})
-```
+`embed:csv-stringify/samples/option.quoted.js`

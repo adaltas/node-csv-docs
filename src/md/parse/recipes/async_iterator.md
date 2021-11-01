@@ -14,50 +14,8 @@ This is kind of an obscure JS functionnality and we don't have to deal with it. 
 
 This example is available with the command `node samples/recipe.async.iterator.js`.
 
-```js
-const parse = require('csv-parse');
-const fs = require('fs');
- 
-const processFile = async () => {
-  records = []
-  const parser = fs
-  .createReadStream(`./input.csv`)
-  .pipe(parse({
-    // CSV options if any
-  }));
-  for await (const record of parser) {
-    // Work with each record
-    records.push(record)
-  }
-  return records
-}
-
-(async () => {
-  const records = await processFile()
-  console.info(records);
-})()
-```
+`embed:csv-parse/samples/recipe.async.iterator.js`
 
 Async iteration is also supported in CoffeeScript. It is expressed with the [`for...from`](https://coffeescript.org/#generators) syntax available since version 1.12.0. The [async example in coffeescript](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/recipe.async.iterator.coffee) is:
 
-```coffee
-parse = require('csv-parse')
-fs = require('fs')
- 
-processFile = () ->
-  records = []
-  parser = fs
-  .createReadStream "#{__dirname}/fs_read.csv"
-  .pipe parse(
-    # CSV options if any
-  )
-  for await record from parser
-    # Work with each record
-    records.push(record)
-  records
-
-(() ->
-  records = await processFile()
-  console.info records
-)()
-```
+`embed:csv-parse/samples/recipe.async.iterator.coffee`

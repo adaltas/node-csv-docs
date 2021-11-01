@@ -27,35 +27,9 @@ The signature is `const stream = transform(records, [options], handler, [options
 
 In the [stream example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.stream.js), records in the form of an array are sent through the `write` function and the transformed records are obtained within the "readable" event by calling the `read` function.
 
-This example is available with the command `node samples/api.stream.js`.
+`embed:stream-transform/samples/api.stream.js`
 
-```js
-const transform = require('stream-transform')
-const assert = require('assert')
-
-const output = []
-const transformer = transform(function(data){
-  data.push(data.shift())
-  return data
-})
-transformer.on('readable', function(){
-  while(row = transformer.read()){
-    output.push(row)
-  }
-})
-transformer.on('error', function(err){
-  console.error(err.message)
-})
-transformer.on('finish', function(){
-  assert.deepEqual(output, [
-    [ '2', '3', '4', '1' ],
-    [ 'b', 'c', 'd', 'a' ]
-  ])
-})
-transformer.write(['1','2','3','4'])
-transformer.write(['a','b','c','d'])
-transformer.end()
-```
+_This example is available with the command `node samples/api.stream.js`._
 
 ### Callback API
 
@@ -65,25 +39,9 @@ The signature is `const stream = transform(records, [options], handler, [callbac
 
 In the [callback example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.callback.js), the user function shift the cells of every records.
 
-This example is available with the command `node samples/api.callback.js`.
+`embed:stream-transform/samples/api.callback.js`
 
-```js
-const transform = require('stream-transform')
-const assert = require('assert')
-
-transform([
-  ['1','2','3','4'],
-  ['a','b','c','d']
-], function(record){
-  record.push(record.shift())
-  return record
-}, function(err, output){
-  assert.deepEqual(output, [
-    [ '2', '3', '4', '1' ],
-    [ 'b', 'c', 'd', 'a' ]
-  ])
-})
-```
+_This example is available with the command `node samples/api.callback.js`._
 
 ### Sync API
 
@@ -93,20 +51,4 @@ The signature is `const records = transform(records, [options], handler)`.
 
 The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.sync.js) illustrates how convenient it is to use this API.
 
-```js
-const transform = require('stream-transform/lib/sync')
-const assert = require('assert')
-
-const records = transform([
-  [ 'a', 'b', 'c', 'd' ],
-  [ '1', '2', '3', '4' ]
-], function(record){
-  record.push(record.shift())
-  return record
-})
-
-assert.deepEqual(records, [
-  [ 'b', 'c', 'd', 'a' ],
-  [ '2', '3', '4', '1' ]
-])
-```
+`embed:stream-transform/samples/api.sync.js`

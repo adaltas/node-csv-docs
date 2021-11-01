@@ -22,20 +22,4 @@ Escaping is disabled inside a quoted field. The escape sequence will be preserve
 
 The [comment example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.comment.js) insert two comments, one at the begining of the file and another one after a record.
 
-```js
-const parse = require('csv-parse/lib/sync')
-const assert = require('assert')
-
-const data = `
-# At the beginning of a record
-"hello"
-"world"# At the end of a record
-`.trim()
-const records = parse(data, {
-  comment: "#"
-})
-assert.deepStrictEqual(records, [
-  [ "hello" ],
-  [ "world" ]
-])
-```
+`embed:csv-parse/samples/option.comment.js`
