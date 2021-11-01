@@ -6,7 +6,7 @@ sort: 7
 
 # Stream Transform examples
 
-This package proposes different API flavours. Every example is available on [GitHub](https://github.com/adaltas/node-stream-transform/tree/master/samples).
+This package proposes different API flavors. Every example is available on [GitHub](https://github.com/adaltas/node-stream-transform/tree/master/samples).
 
 For additional usages and examples, you may refer to:
 

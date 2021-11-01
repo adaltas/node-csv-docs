@@ -9,7 +9,7 @@ sort: 2
 
 ## Introduction
 
-The "stream-transform" package proposes different API flavours available through different modules. Under the hood, they are all based on the same implementation.
+The "stream-transform" package proposes different API flavors available through different modules. Under the hood, they are all based on the same implementation.
 
 The stream and callback API are exported by the main module, using `require('stream-transform')` or `require('csv').transform`. The sync package is available using `require('stream-transform/lib/sync')` or `require('csv/lib/sync').transform`.
 

@@ -8,7 +8,7 @@ sort: 4
 
 ## Introduction
 
-This package proposes different API flavours. Every example is available on [GitHub](https://github.com/adaltas/node-csv/tree/master/samples).
+This package proposes different API flavors. Every example is available on [GitHub](https://github.com/adaltas/node-csv/tree/master/samples).
 
 ## Using the stream API
 
