@@ -47,6 +47,7 @@
     "deploy": "gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
+    "git": "git submodule update --remote csv",
     "serve": "gatsby build && gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
