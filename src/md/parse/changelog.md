@@ -2,7 +2,7 @@
 title: Changelog
 description: Complete changelog of the Node.js csv-parse package
 keywords: ['csv', 'parse', 'parser', 'changelog', 'history', 'feature', 'changes', 'version']
-sort: 7
+sort: 8
 ---
 
 # Changelog

@@ -39,6 +39,9 @@ const theme = {
     'main h1': {
       marginTop: '2rem',
     },
+    'main a': {
+      fontWeight: 'bold',
+    },
     'main :not(pre) > code[class*="language-"]': {
       padding: '.1em .2em .1em .2em',
       backgroundColor: '#5D6F6F',

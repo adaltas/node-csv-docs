@@ -2,7 +2,7 @@
 title: Options
 description: Options relative to the csv-stringify package
 keywords: ['csv', 'stringify', 'options']
-sort: 3
+sort: 4
 ---
 
 # CSV Stringify options

@@ -2,7 +2,7 @@
 title: Errors
 description: Commons errors encountered while using the CSV parser
 keywords: ['csv', 'parse', 'error', 'mistake']
-sort: 6
+sort: 7
 ---
 
 # Errors

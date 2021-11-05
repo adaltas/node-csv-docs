@@ -1,7 +1,7 @@
 ---
 title: Community
 keywords: ['intro','page']
-sort: 7
+sort: 8
 ---
 
 # Community and contribution Guide

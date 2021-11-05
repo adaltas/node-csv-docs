@@ -2,7 +2,7 @@
 title: State
 description: Stream Transform - internal state properties
 keywords: ['stream', 'transform', 'state', 'running', 'started', 'finished']
-sort: 5
+sort: 6
 ---
 
 # Stream Transform state properties

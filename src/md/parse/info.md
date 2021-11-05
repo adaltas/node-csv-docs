@@ -2,7 +2,7 @@
 title: Info properties
 description: CSV Parse - info properties
 keywords: ['csv', 'parse', 'count', 'counter', 'information', 'lines', 'records']
-sort: 5
+sort: 6
 redirects:
  - /parse/state/
 ---

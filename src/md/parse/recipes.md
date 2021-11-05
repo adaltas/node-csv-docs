@@ -2,7 +2,7 @@
 title: Recipes
 description: Learn how to use the parser with multiple examples.
 keywords: ['csv', 'parse', 'parser', 'recipes', 'example', 'tutorial']
-sort: 4
+sort: 5
 ---
 
 # Recipes

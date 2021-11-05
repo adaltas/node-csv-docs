@@ -2,7 +2,7 @@
 title: Options
 description: Options relative to the csv-parse package
 keywords: ['csv', 'parse', 'options', 'delimiter', 'columns', 'comment', 'escape']
-sort: 3
+sort: 4
 ---
 
 # CSV Parse options

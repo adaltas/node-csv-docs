@@ -2,7 +2,7 @@
 title: Changelog
 description: Complete changelog of the Node.js csv-generate package
 keywords: ['csv', 'generate', 'changelog', 'history', 'feature', 'changes', 'version']
-sort: 4
+sort: 5
 ---
 
 # Changelog

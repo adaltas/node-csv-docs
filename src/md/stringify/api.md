@@ -2,7 +2,7 @@
 title: API
 description: CSV Stringify - stream, callback and sync APIs
 keywords: ['csv', 'stringify', 'api', 'callback', 'stream', 'sync', 'promise']
-sort: 2
+sort: 3
 ---
 
 # CSV Stringify API

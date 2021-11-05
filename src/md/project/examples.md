@@ -1,7 +1,7 @@
 ---
 title: Examples
 keywords: ['csv', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
-sort: 4
+sort: 5
 ---
 
 # CSV Examples

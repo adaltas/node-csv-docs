@@ -2,7 +2,7 @@
 title: API
 description: CSV Generate - stream, callback and sync APIs
 keywords: ['csv', 'generate', 'api', 'callback', 'stream', 'sync', 'promise']
-sort: 2
+sort: 3
 ---
 
 # CSV Generate API

@@ -2,7 +2,7 @@
 title: Changelog
 description: Complete changelog of the Node.js csv-stringify package
 keywords: ['csv', 'generate', 'changelog', 'history', 'feature', 'changes', 'version']
-sort: 5
+sort: 6
 ---
 
 # Changelog
