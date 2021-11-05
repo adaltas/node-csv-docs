@@ -6,11 +6,11 @@ keywords: ['csv', 'parse', 'api', 'stream', 'async', 'pipe', 'native', 'write', 
 sort: 2.1
 ---
 
-# Stream API
+# Node.js Stream API
 
 The main module exported by this package implements the native Node.js [transform stream](http://nodejs.org/api/stream.html#stream_class_stream_transform). Transform streams implement both the Readable and Writable interfaces.
 
-This is the recommended approach if you need a maximum of power. It ensures scalability by treating your data as a stream from the source to the destination.
+This is the recommended approach if you need a maximum of power. The stream API might not be the most pleasant API to use but it ensures scalability by treating your data as a stream from the source to the destination.
 
 The signature is `const stream = parse([options])`.
 

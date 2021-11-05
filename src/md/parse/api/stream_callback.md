@@ -1,12 +1,12 @@
 ---
-title: Mixing the stream and callback APIs
+title: Combining the stream and callback APIs
 navtitle: Stream + callback
 description: Replace the writable stream with a string or buffer and the readable stream with a callback function.
 keywords: ['csv', 'parse', 'api', 'stream', 'callback', 'function', 'mixin']
 sort: 2.3
 ---
 
-# Mixing the stream and callback APIs
+# Combining the stream and callback APIs
 
 The main module exported by the package leverages the Node.js [stream transform API](https://nodejs.org/api/stream.html). However, the input doesn't have to be a readable stream. Instead, it could be the CSV string or Buffer. Also, the output doesn't have to be a writable stream, it could be user user callback function.
 

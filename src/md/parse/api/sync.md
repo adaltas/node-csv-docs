@@ -1,7 +1,7 @@
 ---
 title: Sync API
 navtitle: Sync
-description: The Async iterator API is both scalable and elegant. It takes advantage of the native Readable Stream API upon which the parser is build to iterate over the parsed records.
+description: The sync API expose a function which expect as input a full dataset as text and which returns the full result set as an array or an object.
 keywords: ['csv', 'parse', 'api', 'sync', 'memory', 'function']
 sort: 2.3
 ---
@@ -10,7 +10,9 @@ sort: 2.3
 
 The sync API expose a function which expect as input a full dataset as text and which returns the full result set as an array or an object.
 
-To summarise, it is a regular direct synchronous call to a function: you pass CSV content and it returns records. Because of its simplicity, this is the recommended approach if you don't need scalability and if your dataset fit in memory. It is much easier to use at the expense of not being scalable.
+To summarise, it is a regular direct synchronous call to a function: you pass CSV content and it returns records. Because of its simplicity, this is the recommended approach if you don't need scalability and if your dataset fit in memory.
+
+Choose the sync API for simplicity, readability and convenience at the expense of not being scalable.
 
 Import the `csv-parse/lib/sync` module to use it. The exported function signature is `const records = parse(data, [options])`.
 
