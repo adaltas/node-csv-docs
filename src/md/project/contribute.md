@@ -24,7 +24,7 @@ The test suite is run online with [Travis][https://travis-ci.org/github/adaltas/
 
 ## Sponsor
 
-The project is developed and maintained by [Adaltas](https://www.adaltas.com), a consulting company based in France which specializes in Big Data, Data Engineer, Data Science and open source development.
+The project is developed and maintained by [Adaltas](https://www.adaltas.com), a consulting company based in France which specializes in [Big Data](https://www.adaltas.com/en/skills/big-data/), [Data Engineering](https://www.adaltas.com/en/skills/data-engineering/), [Data Science](https://www.adaltas.com/en/skills/data-science/) and open source development.
 
 ## Contributors
 
