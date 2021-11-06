@@ -9,12 +9,13 @@ keywords: ['csv', 'parse', 'options', 'relax_column_count', 'columns']
 
 The `relax_column_count` option tolerates data sets with inconsistent number of fields between records. By default, an error is thrown if two records have a different number of fields.
 
-Note, this option is completed by the `relax_column_count_less` and `relax_column_count_more` options which behave similarly.
+Note, this option is completed by the [`relax_column_count_less` option](/parse/options/relax_column_count_less/) and the [`relax_column_count_more` option](/parse/options/relax_column_count_more/) which behave similarly.
 
 * Type: `boolean`
 * Optional
 * Default: `false`
 * Since: 1.0.6
+* Related: [`relax_column_count_less`](/parse/options/relax_column_count_less/), `quote`, [`relax_column_count_more`](/parse/options/relax_column_count_more/) &mdash; see [Available Options](/parse/options/#available-options)
 
 The option can be used conjointly with the `columns` option. The expected number of fields is determined by the length of the `columns` option, wether it is defined by the user or dynamically discovered.
 
