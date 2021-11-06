@@ -13,7 +13,7 @@ The `skip_records_with_empty_values` option don't generate records for lines con
 * Optional
 * Default: `false`
 * Since: 1.1.8
-* Related: [`skip_empty_lines`](/parse/options/skip_empty_lines/), [`skip_lines_with_error`](/parse/options/skip_lines_with_error/) &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`skip_empty_lines`](/parse/options/skip_empty_lines/), [`skip_records_with_error`](/parse/options/skip_records_with_error/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Usage
 

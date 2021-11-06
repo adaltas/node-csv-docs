@@ -1,13 +1,13 @@
 ---
-title: Option skip_lines_with_error
-navtitle: skip_lines_with_error
-description: Option "skip_lines_with_error" skip to the next line if a parsing error occurred.
-keywords: ['csv', 'parse', 'options', 'skip_lines_with_error', 'columns']
+title: Option skip_records_with_error
+navtitle: skip_records_with_error
+description: Option "skip_records_with_error" skip to the next line if a parsing error occurred.
+keywords: ['csv', 'parse', 'options', 'skip_records_with_error', 'columns']
 ---
 
-# Option `skip_lines_with_error`
+# Option `skip_records_with_error`
 
-The `skip_lines_with_error` option tolerates parsing errors. It skips the records containing an error inside and directly go process the next record.
+The `skip_records_with_error` option tolerates parsing errors. It skips the records containing an error inside and directly go process the next record.
 
 * Type: `boolean`
 * Optional
@@ -21,6 +21,6 @@ A `skip` event is emitted when an error is found and when the record is skipped.
 
 ## Listening to the `skip` event
 
-The [`option.skip_lines_with_error.js` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_lines_with_error.js) catch an invalid closing quote error and continue parsing the next records.
+The [`option.skip_records_with_error.js` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_records_with_error.js) catch an invalid closing quote error and continue parsing the next records.
 
-`embed:csv-parse/samples/option.skip_lines_with_error.js`
+`embed:csv-parse/samples/option.skip_records_with_error.js`

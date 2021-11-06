@@ -39,7 +39,7 @@ In the [filter example](https://github.com/adaltas/node-csv/blob/master/packages
 
 ## Handling inconsistent number of fields
 
-It is possible to handle records with inconsistent number of fields. When used conjointly with the [`relax_column_count`](/parse/options/relax_column_count/) option, the `on_record` option is called unless the [`skip_lines_with_error`](/parse/options/skip_lines_with_error/) is activated.
+It is possible to handle records with inconsistent number of fields. When used conjointly with the [`relax_column_count`](/parse/options/relax_column_count/) option, the `on_record` option is called unless the [`skip_records_with_error`](/parse/options/skip_records_with_error/) is activated.
 
 The [`relax_column_count`](/parse/options/relax_column_count/) documentation provide more information as well as examples.
 
@@ -47,4 +47,4 @@ The [`relax_column_count`](/parse/options/relax_column_count/) documentation pro
 
 Errors throw inside the `on_record` function are caught and handled as any other errors.
 
-They won't be honoured by the [`skip_lines_with_error` option](/parse/options/skip_lines_with_error/). The "error" in `skip_lines_with_error` must be interpreted as a parsing error and not as a user thrown error.
+They won't be honoured by the [`skip_records_with_error` option](/parse/options/skip_records_with_error/). The "error" in `skip_records_with_error` must be interpreted as a parsing error and not as a user thrown error.
