@@ -3,7 +3,7 @@ title: Callback API
 navtitle: Callback
 description: The callback API buffers all the emitted data from the stream API into a single object which is passed to a user provided function.
 keywords: ['csv', 'parse', 'api', 'callback', 'function', 'udf', 'stream']
-sort: 2.2
+sort: 3.2
 ---
 
 # Callback API

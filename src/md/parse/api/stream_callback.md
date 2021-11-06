@@ -3,7 +3,7 @@ title: Combining the stream and callback APIs
 navtitle: Stream + callback
 description: Replace the writable stream with a string or buffer and the readable stream with a callback function.
 keywords: ['csv', 'parse', 'api', 'stream', 'callback', 'function', 'mixin']
-sort: 2.3
+sort: 3.3
 ---
 
 # Combining the stream and callback APIs

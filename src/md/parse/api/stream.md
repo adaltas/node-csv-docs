@@ -3,7 +3,7 @@ title: Stream API
 navtitle: Stream
 description: The stream API might not be the most pleasant API to use but is scalable. It is the one upon which all the other implementation are based.
 keywords: ['csv', 'parse', 'api', 'stream', 'async', 'pipe', 'native', 'write', 'events']
-sort: 2.1
+sort: 3.1
 ---
 
 # Node.js Stream API
