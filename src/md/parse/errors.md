@@ -89,6 +89,10 @@ Finally, each type of error identified by its code property may include addition
 * code: `CSV_INVALID_OPTION_DELIMITER`   
   message: `Invalid option delimiter: delimiter must be a non empty string or buffer, got {value}`    
   Thrown when the delimiter option is incorrect.
+* code: `CSV_INVALID_OPTION_RECORD_DELIMITER`   
+  message: ```Invalid option `record_delimiter`: value must be a non empty string or buffer or array of string|buffer, got {value}```   
+  since: 5.0.0   
+  Thrown when the record_delimiter option is incorrect.
 
 ## Common issues
 

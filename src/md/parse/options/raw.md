@@ -2,7 +2,7 @@
 title: Option raw
 navtitle: raw
 description: Option "raw" generates two properties info and record to provide additional context information.
-keywords: ['csv', 'parse', 'options', 'bom', 'utf', 'unicode', 'utf8']
+keywords: ['csv', 'parse', 'options', 'raw', 'debug', 'buffer']
 ---
 
 # Option `raw`

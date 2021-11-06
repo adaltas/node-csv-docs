@@ -58,19 +58,19 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`max_record_size`](/parse/options/max_record_size/) (integer)   
   _Since version 4.0.0_   
   Maximum number of characters to be contained in the field and line buffers before an exception is raised. It was previously named "max_limit_on_data_read".
-* `objname` (string|Buffer)   
+* [`objname`](/parse/options/objname/) (string|Buffer)   
   _Since early days_   
   Name of header-record title to name objects by; the string or Buffer value must not be empty and it must match a header value.
 * [`on_record`](/parse/options/on_record/) (function)   
   _Since 4.7.0_   
   Alter and filter records by executing a user defined function.
-* `quote` (char|Buffer|boolean)   
+* [`quote`](/parse/options/quote/) (char|Buffer|boolean)   
   _Since version 0.0.1_   
   Optional character surrounding a field as one character only; disabled if null, false or empty; defaults to double quote.
-* `raw` (boolean)   
+* [`raw`](/parse/options/raw/) (boolean)   
   _Since version 1.1.6_   
   Generate two properties `raw` and `record` where `raw` is the original CSV content and `record` is the parsed array or object; note, it can be used conjointly with the `info` option.
-* `record_delimiter` (chars|array)   
+* [`record_delimiter`](/parse/options/record_delimiter/) (chars|array)   
   _Since version 4.0.0_   
   One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters. It was previously named `rowDelimiter`.
 * `relax` (boolean)   

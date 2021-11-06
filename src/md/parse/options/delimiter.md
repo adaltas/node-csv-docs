@@ -13,23 +13,18 @@ Defines the character(s) used to delimitate the fields inside a record. A single
 * Optional
 * Default: `","` (a one character comma)
 * Since: 0.0.1
-* Related: `record_delimiter`, `quote`, [`escape`](/parse/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`record_delimiter`](/parse/options/record_delimiter/), [`quote`](/parse/options/quote/), [`escape`](/parse/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
 
-In the data, it is not possible to escape a delimiter. A field must be quoted to ensure the delimiter value it contains is not interpreted.
+It is not possible to escape a delimiter. A field must be quoted if it contains a delimiter which should not be interpreted as such.
 
-# Example of single-value delimiter
+## Single value delimiter
 
 In the [delimiter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.js), fields are separated by a two characters delimiter value.
 
 `embed:csv-parse/samples/option.delimiter.js`
 
-# Example of an array of delimiter values
+## Array of delimiter values
 
-An example of providing [multiple delimiter values](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.array.js) for parsing. Also shows:
-
-* the `columns` option, used for naming the fields of each record
-* how `trim` affects whitespace on values
-* quoting field values with double-quotes to escape a delimiter
-* use of different delimiters in the same record
+Delimiter can be made of [multiple values](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.array.js) when defined as an array:
 
 `embed:csv-parse/samples/option.delimiter.array.js`
