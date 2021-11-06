@@ -91,13 +91,13 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`skip_empty_lines`](/parse/options/skip_empty_lines/) (boolean)   
   _Since version 0.0.5_   
   Don't generate records for empty lines (line matching `/^$/`), defaults to `false`.
-* `skip_lines_with_empty_values` (boolean)   
+* [`skip_lines_with_empty_values`](/parse/options/skip_lines_with_empty_values/) (boolean)   
   _Since version 1.1.8_   
   Don't generate records for lines containing empty values (column matching `/\s*/`), empty Buffer or equals to `null` and `undefined` if their value was casted, defaults to `false`.
 * [`skip_lines_with_error`](/parse/options/skip_lines_with_error/) (boolean)   
   _Since version 2.1.0_   
   Skip a line with error found inside and directly go process the next line.
-* `to` (number)   
+* [`to`](/parse/options/to/) (number)   
   _Since version 1.2.0_   
   Stop handling records after the requested number of records.
 * [`to_line`](/parse/options/to_line/) (number)   
