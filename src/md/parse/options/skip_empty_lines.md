@@ -27,4 +27,4 @@ The line must be completely empty, without any characters including spaces and t
 
 `embed:csv-parse/samples/option.skip_empty_lines.trim.js`
 
-Another possibility includes using a combination of `skip_lines_with_empty_values` and `relax_column_count`.
+Another possibility includes using a combination of [`skip_records_with_empty_values`](csv-parse/samples/option.skip_records_with_empty_values.js) and [`relax_column_count`](csv-parse/samples/option.relax_column_count.js).
