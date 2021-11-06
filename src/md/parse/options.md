@@ -73,8 +73,8 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`record_delimiter`](/parse/options/record_delimiter/) (chars|array)   
   _Since version 4.0.0_   
   One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters. It was previously named `rowDelimiter`.
-* `relax` (boolean)   
-  _Since early days_   
+* [`relax`](/parse/options/relax/) (boolean)   
+  _Since version 0.0.1_   
   Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
 * [`relax_column_count`](/parse/options/relax_column_count/) (boolean)   
   _Since version 1.0.6_   
@@ -93,7 +93,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Don't generate records for empty lines (line matching `/^$/`), defaults to `false`.
 * `skip_lines_with_empty_values` (boolean)   
   _Since version 1.1.8_   
-  Don't generate records for lines containing empty column values (column matching `/\s*/`), empty Buffer or equals to `null` and `undefined` if their value was casted, defaults to `false`.
+  Don't generate records for lines containing empty values (column matching `/\s*/`), empty Buffer or equals to `null` and `undefined` if their value was casted, defaults to `false`.
 * [`skip_lines_with_error`](/parse/options/skip_lines_with_error/) (boolean)   
   _Since version 2.1.0_   
   Skip a line with error found inside and directly go process the next line.

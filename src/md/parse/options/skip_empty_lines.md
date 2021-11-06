@@ -17,7 +17,7 @@ The `skip_empty_lines` skips any line which is empty.
 
 ## Example
 
-The [`option.skip_empty_line.js` option example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_empty_lines.js) activates the option by setting its value to `true`:
+The [`option.skip_empty_line.js` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_empty_lines.js) activates the option by setting its value to `true`:
 
 `embed:csv-parse/samples/option.skip_empty_lines.js`
 
