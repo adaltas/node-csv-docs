@@ -73,9 +73,6 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`record_delimiter`](/parse/options/record_delimiter/) (chars|array)   
   _Since version 4.0.0_   
   One or multiple characters used to delimit records; defaults to auto discovery if not provided. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters. It was previously named `rowDelimiter`.
-* [`relax`](/parse/options/relax/) (boolean)   
-  _Since version 0.0.1_   
-  Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
 * [`relax_column_count`](/parse/options/relax_column_count/) (boolean)   
   _Since version 1.0.6_   
   Discard inconsistent columns count; disabled if null, false or empty; default to `false`.
@@ -85,6 +82,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`relax_column_count_more`](/parse/options/relax_column_count/) (boolean)   
   _Since version 4.8.0_   
   Similar to `relax_column_count` but only apply when the record contains more fields than expected.
+* [`relax_quotes`](/parse/options/relax_quotes/) (boolean)   
+  _Since version 0.0.1_   
+  Preserve quotes inside unquoted field (be warned, it doesn't make coffee).
 * [`rtrim`](/parse/options/rtrim/) (boolean)   
   _Since early days_   
   If `true`, ignore whitespace immediately preceding the delimiter (i.e. right-trim all fields). Defaults to `false`.  Does not remove whitespace in a quoted field.

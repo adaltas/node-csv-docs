@@ -40,7 +40,7 @@ Finally, each type of error identified by its code property may include addition
 ## Runtime errors
 
 * code: `CSV_INVALID_CLOSING_QUOTE`   
-  Thrown when a quote is found at an unexpected location. The parser can be made tolerant to this error by activating the `relax` option.
+  Thrown when a quote is found at an unexpected location. The parser can be made tolerant to this error by activating the `relax_quotes` option.
 * code: `CSV_INCONSISTENT_RECORD_LENGTH`   
   Thrown when a record don't match the same amount of fields as the previous records. The parser can be made tolerant to the number of fields with the [`relax_column_count`](/parse/options/relax_column_count/) option. Additional properties include:
   * `record`   

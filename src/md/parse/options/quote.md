@@ -15,7 +15,7 @@ The presence of quotes around the field is optional and is automatically detecte
 * Optional
 * Default: `"` (double quote)
 * Since: 0.0.1
-* Related: [`delimiter`](/parse/options/delimiter/), [`escape`](/parse/options/escape/), [`record_delimiter`](/parse/options/record_delimiter/) &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`delimiter`](/parse/options/delimiter/), [`escape`](/parse/options/escape/), [`record_delimiter`](/parse/options/record_delimiter/), [`relax_quotes`](/parse/options/relax_quotes/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Default behavior
 
