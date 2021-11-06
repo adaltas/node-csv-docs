@@ -15,11 +15,11 @@ Note, it can be used conjointly with the raw option.
 * Optional
 * Default: `false`
 * Since: 4.0.0
-* Related: [`cast`](/parse/options/cast/), [`on_record`](/parse/options/on_record/), `raw` &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`cast`](/parse/options/cast/), [`on_record`](/parse/options/on_record/), [`raw`](/parse/options/raw/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Example
 
-When the [`info` property is activated](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.info.js) with the value `true`, field is made of the two properties `info` and `record`:
+When the [`info` option is activated](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.info.js) with the value `true`, field is made of the two properties `info` and `record`:
 
 `embed:csv-parse/samples/option.info.js`
 
