@@ -16,6 +16,6 @@ Choose the sync API for simplicity, readability and convenience at the expense o
 
 Import the `csv-parse/lib/sync` module to use it. The exported function signature is `const records = parse(data, [options])`.
 
-The [synchronous example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/module.sync.js) illustrates how to use the synchronous module. This example is available with the command `node samples/module.sync.js`.
+The [synchronous example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/module.sync.js) illustrates how to use the synchronous module. This example is available with the command `node samples/api.sync.js`.
 
-`embed:csv-parse/samples/module.sync.js`
+`embed:csv-parse/samples/api.sync.js`
