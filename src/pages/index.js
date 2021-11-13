@@ -249,6 +249,27 @@ const Index = () => (
       <article>
         <h2>
           <a
+            href="https://www.adaltas.com/en/"
+            alt="CSV package version 6.0.0 with ECMAScript modules support"
+          >
+            CSV package version 6 with ECMAScript modules support
+          </a>
+        </h2>
+        <p css={styles.blog_info}>
+          {"By "}
+          <a href='https://www.adaltas.com/'>wdavidw</a>
+          {" | November 13th, 2021"}
+        </p>
+        <p>
+          Version 6 of the <a href="https://csv.js.org/">csv package</a> for
+          Node.js is released along its sub projects. <a
+          href="https://www.adaltas.com/en/">Read about the new features and the
+          breaking changes</a> introduced by this new version.
+        </p>
+      </article>
+      <article>
+        <h2>
+          <a
             href="https://www.adaltas.com/en/2021/05/21/js-monorepos-merging-git-repositories/"
             alt="Merging Git repositories and preserve commit history"
           >
