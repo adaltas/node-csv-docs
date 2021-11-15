@@ -249,7 +249,7 @@ const Index = () => (
       <article>
         <h2>
           <a
-            href="https://www.adaltas.com/en/"
+            href="https://www.adaltas.com/en/2021/11/15/csv-version-6/"
             alt="CSV package version 6.0.0 with ECMAScript modules support"
           >
             CSV package version 6 with ECMAScript modules support
@@ -257,14 +257,14 @@ const Index = () => (
         </h2>
         <p css={styles.blog_info}>
           {"By "}
-          <a href='https://www.adaltas.com/'>wdavidw</a>
+          <a href='https://www.adaltas.com/en/author/david/'>wdavidw</a>
           {" | November 13th, 2021"}
         </p>
         <p>
-          Version 6 of the <a href="https://csv.js.org/">csv package</a> for
+          Version 6 of the <a href="https://csv.js.org/"  alt="CSV project">csv package</a> for
           Node.js is released along its sub projects. <a
-          href="https://www.adaltas.com/en/">Read about the new features and the
-          breaking changes</a> introduced by this new version.
+          href="https://www.adaltas.com/en/2021/11/15/csv-version-6/" alt="Node.js CSV 6 announcement">Read about the new features and the
+          breaking changes</a> (<a href="https://www.adaltas.com/fr/2021/11/15/csv-version-6/" alt="French announcement">fr</a>) introduced by this new version.
         </p>
       </article>
       <article>
