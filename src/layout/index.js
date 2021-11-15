@@ -49,20 +49,23 @@ class Layout extends Component {
     })
     const project = {}
     project.slug = page.slug ? /\/(\w+)/.exec(page.slug)[1] : 'project'
+    const ghurl = 'https://github.com/adaltas/node-csv'
     switch (project.slug) {
       case 'project':
-        project.name = 'node-csv'
+        project.name = 'node-csv';
+        project.github = `${ghurl}/`
         break
       case 'transform':
-        project.name = 'node-stream-transform'
+        project.name = 'node-stream-transform';
+        project.github = `${ghurl}/tree/master/packages/stream-transform/`
         break
       default:
-        project.name = 'node-csv-' + project.slug
+        project.name = 'node-csv-' + project.slug;
+        project.github = `${ghurl}/tree/master/packages/csv-${project.slug}/`
     }
     project.label =
       project.slug.charAt(0).toUpperCase() + project.slug.substr(1)
-    project.issue = `https://github.com/adaltas/${project.name}/issues`
-    project.github = `https://github.com/adaltas/${project.name}`
+    project.issue = `https://github.com/adaltas/node-csv/issues`
     return (
       <>
         <Helmet
