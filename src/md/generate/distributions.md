@@ -9,7 +9,7 @@ sort: 2
 
 The library is packaged into multiple distributions depending on your Node.js version, you browser environnement and wether you are using ECMAScript modules (ESM), CommonJS or vanilla JavaScript with support for older browser.
 
-* [Node.js ECMAScript modules (ESM)](/generate/dist/nodejs_esm/)
-* [Node.js CommonJS (CJS)](/generate/dist/nodejs_cjs/)
-* [ECMAScript modules (ESM) for newer browsers](/generate/dist/browser_esm/)
-* [Vanilla JavaScript (IIFE) for older browsers](/generate/dist/browser_iife/)
+* [Node.js ECMAScript modules (ESM)](/generate/distributions/nodejs_esm/)
+* [Node.js CommonJS (CJS)](/generate/distributions/nodejs_cjs/)
+* [ECMAScript modules (ESM) for newer browsers](/generate/distributions/browser_esm/)
+* [Vanilla JavaScript (IIFE) for older browsers](/generate/distributions/browser_iife/)
