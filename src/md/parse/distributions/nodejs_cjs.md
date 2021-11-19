@@ -13,7 +13,7 @@ The CommonJS distribution is appropriate to Node.js packages which have not yet 
 * Stream and callback API: `const {parse} = require('csv-parse');`
 * Sync API: `const {parse} = require('csv-parse/sync');`
 
-Addtionnal information are available in the [`csv` CommonJS](/project/distributions/nodejs_cjs/) documentation.
+Addtionnal information are available in the [project CommonJS](/project/distributions/nodejs_cjs/) documentation.
 
 ## Supported Node.js versions
 
