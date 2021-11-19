@@ -13,12 +13,7 @@ The CommonJS distribution is appropriate to Node.js packages which have not yet 
 * Stream and callback API: `const {transform} = require('stream-transform');`
 * Sync API: `const {transform} = require('stream-transform/sync');`
 
-## Using the `csv` package
-
-When using the `csv` package, use the following import directives:
-
-* Stream and callback API: `const {transform} = require('csv');`
-* Sync API: `const {transform} = require('csv/sync');`
+Addtionnal information are available in the [`csv` CommonJS](/project/distributions/nodejs_cjs/) documentation.
 
 ## Supported Node.js versions
 

@@ -13,12 +13,9 @@ The `csv-parse` package is written as [ECMAScript modules](https://nodejs.org/ap
 * Stream and callback API: `import {parse} from 'csv-parse';`
 * Sync API: `import {parse} from 'csv-parse/sync';`
 
-## Using the `csv` package
+Addtionnal information are available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
 
-When using the `csv` package, use the following import directives:
-
-* Stream and callback API: `import {parse} from 'csv';`
-* Sync API: `import {parse} from 'csv/sync';`
+## Implementation
 
 Internally, the `export` property inside the `package.json` file exposes the modules in the [`./lib` folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/lib).
 

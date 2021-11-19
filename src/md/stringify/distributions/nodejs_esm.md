@@ -13,12 +13,9 @@ The `csv-stringify` package is written as [ECMAScript modules](https://nodejs.or
 * Stream and callback API: `import {stringify} from 'csv-stringify';`
 * Sync API: `import {stringify} from 'csv-stringify/sync';`
 
-## Using the `csv` package
+Addtionnal information are available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
 
-When using the `csv` package, use the following import directives:
-
-* Stream and callback API: `import {stringify} from 'csv';`
-* Sync API: `import {stringify} from 'csv/sync';`
+## Implementation
 
 Internally, the `export` property inside the `package.json` file exposes the modules in the [`./lib` folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify/lib).
 

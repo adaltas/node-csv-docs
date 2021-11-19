@@ -13,12 +13,9 @@ The `csv-generate` package is written as [ECMAScript modules](https://nodejs.org
 * Stream and callback API: `import {generate} from 'csv-generate';`
 * Sync API: `import {generate} from 'csv-generate/sync';`
 
-## Using the `csv` package
+Addtionnal information are available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
 
-When using the `csv` package, use the following import directives:
-
-* Stream and callback API: `import {generate} from 'csv';`
-* Sync API: `import {generate} from 'csv/sync';`
+## Implementation
 
 Internally, the `export` property inside the `package.json` file exposes the modules in the [`./lib` folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-generate/lib).
 
