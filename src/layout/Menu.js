@@ -114,7 +114,9 @@ const List1 = ({
   pages
 }) => (
   <ul>
-    {pages.map( page => (
+    {pages.sort( (p1, p2) => (
+      String(p1.sort || p1.navtitle) > String(p2.sort || p2.navtitle) ? 1 : -1
+    )).map( page => (
       <li key={'li'+page.slug} css={styles_nav.li}>
         <Link
           to={page.slug}
