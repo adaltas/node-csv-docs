@@ -62,10 +62,10 @@ It contains all the dataset and record information with additionnal properties:
 
 The `info` object is directly available from the parser instance. Don't modify the object, some properties are used internally by the parser.
 
-`embed:csv-parse/samples/api.info.internal.js`
+`embed:packages/csv-parse/samples/api.info.internal.js`
 
 ## Accessing `info` in the callback
 
 The `info` object in provided in the third argument of the callback, after the `error` and `data` arguments.
 
-`embed:csv-parse/samples/api.info.callback.js`
+`embed:packages/csv-parse/samples/api.info.callback.js`

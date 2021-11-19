@@ -21,4 +21,4 @@ Note, several options are available to control when to quote fields under certai
 
 In the [quoted_empty example](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify/samples/option.quoted.js), every field evaluated as empty is quoted. It includes an empty string and values of `false`, `null` and `undefined`.
 
-`embed:csv-stringify/samples/option.quoted.js`
+`embed:packages/csv-stringify/samples/option.quoted.js`

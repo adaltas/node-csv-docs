@@ -14,8 +14,8 @@ Uses it for convenience in case you are already interacting with a readable stre
 
 The signature of the [output stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/mixed.output_stream.js) is `const stream = parse(input, options)`. It takes an input string and an options object as arguments and return a readable stream.
 
-`embed:csv-parse/samples/mixed.output_stream.js`
+`embed:packages/csv-parse/samples/mixed.output_stream.js`
 
 Inversely, the signature of the [input stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/mixed.input_stream.js) is `const stream = parse(options, callback)`. It takes an options object and a callback function as arguments and return a writable stream.
 
-`embed:csv-parse/samples/mixed.input_stream.js`
+`embed:packages/csv-parse/samples/mixed.input_stream.js`

@@ -25,7 +25,7 @@ The UTF-8 BOM is a sequence of Bytes at the start of a text-stream (`EF BB BF` o
 
 It is a boolean value which default to `false`. The [bom example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.bom.js) simply activate the option:
 
-`embed:csv-parse/samples/option.bom.js`
+`embed:packages/csv-parse/samples/option.bom.js`
 
 ## Hidden BOM in output
 
@@ -35,4 +35,4 @@ Handling BOM header without this option may create unexpected behaviors. The BOM
 
 Consider the [following example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.bom.hidden.js), it illustrate how the property name is not the one printed in the console:
 
-`embed:csv-parse/samples/option.bom.hidden.js`
+`embed:packages/csv-parse/samples/option.bom.hidden.js`

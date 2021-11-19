@@ -23,4 +23,4 @@ Its behavior is similar to the one of the `info` option. Both options can be use
 
 When the [`raw` option is activated]((https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.raw.js)) with the value `true`, the resulting record are made up of `raw` and `record` properties:
 
-`embed:csv-parse/samples/option.raw.js`
+`embed:packages/csv-parse/samples/option.raw.js`

@@ -18,7 +18,7 @@ The signature is `const stream = parse([options])`.
 
 In the [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/api.stream.js), CSV data is sent through the `write` function and the resulting data is obtained within the `readable` event by calling the `read` function.
 
-`embed:csv-parse/samples/api.stream.js`
+`embed:packages/csv-parse/samples/api.stream.js`
 
 ## Using the pipe function
 

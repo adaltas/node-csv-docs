@@ -19,4 +19,4 @@ The `skip_records_with_empty_values` option don't generate records for lines con
 
 In [this example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.skip_records_with_empty_values.js), the second line contains empty fields composed of zero characters, spaces and tabs:
 
-`embed:csv-parse/samples/option.skip_records_with_empty_values.js`
+`embed:packages/csv-parse/samples/option.skip_records_with_empty_values.js`

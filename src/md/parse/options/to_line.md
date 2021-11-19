@@ -23,4 +23,4 @@ The line matching the value is parsed and the record is including the output. If
 
 This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.to_line.js) return the first two lines and skip all the following records.
 
-`embed:csv-parse/samples/option.to_line.js`
+`embed:packages/csv-parse/samples/option.to_line.js`

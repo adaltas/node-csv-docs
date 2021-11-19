@@ -32,7 +32,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-embed-snippet`,
             options: {
-              directory: `${__dirname}/csv/packages/`
+              directory: `${__dirname}/csv/`
             }
           },
           {
@@ -90,11 +90,11 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    {
-      resolve: 'gatsby-plugin-plausible',
-      options: {
-       domain: `csv.js.org`,
-     },
-    }
+    // {
+    //   resolve: 'gatsby-plugin-plausible',
+    //   options: {
+    //    domain: `csv.js.org`,
+    //  },
+    // }
   ],
 }

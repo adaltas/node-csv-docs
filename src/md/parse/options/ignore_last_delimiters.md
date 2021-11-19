@@ -32,4 +32,4 @@ and here:
 
 In this [example](/https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.ignore_last_delimiters.js), the CSV data is made of 2 fields, `format` and `description`. Fields are separated by commans, the default [delimiter](/parse/options/delimiter/). The last field, `description`, can contains any number of commas without breaking the record.
 
-`embed:csv-parse/samples/option.ignore_last_delimiters.js`
+`embed:packages/csv-parse/samples/option.ignore_last_delimiters.js`

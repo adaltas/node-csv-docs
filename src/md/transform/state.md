@@ -20,7 +20,7 @@ The transform instance export a few properties which are also available from the
 
 The [state instance example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/state.instance.js) illustrates how to accessed the state from a running instance.
 
-`embed:stream-transform/samples/state.instance.js`
+`embed:packages/stream-transform/samples/state.instance.js`
 
 ## Function contextualisation
 
@@ -28,4 +28,4 @@ The handler and event functions are bound with the context of the transformer. T
 
 The [state handler example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/state.handler.js) references the state properties from inside the user function and check their values.
 
-`embed:stream-transform/samples/state.handler.js`
+`embed:packages/stream-transform/samples/state.handler.js`

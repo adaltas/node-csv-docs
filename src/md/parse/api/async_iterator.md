@@ -12,4 +12,4 @@ The Async iterator API is both scalable and elegant. It takes advantage of the n
 
 The [async iterator example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/async.iterator.js) below generates a CSV stream which is then parsed and iterated over. For each record, we simulate a slow asynchronous operation. This example is available with the command `node samples/async.iterator.js`.
 
-`embed:csv-parse/samples/async.iterator.js`
+`embed:packages/csv-parse/samples/async.iterator.js`

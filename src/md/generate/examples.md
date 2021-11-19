@@ -17,4 +17,4 @@ source to a `stream.Writable` destination.
 
 The [pipe example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/pipe.js), generates a dataset of 2 rows with 2 columns. The first columns contains integer values and the second column contains boolean values. It prints the generated dataset to stdout. the function `generate` return a readable stream which is then piped to `process.stdout` which is a writable stream.
 
-`embed:csv-generate/samples/pipe.js`
+`embed:packages/csv-generate/samples/pipe.js`

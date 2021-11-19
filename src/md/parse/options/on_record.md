@@ -29,13 +29,13 @@ The option takes a function which is called with two arguments: the input record
 
 In the [alter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.on_record.alter.js), for every record, the second field is stripped out and the two other fields are re-ordered.
 
-`embed:csv-parse/samples/option.on_record.alter.js`
+`embed:packages/csv-parse/samples/option.on_record.alter.js`
 
 ## Filtering records
 
 In the [filter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.on_record.filter.js), the function returns `null` for the second record, filtering it from the result.
 
-`embed:csv-parse/samples/option.on_record.filter.js`
+`embed:packages/csv-parse/samples/option.on_record.filter.js`
 
 ## Handling inconsistent number of fields
 

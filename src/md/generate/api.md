@@ -19,7 +19,7 @@ The signature is `const stream = generate([options])`.
 
 The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.stream.js) illustrates the various events to listen.
 
-`embed:csv-generate/samples/api.stream.js`
+`embed:packages/csv-generate/samples/api.stream.js`
 
 ## Callback API
 
@@ -30,7 +30,7 @@ The signature is `const stream = generate([options], callback)`.
 
 The [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.callback.js) generate a dataset with 2 records.
 
-`embed:csv-generate/samples/api.callback.js`
+`embed:packages/csv-generate/samples/api.callback.js`
 
 ## Sync API
 
@@ -42,4 +42,4 @@ The module to require is `csv-generate/lib/sync` and the signature is `const rec
 The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.sync.js) returns an array of 2 records.
 
 
-`embed:csv-generate/samples/api.sync.js`
+`embed:packages/csv-generate/samples/api.sync.js`

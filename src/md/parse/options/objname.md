@@ -25,7 +25,7 @@ Field names reference one of the record property. Thus, they require the usage o
 
 Below, [the `objname` option is a string](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.objname.column.js) and it defines the `c1` column:
 
-`embed:csv-parse/samples/option.objname.column.js`
+`embed:packages/csv-parse/samples/option.objname.column.js`
 
 ## As an index name
 
@@ -33,4 +33,4 @@ Index names reference a record field by its position. Thus, records must be gene
 
 Below, [the `objname` option is a number](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.objname.index.js) and it defined the field in the second postion at index `1`:
 
-`embed:csv-parse/samples/option.objname.index.js`
+`embed:packages/csv-parse/samples/option.objname.index.js`

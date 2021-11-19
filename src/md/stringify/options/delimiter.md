@@ -19,10 +19,10 @@ The `delimiter` option set the delimiter between the fields of a record. It can 
 
 By default the generated CSV data set has [fields separated by commas `,`](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.delimiter_single.js):
 
-`embed:csv-stringify/samples/option.delimiter_single.js`
+`embed:packages/csv-stringify/samples/option.delimiter_single.js`
 
 ## Custom behaviour
 
 One or multiple characters can be defined to [customise the field delimiter](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.delimiter_multiple.js):
 
-`embed:csv-stringify/samples/option.delimiter_multiple.js`
+`embed:packages/csv-stringify/samples/option.delimiter_multiple.js`

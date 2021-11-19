@@ -21,7 +21,7 @@ Note, it can be used conjointly with the raw option.
 
 When the [`info` option is activated](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.info.js) with the value `true`, field is made of the two properties `info` and `record`:
 
-`embed:csv-parse/samples/option.info.js`
+`embed:packages/csv-parse/samples/option.info.js`
 
 If `info` was `false`, the assertion would have been:
 

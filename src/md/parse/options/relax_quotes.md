@@ -19,4 +19,4 @@ The `relax_quotes` option preserves quotes inside unquoted field.
 
 The second field is not quoted and it [contains a quote character](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.relax_quotes.js) inside:
 
-`embed:csv-parse/samples/option.relax_quotes.js`
+`embed:packages/csv-parse/samples/option.relax_quotes.js`

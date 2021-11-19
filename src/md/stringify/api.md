@@ -22,7 +22,7 @@ The signature is `const stream = stringify([options])`.
 
 The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/api.stream.js) write 2 records and register multiple events to read the generated CSV output and get notified when the serialisation is finished.
 
-`embed:csv-stringify/samples/api.stream.js`
+`embed:packages/csv-stringify/samples/api.stream.js`
 
 _After cloning the project repository, run this example with the command `node samples/api.stream.js`._
 
@@ -45,7 +45,7 @@ The signature is `stringify(records, [options], callback)`.
 
 The [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/api.callback.js) receives an array and a callback function. The input is serialised into a string unless an error occurred.
 
-`embed:csv-stringify/samples/api.callback.js`
+`embed:packages/csv-stringify/samples/api.callback.js`
 
 _Run this example with the command `node samples/api.callback.js`._
 
@@ -57,4 +57,4 @@ This represent a regular direct synchronous call to a function: you pass records
 
 The module to import is `csv-stringify/sync` and the signature is `const data = stringify(records, [options])` as shown in the [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/api.sync.js):
 
-`embed:csv-stringify/samples/api.sync.js`
+`embed:packages/csv-stringify/samples/api.sync.js`

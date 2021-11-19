@@ -23,4 +23,4 @@ When the `column` option is active, the first record is treated as a header. It 
 
 This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.from.js) read the first `a,b` record to determine column names, skip the next record and return records afterward.
 
-`embed:csv-parse/samples/option.from.js`
+`embed:packages/csv-parse/samples/option.from.js`

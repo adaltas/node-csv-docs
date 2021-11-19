@@ -24,6 +24,6 @@ This option control the sequential versus concurrent execution of handlers. Note
 
 In sequential mode, only 1 transformation function is running at a given time. The [mode sequential example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/mode.sequential.js) force a sequential execution by setting the value to "1".
 
-`embed:stream-transform/samples/mode.sequential.js`
+`embed:packages/stream-transform/samples/mode.sequential.js`
 
 In concurrent mode, the option value defines the maximum number of parallel executions. 

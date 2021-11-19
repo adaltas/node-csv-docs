@@ -18,4 +18,4 @@ Due to its synchronous nature, not all options are honoured. The user handler fu
 
 The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.sync.js) illustrates how to use this API.
 
-`embed:stream-transform/samples/api.sync.js`
+`embed:packages/stream-transform/samples/api.sync.js`

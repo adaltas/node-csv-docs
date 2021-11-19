@@ -50,8 +50,8 @@ By the default, the generator will generate a CSV dataset in the form of a strin
 
 In the [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/options.objectmode.stream.js), each record is returned by the `read` function in the form of an array.
 
-`embed:csv-generate/samples/options.objectmode.stream.js`
+`embed:packages/csv-generate/samples/options.objectmode.stream.js`
 
 In the [callback example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/options.objectmode.callback.js), the dataset is passed in the callback an array of array.
 
-`embed:csv-generate/samples/options.objectmode.callback.js`
+`embed:packages/csv-generate/samples/options.objectmode.callback.js`

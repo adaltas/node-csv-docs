@@ -14,4 +14,4 @@ The [promises example](https://github.com/adaltas/node-csv/blob/master/packages/
 
 This example is available with the command `node samples/recipe.promises.js`.
 
-`embed:csv-parse/samples/recipe.promises.js`
+`embed:packages/csv-parse/samples/recipe.promises.js`

@@ -22,4 +22,4 @@ Escaping is disabled inside a quoted field. The escape sequence will be preserve
 
 The [comment example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.comment.js) insert two comments, one at the begining of the file and another one after a record.
 
-`embed:csv-parse/samples/option.comment.js`
+`embed:packages/csv-parse/samples/option.comment.js`

@@ -12,4 +12,4 @@ The [pipe example](https://github.com/adaltas/node-csv/blob/master/packages/csv-
 
 This example is available with the command `node samples/recipe.pipe.js`.
 
-`embed:csv-parse/samples/recipe.pipe.js`
+`embed:packages/csv-parse/samples/recipe.pipe.js`

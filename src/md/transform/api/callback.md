@@ -16,6 +16,6 @@ The signature is `const stream = transform(records, [options], handler, [callbac
 
 In the [callback example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.callback.js), the user function shift the cells of every records.
 
-`embed:stream-transform/samples/api.callback.js`
+`embed:packages/stream-transform/samples/api.callback.js`
 
 _This example is available with the command `node samples/api.callback.js`._

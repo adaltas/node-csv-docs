@@ -14,7 +14,7 @@ You must first choose the right API. This package exposed multiple API all backe
 
 The easiest way is using the sync API. You read the file and get its content. You then inject this content into the parser and get the result as an array of records. Records may be printed to the console and written to a file one JSON per line for each record. The [final code](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/recipe.file.js) looks like:
 
-`embed:csv-parse/samples/recipe.file.js`
+`embed:packages/csv-parse/samples/recipe.file.js`
 
 Alternatively, you could use the [Stream API](/parse/api/stream/) by [piping a file readable stream](/parse/recipes/stream_pipe/) to the parser transform stream which is itself piped into a writable stream.
 
@@ -24,6 +24,6 @@ The parser shall comply without interfering with the file encoding. You can spec
 
 An alternative is to initialize the parser with the `encoding` option and [writing bytes](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/recipe.file.utf16le.js) to it.
 
-`embed:csv-parse/samples/recipe.file.utf16le.js`
+`embed:packages/csv-parse/samples/recipe.file.utf16le.js`
 
 At the time of this writing, the list of Node.js [supported encodings](https://github.com/nodejs/node/blob/master/lib/buffer.js) includes 'utf8', 'ucs2', 'utf16le', 'latin1', 'ascii', 'base64', 'hex'.

@@ -22,4 +22,4 @@ The option implies the usage of the `columns` mode where records are returned as
 
 The [group_columns_by_name example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.group_columns_by_name.js) contains a CSV data set with two columns named "email". Without the `group_columns_by_name` option, only the last email will be available. Instead, every email is returned in the form of an array:
 
-`embed:csv-parse/samples/option.group_columns_by_name.js`
+`embed:packages/csv-parse/samples/option.group_columns_by_name.js`

@@ -21,4 +21,4 @@ Refer to the [`relax_column_count` option](/parse/options/relax_column_count/) t
 
 [This example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.relax_column_count_more.js) shows how the second line is tolerated despite having more fields than in the first line.
 
-`embed:csv-parse/samples/option.relax_column_count_more.js`
+`embed:packages/csv-parse/samples/option.relax_column_count_more.js`

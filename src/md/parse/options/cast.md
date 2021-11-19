@@ -40,7 +40,7 @@ The function is called with 2 arguments: the field value and a context object. T
 
 The [cast example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.js) uses the context to transform the first filed into a date and replace the second field with the injected context:
 
-`embed:csv-parse/samples/option.cast.js`
+`embed:packages/csv-parse/samples/option.cast.js`
 
 ## Using the `cast` and `columns` functions conjointly
 
@@ -48,8 +48,8 @@ The `cast` function is called field by field, whether it is considered a header 
 
 To distinguish a header field from a data field in the `cast` function, use the [`context.header` property](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.header.column.fn.js) in the second argument of the `cast` function:
 
-`embed:csv-parse/samples/option.cast.header.column.fn.js`
+`embed:packages/csv-parse/samples/option.cast.header.column.fn.js`
 
 Note, the above example can be rewritten to implement the [`columns` transformation directly inside `cast`](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.header.column.true.js), by setting `columns: true` and by replacing `if(context.header) return value;` by `if(context.header) return value.toUpperCase();`:
 
-`embed:csv-parse/samples/option.cast.header.columns.true.js`
+`embed:packages/csv-parse/samples/option.cast.header.columns.true.js`

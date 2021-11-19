@@ -21,10 +21,10 @@ It is not possible to escape a delimiter. A field must be quoted if it contains 
 
 In the [delimiter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.js), fields are separated by a two characters delimiter value.
 
-`embed:csv-parse/samples/option.delimiter.js`
+`embed:packages/csv-parse/samples/option.delimiter.js`
 
 ## Array of delimiter values
 
 Delimiter can be made of [multiple values](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.delimiter.array.js) when defined as an array:
 
-`embed:csv-parse/samples/option.delimiter.array.js`
+`embed:packages/csv-parse/samples/option.delimiter.array.js`

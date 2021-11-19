@@ -21,4 +21,4 @@ The `from_line` option handles records starting from a requested line number. Th
 
 This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.from_line.js) skip the first lines and return records after the second line. The first records is used to determine column names:
 
-`embed:csv-parse/samples/option.from_line.js`
+`embed:packages/csv-parse/samples/option.from_line.js`

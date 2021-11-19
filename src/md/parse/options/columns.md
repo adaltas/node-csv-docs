@@ -34,7 +34,7 @@ If the value is `true`, the first record present in the data set is treated as a
 
 The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.true.js) generates record literals whose properties match the first line of the data set.
 
-`embed:csv-parse/samples/option.columns.true.js`
+`embed:packages/csv-parse/samples/option.columns.true.js`
 
 ## As an array
 
@@ -42,7 +42,7 @@ If the value is an array, to each element corresponds a property. The values may
 
 The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.array.js) generates record literals whose properties match the values of `columns` option.
 
-`embed:csv-parse/samples/option.columns.array.js`
+`embed:packages/csv-parse/samples/option.columns.array.js`
 
 ## As a function
 
@@ -50,4 +50,4 @@ If the value is a function, the user is responsible for returning the list of co
 
 The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.function.js) converts each field of the first to upper case.
 
-`embed:csv-parse/samples/option.columns.function.js`
+`embed:packages/csv-parse/samples/option.columns.function.js`

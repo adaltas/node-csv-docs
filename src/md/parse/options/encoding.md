@@ -31,7 +31,7 @@ When providing options, the values must internally reflect the data source encod
 
 However, if the value is a buffer, you must make sure the buffer was created with the right encoding, here is an exemple [encoding an option as buffer](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.options.js), the `delimiter` option in this case:
 
-`embed:csv-parse/samples/option.encoding.options.js`
+`embed:packages/csv-parse/samples/option.encoding.options.js`
 
 ## Bom automatic detection
 
@@ -39,7 +39,7 @@ The BOM is a special Unicode character sequence at the begining of a text stream
 
 Because the BOM is specific to unicode, only the UTF-8 and UTF-16LE encoding are natively detected by the parser. Here is an example [detecting the encoding](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.detection.js), UTF-16LE in this case:
 
-`embed:csv-parse/samples/option.encoding.detection.js`
+`embed:packages/csv-parse/samples/option.encoding.detection.js`
 
 Notice how the BOM is declared as `\uFEFF`. You can see how it is converted to the hexadecimal representation of `FF EE` with the command `node -e 'console.info(Buffer.from("\ufeff", "utf16le"))'`. You can refer to the [Wikipedia byte order mark by encoding table](https://en.wikipedia.org/wiki/Byte_order_mark) for further investigations.
 
@@ -47,4 +47,4 @@ Notice how the BOM is declared as `\uFEFF`. You can see how it is converted to t
 
 A value of `null` or `false` disables output encoding and [returns the raw buffer](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.buffer.js).
 
-`embed:csv-parse/samples/option.encoding.buffer.js`
+`embed:packages/csv-parse/samples/option.encoding.buffer.js`

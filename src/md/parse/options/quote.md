@@ -21,7 +21,7 @@ The presence of quotes around the field is optional and is automatically detecte
 
 The `quote` option default to `"`. Fields do not need to be quoted as illustrated in [this example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.quote.default.js):
 
-`embed:csv-parse/samples/option.quote.default.js`
+`embed:packages/csv-parse/samples/option.quote.default.js`
 
 ## Quotes inside the field
 
@@ -29,4 +29,4 @@ Quote characters present inside a field must be [escaped](/parse/options/escape/
 
 [This example contains quotes](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.quote.escape.js) inside the second field:
 
-`embed:csv-parse/samples/option.quote.escape.js`
+`embed:packages/csv-parse/samples/option.quote.escape.js`

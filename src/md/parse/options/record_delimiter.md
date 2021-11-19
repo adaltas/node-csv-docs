@@ -27,10 +27,10 @@ Before version 4.0.0, this option was named `rowDelimiter`.
 
 In the [record delimiter example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.record_delimiter.js), two characters `&&` separate records.
 
-`embed:csv-parse/samples/option.record_delimiter.js`
+`embed:packages/csv-parse/samples/option.record_delimiter.js`
 
 # Array of record delimiter values
 
 Record delimiter can be made of [multiple values](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.record_delimiter.array.js) when defined as an array:
 
-`embed:csv-parse/samples/option.record_delimiter.array.js`
+`embed:packages/csv-parse/samples/option.record_delimiter.array.js`

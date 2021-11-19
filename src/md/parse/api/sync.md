@@ -18,4 +18,4 @@ Import the `csv-parse/lib/sync` module to use it. The exported function signatur
 
 The [synchronous example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/module.sync.js) illustrates how to use the synchronous module. This example is available with the command `node samples/api.sync.js`.
 
-`embed:csv-parse/samples/api.sync.js`
+`embed:packages/csv-parse/samples/api.sync.js`

@@ -58,7 +58,7 @@ By returning an object instead of a string, a `cast` function can overwrite the 
 
 The following [`cast` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.cast.js) disable the quoting of the field, leaving it to the responsibility of the `cast` function:
 
-`embed:csv-stringify/samples/option.cast.js` 
+`embed:packages/csv-stringify/samples/option.cast.js` 
 
 _Run this example with the command `node samples/option.cast.js`._
 
@@ -118,6 +118,6 @@ function(value){
 
 This [`cast` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.cast.js) convert date objects into ISO 8601 dates.
 
-`embed:csv-stringify/samples/option.cast.date.js`
+`embed:packages/csv-stringify/samples/option.cast.date.js`
 
 _Run this example with the command `node samples/option.cast.date.js`._

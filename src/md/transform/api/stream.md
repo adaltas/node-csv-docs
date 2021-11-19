@@ -18,6 +18,6 @@ The signature is `const stream = transform(records, [options], handler, [options
 
 In the [stream example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.stream.js), records in the form of an array are sent through the `write` function and the transformed records are obtained within the "readable" event by calling the `read` function.
 
-`embed:stream-transform/samples/api.stream.js`
+`embed:packages/stream-transform/samples/api.stream.js`
 
 _This example is available with the command `node samples/api.stream.js`._

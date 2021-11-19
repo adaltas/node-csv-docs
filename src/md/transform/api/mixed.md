@@ -14,10 +14,10 @@ The steam and callback API are implemented inside the same module and they share
 
 In the [input stream example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.mixed.input.stream.js), records are written with the `write` method and the resulting dataset is available in the user callback:
 
-`embed:stream-transform/samples/api.mixed.input.stream.js`
+`embed:packages/stream-transform/samples/api.mixed.input.stream.js`
 
 ## Using the stream readable API
 
 In the [input stream example](https://github.com/adaltas/node-csv/blob/master/packages/stream-transform/samples/api.mixed.output.stream.js), records are provided as an argument and consumed with the readable API:
 
-`embed:stream-transform/samples/api.mixed.output.stream.js`
+`embed:packages/stream-transform/samples/api.mixed.output.stream.js`

@@ -21,10 +21,10 @@ Note, several options are available to control when to quote fields under certai
 
 In the [quoted_match_string example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.quoted_match_string.js), fields containing the string `"."` are quoted.
 
-`embed:csv-stringify/samples/option.quoted_match_string.js`
+`embed:packages/csv-stringify/samples/option.quoted_match_string.js`
 
 ## Example with a regular expression
 
 In the [quoted_match_regexp example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.quoted_match_regexp.js), fields matching the regular expression `/\./` are quoted.
 
-`embed:csv-stringify/samples/option.quoted_match_regexp.js`
+`embed:packages/csv-stringify/samples/option.quoted_match_regexp.js`
