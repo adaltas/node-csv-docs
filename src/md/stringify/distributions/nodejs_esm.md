@@ -13,7 +13,7 @@ The `csv-stringify` package is written as [ECMAScript modules](https://nodejs.or
 * Stream and callback API: `import {stringify} from 'csv-stringify';`
 * Sync API: `import {stringify} from 'csv-stringify/sync';`
 
-Addtionnal information are available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
+Additional information is available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
 
 ## Implementation
 
