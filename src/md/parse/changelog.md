@@ -11,13 +11,144 @@ sort: 8
 
 Please join and contribute:
 
-* `skip_lines_with_empty_values`: rename to skip_records_with_empty_values (easy)
-* `skip_lines_with_error`: rename to skip_records_with_error (easy)
-* `relax`: rename to relax_quotes_when_unquoted (easy)
 * `max_comment_size`: new option (medium)
 * promise: new API module (medium)
 * errors: finish normalisation of all errors (easy)
 * encoding: new encoding_input and encoding_output options (medium)
+
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [5.0.3](https://github.com/adaltas/node-csv/compare/csv-parse@5.0.2...csv-parse@5.0.3) (2021-11-19)
+
+
+### Bug Fixes
+
+* expose browser esm modules ([eb87355](https://github.com/adaltas/node-csv/commit/eb873557c65912f065d2581d30a17a96b0bfd2d6))
+
+
+
+
+
+## [5.0.2](https://github.com/adaltas/node-csv/compare/csv-parse@5.0.1...csv-parse@5.0.2) (2021-11-18)
+
+
+### Bug Fixes
+
+* dont insert polyfills in cjs [#303](https://github.com/adaltas/node-csv/issues/303) ([9baf334](https://github.com/adaltas/node-csv/commit/9baf334044dab90b4a0d096a7e456d0fd5807d5b))
+
+
+### Performance Improvements
+
+* **csv-parse:** buffer unsafe allocation ([35c1f4a](https://github.com/adaltas/node-csv/commit/35c1f4a9dd806adc4de749c2e211bd436224d7f0))
+
+
+
+
+
+## [5.0.1](https://github.com/adaltas/node-csv/compare/csv-parse@5.0.0...csv-parse@5.0.1) (2021-11-15)
+
+
+### Bug Fixes
+
+* remove samples from publicatgion ([12c221d](https://github.com/adaltas/node-csv/commit/12c221dc37add26f094e3bb7f94b50ee06ff5be6))
+
+
+
+
+
+# [5.0.0](https://github.com/adaltas/node-csv/compare/csv-parse@4.16.3...csv-parse@5.0.0) (2021-11-15)
+
+
+### Bug Fixes
+
+* **csv-parse:** export csv error class in sync ([fc89380](https://github.com/adaltas/node-csv/commit/fc8938090141861dcbcae214f64e52a0aa6cc691))
+* **csv-parse:** ts callback CsvError argument ([899dc67](https://github.com/adaltas/node-csv/commit/899dc67ed6256478e8eecbcc5b925f238ce367d5))
+* export original lib esm modules ([be25349](https://github.com/adaltas/node-csv/commit/be2534928ba21156e9cde1e15d2e8593d62ffe71))
+* fallback to setTimeout is setImmediate is undefined ([3d6a2d0](https://github.com/adaltas/node-csv/commit/3d6a2d0a655af342f28456b46db7ccfe7ee9d664))
+* refer to esm files in dist ([b780fbd](https://github.com/adaltas/node-csv/commit/b780fbd26f5e54494e511eb2e004d3cdedee3593))
+
+
+### Features
+
+* backport support for node 14 ([dbfeb78](https://github.com/adaltas/node-csv/commit/dbfeb78f61ed36f02936d63a53345708ca213e45))
+* backward support for node 8 ([496231d](https://github.com/adaltas/node-csv/commit/496231dfd838f0a6a72269a5a2390a4c637cef95))
+* **csv-parse:** improve record_delimiter validation ([67b7da8](https://github.com/adaltas/node-csv/commit/67b7da892db7f0f426b9f0fa12063e81eafe8a9b))
+* **csv-parse:** objname index ([015b936](https://github.com/adaltas/node-csv/commit/015b936ea42026efa52263a7687f886463263ed8))
+* **csv-parse:** skip_line_with_errors used with raw print current buffer (fix [#292](https://github.com/adaltas/node-csv/issues/292)) ([2741990](https://github.com/adaltas/node-csv/commit/27419908b9ce5319307bb6647335d5c07cd1e3a4))
+* **csv-parse:** ts type encoding with BufferEncoding ([39a4388](https://github.com/adaltas/node-csv/commit/39a43886904801d47a92a3cb5722409f36020534))
+* esm migration ([b5c0d4b](https://github.com/adaltas/node-csv/commit/b5c0d4b191c8b57397808c0922a3f08248506a9f))
+* export ts types in sync ([890bf8d](https://github.com/adaltas/node-csv/commit/890bf8d950c18a05cab5e35a461d0847d9425156))
+* replace ts types with typesVersions ([acb41d5](https://github.com/adaltas/node-csv/commit/acb41d5031669f2d582e40da1c80f5fd4738fee4))
+
+
+
+
+
+## [4.16.2](https://github.com/wdavidw/node-csv-parse/compare/csv-parse@4.16.1...csv-parse@4.16.2) (2021-08-27)
+
+**Note:** Version bump only for package csv-parse
+
+
+
+
+
+## 4.16.1 (2021-08-27)
+
+**Note:** Version bump only for package csv-parse
+
+## Version 4.16.0
+
+* fix: info print the number of encountered line when emited
+* feat: cast expose context.empty_lines
+* fix: handle empty column names properly
+* feat: enforce usage of columns with columns_duplicates_to_array
+* fix: update error message with invalid column type
+
+## Version 4.15.4
+
+* fix: handle cast value 0 fix #315
+
+## Version 4.15.3
+
+* feat: lib/browser compatibility with ES5
+
+## Version 4.15.2
+
+* docs: browser demo fix #302
+* fix: browserify export parse instead of stringify
+
+## Version 4.15.1
+
+* fix: skip_empty_lines don't interfere with from_line
+
+## Version 4.15.0
+
+* feat: new ignore_last_delimiters option, solve #193
+* feat: generate browser compatible lib
+* refactor: rename raw to record
+* docs: comment about trimable chars
+* refactor: move isCharTrimable
+
+## Version 4.14.2
+
+* fix(skip_lines_with_error): work with relax_column_count (#303)
+* sample: async iterator
+* sample: promises
+
+## Version 4.14.1
+
+* package: latest dependencies
+* ts: enable strict mode
+* package: mocha inside package declaration
+
+## Version 4.14.0
+
+* on_record: expose info.error when relax_column_count is activated
+* raw: move tests
+* package: latest dependencies
 
 ## Version 4.13.1
 
@@ -71,7 +202,7 @@ New feature:
 * columns_duplicates_to_array: new option
 
 Project management:
-* samples: new file recipe
+* samples: new file recipie
 
 ## Version 4.9.1
 

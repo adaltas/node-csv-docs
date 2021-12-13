@@ -5,7 +5,144 @@ keywords: ['csv', 'generate', 'changelog', 'history', 'feature', 'changes', 'ver
 sort: 6
 ---
 
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [6.0.4](https://github.com/adaltas/node-csv/compare/csv-stringify@6.0.3...csv-stringify@6.0.4) (2021-11-19)
+
+
+### Bug Fixes
+
+* **csv-stringify:** catch error with sync api, fix [#296](https://github.com/adaltas/node-csv/issues/296) ([e157f40](https://github.com/adaltas/node-csv/commit/e157f407eeffe5bcfb179cb20476169037bfb4f1))
+* **csv-stringify:** node 12 compatibility in flush ([9145b75](https://github.com/adaltas/node-csv/commit/9145b75012ec71a0b4152036af2275bf28c460e0))
+
+
+
+
+
+## [6.0.3](https://github.com/adaltas/node-csv/compare/csv-stringify@6.0.2...csv-stringify@6.0.3) (2021-11-19)
+
+
+### Bug Fixes
+
+* expose browser esm modules ([eb87355](https://github.com/adaltas/node-csv/commit/eb873557c65912f065d2581d30a17a96b0bfd2d6))
+
+
+
+
+
+## [6.0.2](https://github.com/adaltas/node-csv/compare/csv-stringify@6.0.1...csv-stringify@6.0.2) (2021-11-18)
+
+
+### Bug Fixes
+
+* dont insert polyfills in cjs [#303](https://github.com/adaltas/node-csv/issues/303) ([9baf334](https://github.com/adaltas/node-csv/commit/9baf334044dab90b4a0d096a7e456d0fd5807d5b))
+
+
+
+
+
+## [6.0.1](https://github.com/adaltas/node-csv/compare/csv-stringify@6.0.0...csv-stringify@6.0.1) (2021-11-15)
+
+
+### Bug Fixes
+
+* remove samples from publicatgion ([12c221d](https://github.com/adaltas/node-csv/commit/12c221dc37add26f094e3bb7f94b50ee06ff5be6))
+
+
+
+
+
+# [6.0.0](https://github.com/adaltas/node-csv/compare/csv-stringify@5.6.5...csv-stringify@6.0.0) (2021-11-15)
+
+
+### Bug Fixes
+
+* **csv-stringify:** use removeListener instead of off ([2c2623f](https://github.com/adaltas/node-csv/commit/2c2623f01a4985c5d248e1557a32a70350e825f6))
+* export original lib esm modules ([be25349](https://github.com/adaltas/node-csv/commit/be2534928ba21156e9cde1e15d2e8593d62ffe71))
+* fallback to setTimeout is setImmediate is undefined ([3d6a2d0](https://github.com/adaltas/node-csv/commit/3d6a2d0a655af342f28456b46db7ccfe7ee9d664))
+* refer to esm files in dist ([b780fbd](https://github.com/adaltas/node-csv/commit/b780fbd26f5e54494e511eb2e004d3cdedee3593))
+
+
+### Features
+
+* backport support for node 14 ([dbfeb78](https://github.com/adaltas/node-csv/commit/dbfeb78f61ed36f02936d63a53345708ca213e45))
+* backward support for node 8 ([496231d](https://github.com/adaltas/node-csv/commit/496231dfd838f0a6a72269a5a2390a4c637cef95))
+* **csv-stringify:** ts extends options with stream.TransformOptions ([#301](https://github.com/adaltas/node-csv/issues/301)) ([cc30d66](https://github.com/adaltas/node-csv/commit/cc30d66e0f07686d2c42670ead10246ebcf37a67))
+* esm migration ([b5c0d4b](https://github.com/adaltas/node-csv/commit/b5c0d4b191c8b57397808c0922a3f08248506a9f))
+* export ts types in sync ([890bf8d](https://github.com/adaltas/node-csv/commit/890bf8d950c18a05cab5e35a461d0847d9425156))
+* replace ts types with typesVersions ([acb41d5](https://github.com/adaltas/node-csv/commit/acb41d5031669f2d582e40da1c80f5fd4738fee4))
+
+
+
+
+
+## [5.6.4](https://github.com/adaltas/node-csv-stringify/compare/csv-stringify@5.6.3...csv-stringify@5.6.4) (2021-08-27)
+
+**Note:** Version bump only for package csv-stringify
+
+
+
+
+
+## 5.6.3 (2021-08-27)
+
+**Note:** Version bump only for package csv-stringify
+
+## Version 5.6.2
+
+* build: rename build commands
+
+## Version 5.6.1
+
+* fix: memory leak in sync
+* refactor: remove unsused values
+* fix: add browserify dev dep
+
+## Version 5.6.0
+
+* build: use browser compatible bundles, fix #122
+
+## Version 5.5.3
+
+* ts: callback argument simplification
+
+## Version 5.5.2
+
+* package: latest dependencies
+* test: fix write null in node 14
+* ts: enable strict mode
+* package: mocha inside package declaration
+
+## Version 5.5.1
+
+Fix
+* bom: work with sync module, fix #115
+
+## Version 5.5.0
+
+Feature:
+* cast: support for BigInt
+
+## Version 5.4.3
+
+Fix:
+* utils: wrongly declared variable in isSymbol
+
+## Version 5.4.2
+
+Fix:
+* quoted_match: apply on all types and not just string
+* cast: validate and normalize local options
+
+Project management:
+* samples: add quoted examples
+
+## Version 5.4.1
+
+* bom: fix ts definition
 
 ## Version 5.4.0
 
