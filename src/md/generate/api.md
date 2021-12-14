@@ -37,7 +37,7 @@ The [callback example](https://github.com/adaltas/node-csv/blob/master/packages/
 The generated output is returned. Like with the callback API, this mode
 implies that the overall dataset will be stored in memory.
 
-The module to require is `csv-generate/lib/sync` and the signature is `const records = generate([options])`.
+The module to import or require is `csv-generate/sync` and the signature is `const records = generate([options])`.
 
 The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.sync.js) returns an array of 2 records.
 
