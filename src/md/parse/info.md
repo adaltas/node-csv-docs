@@ -41,7 +41,7 @@ It contains all the dataset information with additionnal properties:
 * `error` (Error)   
   The error that was encountered, useful with the variuos relax options.
 * `header` (boolean)   
-  True when the [`columns` option](/parse/options/columns/) is activated.
+  True when the [`columns` option](/parse/options/columns/) is activated and the current record is interpreted as a header instead of a data record.
 * `index` (number)   
   Position of the last processed field.
 
