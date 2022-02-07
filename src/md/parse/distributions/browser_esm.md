@@ -21,9 +21,9 @@ The files can be manually imported. They dont require any external dependencies 
 When using NPM to manage and load your modules, for example within webpack, use:
 
 ```js
-import {parse} from 'csv-parse/browser/esm/index.js';
+import {parse} from 'csv-parse/browser/esm';
 // Or
-import {parse} from 'csv-parse/browser/esm/sync.js';
+import {parse} from 'csv-parse/browser/esm/sync';
 ```
 
 ## Vanilla JavaScript
@@ -68,11 +68,14 @@ This distribution is compatible with [webpack version 5](https://webpack.js.org/
 
 In your module, import the appropriate `csv-parse` module:
 
-```js
-import {parse} from 'csv-parse/browser/esm/index.js';
-// Or
-import {parse} from 'csv-parse/browser/esm/sync.js';
-```
+* [`./parse.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/parse.js#L2):   
+  ```js
+  import {parse} from 'csv-parse/browser/esm';
+  ```
+* [`./parse_sync.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/parse_sync.js#L2):   
+  ```js
+  import {parse} from 'csv-parse/browser/esm/sync';
+  ```
 
 The relevant [webpack configuration](https://github.com/adaltas/node-csv/tree/master/demo/webpack/webpack.config.js) looks like:
 
