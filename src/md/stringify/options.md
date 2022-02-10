@@ -27,13 +27,13 @@ All options are optional. All the options from the [Node.js Writable Stream API]
     Custom function to transform object literals.
 * [`columns`](/stringify/options/columns/) (array|object)   
   _Since version 0.0.1_   
-  List of properties when records are provided as objects; work with records in the form of arrays based on index position; order matters; auto discovered in the first record when the user write objects, can refer to nested properties of the input JSON, see the "header" option on how to print columns names on the first line.
+  Influence the generation of records at the field level.
 * [`delimiter`](/stringify/options/delimiter/) (string)   
   _Since version 0.0.1_   
   Set the field delimiter, one or multiple characters, defaults to a comma.   
 * `eof` (boolean)   
   _Since version 0.0.2_   
-  Add the value of "options.rowDelimiter" on the last line, default to true.   
+  Add the value of "options.record_delimiter" on the last line, default to true.   
 * `escape` (string|Buffer)   
   _Since version 0.0.1_   
   Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.   
