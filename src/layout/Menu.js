@@ -209,7 +209,7 @@ const styles = {
     backgroundColor: '#343B3B',
     display: 'block',
     '&:after': {
-      content: ' ',
+      content: '" "',
       display: 'block',
       height: '2rem',
     }
