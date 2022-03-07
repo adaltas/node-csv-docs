@@ -56,6 +56,17 @@ const theme = {
     'code[class*="language-"],pre[class*="language-"]': {
       fontFamily: 'Fira Mono !important',
     },
+    'main .display-embed-file-highlight > pre': {
+      marginBottom: 0,
+    },
+    'main .display-embed-file-highlight > div': {
+      textAlign: 'right',
+      fontStyle: 'italic',
+      padding: '0 .2rem',
+    },
+    'main .display-embed-file-highlight > div a': {
+      fontWeight: 'lighter',
+    },
     blockquote: {
       ...scale(1 / 5),
       color: gray(41),

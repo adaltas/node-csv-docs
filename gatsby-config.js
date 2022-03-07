@@ -24,7 +24,10 @@ module.exports = {
     }, {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [ {
+        plugins: [{
+          resolve: "gatsby-remark-snippet-url-prepare",
+          options: {}
+        }, {
           resolve: "gatsby-remark-toc-patched",
           options: {
             header: "Table of Contents", // the custom header text
@@ -44,6 +47,12 @@ module.exports = {
             inlineCodeMarker: "±",
             aliases: {},
           },
+        }, {
+          resolve: "gatsby-remark-snippet-url",
+          options: {
+            message: './{{FILE}}',
+            url: 'https://github.com/adaltas/node-csv/blob/master/{{FILE}}'
+          }
         }, {
           resolve: "gatsby-remark-autolink-headers",
           options: {
