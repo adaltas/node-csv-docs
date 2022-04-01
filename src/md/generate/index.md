@@ -63,3 +63,9 @@ Run `npm install csv` to install the full csv module or run
 `npm install csv-generate` if you are only interested by the CSV generator.
 
 The source code uses modern JavaScript features and runs natively in Node greater or equal than version 8.
+
+## Additional help
+
+For usage and examples, you may refer to
+[example page](/generate/examples/),
+[the "samples" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-generate/samples) and [the "test" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-generate/test).

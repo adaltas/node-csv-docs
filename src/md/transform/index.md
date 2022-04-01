@@ -34,3 +34,9 @@ Run `npm install csv` to install the full CSV module or run `npm install stream-
 The source code uses modern JavaScript features and run natively in Node 7.6+. For older browsers or older versions of Node, use the modules inside "./lib/es5".
 
 Data is expected to be an array of records. Records may be provided in any form such as a string, an array or an object. Options can be placed in any positions.
+
+## Additional help
+
+For usage and examples, you may refer to
+[example page](/transform/examples/),
+[the "samples" folder](https://github.com/adaltas/node-csv/tree/master/packages/stream-transform/samples) and [the "test" folder](https://github.com/adaltas/node-csv/tree/master/packages/stream-transform/test).
