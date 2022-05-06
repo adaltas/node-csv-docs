@@ -12,7 +12,7 @@ This package proposes different API flavors. Every example is available on [GitH
 
 ## Using the stream API
 
-The Node.js stream API is scallable and offers the greatest control over the data flow. It comes at the cost of being more verbose and harder to write. Data is consumed inside the `readable` event with the `stream.read` function. It is then written by calling the `stream.write` function. The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/stream.js) illustrates how to initialize each packages and how to plug them.
+The Node.js stream API is scalable and offers the greatest control over the data flow. It comes at the cost of being more verbose and harder to write. Data is consumed inside the `readable` event with the `stream.read` function. It is then written by calling the `stream.write` function. The [stream example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/stream.js) illustrates how to initialize each packages and how to plug them.
 
 `embed:packages/csv/samples/stream.js`
 
