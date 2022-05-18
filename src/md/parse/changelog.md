@@ -1,25 +1,28 @@
 ---
-title: Changelog
+title: Change log
 description: Complete changelog of the Node.js csv-parse package
 keywords: ['csv', 'parse', 'parser', 'changelog', 'history', 'feature', 'changes', 'version']
 sort: 8
 ---
 
-# Changelog
-
-## Todo
-
-Please join and contribute:
-
-* `max_comment_size`: new option (medium)
-* promise: new API module (medium)
-* errors: finish normalisation of all errors (easy)
-* encoding: new encoding_input and encoding_output options (medium)
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [5.0.4](https://github.com/adaltas/node-csv/compare/csv-parse@5.0.3...csv-parse@5.0.4) (2021-12-29)
+
+
+### Bug Fixes
+
+* correct exports in package.json with webpack ([154eafb](https://github.com/adaltas/node-csv/commit/154eafbac866eb4499a0d392f8dcd057695c2586))
+* **csv-demo-webpack-ts:** remove polyfill ([47a99bd](https://github.com/adaltas/node-csv/commit/47a99bd944d1d943e6374227dbc4e20aaa2c8c7f))
+* **csv-demo-webpack-ts:** simplify export paths ([8d63a14](https://github.com/adaltas/node-csv/commit/8d63a14313bb6b26f13fafb740cc686f1dfaa65f))
+* esm exports in package.json files ([c48fe47](https://github.com/adaltas/node-csv/commit/c48fe478ced7560aa078fbc36ec33d6007111e2b)), closes [#308](https://github.com/adaltas/node-csv/issues/308)
+
+
+
+
 
 ## [5.0.3](https://github.com/adaltas/node-csv/compare/csv-parse@5.0.2...csv-parse@5.0.3) (2021-11-19)
 
@@ -61,6 +64,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [5.0.0](https://github.com/adaltas/node-csv/compare/csv-parse@4.16.3...csv-parse@5.0.0) (2021-11-15)
 
+See also [CSV package for Node.js version 6 (11/15/2021)](https://www.adaltas.com/en/2021/11/15/csv-version-6/)
+
+### ⚠ BREAKING CHANGES
+
+* esm migration ([b5c0d4b](https://github.com/adaltas/node-csv/commit/b5c0d4b191c8b57397808c0922a3f08248506a9f))
+  CommonJS consumers must change `require('csv-parse/lib/sync')` to `require('csv-parse/sync')`
+* **csv-parse:** rename group_columns_by_name option [74334cf](https://github.com/adaltas/node-csv/commit/74334cf0e85e005a878c0597b3300f4762116a0d)
+* **csv-parse:** rename RECORD_INCONSISTENT_FIELDS_LENGTH [7b55f05](https://github.com/adaltas/node-csv/commit/7b55f050df327939efcb65d4e76d27f98c89d925)
+* **csv-parse:** rename RECORD_DONT_MATCH_COLUMNS_LENGTH [fb391c9](https://github.com/adaltas/node-csv/commit/fb391c92fa248bda30b816930cac88a5d9026b04)
+* **csv-parse:** rename skip_records_with_error [0376af7](https://github.com/adaltas/node-csv/commit/0376af7984caa6726d12980edecccda1bbbbcacc)
+* **csv-parse:** rename skip_records_with_empty_values [aa432c1](https://github.com/adaltas/node-csv/commit/aa432c1251327b579ee7f71bd9fd776021ac1f1e)
+* **csv-parse:** rename relax to relax_quotes [9fffd50](https://github.com/adaltas/node-csv/commit/9fffd50762e10b3794883c6b3751ad209510f82e)
 
 ### Bug Fixes
 
@@ -79,7 +94,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **csv-parse:** objname index ([015b936](https://github.com/adaltas/node-csv/commit/015b936ea42026efa52263a7687f886463263ed8))
 * **csv-parse:** skip_line_with_errors used with raw print current buffer (fix [#292](https://github.com/adaltas/node-csv/issues/292)) ([2741990](https://github.com/adaltas/node-csv/commit/27419908b9ce5319307bb6647335d5c07cd1e3a4))
 * **csv-parse:** ts type encoding with BufferEncoding ([39a4388](https://github.com/adaltas/node-csv/commit/39a43886904801d47a92a3cb5722409f36020534))
-* esm migration ([b5c0d4b](https://github.com/adaltas/node-csv/commit/b5c0d4b191c8b57397808c0922a3f08248506a9f))
 * export ts types in sync ([890bf8d](https://github.com/adaltas/node-csv/commit/890bf8d950c18a05cab5e35a461d0847d9425156))
 * replace ts types with typesVersions ([acb41d5](https://github.com/adaltas/node-csv/commit/acb41d5031669f2d582e40da1c80f5fd4738fee4))
 

@@ -1,5 +1,5 @@
 ---
-title: Changelog
+title: Change log
 description: Complete changelog of the Node.js stream-transform package
 keywords: ['stream', 'transform', 'changelog', 'history', 'feature', 'changes', 'version']
 sort: 7
