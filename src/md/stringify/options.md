@@ -17,6 +17,8 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 * [`cast`](/stringify/options/cast/)   
   _Since version 1.1.0_   
   Defines custom cast for certain data types; was `formatters` until version 4.3.1.
+  * `bigint`
+    Custom function to transform bigint values.
   * `boolean`
     Custom function to transform boolean values.
   * `date`
