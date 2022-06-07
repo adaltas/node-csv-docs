@@ -25,6 +25,8 @@ All options are optional. All the options from the [Node.js Writable Stream API]
     Custom function to transform number values.
   * `object`
     Custom function to transform object literals.
+  * `string`
+    Custom function to transform string values.
 * [`columns`](/stringify/options/columns/) (array|object)   
   _Since version 0.0.1_   
   Influence the generation of records at the field level.
