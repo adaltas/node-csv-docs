@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Modal from 'react-modal'
-import { css } from 'glamor'
+import { css } from '@emotion/css'
 import {
   TABLET_MEDIA_QUERY,
   MOBILE_MEDIA_QUERY,
@@ -101,25 +101,24 @@ class Convert extends Component {
     return (
       <div ref={this.root}>
         { fullscreen ? (
-            <Modal
-              isOpen={fullscreen}
-              appElement={this.root.current}
-              shouldCloseOnOverlayClick={true}
-              shouldCloseOnEsc={true}
-              onRequestClose={e => this.setState({fullscreen: false})}
-              className={css([
-                styles.modal,
-              ]).toString()}
-              overlayClassName={css([
-                styles.overlay,
-              ]).toString()}
-            >
-              {content}
-            </Modal>
-          ) : (
-            <>{content}</>
-          )
-        }
+          <Modal
+            isOpen={fullscreen}
+            appElement={this.root.current}
+            shouldCloseOnOverlayClick={true}
+            shouldCloseOnEsc={true}
+            onRequestClose={e => this.setState({fullscreen: false})}
+            className={css([
+              styles.modal,
+            ])}
+            overlayClassName={css([
+              styles.overlay,
+            ])}
+          >
+            {content}
+          </Modal>
+        ) : (
+          <>{content}</>
+        )}
       </div>
     )
   }

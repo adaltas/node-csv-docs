@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "David Worms <david@adaltas.com>",
   "dependencies": {
+    "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "csv": "^6.1.3",
@@ -23,7 +24,6 @@
     "gatsby-remark-prismjs": "^6.16.0",
     "gatsby-source-filesystem": "^4.16.0",
     "gatsby-transformer-remark": "^5.16.0",
-    "glamor": "^2.20.40",
     "prismjs": "^1.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

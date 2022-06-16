@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import Modal from 'react-modal'
-import { css } from 'glamor'
+import { css } from '@emotion/css'
 
 /*
 Breakpoints

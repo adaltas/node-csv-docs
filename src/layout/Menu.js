@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react'
 import { Link } from 'gatsby'
-import { css } from 'glamor'
+import { css } from '@emotion/css'
 import Icon from '../components/Icon'
 
 const styles_nav = {

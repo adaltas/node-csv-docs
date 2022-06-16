@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDom from 'react-dom'
-import { css } from 'glamor'
+import { css } from '@emotion/css'
 import ReactTooltip from 'react-tooltip'
 import Icon from '../components/Icon'
 import {
