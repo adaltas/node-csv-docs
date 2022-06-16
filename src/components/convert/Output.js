@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import csv from 'csv/lib/browser/sync'
+import * as csv from 'csv/browser/esm/sync'
 // Syntax
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
