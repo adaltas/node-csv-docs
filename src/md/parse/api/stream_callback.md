@@ -8,7 +8,7 @@ sort: 3.3
 
 # Combining the stream and callback APIs
 
-The main module exported by the package leverages the Node.js [stream transform API](https://nodejs.org/api/stream.html). However, the input doesn't have to be a readable stream. Instead, it could be the CSV string or Buffer. Also, the output doesn't have to be a writable stream, it could be user callback function.
+The main module exported by the package leverages the Node.js [stream transform API](https://nodejs.org/api/stream.html). However, the input doesn't have to be a readable stream. Instead, it could be a CSV string and a Buffer. Also, the output doesn't have to be a writable stream, it could be a user callback function.
 
 Uses it for convenience in case you are already interacting with a readable stream or a writable stream. It is not scalable because it implies that you either have all CSV dataset in memory and wish to pipe the generated records into a stream writer or that you have a stream reader generating a CSV data stream and wish to obtain a full dataset with all the records.
 
