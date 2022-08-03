@@ -7,7 +7,7 @@ keywords: ['csv', 'stringify', 'options', 'columns']
 
 # Option `columns`
 
-The `columns` option provides influence the generation of records at the field level. For example, it is used to name headers, to order columns in the generated records, and to filter columns. It applies when records are provided as objects and arrays.
+The `columns` option controls the generation of records at the field level. For example, it is used to name headers, to order columns in the generated records, and to filter columns. It applies when records are provided as objects and arrays.
 
 Consider the [tests](https://github.com/adaltas/node-csv-stringify/blob/master/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features. Also, refer to the ["header" option](/stringify/options/group_columns_by_name/) to learn how to print columns names on the first line.
 
@@ -19,14 +19,14 @@ Consider the [tests](https://github.com/adaltas/node-csv-stringify/blob/master/t
 
 ## Usage
 
-The `column` option is expected to be provided as an array where each element map to a record field. It is also accepted to define the option as an array. It will be converted to an array.
+The `columns` option can be an array of `{ 'key': string, 'header': string }` objects, or an array of column names (strings).
 
-Once normalised, the final columns option is an array where each element defines each column. Columns are themselves defined as an object with the properties:
+As objects, `columns` are defined with the properties:
 
 * `key` (string)   
   Name of property present in the input records; required.
 * `header` (string)   
-  Value to be printed in the first header line; to be used conjointly with the `header` option; default to `key`.
+  Value to be printed in the first header line; to be used conjointly with the `header` option; defaults to `key`.
 
 Here is an [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.columns_array_with_objects.js):
 
@@ -38,7 +38,7 @@ A shorter variation is to declare column elements as strings. The previous examp
 
 ## Order
 
-The order definition matters. It reflects the order of the generated records. Reverse the order of the column option in the above example to `[ { key: 'b' }, { key: 'a' } ]` yields to reverse the order of the generated CSV as `2,1\n`.
+The order definition matters. It reflects the order of the generated records. Reversing the order of the columns option in the above example to `[ { key: 'b' }, { key: 'a' } ]` results in reversed generated CSV data: `2,1\n`.
 
 With records ingested in the form of objects, it is possible to re-order all columns. Columns keys are also auto discovered in the first record unless defined.
 
@@ -46,7 +46,7 @@ With records ingested in the form of arrays, order reflects the field positions.
 
 ## Nested properties
 
-With records provided as object, the column `key` can refer to nested properties of the input. Its support both array and object references.
+With records provided as object, the column `key` can refer to nested properties of the input. It supports both array and object references.
 
 `embed:packages/csv-stringify/samples/option.columns_nested.js`
 
