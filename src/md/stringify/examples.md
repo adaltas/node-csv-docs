@@ -8,7 +8,7 @@ sort: 5
 
 ## Introduction
 
-This package proposes different API flavors. Every example is available on [GitHub](https://github.com/adaltas/node-csv-stringify/tree/master/samples).
+This package proposes different API flavors. Every example is available on [GitHub](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify/samples).
 
 ## Using the pipe function
 
