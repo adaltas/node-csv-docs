@@ -1,14 +1,14 @@
 ---
 title: Sync API
 navtitle: Sync
-description: The sync API expose a function which expect as input a full dataset as text and which returns the full result set as an array or an object.
+description: The sync API exposes a function, which expects as input a full dataset as text, and which returns the full result set as an array or an object.
 keywords: ['csv', 'parse', 'api', 'sync', 'memory', 'function']
 sort: 3.3
 ---
 
 # Sync API
 
-The sync API expose a function which expect as input a full dataset as text and which returns the full result set as an array or an object.
+The sync API exposes a function, which expects as input a full dataset as text, and which returns the full result set as an array or an object.
 
 To summarise, it is a regular direct synchronous call to a function: you pass CSV content and it returns records. Because of its simplicity, this is the recommended approach if you don't need scalability and if your dataset fit in memory.
 
