@@ -85,7 +85,7 @@ class Layout extends Component {
           width={'23%'}
           main={
             <>
-              <Header onMenuClick={toggle} slug={page.slug} project={project}>
+              <Header onMenuClick={toggle} slug={page.slug} page={page} project={project}>
                 {intro && <Intro />}
               </Header>
               <Main page={page}>{children}</Main>
@@ -116,7 +116,7 @@ const QueryLayout = props => (
           }
         }
         pages: allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___sort] }
+          sort: {frontmatter: {sort: ASC}}
           limit: 1000
         ) {
           edges {

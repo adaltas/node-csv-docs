@@ -30,8 +30,10 @@ const theme = {
       fill: '#B3C6C8',
     },
     a: {
-      textDecoration: 'none',
+      // textDecoration: 'none',
       color: '#FFF',
+      // textDecoration: 'dotted',
+      textUnderlineOffset: '.2em',
     },
     'a:hover, a:active': {
       color: '#00D0B4',
@@ -41,6 +43,9 @@ const theme = {
     },
     'main a': {
       fontWeight: 'bold',
+    },
+    'main strong': {
+      color: '#FFF',
     },
     'main :not(pre) > code[class*="language-"]': {
       padding: '.1em .2em .1em .2em',

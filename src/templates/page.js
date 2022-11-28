@@ -3,11 +3,10 @@ import { graphql } from 'gatsby'
 import Layout from '../layout'
 
 const Page = ({
-  data,
+  data: { page },
 }) => {
-  const { page } = data
   return (
-    <Layout page={{ ...page.fields, ...page.frontmatter }}>
+    <Layout page={{ ...page.fields, ...page.frontmatter, ...{headings: page.headings} }}>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </Layout>
   )
@@ -23,6 +22,11 @@ export const pageQuery = graphql`
         title
         description
         keywords
+      }
+      headings(depth: h2) {
+        id
+        depth
+        value
       }
       fields {
         edit_url

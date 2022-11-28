@@ -7,7 +7,8 @@ import {
 
 const styles = {
   intro: {
-    padding: '1rem 0',
+    marginTop: '-80px',
+    padding: '120px 0 1rem 0',
     position: 'relative',
     textAlign: 'center',
     width: '100%',

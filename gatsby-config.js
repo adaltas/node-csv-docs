@@ -28,14 +28,6 @@ module.exports = {
           resolve: "gatsby-remark-snippet-url-prepare",
           options: {}
         }, {
-          resolve: "gatsby-remark-toc-patched",
-          options: {
-            header: "Table of Contents", // the custom header text
-            include: [
-              "**/*.md", // an include glob to match against
-            ],
-          },
-        }, {
           resolve: "gatsby-remark-embed-snippet",
           options: {
             directory: `${__dirname}/csv/`

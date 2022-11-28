@@ -14,12 +14,12 @@ const styles = {
       outline: 'none',
     },
     ':enabled:hover': {
-      backgroundColor: 'rgba(0, 0, 0, .08)',
+      backgroundColor: 'rgba(0, 0, 0, .2)',
     },
   },
   link: {
     ':hover': {
-      backgroundColor: 'rgba(0, 0, 0, .08)',
+      backgroundColor: 'rgba(0, 0, 0, .2)',
     },
   },
 }
