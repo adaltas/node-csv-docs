@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcsv_docs=self.webpackChunkcsv_docs||[]).push([[565],{6491:function(t,e,s){s.r(e);s(7294);var a=s(156),n=s(4579);e.default=function(t){var e=t.data.page;return(0,n.tZ)(a.Z,{page:Object.assign({},e.fields,e.frontmatter)},(0,n.tZ)("div",{dangerouslySetInnerHTML:{__html:e.html}}))}}}]);
-//# sourceMappingURL=component---src-templates-page-js-4f70219be73702364987.js.map
