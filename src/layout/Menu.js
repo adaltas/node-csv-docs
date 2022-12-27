@@ -23,6 +23,7 @@ const styles_nav = {
     '& > ul': {
       margin: '0',
       paddingTop: '0',
+      marginLeft: '.5rem',
       boxSizing: 'border-box',
       overflow: 'hidden',
       height: '0',
