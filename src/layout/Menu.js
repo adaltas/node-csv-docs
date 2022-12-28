@@ -180,6 +180,7 @@ const Nav = ({
         color="inherit"
         ripple={true}
         className={css(styles_nav.button).toString()}
+        // disabled={current}
       >
         <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
           <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
@@ -241,7 +242,7 @@ const Menu = ({
     if(currentSlug === extractMenuSlug(slug)) {
       setCurrentSlug(undefined)
     } else {
-    setCurrentSlug(extractMenuSlug(slug))
+      setCurrentSlug(extractMenuSlug(slug))
     }
   }
   let menus = { children: {
