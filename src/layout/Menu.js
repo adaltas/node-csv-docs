@@ -106,8 +106,8 @@ const styles_nav = {
     transition: 'transform .5s ease-out',
   },
   icon_down: {
-    transform: 'rotate(0deg)',
-  }
+    transform: 'rotate(90deg)',
+  },
 }
 
 const List1 = ({
@@ -181,7 +181,7 @@ const Nav = ({
         ripple={true}
         className={css(styles_nav.button).toString()}
       >
-        <svg css={[styles_nav.icon, current ? styles_nav.icon_down : styles_nav.icon_up]}>
+        <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
           <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
         </svg>
       </Icon>
