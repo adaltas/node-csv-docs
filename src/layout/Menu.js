@@ -6,10 +6,11 @@ import Icon from '../components/Icon'
 const styles_nav = {
   root: {
     fontWeight: '300',
+    marginTop: '2rem',
     '& h1': {
       fontSize: '1.2rem',
       fontWeight: '300',
-      margin: '2rem 0 0 0',
+      margin: 0,
       padding: '0 1rem',
       display: 'flex',
       cursor: 'pointer',
@@ -60,7 +61,11 @@ const styles_nav = {
     },
   },
   current: {
+    backgroundColor: 'rgba(255, 255, 255, .05)',
+    borderTop: '1px solid rgba(255, 255, 255, .1)',
+    borderBottom: '1px solid rgba(255, 255, 255, .1)',
     '& h1': {
+      paddingTop: '1rem',
       cursor: 'default',
       ':hover button': {
         backgroundColor: 'rgba(255, 255, 255, 0)',
@@ -69,6 +74,7 @@ const styles_nav = {
     '& > ul': {
       // display: '',
       paddingTop: '1rem',
+      paddingBottom: '1rem',
       overflow: 'visible',
       height: 'auto',
       opacity: '1',
@@ -105,8 +111,8 @@ const styles_nav = {
     transition: 'transform .5s ease-out',
   },
   icon_down: {
-    transform: 'rotate(0deg)',
-  }
+    transform: 'rotate(90deg)',
+  },
 }
 
 const List1 = ({
@@ -179,7 +185,7 @@ const Nav = ({
         color="inherit"
         ripple={true}
         className={css(styles_nav.button).toString()}
-        disabled={current}
+        // disabled={current}
       >
         <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
           <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
@@ -238,7 +244,11 @@ const Menu = ({
   const defaultSlug = extractMenuSlug(slug)
   const [currentSlug, setCurrentSlug] = useState(defaultSlug)
   const onToggle = (slug) => {
-    setCurrentSlug(extractMenuSlug(slug))
+    if(currentSlug === extractMenuSlug(slug)) {
+      setCurrentSlug(undefined)
+    } else {
+      setCurrentSlug(extractMenuSlug(slug))
+    }
   }
   let menus = { children: {
     project: {
