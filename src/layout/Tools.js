@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import Icon from '../components/Icon'
 import { css } from '@emotion/css'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip } from 'react-tooltip'
 import ReactDom from 'react-dom'
 import {
   TABLET_MEDIA_QUERY,
@@ -83,9 +83,8 @@ export default function Tools({
         <div css={toolsStyles.tools}>
           <Icon
             color="inherit"
-            aria-label="content-edit"
-            data-for="content-tooltip"
-            data-tip="Edit on GitHub"
+            aria-label="Edit on GitHub"
+            id="tooltip-edit"
             href={page.edit_url}
             ripple={true}
             className={css(toolsStyles.icon).toString()}
@@ -100,9 +99,8 @@ export default function Tools({
           </Icon>
           <Icon
             color="inherit"
-            aria-label="content-toc"
-            data-for="content-tooltip"
-            data-tip="Toggle the table of content"
+            aria-label="Toggle table of content"
+            id="tooltip-toc"
             onClick={() => setShowToc(!showToc)}
             className={css(toolsStyles.icon).toString()}
             ripple={true}
@@ -113,11 +111,19 @@ export default function Tools({
               <path d="M3,9h14V7H3V9z M3,13h14v-2H3V13z M3,17h14v-2H3V17z M19,17h2v-2h-2V17z M19,7v2h2V7H19z M19,13h2v-2h-2V13z" />
             </svg>
           </Icon>
-          <ReactTooltip
-            id="content-tooltip"
+          <Tooltip
+            anchorId="tooltip-edit"
             delayShow={300}
             place="bottom"
             effect="solid"
+            content="Edit on GitHub"
+          />
+          <Tooltip
+            anchorId="tooltip-toc"
+            delayShow={300}
+            place="bottom"
+            effect="solid"
+            content="Toggle the table of content"
           />
         </div>
       }

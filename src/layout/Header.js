@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/css'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip } from 'react-tooltip'
 import Icon from '../components/Icon'
 import Tools from './Tools'
 import {
@@ -152,8 +152,7 @@ export default function Header({
             <a
               href={project.issue}
               css={styles.quick}
-              data-for="header-tooltip"
-              data-tip="Report an issue"
+              id="tooltip-issue"
             >
               <Icon
                 color="inherit"
@@ -168,8 +167,7 @@ export default function Header({
             <a
               href={project.github}
               css={styles.quick}
-              data-for="header-tooltip"
-              data-tip="GitHub repository"
+              id="tooltip-git"
             >
               <Icon
                 color="inherit"
@@ -182,11 +180,21 @@ export default function Header({
               <span id="header-github" css={styles.quick_label}>GitHub</span>
             </a>
           </div>
-          <ReactTooltip
-            id="header-tooltip"
+          <Tooltip
+            anchorId="tooltip-issue"
             delayShow={300}
             place="bottom"
             effect="solid"
+            content="Report an issue"
+            style={{zIndex: 10}}
+          />
+          <Tooltip
+            anchorId="tooltip-git"
+            delayShow={300}
+            place="bottom"
+            effect="solid"
+            content="GitHub repository"
+            style={{zIndex: 10}}
           />
           <Tools page={page} />
         </header>
