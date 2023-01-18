@@ -28,11 +28,11 @@ class Main extends Component {
       '& h2:a': {
       },
       '& h2:before': {
-        display: 'block',
-        content: '"ok"',
-        height: '120px',
-        marginTop: '-120px',
-        visibility: 'hidden',
+        // display: 'block',
+        // content: '"ok"',
+        // height: '120px',
+        // marginTop: '-120px',
+        // visibility: 'hidden',
       },
     },
   }
