@@ -9,7 +9,7 @@ keywords: ['csv', 'stringify', 'options', 'quotes', 'delimiter', 'escape']
 
 Quote all fields matching a regular expression.
 
-* Type: `boolean`
+* Type: `String|RegExp`
 * Optional
 * Default: `false`
 * Since: 5.0.0
