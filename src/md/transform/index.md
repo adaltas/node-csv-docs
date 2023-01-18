@@ -38,5 +38,4 @@ Data is expected to be an array of records. Records may be provided in any form 
 ## Additional help
 
 For usage and examples, you may refer to
-[example page](/transform/examples/),
 [the "samples" folder](https://github.com/adaltas/node-csv/tree/master/packages/stream-transform/samples) and [the "test" folder](https://github.com/adaltas/node-csv/tree/master/packages/stream-transform/test).
