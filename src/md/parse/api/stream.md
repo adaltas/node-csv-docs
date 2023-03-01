@@ -1,7 +1,7 @@
 ---
 title: Stream API
 navtitle: Stream
-description: The stream API might not be the most pleasant API to use but is scalable. It is the one upon which all the other implementation are based.
+description: The stream API might not be the most pleasant API to use but is scalable.
 keywords: ['csv', 'parse', 'api', 'stream', 'async', 'pipe', 'native', 'write', 'events']
 sort: 3.1
 ---
