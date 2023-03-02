@@ -10,6 +10,106 @@ sort: 6
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.4](https://github.com/adaltas/node-csv/compare/csv-stringify@6.2.3...csv-stringify@6.2.4) (2023-02-08)
+
+
+### Bug Fixes
+
+* support ts node16 resolution in cjs ([#354](https://github.com/adaltas/node-csv/issues/354)) ([fa09d03](https://github.com/adaltas/node-csv/commit/fa09d03aaf0008b2790656871ca6b2c4be12d14c))
+
+
+
+## [6.2.3](https://github.com/adaltas/node-csv/compare/csv-stringify@6.2.2...csv-stringify@6.2.3) (2022-11-30)
+
+
+### Bug Fixes
+
+* **csv-stringify:** update quoted_match config option to accept arrays ([#371](https://github.com/adaltas/node-csv/issues/371)) ([42c468b](https://github.com/adaltas/node-csv/commit/42c468b188d9f0370d0f7ccf2b20c8f477b751d8))
+
+
+
+## [6.2.2](https://github.com/adaltas/node-csv/compare/csv-stringify@6.2.1...csv-stringify@6.2.2) (2022-11-22)
+
+
+### Bug Fixes
+
+* **csv-stringify:** add missing type definition for bigint cast option ([#369](https://github.com/adaltas/node-csv/issues/369)) ([764e748](https://github.com/adaltas/node-csv/commit/764e7486971835189364ea7a0103798e5c07fb2b))
+
+
+
+## [6.2.1](https://github.com/adaltas/node-csv/compare/csv-stringify@6.2.0...csv-stringify@6.2.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* support TypeScript moduleResolution node16 ([#368](https://github.com/adaltas/node-csv/issues/368)) ([f4d7c97](https://github.com/adaltas/node-csv/commit/f4d7c97f39fb73e9d248eee21e61e7dc48015c78))
+
+
+
+## [6.2.0](https://github.com/adaltas/node-csv/compare/csv-stringify@6.1.3...csv-stringify@6.2.0) (2022-07-10)
+
+
+### Features
+
+* ts module Node16 and type declaration to exports field ([#341](https://github.com/adaltas/node-csv/issues/341)) ([4b0283d](https://github.com/adaltas/node-csv/commit/4b0283d17b7fa46daa1f87380759ba72c71ec79b))
+
+
+
+### [6.1.3](https://github.com/adaltas/node-csv/compare/csv-stringify@6.1.2...csv-stringify@6.1.3) (2022-06-16)
+
+
+### Bug Fixes
+
+* **csv-stringify:** quote_match with empty string pattern quotes empty strings ([#345](https://github.com/adaltas/node-csv/issues/345)) ([1c22d2e](https://github.com/adaltas/node-csv/commit/1c22d2e07f66dd747150b5a7499b5ebd5bc0f25c)), closes [#344](https://github.com/adaltas/node-csv/issues/344)
+
+
+
+### [6.1.2](https://github.com/adaltas/node-csv/compare/csv-stringify@6.1.1...csv-stringify@6.1.2) (2022-06-14)
+
+
+### Bug Fixes
+
+* **csv-stringify:** throw err with no records and header in sync mode ([5c8ef2e](https://github.com/adaltas/node-csv/commit/5c8ef2e25618b122982e01c22bcfa3f8ed5db8aa))
+
+
+
+### [6.1.1](https://github.com/adaltas/node-csv/compare/csv-stringify@6.1.0...csv-stringify@6.1.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* **csv-stringify:** bom and header in sync mode with no records (fix [#343](https://github.com/adaltas/node-csv/issues/343)) ([bff158f](https://github.com/adaltas/node-csv/commit/bff158fbc9001b2cf7177ecd0f16dc97edac55f2))
+
+
+
+## [6.1.0](https://github.com/adaltas/node-csv/compare/csv-stringify@6.0.5...csv-stringify@6.1.0) (2022-05-24)
+
+
+### Features
+
+* wg stream api ([8a5eb7d](https://github.com/adaltas/node-csv/commit/8a5eb7dfd31b22217db4fbbc832d707221850785))
+
+
+### Bug Fixes
+
+* **csv-stringify:** update TS types to allow cast to return an object ([#339](https://github.com/adaltas/node-csv/issues/339)) ([60efa78](https://github.com/adaltas/node-csv/commit/60efa7862ed43bd2fd19d1f027a1809e9df6a67e))
+
+
+
+## [6.0.5](https://github.com/adaltas/node-csv/compare/csv-stringify@6.0.4...csv-stringify@6.0.5) (2021-12-29)
+
+
+### Bug Fixes
+
+* correct exports in package.json with webpack ([154eafb](https://github.com/adaltas/node-csv/commit/154eafbac866eb4499a0d392f8dcd057695c2586))
+* **csv-demo-webpack-ts:** remove polyfill ([47a99bd](https://github.com/adaltas/node-csv/commit/47a99bd944d1d943e6374227dbc4e20aaa2c8c7f))
+* **csv-demo-webpack-ts:** simplify export paths ([8d63a14](https://github.com/adaltas/node-csv/commit/8d63a14313bb6b26f13fafb740cc686f1dfaa65f))
+* esm exports in package.json files ([c48fe47](https://github.com/adaltas/node-csv/commit/c48fe478ced7560aa078fbc36ec33d6007111e2b)), closes [#308](https://github.com/adaltas/node-csv/issues/308)
+
+
+
+
+
 ## [6.0.4](https://github.com/adaltas/node-csv/compare/csv-stringify@6.0.3...csv-stringify@6.0.4) (2021-11-19)
 
 

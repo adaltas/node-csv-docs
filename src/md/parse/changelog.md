@@ -10,6 +10,97 @@ sort: 8
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.5](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.4...csv-parse@5.3.5) (2023-02-08)
+
+
+### Bug Fixes
+
+* support ts node16 resolution in cjs ([#354](https://github.com/adaltas/node-csv/issues/354)) ([fa09d03](https://github.com/adaltas/node-csv/commit/fa09d03aaf0008b2790656871ca6b2c4be12d14c))
+
+
+
+## [5.3.4](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.3...csv-parse@5.3.4) (2023-01-31)
+
+
+### Bug Fixes
+
+* **csv-parse:** destroy on end and call close event (fix [#333](https://github.com/adaltas/node-csv/issues/333)) ([ca3f55b](https://github.com/adaltas/node-csv/commit/ca3f55b7cf556b45377677428783608a2d9ebbb2))
+
+
+
+## [5.3.3](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.2...csv-parse@5.3.3) (2022-11-28)
+
+
+### Bug Fixes
+
+* **csv-parse:** improve INVALID_OPENING_QUOTE error message (fix adaltas/node-csv-docs[#120](https://github.com/adaltas/node-csv/issues/120)) ([3639780](https://github.com/adaltas/node-csv/commit/36397800a9b479658e6497bb521a27c037fc3abb))
+
+
+
+## [5.3.2](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.1...csv-parse@5.3.2) (2022-11-08)
+
+
+### Bug Fixes
+
+* support TypeScript moduleResolution node16 ([#368](https://github.com/adaltas/node-csv/issues/368)) ([f4d7c97](https://github.com/adaltas/node-csv/commit/f4d7c97f39fb73e9d248eee21e61e7dc48015c78))
+
+
+
+### [5.3.1](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.0...csv-parse@5.3.1) (2022-10-12)
+
+
+### Bug Fixes
+
+* **csv-parse:** build from previus commit ([29a0916](https://github.com/adaltas/node-csv/commit/29a0916026429d648e8c515ada4a452036e0736d))
+* **csv-parse:** record_delimiter and non default encoding (fix [#365](https://github.com/adaltas/node-csv/issues/365)) ([16fdb2d](https://github.com/adaltas/node-csv/commit/16fdb2dd2c3221d00568f28bed44106ffc0d49ef))
+
+
+
+## [5.3.0](https://github.com/adaltas/node-csv/compare/csv-parse@5.2.2...csv-parse@5.3.0) (2022-07-10)
+
+
+### Features
+
+* ts module Node16 and type declaration to exports field ([#341](https://github.com/adaltas/node-csv/issues/341)) ([4b0283d](https://github.com/adaltas/node-csv/commit/4b0283d17b7fa46daa1f87380759ba72c71ec79b))
+
+
+
+### [5.2.2](https://github.com/adaltas/node-csv/compare/csv-parse@5.2.1...csv-parse@5.2.2) (2022-07-01)
+
+
+### Bug Fixes
+
+* **csv-parse:** encoding detection with bom ([#350](https://github.com/adaltas/node-csv/issues/350)) ([fd75e66](https://github.com/adaltas/node-csv/commit/fd75e6626c1c549936bf35a2247ebefa0f3d5ec3))
+
+
+
+### [5.2.1](https://github.com/adaltas/node-csv/compare/csv-parse@5.2.0...csv-parse@5.2.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* **csv-parse:** rtrim encoding support (fix [#349](https://github.com/adaltas/node-csv/issues/349)) ([8bf52f0](https://github.com/adaltas/node-csv/commit/8bf52f0d5c25ee2423cb1629d3e9103534668c83))
+
+
+
+## [5.2.0](https://github.com/adaltas/node-csv/compare/csv-parse@5.1.0...csv-parse@5.2.0) (2022-06-14)
+
+
+### Features
+
+* **csv-parse:** cast_date as a function (fix [#342](https://github.com/adaltas/node-csv/issues/342)) ([2807d29](https://github.com/adaltas/node-csv/commit/2807d292c8987f5dedde4f7fe0bd0ac7f75c8755))
+
+
+
+## [5.1.0](https://github.com/adaltas/node-csv/compare/csv-parse@5.0.4...csv-parse@5.1.0) (2022-05-24)
+
+
+### Features
+
+* wg stream api ([8a5eb7d](https://github.com/adaltas/node-csv/commit/8a5eb7dfd31b22217db4fbbc832d707221850785))
+
+
+
 ## [5.0.4](https://github.com/adaltas/node-csv/compare/csv-parse@5.0.3...csv-parse@5.0.4) (2021-12-29)
 
 

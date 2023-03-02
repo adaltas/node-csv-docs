@@ -10,12 +10,60 @@ sort: 5
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## Roadmap
+## [4.2.2](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.1...csv-generate@4.2.2) (2023-02-08)
 
-* seed: always a number, value "0" disable the feature
-* Promise module API
-* record_delimiter: rename from row_delimiter
-* internal: store options in snake case
+
+### Bug Fixes
+
+* support ts node16 resolution in cjs ([#354](https://github.com/adaltas/node-csv/issues/354)) ([fa09d03](https://github.com/adaltas/node-csv/commit/fa09d03aaf0008b2790656871ca6b2c4be12d14c))
+
+
+
+## [4.2.1](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.0...csv-generate@4.2.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* support TypeScript moduleResolution node16 ([#368](https://github.com/adaltas/node-csv/issues/368)) ([f4d7c97](https://github.com/adaltas/node-csv/commit/f4d7c97f39fb73e9d248eee21e61e7dc48015c78))
+
+
+
+## [4.2.0](https://github.com/adaltas/node-csv/compare/csv-generate@4.1.0...csv-generate@4.2.0) (2022-07-10)
+
+
+### Features
+
+* ts module Node16 and type declaration to exports field ([#341](https://github.com/adaltas/node-csv/issues/341)) ([4b0283d](https://github.com/adaltas/node-csv/commit/4b0283d17b7fa46daa1f87380759ba72c71ec79b))
+
+
+
+## [4.1.0](https://github.com/adaltas/node-csv/compare/csv-generate@4.0.4...csv-generate@4.1.0) (2022-05-24)
+
+
+### Features
+
+* wg stream api ([8a5eb7d](https://github.com/adaltas/node-csv/commit/8a5eb7dfd31b22217db4fbbc832d707221850785))
+
+
+### Bug Fixes
+
+* **csv-generate:** catch invalid value error ([f031542](https://github.com/adaltas/node-csv/commit/f0315423ba576551f2bd08f3e1c3bc85e9003926))
+
+
+
+## [4.0.4](https://github.com/adaltas/node-csv/compare/csv-generate@4.0.3...csv-generate@4.0.4) (2021-12-29)
+
+
+### Bug Fixes
+
+* correct exports in package.json with webpack ([154eafb](https://github.com/adaltas/node-csv/commit/154eafbac866eb4499a0d392f8dcd057695c2586))
+* **csv-demo-webpack-ts:** remove polyfill ([47a99bd](https://github.com/adaltas/node-csv/commit/47a99bd944d1d943e6374227dbc4e20aaa2c8c7f))
+* **csv-demo-webpack-ts:** simplify export paths ([8d63a14](https://github.com/adaltas/node-csv/commit/8d63a14313bb6b26f13fafb740cc686f1dfaa65f))
+* esm exports in package.json files ([c48fe47](https://github.com/adaltas/node-csv/commit/c48fe478ced7560aa078fbc36ec33d6007111e2b)), closes [#308](https://github.com/adaltas/node-csv/issues/308)
+
+
+
+
 
 ## [4.0.3](https://github.com/adaltas/node-csv/compare/csv-generate@4.0.2...csv-generate@4.0.3) (2021-11-19)
 
