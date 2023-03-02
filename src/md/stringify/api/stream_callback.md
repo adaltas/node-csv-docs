@@ -1,6 +1,6 @@
 ---
 title: Combining the stream API with a entire dataset
-navtitle: stream + dataset
+navtitle: Stream + dataset
 description: Replace the writable stream with a string or buffer and the readable stream with a callback function.
 keywords: ['csv', 'stringify', 'api', 'stream', 'callback', 'function', 'mixin']
 sort: 3.3
