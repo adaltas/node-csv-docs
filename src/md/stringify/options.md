@@ -11,7 +11,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 
 ## Available options
 
-* `bom` (boolean)   
+* [`bom`](/stringify/options/bom/) (boolean)   
   _Since version 5.4.0_   
   Prepend the byte order mark (BOM) to the output stream.
 * [`cast`](/stringify/options/cast/)   
@@ -41,18 +41,19 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 * [`escape`](/stringify/options/escape/) (string|Buffer)   
   _Since version 0.0.1_   
   Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.
-* `escape_formulas` (boolean)   
+* [`escape_formulas`](/stringify/options/escape_formulas/) (boolean)   
   _Since version 6.3.0_   
   Escape values that start with `=`, `+`, `-`, `@`, `\t`, or `\r` with `'` and defend against CSV injection attacks.
 * [`header`](/stringify/options/header/) (boolean)   
   _Since version 0.0.1_   
   Display the column names on the first line if the columns option is provided or discovered.   
-* `quote` (string|Buffer|boolean)   
+* [`quote`](/stringify/options/quote/) (string|Buffer|boolean)   
   _Since version 0.0.1_   
-  The quote characters surrounding a field, defaults to the `"` (double quotation marks), an empty quote value will preserve the original field, whether it contains quotation marks or not.   
+  The quote characters surrounding a field, defaults to the `"` (double quotation marks), an empty quote value will preserve the original field, whether it contains quotation marks or not.
 * [`quoted`](/stringify/options/quoted/) (boolean)    
   _Since version 0.0.1_   
-  Boolean, default to false, quote all the non-empty fields even if not required.
+  Boolean, default to false, quote all the non-empty fields even if not
+  required.
 * [`quoted_empty`](/stringify/options/quoted_empty/) (boolean)   
   _Since version 5.1.0_   
   Quote empty strings and overrides `quoted_string` on empty strings when defined; default is `false`.

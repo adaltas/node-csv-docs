@@ -7,13 +7,13 @@ keywords: ['csv', 'stringify', 'options', 'quotes', 'delimiter', 'escape']
 
 # Option `quoted_empty`
 
-Quote empty strings and overrides `quoted_string` on empty strings when defined. The behavior of this option is the opposite of the `quoted` option and can be used conjointly to quote every fields.
+Quote empty strings. It overrides `quoted_string` on empty strings when defined.
 
 * Type: `boolean`
 * Optional
 * Default: `false`
 * Since: 0.0.4
-* Related: [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
+* Related: [`quote`](/stringify/options/quote/), [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
 
 Note, several options are available to control when to quote fields under certain conditions. Make sure to review the alternatives.
 

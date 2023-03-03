@@ -13,7 +13,7 @@ Quote all fields of type string. This option apply even when there is no charact
 * Optional
 * Default: `false`
 * Since: 0.0.4
-* Related: [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_match`](/stringify/options/quoted_match/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
+* Related: [`quote`](/stringify/options/quote/), [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_match`](/stringify/options/quoted_match/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
 
 Note, several options are available to control when to quote fields under certain conditions. Make sure to review the alternatives.
 
