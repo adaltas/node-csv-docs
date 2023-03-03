@@ -2,7 +2,7 @@
 title: Option escape_formulas
 navtitle: escape_formulas
 description: Escape values that start with `=`, `+`, `-`, `@`, `\t`, or `\r` with a `'` and defend against CSV injection attacks.
-keywords: ['csv', 'stringify', 'options', 'quotes', 'delimiter', 'escape']
+keywords: ['csv', 'stringify', 'options', 'escape_formulas', 'quotes', 'escape']
 ---
 
 # Option `escape_formulas`
@@ -13,6 +13,7 @@ Escape values that start with `=`, `+`, `-`, `@`, `\t`, or `\r` with `'` and def
 * Optional
 * Default: `false`
 * Since: 6.3.0
+* Related: `quote`, [`escape`](/stringify/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Example
 

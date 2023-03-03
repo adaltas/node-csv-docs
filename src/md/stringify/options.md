@@ -38,7 +38,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 * `eof` (boolean)   
   _Since version 0.0.2_   
   Add the value of "options.record_delimiter" on the last line, default to true.   
-* `escape` (string|Buffer)   
+* [`escape`](/stringify/options/escape/) (string|Buffer)   
   _Since version 0.0.1_   
   Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.
 * `escape_formulas` (boolean)   
