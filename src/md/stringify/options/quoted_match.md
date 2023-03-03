@@ -7,11 +7,11 @@ keywords: ['csv', 'stringify', 'options', 'quotes', 'delimiter', 'escape']
 
 # Option `quoted_match`
 
-Quote all fields matching a regular expression.
+Quote all fields matching a regular expression. Value may equal a string, a RegExp, and an array with any of those.
 
-* Type: `String|RegExp`
+* Type: `[String|RegExp]` or `String|RegExp`
 * Optional
-* Default: `false`
+* Default: `null`
 * Since: 5.0.0
 * Related: [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
 
