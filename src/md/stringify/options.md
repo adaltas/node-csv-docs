@@ -40,7 +40,10 @@ All options are optional. All the options from the [Node.js Writable Stream API]
   Add the value of "options.record_delimiter" on the last line, default to true.   
 * `escape` (string|Buffer)   
   _Since version 0.0.1_   
-  Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.   
+  Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.
+* `escape_formulas` (boolean)   
+  _Since version 6.3.0_   
+  Escape values that start with `=`, `+`, `-`, `@`, `\t`, or `\r` with `'` and defend against CSV injection attacks.
 * [`header`](/stringify/options/header/) (boolean)   
   _Since version 0.0.1_   
   Display the column names on the first line if the columns option is provided or discovered.   
