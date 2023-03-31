@@ -9,14 +9,14 @@ sort: 3
 
 This package proposes different API flavors available through different modules. Under the hood, they are all based on the same implementation.
 
+* [Sync API](/transform/api/sync/)   
+  The sync API provides simplicity, readability and convenience. However, both the input and output datasets must fit into memory and only synchronous handlers are supported.
 * [Stream API](/transform/api/stream/)   
   The stream API is scalable and is the default implemention upon witch other API are created. It is verbose but flexible.
 * [Callback API](/transform/api/callback/)   
-  If the transformed dataset fit into memory, you can obtains the records from a user defined function. It is implemented in the same function as the stream API. It is easy and handlers can be written asynchronously.
+  If the transformed dataset fit into memory, you can obtains the records from a user defined function. This is usually not recommanded, use the Sync API instead. It is implemented in the same function as the stream API. It is easy and handlers can be written asynchronously.
 * [Stream + callback API](/transform/api/mixed/)  
   The stream and callback APIs can be combined toguether if you need to.
-* [Sync API](/transform/api/sync/)   
-  The sync API provides simplicity, readability and convenience. However, both the input and output datasets must fit into memory and only synchronous handlers are supported.
 
 ## Additionnal information
 
