@@ -63,23 +63,25 @@ const toolsStyles = {
   },
 }
 
-export default function Tools({
-  page
-}) {
-  const [ showToc, setShowToc ] = useState(false)
+export default function Tools({ page }) {
+  const [showToc, setShowToc] = useState(false)
   return (
     <Fragment>
-      { page && showToc &&
+      {page && showToc && (
         <div css={toolsStyles.toc}>
           <h2>Table of Contents</h2>
           <ul>
-          {page.headings.map( ({id, value}) =>
-            <li><a href={`#${id}`} alt={value}>{value}</a></li>
-          )}
+            {page.headings.map(({ id, value }) => (
+              <li>
+                <a href={`#${id}`} alt={value}>
+                  {value}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-      }
-      {page && page.edit_url &&
+      )}
+      {page && page.edit_url && (
         <div css={toolsStyles.tools}>
           <Icon
             color="inherit"
@@ -126,7 +128,7 @@ export default function Tools({
             content="Toggle the table of content"
           />
         </div>
-      }
+      )}
     </Fragment>
   )
 }

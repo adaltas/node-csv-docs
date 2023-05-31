@@ -116,12 +116,7 @@ const styles = {
   },
 }
 
-export default function Header({
-  children,
-  onMenuClick,
-  page,
-  project,
-}) {
+export default function Header({ children, onMenuClick, page, project }) {
   return (
     <>
       <div css={styles.headerContainer}>
@@ -149,11 +144,7 @@ export default function Header({
               </Link>
             </h1>
             <div css={styles.grow} />
-            <a
-              href={project.issue}
-              css={styles.quick}
-              id="tooltip-issue"
-            >
+            <a href={project.issue} css={styles.quick} id="tooltip-issue">
               <Icon
                 color="inherit"
                 aria-labelledby="header-bug"
@@ -162,13 +153,11 @@ export default function Header({
               >
                 <FaBug css={styles.icon} />
               </Icon>
-              <span id="header-bug" css={styles.quick_label}>Issues</span>
+              <span id="header-bug" css={styles.quick_label}>
+                Issues
+              </span>
             </a>
-            <a
-              href={project.github}
-              css={styles.quick}
-              id="tooltip-git"
-            >
+            <a href={project.github} css={styles.quick} id="tooltip-git">
               <Icon
                 color="inherit"
                 aria-labelledby="header-github"
@@ -177,7 +166,9 @@ export default function Header({
               >
                 <FaGithub css={styles.icon} />
               </Icon>
-              <span id="header-github" css={styles.quick_label}>GitHub</span>
+              <span id="header-github" css={styles.quick_label}>
+                GitHub
+              </span>
             </a>
           </div>
           <Tooltip
@@ -186,7 +177,7 @@ export default function Header({
             place="bottom"
             effect="solid"
             content="Report an issue"
-            style={{zIndex: 10}}
+            style={{ zIndex: 10 }}
           />
           <Tooltip
             anchorId="tooltip-git"
@@ -194,14 +185,12 @@ export default function Header({
             place="bottom"
             effect="solid"
             content="GitHub repository"
-            style={{zIndex: 10}}
+            style={{ zIndex: 10 }}
           />
           <Tools page={page} />
         </header>
       </div>
-    <div css={styles.root}>
-      {children}
-    </div>
+      <div css={styles.root}>{children}</div>
     </>
   )
 }

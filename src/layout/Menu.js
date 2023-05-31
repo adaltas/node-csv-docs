@@ -54,7 +54,7 @@ const styles_nav = {
             },
           },
         },
-      }
+      },
     },
     '& a': {
       textDecoration: 'none',
@@ -98,7 +98,7 @@ const styles_nav = {
     textAlign: 'center',
     ':enabled:hover': {
       backgroundColor: 'rgba(255, 255, 255, .2)',
-    }
+    },
   },
   icon: {
     color: '#FFF',
@@ -115,40 +115,33 @@ const styles_nav = {
   },
 }
 
-const List1 = ({
-  onClickLink,
-  pages
-}) => (
+const List1 = ({ onClickLink, pages }) => (
   <ul>
-    {pages.sort( (p1, p2) => (
-      String(p1.sort || p1.navtitle) > String(p2.sort || p2.navtitle) ? 1 : -1
-    )).map( page => (
-      <li key={'li'+page.slug} css={styles_nav.li}>
-        <Link
-          to={page.slug}
-          className={css(styles_nav.link).toString()}
-          activeClassName={css(styles_nav.linkActive).toString()}
-          onClick={onClickLink}
-        >
-          {page.navtitle || page.title}
-        </Link>
-        { page.children &&
-          <List
-            onClickLink={onClickLink}
-            pages={page.children}
-          />
-        }
-      </li>
-    ))}
+    {pages
+      .sort((p1, p2) =>
+        String(p1.sort || p1.navtitle) > String(p2.sort || p2.navtitle) ? 1 : -1
+      )
+      .map((page) => (
+        <li key={'li' + page.slug} css={styles_nav.li}>
+          <Link
+            to={page.slug}
+            className={css(styles_nav.link).toString()}
+            activeClassName={css(styles_nav.linkActive).toString()}
+            onClick={onClickLink}
+          >
+            {page.navtitle || page.title}
+          </Link>
+          {page.children && (
+            <List onClickLink={onClickLink} pages={page.children} />
+          )}
+        </li>
+      ))}
   </ul>
 )
 
-const List = ({
-  onClickLink,
-  pages
-}) => (
+const List = ({ onClickLink, pages }) => (
   <ul>
-    {pages.map( page => (
+    {pages.map((page) => (
       <li key={page.slug} css={styles_nav.li}>
         <Link
           to={page.slug}
@@ -158,44 +151,39 @@ const List = ({
         >
           {page.navtitle || page.title}
         </Link>
-        { page.children &&
-          <List1
-            onClickLink={onClickLink}
-            pages={page.children}
-          />
-        }
+        {page.children && (
+          <List1 onClickLink={onClickLink} pages={page.children} />
+        )}
       </li>
     ))}
   </ul>
 )
 
-const Nav = ({
-  current,
-  onClickLink,
-  onToggle,
-  pages,
-  title
-}) => (
+const Nav = ({ current, onClickLink, onToggle, pages, title }) => (
   <nav css={[styles_nav.root, current && styles_nav.current]}>
     <h1 onClick={onToggle}>
-      <span>
-        {title}
-      </span>
+      <span>{title}</span>
       <Icon
         color="inherit"
         ripple={true}
         className={css(styles_nav.button).toString()}
         // disabled={current}
       >
-        <svg css={[styles_nav.icon, current ? styles_nav.icon_up : styles_nav.icon_down]}>
-          <polygon points="8,14.124,1,2,15,2" fill="none" stroke="rgb(179,198,200)"/>
+        <svg
+          css={[
+            styles_nav.icon,
+            current ? styles_nav.icon_up : styles_nav.icon_down,
+          ]}
+        >
+          <polygon
+            points="8,14.124,1,2,15,2"
+            fill="none"
+            stroke="rgb(179,198,200)"
+          />
         </svg>
       </Icon>
     </h1>
-    <List
-      onClickLink={onClickLink}
-      pages={pages}
-    />
+    <List onClickLink={onClickLink} pages={pages} />
   </nav>
 )
 
@@ -218,7 +206,7 @@ const styles = {
       content: '" "',
       display: 'block',
       height: '2rem',
-    }
+    },
   },
   footer: {
     borderTop: '1px solid rgb(200, 200, 200)',
@@ -231,11 +219,7 @@ const styles = {
   },
 }
 
-const Menu = ({
-  onClickLink,
-  pages,
-  slug
-}) => {
+const Menu = ({ onClickLink, pages, slug }) => {
   const extractMenuSlug = (slug) => {
     slug = slug && slug !== '/' ? /^(\/\w+\/)/.exec(slug)[1] : '/'
     slug = slug === '/project/' ? '/' : slug
@@ -244,67 +228,69 @@ const Menu = ({
   const defaultSlug = extractMenuSlug(slug)
   const [currentSlug, setCurrentSlug] = useState(defaultSlug)
   const onToggle = (slug) => {
-    if(currentSlug === extractMenuSlug(slug)) {
+    if (currentSlug === extractMenuSlug(slug)) {
       setCurrentSlug(undefined)
     } else {
       setCurrentSlug(extractMenuSlug(slug))
     }
   }
-  let menus = { children: {
-    project: {
-      title: 'Project',
-      sort: 1,
-      slug: '/',
-      children: {
-        'home': {
-          slug: '/',
-          title: 'Homepage',
-          sort: 1,
+  let menus = {
+    children: {
+      project: {
+        title: 'Project',
+        sort: 1,
+        slug: '/',
+        children: {
+          home: {
+            slug: '/',
+            title: 'Homepage',
+            sort: 1,
+          },
+          convert: {
+            slug: '/convert/',
+            title: 'Convertor',
+            sort: 2,
+          },
         },
-        'convert': {
-          slug: '/convert/',
-          title: 'Convertor',
-          sort: 2,
-        }
-      }
+      },
+      generate: {
+        title: 'Generate',
+        sort: 2,
+      },
+      parse: {
+        // current: true,
+        title: 'Parse',
+        sort: 3,
+      },
+      transform: {
+        title: 'Transform',
+        sort: 4,
+      },
+      stringify: {
+        title: 'Stringify',
+        sort: 5,
+      },
     },
-    generate: {
-      title: 'Generate',
-      sort: 2,
-    },
-    parse: {
-      // current: true,
-      title: 'Parse',
-      sort: 3,
-    },
-    transform: {
-      title: 'Transform',
-      sort: 4,
-    },
-    stringify: {
-      title: 'Stringify',
-      sort: 5,
-    },
-  } }
+  }
   // Build hierarchy, result is made of nested objects
-  pages.map( page => {
-    const namespace = page.slug.split('/').filter( name => !!name)
+  pages.map((page) => {
+    const namespace = page.slug.split('/').filter((name) => !!name)
     let local = menus
-    namespace.map( (name, i) => {
-      if( namespace.length === 1){
+    namespace.map((name, i) => {
+      if (namespace.length === 1) {
         // Main section have child pages matching the section slug
         local.children[name].slug = page.slug
         local.children[name].children = {
-          [name]: page
+          [name]: page,
         }
-      }else if( i < namespace.length - 1 ){
+      } else if (i < namespace.length - 1) {
         // Build the tree
-        if( !local.children[name] ) local.children[name] = {}
+        if (!local.children[name]) local.children[name] = {}
         // Navigate the tree
         local = local.children[name]
-      }else{
+      } else {
         // Insert the page
-        if(!local.children) local.children = {}
+        if (!local.children) local.children = {}
         local.children[name] = page
       }
     })
@@ -312,24 +298,27 @@ const Menu = ({
   // Sort hierachy, result is made of nested arrays
   const sort = (pages) => {
     return Object.keys(pages)
-    .map( name => {
-      let page = {}
-      Object.keys(pages[name]).map( property => {
-        page[property] = pages[name][property]
+      .map((name) => {
+        let page = {}
+        Object.keys(pages[name]).map((property) => {
+          page[property] = pages[name][property]
+        })
+        if (page.children) {
+          page.children = sort(page.children)
+        }
+        return page
       })
-      if( page.children ){
-        page.children = sort(page.children)
-      }
-      return page
-    })
-    .sort( (p1, p2) => (p1.sort || p1.navtitle || p1.title) > (p2.sort || p2.navtitle || p2.title))
+      .sort(
+        (p1, p2) =>
+          (p1.sort || p1.navtitle || p1.title) >
+          (p2.sort || p2.navtitle || p2.title)
+      )
   }
   menus = sort(menus.children)
   return (
     <aside css={[styles.root]}>
       <div css={styles.menu}>
-      {
-        menus.map( (page) => (
+        {menus.map((page) => (
           <Nav
             key={page.slug}
             current={currentSlug === page.slug}
@@ -338,14 +327,11 @@ const Menu = ({
             onClickLink={onClickLink}
             onToggle={() => onToggle(page.slug)}
           />
-        ))
-      }
+        ))}
       </div>
       <div css={styles.footer}>
         Help us{' '}
-        <a
-          href="https://github.com/adaltas/node-csv-docs/issues"
-        >
+        <a href="https://github.com/adaltas/node-csv-docs/issues">
           improve the docs
         </a>{' '}
         by proposing enhancements and fixing typos.

@@ -44,7 +44,7 @@ class Layout extends Component {
         this.setState({ open: false })
       }
     }
-    const pages = data.pages.edges.map(page => {
+    const pages = data.pages.edges.map((page) => {
       return { ...page.node.fields, ...page.node.frontmatter }
     })
     const project = {}
@@ -52,15 +52,15 @@ class Layout extends Component {
     const ghurl = 'https://github.com/adaltas/node-csv'
     switch (project.slug) {
       case 'project':
-        project.name = 'node-csv';
+        project.name = 'node-csv'
         project.github = `${ghurl}/`
         break
       case 'transform':
-        project.name = 'node-stream-transform';
+        project.name = 'node-stream-transform'
         project.github = `${ghurl}/tree/master/packages/stream-transform/`
         break
       default:
-        project.name = 'node-csv-' + project.slug;
+        project.name = 'node-csv-' + project.slug
         project.github = `${ghurl}/tree/master/packages/csv-${project.slug}/`
     }
     project.label =
@@ -73,7 +73,10 @@ class Layout extends Component {
           meta={[
             { name: 'description', content: page.description },
             { name: 'keywords', content: page.keywords },
-            { name: 'google-site-verification', content: 'ukvG8Ae6z6Ly-ABtoUMWzRAPMmn07QWlbRnot0AC5FA'}
+            {
+              name: 'google-site-verification',
+              content: 'ukvG8Ae6z6Ly-ABtoUMWzRAPMmn07QWlbRnot0AC5FA',
+            },
           ]}
         >
           <html lang="en" />
@@ -85,7 +88,12 @@ class Layout extends Component {
           width={'23%'}
           main={
             <>
-              <Header onMenuClick={toggle} slug={page.slug} page={page} project={project}>
+              <Header
+                onMenuClick={toggle}
+                slug={page.slug}
+                page={page}
+                project={project}
+              >
                 {intro && <Intro />}
               </Header>
               <Main page={page}>{children}</Main>
@@ -106,7 +114,7 @@ class Layout extends Component {
   }
 }
 
-const QueryLayout = props => (
+const QueryLayout = (props) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -116,7 +124,7 @@ const QueryLayout = props => (
           }
         }
         pages: allMarkdownRemark(
-          sort: {frontmatter: {sort: ASC}}
+          sort: { frontmatter: { sort: ASC } }
           limit: 1000
         ) {
           edges {
@@ -134,7 +142,7 @@ const QueryLayout = props => (
         }
       }
     `}
-    render={data => <Layout data={data} {...props} />}
+    render={(data) => <Layout data={data} {...props} />}
   />
 )
 

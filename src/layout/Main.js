@@ -25,8 +25,7 @@ class Main extends Component {
         boxSizing: 'border-box',
       },
       clear: 'right',
-      '& h2:a': {
-      },
+      '& h2:a': {},
       '& h2:before': {
         // display: 'block',
         // content: '"ok"',

@@ -97,10 +97,10 @@ const Intro = () => {
                 href="/generate/"
                 alt="CSV Generate package"
                 onMouseEnter={(e) =>
-                  generateRef.current.style['fill-opacity'] = .4
+                  (generateRef.current.style['fill-opacity'] = 0.4)
                 }
                 onMouseLeave={(e) =>
-                  generateRef.current.style['fill-opacity'] = .2
+                  (generateRef.current.style['fill-opacity'] = 0.2)
                 }
               >
                 <g>
@@ -149,7 +149,7 @@ const Intro = () => {
                   <g transform="matrix(1,0,0,1,516,430.459)">
                     <text
                       style={{
-                        fontFamily: "Fira Mono",
+                        fontFamily: 'Fira Mono',
                         fontWeight: '400',
                         fontSize: '30px',
                         fontStyle: 'normal',
@@ -167,10 +167,10 @@ const Intro = () => {
                 href="/parse/"
                 alt="CSV Parse package"
                 onMouseEnter={(e) =>
-                  parseRef.current.style['fill-opacity'] = .4
+                  (parseRef.current.style['fill-opacity'] = 0.4)
                 }
                 onMouseLeave={(e) =>
-                  parseRef.current.style['fill-opacity'] = .2
+                  (parseRef.current.style['fill-opacity'] = 0.2)
                 }
               >
                 <g>
@@ -220,7 +220,7 @@ const Intro = () => {
                     <text
                       style={{
                         textAlign: 'center',
-                        fontFamily: "Fira Mono",
+                        fontFamily: 'Fira Mono',
                         fontWeight: '400',
                         fontSize: '30px',
                         fontStyle: 'normal',
@@ -238,10 +238,10 @@ const Intro = () => {
                 href="/transform/"
                 alt="Stream Transform package"
                 onMouseEnter={(e) =>
-                  transformRef.current.style['fill-opacity'] = .4
+                  (transformRef.current.style['fill-opacity'] = 0.4)
                 }
                 onMouseLeave={(e) =>
-                  transformRef.current.style['fill-opacity'] = .2
+                  (transformRef.current.style['fill-opacity'] = 0.2)
                 }
               >
                 <g>
@@ -290,7 +290,7 @@ const Intro = () => {
                   <g transform="matrix(1,0,0,1,881,501)">
                     <text
                       style={{
-                        fontFamily: "Fira Mono",
+                        fontFamily: 'Fira Mono',
                         fontWeight: '400',
                         fontSize: '30px',
                         fontStyle: 'normal',
@@ -308,10 +308,10 @@ const Intro = () => {
                 href="/stringify/"
                 alt="CSV Stringify package"
                 onMouseEnter={(e) =>
-                  stringifyRef.current.style['fill-opacity'] = .4
+                  (stringifyRef.current.style['fill-opacity'] = 0.4)
                 }
                 onMouseLeave={(e) =>
-                  stringifyRef.current.style['fill-opacity'] = .2
+                  (stringifyRef.current.style['fill-opacity'] = 0.2)
                 }
               >
                 <g>
@@ -360,7 +360,7 @@ const Intro = () => {
                   <g transform="matrix(1,0,0,1,1083,556.117)">
                     <text
                       style={{
-                        fontFamily: "Fira Mono",
+                        fontFamily: 'Fira Mono',
                         fontWeight: '400',
                         fontSize: '30px',
                         fontStyle: 'normal',
@@ -381,9 +381,8 @@ const Intro = () => {
       <div css={styles.headline}>
         <p>
           Comprehensive CSV suite combining 4 well tested packages to{' '}
-          <Link to="/generate/">generate</Link>,{' '}
-          <Link to="/parse/">parse</Link>,{' '}
-          <Link to="/transform/">transform</Link> and{' '}
+          <Link to="/generate/">generate</Link>, <Link to="/parse/">parse</Link>
+          , <Link to="/transform/">transform</Link> and{' '}
           <Link to="/stringify/">stringify</Link> CSV data.
         </p>
       </div>
