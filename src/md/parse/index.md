@@ -7,7 +7,9 @@ sort: 1
 
 # CSV Parser for Node.js
 
-[![Build Status](https://api.travis-ci.org/adaltas/node-csv-parse.svg)](https://travis-ci.org/#!/adaltas/node-csv-parse)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master)](https://github.com/adaltas/node-csv/actions)
+[![NPM](https://img.shields.io/npm/dm/csv-parse)](https://www.npmjs.com/package/csv-parse)
+[![NPM](https://img.shields.io/npm/v/csv-parse)](https://www.npmjs.com/package/csv-parse)
 
 This package is a parser converting CSV text input into arrays or objects. It implements the Node.js [stream API](/parse/api/#stream-api). It also provides alternative APIs for convenience such as the [callback API](/parse/api/#callback-api) and [sync API](/parse/api/#sync-api). It is both extremely easy to use and powerful. It was first released in 2010 and is used against big data sets by a large community.
 

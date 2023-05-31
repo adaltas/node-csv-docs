@@ -7,7 +7,9 @@ sort: 1
 
 # CSV and object generator
 
-[![Build Status](https://api.travis-ci.org/adaltas/node-csv-generate.svg)](https://travis-ci.org/#!/adaltas/node-csv-generate)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master)](https://github.com/adaltas/node-csv/actions)
+[![NPM](https://img.shields.io/npm/dm/csv-generate)](https://www.npmjs.com/package/csv-generate)
+[![NPM](https://img.shields.io/npm/v/csv-generate)](https://www.npmjs.com/package/csv-generate)
 
 This package provides a flexible generator of CSV strings and Javascript objects implementing the Node.js `stream.Readable` API. It may be used to generate random or user-defined datasets.
 
