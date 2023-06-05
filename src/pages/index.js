@@ -89,9 +89,12 @@ const styles = {
     '& a': {
       textDecoration: 'none'
     },
-    '& h1, & img': {
+    '& h1': {
       marginTop: '0',
-      marginBottom: '.5rem',
+      marginBottom: '1rem',
+    },
+    '& img': {
+      marginBottom: '0rem',
     },
     '& p': {
       marginBottom: '0',
@@ -147,6 +150,16 @@ const Index = () => (
       <div css={styles.card}>
         <h1><Link to="/generate/">csv-generate</Link></h1>
         <a
+          href="https://github.com/adaltas/node-csv/actions"
+          title="CSV Generate build status"
+        >
+          <img
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            alt="CSV Generate build status"
+          />
+        </a>
+        {' '}
+        <a
           href="https://npmjs.org/package/csv-generate"
           title="View this project on NPM"
         >
@@ -154,20 +167,21 @@ const Index = () => (
             src="https://img.shields.io/npm/v/csv-generate.svg"
             alt="NPM version"
           />
-        </a>{' '}
-        <a
-          href="https://travis-ci.org/#!/adaltas/node-csv-generate"
-          title="View this project on Travis"
-        >
-          <img
-            src="https://api.travis-ci.org/adaltas/node-csv-generate.svg"
-            alt="Travis build status"
-          />
         </a>
         <p>Write random and user-defined strings, objects and arrays</p>
       </div>
       <div css={styles.card}>
         <h1><Link to="/parse/">csv-parse</Link></h1>
+        <a
+          href="https://github.com/adaltas/node-csv/actions"
+          title="CSV parse build status"
+        >
+          <img
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            alt="CSV parse build status"
+          />
+        </a>
+        {' '}
         <a
           href="https://npmjs.org/package/csv-parse"
           title="View this project on NPM"
@@ -176,20 +190,21 @@ const Index = () => (
             src="https://img.shields.io/npm/v/csv-parse.svg"
             alt="NPM version"
           />
-        </a>{' '}
-        <a
-          href="https://travis-ci.org/#!/adaltas/node-csv-parse"
-          title="View this project on Travis"
-        >
-          <img
-            src="https://api.travis-ci.org/adaltas/node-csv-parse.svg"
-            alt="Travis build status"
-          />
         </a>
         <p>Read CSV strings and buffers and write object and arrays</p>
       </div>
       <div css={styles.card}>
         <h1><Link to="/transform/">stream-transform</Link></h1>
+        <a
+          href="https://github.com/adaltas/node-csv/actions"
+          title="Stream transform build status"
+        >
+          <img
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            alt="Stream transform build status"
+          />
+        </a>
+        {' '}
         <a
           href="https://npmjs.org/package/stream-transform"
           title="View this project on NPM"
@@ -198,20 +213,21 @@ const Index = () => (
             src="https://img.shields.io/npm/v/stream-transform.svg"
             alt="NPM version"
           />
-        </a>{' '}
-        <a
-          href="https://travis-ci.org/#!/adaltas/node-stream-transform"
-          title="View this project on Travis"
-        >
-          <img
-            src="https://api.travis-ci.org/adaltas/node-stream-transform.svg"
-            alt="Travis build status"
-          />
         </a>
         <p>Read and write objects and arrays</p>
       </div>
       <div css={styles.card}>
         <h1><Link to="/stringify/">csv-stringify</Link></h1>
+        <a
+          href="https://github.com/adaltas/node-csv/actions"
+          title="CSV stringify build status"
+        >
+          <img
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            alt="CSV stringify build status"
+          />
+        </a>
+        {' '}
         <a
           href="https://npmjs.org/package/csv-stringify"
           title="View this project on NPM"
@@ -219,15 +235,6 @@ const Index = () => (
           <img
             src="https://img.shields.io/npm/v/csv-stringify.svg"
             alt="NPM version"
-          />
-        </a>{' '}
-        <a
-          href="https://travis-ci.org/#!/adaltas/node-csv-stringify"
-          title="View this project on Travis"
-        >
-          <img
-            src="https://api.travis-ci.org/adaltas/node-csv-stringify.svg"
-            alt="Travis build status"
           />
         </a>
         <p>Read object and arrays and write CSV strings</p>
