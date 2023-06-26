@@ -19,6 +19,6 @@ Refer to the [`trim`](/parse/options/trim/) documentation to learn about which c
 
 ## Example
 
-This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.ltrim.js) declare spaces around fields at multiple locations. The ones on the left side are trimmed while the other ones are preserved.
+This [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.ltrim.js) declares spaces around fields at multiple locations. The ones on the left side are trimmed while the other ones are preserved.
 
 `embed:packages/csv-parse/samples/option.ltrim.js`

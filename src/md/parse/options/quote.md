@@ -9,7 +9,7 @@ keywords: ['csv', 'parse', 'options', 'objname', 'index', 'position', 'name', 'f
 
 The `quote` option defines the characters used to surround a field.
 
-The presence of quotes around the field is optional and is automatically detected. The value can be one or multiple characters. The detection of quotes is disable with the `null`, `false` and empty string values. it defaults to `"` (double quote).
+The presence of quotes around the field is optional and is automatically detected. The value can be one or multiple characters. The detection of quotes is disable with the `null`, `false` and empty string values. It defaults to `"` (double quote).
 
 * Type: `string` | `Buffer` | `[string|Buffer]`
 * Optional
