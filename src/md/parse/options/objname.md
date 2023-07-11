@@ -23,7 +23,7 @@ The option is compatible with the `raw` and `info` options.
 
 Field names reference one of the record property. Thus, they require the usage of the column option to generate records as object literal instead of array.
 
-Below, [the `objname` option is a string](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.objname.column.js) and it defines the `c1` column:
+Below, [the `objname` option is a string](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.objname.column.js) and it defines the `c2` column:
 
 `embed:packages/csv-parse/samples/option.objname.column.js`
 
