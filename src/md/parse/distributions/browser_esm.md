@@ -12,11 +12,11 @@ The ESM distribution target the latest browsers with support for [ECMAScript mod
 
 Compared with the [Node.js version](/csv/distributions/nodejs_esm/), this distribution bundles polyfills to run outside of the Node.js environment.
 
-Addtionnal information are available in the [project ECMAScript modules](/project/distributions/browser_esm/) documentation.
+Additional information is available in the [project ECMAScript modules](/project/distributions/browser_esm/) documentation.
 
 ## Usage
 
-The files can be manually imported. They dont require any external dependencies and they are located inside the [`packages/csv-parse/dist/esm`](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/dist/esm) folder.
+The files can be manually imported. They don't require any external dependencies and they are located inside the [`packages/csv-parse/dist/esm`](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/dist/esm) folder.
 
 When using NPM to manage and load your modules, for example within webpack, use:
 
