@@ -256,6 +256,25 @@ const Index = () => (
       <article>
         <h2>
           <a
+            href="/parse/options/comment_no_infix/"
+            alt="New `comment_no_infix` option"
+          >
+            New `comment_no_infix` option.
+          </a>
+        </h2>
+        <p css={styles.blog_info}>
+          {"By "}
+          <a href='https://www.adaltas.com/en/author/david/'>wdavidw</a>
+          {" | August 25th, 2023"}
+        </p>
+        <p>
+          Version 5.5.0 of csv-parse include the new [`comment_no_infix` option](/parse/options/comment_no_infix/).
+          When activate, comments may only start at the begining of a line.
+        </p>
+      </article>
+      <article>
+        <h2>
+          <a
             href="https://www.adaltas.com/en/2021/11/15/csv-version-6/"
             alt="CSV package version 6.0.0 with ECMAScript modules support"
           >
