@@ -31,6 +31,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 * [`comment`](/parse/options/comment/) (string|buffer)   
   _Since early days_   
   Treat all the characters after this one as a comment; one or multiple characters; disabled by default by defining an empty string `""`.
+* [`comment_no_infix`](/parse/options/comment_no_infix/) (boolean)   
+  _Since 5.5.0_   
+  Restricts the definition of comments to full lines.
 * [`delimiter`](/parse/options/delimiter/) (string|Buffer|[string|Buffer])   
   _Since version 0.0.1_   
   Set one or several field delimiters containing one or several characters. It defaults to `,` (comma).
