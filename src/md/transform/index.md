@@ -11,7 +11,7 @@ sort: 1
 [![NPM](https://img.shields.io/npm/dm/stream-transform)](https://www.npmjs.com/package/stream-transform)
 [![NPM](https://img.shields.io/npm/v/stream-transform)](https://www.npmjs.com/package/stream-transform)
 
-This project provides a simple object transformation framework implementing the Node.js `stream.Transform` API. Transformations are based on a [user function](/transform/user_function/) which must be provided. It was originally developed as a part of the Node.js [CSV package](https://github.com/adaltas/node-csv) (`npm install csv`) and can be used independently.
+This project provides a simple object transformation framework implementing the Node.js `stream.Transform` API. Transformations are based on a [user handler function](/transform/handler/) that must be provided. It was originally developed as a part of the Node.js [CSV package](https://github.com/adaltas/node-csv) (`npm install csv`) and can be used independently.
 
 Source code for this project is available on [GitHub](https://github.com/adaltas/node-csv/tree/master/packages/stream-transform).
 
