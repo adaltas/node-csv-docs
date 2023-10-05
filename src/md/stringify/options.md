@@ -35,9 +35,9 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 * [`delimiter`](/stringify/options/delimiter/) (string)   
   _Since version 0.0.1_   
   Set the field delimiter, one or multiple characters, defaults to a comma.   
-* `eof` (boolean)   
+* [`eof`](/stringify/options/eof/) (boolean)   
   _Since version 0.0.2_   
-  Add the value of "options.record_delimiter" on the last line, default to true.   
+  Append the value of the `record_delimiter` option after the last record, default to `true`.   
 * [`escape`](/stringify/options/escape/) (string|Buffer)   
   _Since version 0.0.1_   
   Single character used for escaping; only apply to characters matching the `quote` and the `escape` options default to `"`.
@@ -63,7 +63,7 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 * [`quoted_string`](/stringify/options/quoted_string/) (boolean)   
   _Since version 5.1.0_   
   Quote all fields of type string even if not required; default is `false`.
-* `record_delimiter` (string|Buffer)    
+* [`record_delimiter`](/stringify/options/record_delimiter/) (string|Buffer)    
   _Since version 0.0.1_   
   String used to delimit record rows or a special value; special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered in source or 'unix' if no source is specified); was `rowDelimiter` until version 4.3.1.
   

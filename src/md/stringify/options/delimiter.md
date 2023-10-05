@@ -13,7 +13,7 @@ The `delimiter` option set the delimiter between the fields of a record. It can 
 * Optional
 * Default: `","` (a one character comma)
 * Since: 0.0.1
-* Related: `record_delimiter`, `quote`, `escape` &mdash; see [Available Options](/parse/options/#available-options)
+* Related: [`record_delimiter`](/stringify/options/record_delimiter/), [`quote`](/stringify/options/quote/), [`escape`](/stringify/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Default behavior
 
