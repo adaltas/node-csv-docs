@@ -2,7 +2,7 @@
 title: Options
 description: Options relative to the csv-generate package
 keywords: ['csv', 'generate', 'options', 'duration', 'columns', 'seed', 'object', 'string']
-sort: 4
+sort: 5
 ---
 
 # CSV Generate options

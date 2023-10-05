@@ -1,7 +1,7 @@
 ---
 title: Examples
 keywords: ['csv', 'stringify', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
-sort: 5
+sort: 4
 ---
 
 # CSV Stringify examples
