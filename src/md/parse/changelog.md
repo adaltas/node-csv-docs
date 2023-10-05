@@ -10,6 +10,87 @@ sort: 8
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.1](https://github.com/adaltas/node-csv/compare/csv-parse@5.5.0...csv-parse@5.5.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* **csv-parse:** premature close error ([c6473a9](https://github.com/adaltas/node-csv/commit/c6473a9cb6c5e4c94e42c30c2b9d15b049f16a6b))
+
+
+
+## [5.5.0](https://github.com/adaltas/node-csv/compare/csv-parse@5.4.1...csv-parse@5.5.0) (2023-08-25)
+
+
+### Features
+
+* **csv-parse:** new comment_no_infix option (fix [#325](https://github.com/adaltas/node-csv/issues/325)) ([caca5c3](https://github.com/adaltas/node-csv/commit/caca5c3044541acfc9fe4a7f32167bb1179b6253))
+
+
+### Bug Fixes
+
+* **csv-demo-ts-cjs-node16:** upgrade module definition after latest typescript ([87fe919](https://github.com/adaltas/node-csv/commit/87fe91996fb2a8895c252177fca4f0cb59a518f9))
+
+
+
+## [5.4.1](https://github.com/adaltas/node-csv/compare/csv-parse@5.4.0...csv-parse@5.4.1) (2023-08-24)
+
+
+### Bug Fixes
+
+* commonjs types, run tsc and lint to validate changes ([#397](https://github.com/adaltas/node-csv/issues/397)) ([e6870fe](https://github.com/adaltas/node-csv/commit/e6870fe272c119e273196522c9771d12ff8b2a35))
+
+
+
+## [5.4.0](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.10...csv-parse@5.4.0) (2023-05-26)
+
+
+### Features
+
+* **csv-parse:** add `columns` property in `Info` object type ([#390](https://github.com/adaltas/node-csv/issues/390)) ([2dd2a92](https://github.com/adaltas/node-csv/commit/2dd2a92d0376c3cee3a4a39334f9828874f422bd))
+
+
+
+## [5.3.10](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.9...csv-parse@5.3.10) (2023-05-04)
+
+**Note:** Version bump only for package csv-parse
+
+
+
+
+
+## [5.3.9](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.8...csv-parse@5.3.9) (2023-04-30)
+
+**Note:** Version bump only for package csv-parse
+
+
+
+
+
+## [5.3.8](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.6...csv-parse@5.3.8) (2023-04-16)
+
+**Note:** Version bump only for package csv-parse
+
+
+
+
+
+## [5.3.7](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.6...csv-parse@5.3.7) (2023-04-16)
+
+**Note:** Version bump only for package csv-parse
+
+
+
+
+
+## [5.3.6](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.5...csv-parse@5.3.6) (2023-03-03)
+
+**Note:** Version bump only for package csv-parse
+
+
+
+
+
 ## [5.3.5](https://github.com/adaltas/node-csv/compare/csv-parse@5.3.4...csv-parse@5.3.5) (2023-02-08)
 
 

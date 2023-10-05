@@ -10,6 +10,65 @@ sort: 7
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.9](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.8...stream-transform@3.2.9) (2023-10-05)
+
+
+### Bug Fixes
+
+* **stream-transform:** sync callback usage in async handler ([4dd562b](https://github.com/adaltas/node-csv/commit/4dd562b65b99803b45858f449f67e52e2ef15726))
+
+
+
+## [3.2.8](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.7...stream-transform@3.2.8) (2023-08-25)
+
+
+### Bug Fixes
+
+* **csv-demo-ts-cjs-node16:** upgrade module definition after latest typescript ([87fe919](https://github.com/adaltas/node-csv/commit/87fe91996fb2a8895c252177fca4f0cb59a518f9))
+
+
+
+## [3.2.7](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.6...stream-transform@3.2.7) (2023-08-24)
+
+
+### Bug Fixes
+
+* commonjs types, run tsc and lint to validate changes ([#397](https://github.com/adaltas/node-csv/issues/397)) ([e6870fe](https://github.com/adaltas/node-csv/commit/e6870fe272c119e273196522c9771d12ff8b2a35))
+
+
+
+## [3.2.6](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.5...stream-transform@3.2.6) (2023-05-04)
+
+**Note:** Version bump only for package stream-transform
+
+
+
+
+
+## [3.2.5](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.4...stream-transform@3.2.5) (2023-04-30)
+
+**Note:** Version bump only for package stream-transform
+
+
+
+
+
+## [3.2.4](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.2...stream-transform@3.2.4) (2023-04-16)
+
+**Note:** Version bump only for package stream-transform
+
+
+
+
+
+## [3.2.3](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.2...stream-transform@3.2.3) (2023-04-16)
+
+**Note:** Version bump only for package stream-transform
+
+
+
+
+
 ## [3.2.2](https://github.com/adaltas/node-csv/compare/stream-transform@3.2.1...stream-transform@3.2.2) (2023-02-08)
 
 

@@ -10,6 +10,66 @@ sort: 5
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.0](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.8...csv-generate@4.3.0) (2023-10-05)
+
+
+### Features
+
+* **csv-generate:** breathe between async reads ([b1da5a1](https://github.com/adaltas/node-csv/commit/b1da5a13cf4dbbf0dd62f2e28e5dee8767ad0151))
+* **csv-generate:** set highWaterMark to default ([8e758cf](https://github.com/adaltas/node-csv/commit/8e758cf79ab8b089e9a6a80a1f06be524a208f35))
+
+
+
+## [4.2.8](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.7...csv-generate@4.2.8) (2023-08-25)
+
+
+### Bug Fixes
+
+* **csv-demo-ts-cjs-node16:** upgrade module definition after latest typescript ([87fe919](https://github.com/adaltas/node-csv/commit/87fe91996fb2a8895c252177fca4f0cb59a518f9))
+
+
+
+## [4.2.7](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.6...csv-generate@4.2.7) (2023-08-24)
+
+
+### Bug Fixes
+
+* commonjs types, run tsc and lint to validate changes ([#397](https://github.com/adaltas/node-csv/issues/397)) ([e6870fe](https://github.com/adaltas/node-csv/commit/e6870fe272c119e273196522c9771d12ff8b2a35))
+
+
+
+## [4.2.6](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.5...csv-generate@4.2.6) (2023-05-04)
+
+**Note:** Version bump only for package csv-generate
+
+
+
+
+
+## [4.2.5](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.4...csv-generate@4.2.5) (2023-04-30)
+
+**Note:** Version bump only for package csv-generate
+
+
+
+
+
+## [4.2.4](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.2...csv-generate@4.2.4) (2023-04-16)
+
+**Note:** Version bump only for package csv-generate
+
+
+
+
+
+## [4.2.3](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.2...csv-generate@4.2.3) (2023-04-16)
+
+**Note:** Version bump only for package csv-generate
+
+
+
+
+
 ## [4.2.2](https://github.com/adaltas/node-csv/compare/csv-generate@4.2.1...csv-generate@4.2.2) (2023-02-08)
 
 

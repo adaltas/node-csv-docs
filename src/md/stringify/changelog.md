@@ -10,6 +10,84 @@ sort: 6
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.4.3](https://github.com/adaltas/node-csv/compare/csv-stringify@6.4.2...csv-stringify@6.4.3) (2023-10-05)
+
+**Note:** Version bump only for package csv-stringify
+
+
+
+
+
+## [6.4.2](https://github.com/adaltas/node-csv/compare/csv-stringify@6.4.1...csv-stringify@6.4.2) (2023-08-25)
+
+
+### Bug Fixes
+
+* **csv-demo-ts-cjs-node16:** upgrade module definition after latest typescript ([87fe919](https://github.com/adaltas/node-csv/commit/87fe91996fb2a8895c252177fca4f0cb59a518f9))
+
+
+
+## [6.4.1](https://github.com/adaltas/node-csv/compare/csv-stringify@6.4.0...csv-stringify@6.4.1) (2023-08-24)
+
+
+### Bug Fixes
+
+* commonjs types, run tsc and lint to validate changes ([#397](https://github.com/adaltas/node-csv/issues/397)) ([e6870fe](https://github.com/adaltas/node-csv/commit/e6870fe272c119e273196522c9771d12ff8b2a35))
+
+
+
+## [6.4.0](https://github.com/adaltas/node-csv/compare/csv-stringify@6.3.4...csv-stringify@6.4.0) (2023-05-09)
+
+
+### Features
+
+* add unicode chars to formula escape ([#387](https://github.com/adaltas/node-csv/issues/387)) ([1fc177c](https://github.com/adaltas/node-csv/commit/1fc177c605e8a88e403539806890695a6ba72dec))
+
+
+
+## [6.3.4](https://github.com/adaltas/node-csv/compare/csv-stringify@6.3.3...csv-stringify@6.3.4) (2023-05-04)
+
+**Note:** Version bump only for package csv-stringify
+
+
+
+
+
+## [6.3.3](https://github.com/adaltas/node-csv/compare/csv-stringify@6.3.2...csv-stringify@6.3.3) (2023-04-30)
+
+**Note:** Version bump only for package csv-stringify
+
+
+
+
+
+## [6.3.2](https://github.com/adaltas/node-csv/compare/csv-stringify@6.3.0...csv-stringify@6.3.2) (2023-04-16)
+
+
+### Bug Fixes
+
+* uncaught errors with large stream chunks (fix [#386](https://github.com/adaltas/node-csv/issues/386)) ([1d500ed](https://github.com/adaltas/node-csv/commit/1d500edf38ba06fc80409974e08c37c6a40f27a1))
+
+
+
+## [6.3.1](https://github.com/adaltas/node-csv/compare/csv-stringify@6.3.0...csv-stringify@6.3.1) (2023-04-16)
+
+
+### Bug Fixes
+
+* uncaught errors with large stream chunks (fix [#386](https://github.com/adaltas/node-csv/issues/386)) ([1d500ed](https://github.com/adaltas/node-csv/commit/1d500edf38ba06fc80409974e08c37c6a40f27a1))
+
+
+
+## [6.3.0](https://github.com/adaltas/node-csv/compare/csv-stringify@6.2.4...csv-stringify@6.3.0) (2023-03-03)
+
+
+### Features
+
+* **csv-stringify:** Add escape_formulas to defend against injection attacks ([#380](https://github.com/adaltas/node-csv/issues/380)) ([47ac4bd](https://github.com/adaltas/node-csv/commit/47ac4bd7f5838e28daf889528fd6427ad0934076))
+
+
+
 ## [6.2.4](https://github.com/adaltas/node-csv/compare/csv-stringify@6.2.3...csv-stringify@6.2.4) (2023-02-08)
 
 
