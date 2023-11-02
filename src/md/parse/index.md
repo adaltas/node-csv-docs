@@ -40,5 +40,5 @@ For older browsers or older versions of Node, use the modules inside "./lib/es5"
 ## Additional help
 
 For usage and examples, you may refer to
-[recipes page](/parse/recipes/),
+[examples page](/parse/examples/),
 [the "samples" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/samples) and [the "test" folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/test).
