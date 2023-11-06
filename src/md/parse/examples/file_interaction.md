@@ -16,7 +16,7 @@ The easiest way is using the sync API. You read the file and get its content. Yo
 
 `embed:packages/csv-parse/samples/recipe.file.js`
 
-Alternatively, you could use the [Stream API](/parse/api/stream/) by [piping a file readable stream](/parse/recipes/stream_pipe/) to the parser transform stream which is itself piped into a writable stream.
+Alternatively, you could use the [Stream API](/parse/api/stream/) by [piping a file readable stream](/parse/examples/stream_pipe/) to the parser transform stream which is itself piped into a writable stream.
 
 ## Alternative encoding
 

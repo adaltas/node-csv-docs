@@ -9,13 +9,13 @@ sort: 3
 
 Learn how to use the parser with multiple examples.
 
-* [Async iterators](/parse/recipes/async_iterator/)   
+* [Async iterators](/parse/examples/async_iterator/)   
   An elegant method to iterate over records with the `for await...of` construct.
-* [File interaction](/parse/recipes/file_interaction/)   
+* [File interaction](/parse/examples/file_interaction/)   
   Read and write CSV content into a file.
-* [Promises usage](/parse/recipes/promises/)   
+* [Promises usage](/parse/examples/promises/)   
   How to use promises with the latest Nodejs Stream API.
-* [Stream Pipe](/parse/recipes/stream_pipe/)   
+* [Stream Pipe](/parse/examples/stream_pipe/)   
   When using the stream API, plug multiple readable and writable streams to parse CSV data.
   
 Additionnally, the [API](/parse/api/) and [options](/parse/options/) documentations come with numerous examples.
