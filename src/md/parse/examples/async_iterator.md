@@ -1,7 +1,7 @@
 ---
 title: Async iterator
 description: CSV Parse - how to use ES6 async iterator to traverse your records.
-keywords: ['csv', 'parse', 'parser', 'recipe', 'async', 'iterator', 'stream', 'pipe', 'read']
+keywords: ['csv', 'parse', 'parser', 'recipe', 'async', 'iterator', 'stream', 'pipe', 'read', 'promise']
 ---
 
 # Async iterator

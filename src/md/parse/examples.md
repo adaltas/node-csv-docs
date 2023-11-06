@@ -1,7 +1,7 @@
 ---
 title: Examples
 description: Learn how to use the parser with multiple examples.
-keywords: ['csv', 'parse', 'parser', 'recipes', 'example', 'tutorial']
+keywords: ['csv', 'parse', 'parser', 'examples', 'tutorial', 'recipes', 'async', 'promise', 'stream', 'file', 'fs']
 sort: 3
 ---
 
