@@ -14,6 +14,21 @@ import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javasc
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 SyntaxHighlighter.registerLanguage('javascript', javascript)
 
+const codeSyncString = `
+import assert from "node:assert";
+import { generate, parse, transform, stringify } from "csv/sync";
+
+// Run the pipeline
+const input = generate({ seed: 1, columns: 2, length: 2 });
+const rawRecords = parse(input);
+const refinedRecords = transform(rawRecords, (data) =>
+  data.map((value) => value.toUpperCase())
+);
+const output = stringify(refinedRecords);
+// Print the final result
+assert.equal(output, \`OMH,ONKCHHJMJADOA\nD,GEACHIN\n\`);
+`.trim()
+
 const codePipeString = `
 // Import the package
 import * as csv from 'csv';
@@ -418,7 +433,11 @@ const Index = () => (
       </article>
     </section>
     <section css={styles.sample}>
-      <h1>Quick Example</h1>
+      <h1>Quick sync example</h1>
+      <SyntaxHighlighter language="javascript" style={tomorrow}>
+        {codeSyncString}
+      </SyntaxHighlighter>
+      <h1>Quick stream pipe example</h1>
       <SyntaxHighlighter language="javascript" style={tomorrow}>
         {codePipeString}
       </SyntaxHighlighter>
