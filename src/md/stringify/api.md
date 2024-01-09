@@ -9,7 +9,7 @@ sort: 3
 
 ## Introduction
 
-There are multiple APIs available, each with their own advantages and disadvantages. Under the hood, they are all based on the same implementation.
+There are multiple APIs available, each with their own advantages and disadvantages. Under the hood, they share the same implementation.
 
 * [Sync API](/stringify/api/sync/)   
   The sync API provides simplicity, readability and convenience. Like for the callback API, it is meant for small dataset which fit in memory and which usage tolerates waiting for the last record.

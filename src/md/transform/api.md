@@ -7,7 +7,7 @@ sort: 3
 
 # Stream Transform API
 
-This package proposes different API flavors available through different modules. Under the hood, they are all based on the same implementation.
+This package proposes different API flavors available through different modules. Under the hood, they share the same implementation.
 
 * [Sync API](/transform/api/sync/)   
   The sync API provides simplicity, readability and convenience. However, both the input and output datasets must fit into memory and only synchronous handlers are supported.
