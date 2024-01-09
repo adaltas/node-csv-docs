@@ -14,32 +14,33 @@ import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javasc
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 SyntaxHighlighter.registerLanguage('javascript', javascript)
 
-const codeString = `
-// Import the package main module
-const csv = require('csv')
-// Use the module
+const codePipeString = `
+// Import the package
+import * as csv from 'csv';
+
+// Run the pipeline
 csv
-// Generate 20 records
-.generate({
-  delimiter: '|',
-  length: 20
-})
-// Parse the records
-.pipe(csv.parse({
-  delimiter: '|'
-}))
-// Transform each value into uppercase
-.pipe(csv.transform(function(record){
-   return record.map(function(value){
-     return value.toUpperCase()
-   });
-}))
-// Convert the object into a stream
-.pipe(csv.stringify({
-  quoted: true
-}))
-// Print the CSV stream to stdout
-.pipe(process.stdout)
+  // Generate 20 records
+  .generate({
+    delimiter: '|',
+    length: 20
+  })
+  // Transform CSV data into records
+  .pipe(csv.parse({
+    delimiter: '|'
+  }))
+  // Transform each value into uppercase
+  .pipe(csv.transform((record) =>
+    record.map((value) =>
+      value.toUpperCase()
+    )
+  ))
+  // Convert objects into a stream
+  .pipe(csv.stringify({
+    quoted: true
+  }))
+  // Print the CSV stream to stdout
+  .pipe(process.stdout);
 `.trim()
 
 const styles = {
@@ -419,7 +420,7 @@ const Index = () => (
     <section css={styles.sample}>
       <h1>Quick Example</h1>
       <SyntaxHighlighter language="javascript" style={tomorrow}>
-        {codeString}
+        {codePipeString}
       </SyntaxHighlighter>
     </section>
   </Layout>
