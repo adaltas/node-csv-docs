@@ -12,7 +12,7 @@ The ESM distribution target the latest browsers with support for [ECMAScript mod
 
 Compared with the [Node.js version](/csv/distributions/nodejs_esm/), this distribution bundles polyfills to run outside of the Node.js environment.
 
-Addtionnal information are available in the [project ECMAScript modules](/project/distributions/browser_esm/) documentation.
+Additional information are available in the [project ECMAScript modules](/project/distributions/browser_esm/) documentation.
 
 ## Usage
 
