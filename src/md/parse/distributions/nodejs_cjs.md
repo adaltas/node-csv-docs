@@ -21,7 +21,7 @@ The CommonJS distribution of this package supports the usage of Node.js version 
 
 Internally, the [`export` property](https://nodejs.org/api/packages.html#packages_exports) inside the `package.json` file declares the `csv-parse` and `csv-parse/sync` entry points. It exposes the modules of the [`./dist/cjs` folder](https://github.com/adaltas/node-csv/tree/master/packages/csv-parse/lib).
 
-It is supported in Node.js 12+ as an alternative to the `main` field. For older version, the `main` field behave as a fallback of the `csv` module. It is transparent. Use `require("csv/dist/cjs/sync.cjs")` as an alternative to `require("csv/sync")`.
+It is supported in Node.js 12.16.0+ as an alternative to the `main` field. For older versions, the `main` field behaves as a fallback to the `csv` module. It is transparent. Use `require("csv-parse/dist/cjs/sync.cjs")` as an alternative to `require("csv-parse/sync")`.
 
 ## Older versions of this package
 
