@@ -15,11 +15,17 @@ The `cast` option works at the field-level to alter its value. It is possible to
 * Since: 2.2.0
 * Related: `cast_date`, [`info`](/parse/options/info/), [`on_record`](/parse/options/on_record/) &mdash; see [Available Options](/parse/options/#available-options)
 
-The `cast` value is expected to be a function that receives context-rich information. The function has full control over a field. The [`test/option.cast.coffee`](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/test/option.cast.coffee) test provides insights on how to use it and its supported functionalities.
+The `cast` value is expected to be a function that receives context-rich information. The function has full control over a field.
+
+## Usage
+
+The `cast` user function is called with 2 arguments: the field `value` and the `context` object. The user function may return the value as-is or any other value including `null` and `undefined`.
+
+The [`test/option.cast.coffee`](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/test/option.cast.coffee) test provides insights on how to use it and its supported functionalities. It returns the first column untouched, converts the second column to an integer and return a new string from the third column's value.
+
+`embed:packages/csv-parse/samples/option.cast.js`
 
 ## Context
-
-The `cast` function is called with 2 arguments: the field `value` and the `context` object.
 
 The `context` object exposes the following properties:
 * `column` (number|string)   
@@ -39,9 +45,9 @@ The `context` object exposes the following properties:
 * `records` (number)   
   The number of records which have been fully parsed. It was named `count` until version 3.
 
-The [cast example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.js) uses the context to transform the first field into a date and replace the second field with the injected context:
+The [context example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.context.js) uses the context to transform the first field into a date and replace the second field with the injected context:
 
-`embed:packages/csv-parse/samples/option.cast.js`
+`embed:packages/csv-parse/samples/option.cast.context.js`
 
 ## Using the `cast` and `columns` functions conjointly
 
