@@ -57,9 +57,41 @@
 <li>Since: 2.2.0</li>
 <li>Related: <code class="language-text">cast_date</code>, <a href="/parse/options/info/"><code class="language-text">info</code></a>, <a href="/parse/options/on_record/"><code class="language-text">on_record</code></a> — see <a href="/parse/options/#available-options">Available Options</a></li>
 </ul>
-<p>The <code class="language-text">cast</code> value is expected to be a function that receives context-rich information. The function has full control over a field. The <a href="https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/test/option.cast.coffee"><code class="language-text">test/option.cast.coffee</code></a> test provides insights on how to use it and its supported functionalities.</p>
+<p>The <code class="language-text">cast</code> value is expected to be a function that receives context-rich information. The function has full control over a field.</p>
+<h2 id="usage" style="position:relative;"><a href="#usage" aria-label="usage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<p>The <code class="language-text">cast</code> user function is called with 2 arguments: the field <code class="language-text">value</code> and the <code class="language-text">context</code> object. The user function may return the value as-is or any other value including <code class="language-text">null</code> and <code class="language-text">undefined</code>.</p>
+<p>The <a href="https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/test/option.cast.coffee"><code class="language-text">test/option.cast.coffee</code></a> test provides insights on how to use it and its supported functionalities. It returns the first column untouched, converts the second column to an integer and return a new string from the third column's value.</p>
+<p><div class="gatsby-highlight display-embed-file-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> assert <span class="token keyword">from</span> <span class="token string">"node:assert"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> parse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"csv-parse/sync"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  1,2,3
+  4,5,6
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> records <span class="token operator">=</span> <span class="token function">parse</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// The cast option exect a function which</span>
+  <span class="token comment">// is called with two arguments,</span>
+  <span class="token comment">// the parsed value and a context object</span>
+  <span class="token function-variable function">cast</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Index indicates the column position</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>context<span class="token punctuation">.</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Return the value untouched</span>
+      <span class="token keyword">return</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>context<span class="token punctuation">.</span>index <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Convert the value to a string</span>
+      <span class="token keyword">return</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Return a different value</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Value is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">trim</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+assert<span class="token punctuation">.</span><span class="token function">deepStrictEqual</span><span class="token punctuation">(</span>records<span class="token punctuation">,</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">[</span> <span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"Value is 3"</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span> <span class="token string">"4"</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">"Value is 6"</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><div class="display-embed-file"><a href="https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.js">./packages/csv-parse/samples/option.cast.js</a></div></div></p>
 <h2 id="context" style="position:relative;"><a href="#context" aria-label="context permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context</h2>
-<p>The <code class="language-text">cast</code> function is called with 2 arguments: the field <code class="language-text">value</code> and the <code class="language-text">context</code> object.</p>
 <p>The <code class="language-text">context</code> object exposes the following properties:</p>
 <ul>
 <li><code class="language-text">column</code> (number|string)<br>
@@ -79,7 +111,7 @@ A boolean indicating if the field was surrounded by quotes.</li>
 <li><code class="language-text">records</code> (number)<br>
 The number of records which have been fully parsed. It was named <code class="language-text">count</code> until version 3.</li>
 </ul>
-<p>The <a href="https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.js">cast example</a> uses the context to transform the first field into a date and replace the second field with the injected context:</p>
+<p>The <a href="https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast.context.js">context example</a> uses the context to transform the first field into a date and replace the second field with the injected context:</p>
 <p><div class="gatsby-highlight display-embed-file-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> assert <span class="token keyword">from</span> <span class="token string">'node:assert'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> parse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'csv-parse/sync'</span><span class="token punctuation">;</span>
 
