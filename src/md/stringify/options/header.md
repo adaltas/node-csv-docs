@@ -9,7 +9,7 @@ keywords: ['csv', 'stringify', 'options', 'header']
 
 The `header` option generates the column names in the first emitted record. The value is expected to be a boolean value.
 
-This option implies that the knowledge of the columns. Column names can be discovered from the records when those are provided as object. They can also be provided through the [`columns` option](/stringify/options/columns/).
+This option implies knowledge of the columns. Column names can be discovered from the records when those are provided as object. They can also be provided through the [`columns` option](/stringify/options/columns/).
 
 An error will be emitted at runtime if the `header` option is set because no columns are defined nor discovered in the first record. The error message is `Undiscoverable Columns: header option requires column option or object records`.
 
