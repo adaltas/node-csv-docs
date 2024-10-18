@@ -18,4 +18,4 @@ Learn how to use the parser with multiple examples.
 * [Stream Pipe](/parse/examples/stream_pipe/)   
   When using the stream API, plug multiple readable and writable streams to parse CSV data.
   
-Additionnally, the [API](/parse/api/) and [options](/parse/options/) documentations come with numerous examples.
+Additionally, the [API](/parse/api/) and [options](/parse/options/) documentations come with numerous examples.
