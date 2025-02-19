@@ -103,7 +103,7 @@ const styles = {
     padding: '1rem 2rem',
     textAlign: 'center',
     '& a': {
-      textDecoration: 'none'
+      textDecoration: 'none',
     },
     '& h1': {
       marginTop: '0',
@@ -135,20 +135,20 @@ const styles = {
       [MIN_TABLET_MEDIA_QUERY]: {
         textAlign: 'justify',
       },
-    }
+    },
   },
   blog_info: {
     fontSize: '.9rem',
     // fontStyle: 'italic',
     // opacity: '.6',
-    fontColor: "rgba(255,255,255,.6)",
+    fontColor: 'rgba(255,255,255,.6)',
     margin: '0',
   },
   sample: {
     '& h1': {
       textAlign: 'center',
-    }
-  }
+    },
+  },
 }
 
 const Index = () => (
@@ -164,17 +164,18 @@ const Index = () => (
   >
     <section css={styles.projects}>
       <div css={styles.card}>
-        <h1><Link to="/generate/">csv-generate</Link></h1>
+        <h1>
+          <Link to="/generate/">csv-generate</Link>
+        </h1>
         <a
           href="https://github.com/adaltas/node-csv/actions"
           title="CSV Generate build status"
         >
           <img
-            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/publish.yml?branch=master"
             alt="CSV Generate build status"
           />
-        </a>
-        {' '}
+        </a>{' '}
         <a
           href="https://npmjs.org/package/csv-generate"
           title="View this project on NPM"
@@ -187,17 +188,18 @@ const Index = () => (
         <p>Write random and user-defined strings, objects and arrays</p>
       </div>
       <div css={styles.card}>
-        <h1><Link to="/parse/">csv-parse</Link></h1>
+        <h1>
+          <Link to="/parse/">csv-parse</Link>
+        </h1>
         <a
           href="https://github.com/adaltas/node-csv/actions"
           title="CSV parse build status"
         >
           <img
-            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/publish.yml?branch=master"
             alt="CSV parse build status"
           />
-        </a>
-        {' '}
+        </a>{' '}
         <a
           href="https://npmjs.org/package/csv-parse"
           title="View this project on NPM"
@@ -210,17 +212,18 @@ const Index = () => (
         <p>Read CSV strings and buffers and write object and arrays</p>
       </div>
       <div css={styles.card}>
-        <h1><Link to="/transform/">stream-transform</Link></h1>
+        <h1>
+          <Link to="/transform/">stream-transform</Link>
+        </h1>
         <a
           href="https://github.com/adaltas/node-csv/actions"
           title="Stream transform build status"
         >
           <img
-            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/publish.yml?branch=master"
             alt="Stream transform build status"
           />
-        </a>
-        {' '}
+        </a>{' '}
         <a
           href="https://npmjs.org/package/stream-transform"
           title="View this project on NPM"
@@ -233,17 +236,18 @@ const Index = () => (
         <p>Read and write objects and arrays</p>
       </div>
       <div css={styles.card}>
-        <h1><Link to="/stringify/">csv-stringify</Link></h1>
+        <h1>
+          <Link to="/stringify/">csv-stringify</Link>
+        </h1>
         <a
           href="https://github.com/adaltas/node-csv/actions"
           title="CSV stringify build status"
         >
           <img
-            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/nodejs.yml?branch=master"
+            src="https://img.shields.io/github/actions/workflow/status/adaltas/node-csv/publish.yml?branch=master"
             alt="CSV stringify build status"
           />
-        </a>
-        {' '}
+        </a>{' '}
         <a
           href="https://npmjs.org/package/csv-stringify"
           title="View this project on NPM"
@@ -256,17 +260,21 @@ const Index = () => (
         <p>Read object and arrays and write CSV strings</p>
       </div>
     </section>
-      <section css={styles.convert}>
-        <div>
-          <h1><Link to="/convert/"><span>CSV & JSON</span> <span>convertor tool</span></Link></h1>
-          <p>
-            This is a full-featured CSV parsing tool running entirely on your browser. 
-            No data leave your computer ! 
-            Use it also to learn how to use our packages and to test the various options interactively.
-          </p>
-        </div>
-        <img src={convert_icon} alt="Convertor tool" />
-      </section>
+    <section css={styles.convert}>
+      <div>
+        <h1>
+          <Link to="/convert/">
+            <span>CSV & JSON</span> <span>convertor tool</span>
+          </Link>
+        </h1>
+        <p>
+          This is a full-featured CSV parsing tool running entirely on your
+          browser. No data leave your computer ! Use it also to learn how to use
+          our packages and to test the various options interactively.
+        </p>
+      </div>
+      <img src={convert_icon} alt="Convertor tool" />
+    </section>
     <section css={styles.blog}>
       <h1>Latest news</h1>
       <article>
@@ -279,13 +287,14 @@ const Index = () => (
           </a>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://www.adaltas.com/en/author/david/'>wdavidw</a>
-          {" | August 25th, 2023"}
+          {'By '}
+          <a href="https://www.adaltas.com/en/author/david/">wdavidw</a>
+          {' | August 25th, 2023'}
         </p>
         <p>
-          Version 5.5.0 of csv-parse include the new [`comment_no_infix` option](/parse/options/comment_no_infix/).
-          When activate, comments may only start at the begining of a line.
+          Version 5.5.0 of csv-parse include the new [`comment_no_infix`
+          option](/parse/options/comment_no_infix/). When activate, comments may
+          only start at the begining of a line.
         </p>
       </article>
       <article>
@@ -298,15 +307,30 @@ const Index = () => (
           </a>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://www.adaltas.com/en/author/david/'>wdavidw</a>
-          {" | November 13th, 2021"}
+          {'By '}
+          <a href="https://www.adaltas.com/en/author/david/">wdavidw</a>
+          {' | November 13th, 2021'}
         </p>
         <p>
-          Version 6 of the <a href="https://csv.js.org/"  alt="CSV project">csv package</a> for
-          Node.js is released along its sub projects. <a
-          href="https://www.adaltas.com/en/2021/11/15/csv-version-6/" alt="Node.js CSV 6 announcement">Read about the new features and the
-          breaking changes</a> (<a href="https://www.adaltas.com/fr/2021/11/15/csv-version-6/" alt="French announcement">fr</a>) introduced by this new version.
+          Version 6 of the{' '}
+          <a href="https://csv.js.org/" alt="CSV project">
+            csv package
+          </a>{' '}
+          for Node.js is released along its sub projects.{' '}
+          <a
+            href="https://www.adaltas.com/en/2021/11/15/csv-version-6/"
+            alt="Node.js CSV 6 announcement"
+          >
+            Read about the new features and the breaking changes
+          </a>{' '}
+          (
+          <a
+            href="https://www.adaltas.com/fr/2021/11/15/csv-version-6/"
+            alt="French announcement"
+          >
+            fr
+          </a>
+          ) introduced by this new version.
         </p>
       </article>
       <article>
@@ -319,116 +343,109 @@ const Index = () => (
           </a>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://www.adaltas.com/'>wdavidw</a>
-          {" | August 27th, 2021"}
+          {'By '}
+          <a href="https://www.adaltas.com/">wdavidw</a>
+          {' | August 27th, 2021'}
         </p>
         <p>
-          A few weeks ago, we migrated the 5 repositories in one Git monorepo. If
-          interested in the details, read our article on how we <a
-          href="https://www.adaltas.com/en/2021/05/21/js-monorepos-merging-git-repositories/"
-          alt="Git monorepo">merged the repositories</a> while preserving the
-          commit history.
+          A few weeks ago, we migrated the 5 repositories in one Git monorepo.
+          If interested in the details, read our article on how we{' '}
+          <a
+            href="https://www.adaltas.com/en/2021/05/21/js-monorepos-merging-git-repositories/"
+            alt="Git monorepo"
+          >
+            merged the repositories
+          </a>{' '}
+          while preserving the commit history.
         </p>
       </article>
       <article>
         <h2>
-          <Link
-            to="/convert/"
-          >
-            Try the new CSV & JSON conversion tool!
-          </Link>
+          <Link to="/convert/">Try the new CSV & JSON conversion tool!</Link>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://www.adaltas.com/'>wdavidw</a>
-          {" | January 15th, 2019"}
+          {'By '}
+          <a href="https://www.adaltas.com/">wdavidw</a>
+          {' | January 15th, 2019'}
         </p>
         <p>
-          We just published a new conversion tool which takes a CSV input 
-          and convert it to JSON. Use it as a playground to learn how to 
-          use our packages, test your options interactively or as a 
-          full-featured CSV parsing tool.
+          We just published a new conversion tool which takes a CSV input and
+          convert it to JSON. Use it as a playground to learn how to use our
+          packages, test your options interactively or as a full-featured CSV
+          parsing tool.
         </p>
       </article>
       <article>
         <h2>
-          <Link
-            to="/stringify/changelog/"
-          >
-            CSV Stringify 5.1.0
-          </Link>
+          <Link to="/stringify/changelog/">CSV Stringify 5.1.0</Link>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://github.com/wdavidw/'>wdavidw</a>
-          {" | December 5th, 2018"}
+          {'By '}
+          <a href="https://github.com/wdavidw/">wdavidw</a>
+          {' | December 5th, 2018'}
         </p>
         <p>
-          <Link to="/stringify/options/cast/">Casting user functions</Link> are 
-          now called with a context object. The initial properties are 
-          "column", "header", "index", "records".
+          <Link to="/stringify/options/cast/">Casting user functions</Link> are
+          now called with a context object. The initial properties are "column",
+          "header", "index", "records".
         </p>
       </article>
       <article>
         <h2>
-          <Link
-            to="/project/changelog/"
-          >
-            CSV 5.0.0
-          </Link>
+          <Link to="/project/changelog/">CSV 5.0.0</Link>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://github.com/wdavidw/'>wdavidw</a>
-          {" | November 21th, 2018"}
+          {'By '}
+          <a href="https://github.com/wdavidw/">wdavidw</a>
+          {' | November 21th, 2018'}
         </p>
         <p>
-          Version 5.0.0 includes the latest csv-parse and csv-stringify 
+          Version 5.0.0 includes the latest csv-parse and csv-stringify
           respectively with version 4.0.1 and 5.0.0.
         </p>
       </article>
       <article>
         <h2>
-          <Link
-            to="/stringify/changelog/"
-          >
-            CSV Stringify 5.0.0
-          </Link>
+          <Link to="/stringify/changelog/">CSV Stringify 5.0.0</Link>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://github.com/wdavidw/'>wdavidw</a>
-          {" | November 21th, 2018"}
+          {'By '}
+          <a href="https://github.com/wdavidw/">wdavidw</a>
+          {' | November 21th, 2018'}
         </p>
         <p>
-          Version 5.0.0 introduces the new <code className="language-text">quoted_match</code> option and support 
-          options written both in the underscore and camelcase forms. Some 
-          options were renamed. Thus <code className="language-text">rowDelimiter</code> is 
-          now <code className="language-text">record_delimiter</code> and <code className="language-text">formatters</code> is now <code className="language-text">cast</code>. <Link to="/stringify/changelog/">Read the changelog!</Link>
+          Version 5.0.0 introduces the new{' '}
+          <code className="language-text">quoted_match</code> option and support
+          options written both in the underscore and camelcase forms. Some
+          options were renamed. Thus{' '}
+          <code className="language-text">rowDelimiter</code> is now{' '}
+          <code className="language-text">record_delimiter</code> and{' '}
+          <code className="language-text">formatters</code> is now{' '}
+          <code className="language-text">cast</code>.{' '}
+          <Link to="/stringify/changelog/">Read the changelog!</Link>
         </p>
       </article>
       <article>
         <h2>
-          <a
-            href="https://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/"
-          >
+          <a href="https://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/">
             CSV Parse 4.0.0 - re-writing and performance
           </a>
         </h2>
         <p css={styles.blog_info}>
-          {"By "}
-          <a href='https://github.com/wdavidw/'>wdavidw</a>
-          {" | November 19th, 2018"}
+          {'By '}
+          <a href="https://github.com/wdavidw/">wdavidw</a>
+          {' | November 19th, 2018'}
         </p>
         <p>
-          Version 4.0.0 is a complete re-writing of the project focusing on 
-          performance. It also comes with new functionalities as well as 
-          some cleanup in the option properties and the exported 
-          information. The official website is updated and 
-          the <Link to="/parse/changelog/">changelog</Link> contains the 
-          list of changes for this major release. <a
-          href="https://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/">Learn more!</a>
+          Version 4.0.0 is a complete re-writing of the project focusing on
+          performance. It also comes with new functionalities as well as some
+          cleanup in the option properties and the exported information. The
+          official website is updated and the{' '}
+          <Link to="/parse/changelog/">changelog</Link> contains the list of
+          changes for this major release.{' '}
+          <a href="https://www.adaltas.com/en/2018/11/19/nodejs-csv-version-4-performance/">
+            Learn more!
+          </a>
         </p>
       </article>
     </section>
