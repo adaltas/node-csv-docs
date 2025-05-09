@@ -7,8 +7,8 @@ The repository contains the source code generating the website of the [Node.js C
 To start a local instance of the website with yarn:
 
 ```bash
-yarn install
-yarn run develop
+npm install
+npm run develop
 ```
 
 To fetch the latest source code of the project:
