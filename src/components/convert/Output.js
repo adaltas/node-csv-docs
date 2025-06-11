@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import * as csv from 'csv/browser/esm/sync'
 // Syntax
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -24,20 +24,19 @@ const styles = {
 
 class Output extends Component {
   render() {
-    const {props} = this
-    const {fullscreen, input, options, transform} = props
+    const { props } = this
+    const { fullscreen, input, options, transform } = props
     const opts = {}
-    for(let property in options) {
+    for (let property in options) {
       const option = options[property]
       let value = option.variants[option.variant]
-      switch(option.variant){
+      switch (option.variant) {
         case 'function':
           try {
-            const ctx= {}
+            const ctx = {}
             eval(`ctx.value = ${value}`)
             value = ctx.value
-          }
-          catch(error) {}
+          } catch (error) {}
           break
         case 'buffer':
           value = Buffer.from(value)
@@ -49,26 +48,27 @@ class Output extends Component {
         case 'string':
           break
         default:
-          throw Error(`Invalid variant: property ${property} value ${options.variant}`)
+          throw Error(
+            `Invalid variant: property ${property} value ${options.variant}`
+          )
       }
       opts[property] = value
     }
     let output
     let error
     // Parse
-    try{
+    try {
       output = csv.parse(input, opts)
-    }catch(e){
+    } catch (e) {
       error = e
     }
     // Transform
-    if(transform){
+    if (transform) {
       try {
-        const transformCtx= {}
+        const transformCtx = {}
         eval(`transformCtx.value = ${transform}`)
         output = csv.transform(output, transformCtx.value)
-      }
-      catch(e) {
+      } catch (e) {
         error = e
       }
     }
@@ -78,7 +78,11 @@ class Output extends Component {
         {error ? (
           <p>{error.message}</p>
         ) : (
-          <SyntaxHighlighter language="json" style={tomorrow} css={[styles.output, fullscreen && styles.fullscreen]}>
+          <SyntaxHighlighter
+            language="json"
+            style={tomorrow}
+            css={[styles.output, fullscreen && styles.fullscreen]}
+          >
             {output}
           </SyntaxHighlighter>
         )}

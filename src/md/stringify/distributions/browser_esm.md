@@ -21,35 +21,37 @@ The files can be manually imported. They dont require any external dependencies 
 When using NPM to manage and load your modules, for example within webpack, use:
 
 ```js
-import {stringify} from 'csv-stringify/browser/esm';
+import { stringify } from 'csv-stringify/browser/esm'
 // Or
-import {stringify} from 'csv-stringify/browser/esm/sync';
+import { stringify } from 'csv-stringify/browser/esm/sync'
 ```
 
 ## Vanilla JavaScript
 
 A working demo is available in the project [`demo/browser`](https://github.com/adaltas/node-csv/tree/master/demo/browser) directory.
 
-* [`./esm/stringify.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/stringify.html)
-* [`./esm/stringify_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/stringify_sync.html)
+- [`./esm/stringify.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/stringify.html)
+- [`./esm/stringify_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/stringify_sync.html)
 
 With Express, expose the files with:
 
 ```js
-const app = express();
-app.use('/lib/stringify/',
-  express.static(`node_modules/csv-stringify/dist/esm/`));
-app.listen(3000);
+const app = express()
+app.use(
+  '/lib/stringify/',
+  express.static(`node_modules/csv-stringify/dist/esm/`)
+)
+app.listen(3000)
 ```
 
 The HTML code looks like:
 
 ```html
 <script type="module">
-  import {stringify} from '/lib/stringify/index.js';
+  import { stringify } from '/lib/stringify/index.js'
   stringify(records, options, (err, data) => {
     console.info(data)
-  });
+  })
 </script>
 ```
 
@@ -57,8 +59,8 @@ If you wish to use the sync API, use:
 
 ```html
 <script type="module">
-  import {stringify} from '/lib/stringify/sync.js';
-  const data = stringify(records, options);
+  import { stringify } from '/lib/stringify/sync.js'
+  const data = stringify(records, options)
 </script>
 ```
 
@@ -68,13 +70,13 @@ This distribution is compatible with [webpack version 5](https://webpack.js.org/
 
 In your module, import the appropriate `csv-stringify` module:
 
-* [`./stringify.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/stringify.js#L2):   
+- [`./stringify.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/stringify.js#L2):
   ```js
-  import {stringify} from 'csv-stringify/browser/esm';
+  import { stringify } from 'csv-stringify/browser/esm'
   ```
-* [`./stringify_sync.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/stringify_sync.js#L2):   
+- [`./stringify_sync.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/stringify_sync.js#L2):
   ```js
-  import {stringify} from 'csv-stringify/browser/esm/sync';
+  import { stringify } from 'csv-stringify/browser/esm/sync'
   ```
 
 The relevant [webpack configuration](https://github.com/adaltas/node-csv/tree/master/demo/webpack/webpack.config.js) looks like:

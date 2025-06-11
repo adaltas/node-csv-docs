@@ -21,35 +21,34 @@ The files can be manually imported. They don't require any external dependencies
 When using NPM to manage and load your modules, for example within webpack, use:
 
 ```js
-import {parse} from 'csv-parse/browser/esm';
+import { parse } from 'csv-parse/browser/esm'
 // Or
-import {parse} from 'csv-parse/browser/esm/sync';
+import { parse } from 'csv-parse/browser/esm/sync'
 ```
 
 ## Vanilla JavaScript
 
 A working demo is available in the project [`demo/browser`](https://github.com/adaltas/node-csv/tree/master/demo/browser) directory.
 
-* [`./esm/parse.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/parse.html)
-* [`./esm/parse_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/parse_sync.html)
+- [`./esm/parse.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/parse.html)
+- [`./esm/parse_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/parse_sync.html)
 
 With Express, expose the files with:
 
 ```js
-const app = express();
-app.use('/lib/parse/',
-  express.static(`node_modules/csv-parse/dist/esm/`));
-app.listen(3000);
+const app = express()
+app.use('/lib/parse/', express.static(`node_modules/csv-parse/dist/esm/`))
+app.listen(3000)
 ```
 
 The HTML code looks like:
 
 ```html
 <script type="module">
-  import {parse} from '/lib/parse/index.js';
+  import { parse } from '/lib/parse/index.js'
   parse(records, options, (err, data) => {
     console.info(data)
-  });
+  })
 </script>
 ```
 
@@ -57,8 +56,8 @@ If you wish to use the sync API, use:
 
 ```html
 <script type="module">
-  import {parse} from '/lib/parse/sync.js';
-  const data = parse(records, options);
+  import { parse } from '/lib/parse/sync.js'
+  const data = parse(records, options)
 </script>
 ```
 
@@ -68,13 +67,13 @@ This distribution is compatible with [webpack version 5](https://webpack.js.org/
 
 In your module, import the appropriate `csv-parse` module:
 
-* [`./parse.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/parse.js#L2):   
+- [`./parse.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/parse.js#L2):
   ```js
-  import {parse} from 'csv-parse/browser/esm';
+  import { parse } from 'csv-parse/browser/esm'
   ```
-* [`./parse_sync.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/parse_sync.js#L2):   
+- [`./parse_sync.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/parse_sync.js#L2):
   ```js
-  import {parse} from 'csv-parse/browser/esm/sync';
+  import { parse } from 'csv-parse/browser/esm/sync'
   ```
 
 The relevant [webpack configuration](https://github.com/adaltas/node-csv/tree/master/demo/webpack/webpack.config.js) looks like:

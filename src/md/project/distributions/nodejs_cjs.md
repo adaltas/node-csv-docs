@@ -16,24 +16,24 @@ When using the `csv` package, use the following import directives:
 
 ```js
 // For the stream and callback APIs
-const {generate, parse, transform, stringify} = require('csv');
+const { generate, parse, transform, stringify } = require('csv')
 // Or for the sync API
-const {generate, parse, transform, stringify} = require('csv/sync');
+const { generate, parse, transform, stringify } = require('csv/sync')
 ```
 
 When using individual packages:
 
 ```js
 // For the stream and callback APIs
-const {generate} = require('csv-generate');
-const {parse} = require('csv-parse');
-const {transform} = require('stream-transform');
-const {stringify} = require('csv-stringify');
+const { generate } = require('csv-generate')
+const { parse } = require('csv-parse')
+const { transform } = require('stream-transform')
+const { stringify } = require('csv-stringify')
 // Or for the sync API
-const {generate} = require('csv-generate/sync');
-const {parse} = require('csv-parse/sync');
-const {transform} = require('stream-transform/sync');
-const {stringify} = require('csv-stringify/sync');
+const { generate } = require('csv-generate/sync')
+const { parse } = require('csv-parse/sync')
+const { transform } = require('stream-transform/sync')
+const { stringify } = require('csv-stringify/sync')
 ```
 
 ## Supported Node.js versions
@@ -49,7 +49,7 @@ It is supported in Node.js 12+ as an alternative to the `main` field. For older 
 In version 2 and below, the module signature was:
 
 ```js
-const generate = require('csv');
+const generate = require('csv')
 // And
-const generate = require('csv/lib/sync');
+const generate = require('csv/lib/sync')
 ```

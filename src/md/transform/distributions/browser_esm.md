@@ -21,35 +21,37 @@ The files can be manually imported. They dont require any external dependencies 
 When using NPM to manage and load your modules, for example within webpack, use:
 
 ```js
-import {transform} from 'stream-transform/browser/esm';
+import { transform } from 'stream-transform/browser/esm'
 // Or
-import {transform} from 'stream-transform/browser/esm/sync';
+import { transform } from 'stream-transform/browser/esm/sync'
 ```
 
 ## Vanilla JavaScript
 
 A working demo is available in the project [`demo/browser`](https://github.com/adaltas/node-csv/tree/master/demo/browser) directory.
 
-* [`./esm/transform.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/transform.html)
-* [`./esm/transform_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/transform_sync.html)
+- [`./esm/transform.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/transform.html)
+- [`./esm/transform_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/esm/transform_sync.html)
 
 With Express, expose the files with:
 
 ```js
-const app = express();
-app.use('/lib/transform/',
-  express.static(`node_modules/stream-transform/dist/esm/`));
-app.listen(3000);
+const app = express()
+app.use(
+  '/lib/transform/',
+  express.static(`node_modules/stream-transform/dist/esm/`)
+)
+app.listen(3000)
 ```
 
 The HTML code looks like:
 
 ```html
 <script type="module">
-  import {transform} from '/lib/transform/index.js';
+  import { transform } from '/lib/transform/index.js'
   transform(input, handler, options, (err, data) => {
     console.info(data)
-  });
+  })
 </script>
 ```
 
@@ -57,8 +59,8 @@ If you wish to use the sync API, use:
 
 ```html
 <script type="module">
-  import {transform} from '/lib/transform/sync.js';
-  const data = transform(input, handler, options);
+  import { transform } from '/lib/transform/sync.js'
+  const data = transform(input, handler, options)
 </script>
 ```
 
@@ -68,13 +70,13 @@ This distribution is compatible with [webpack version 5](https://webpack.js.org/
 
 In your module, import the appropriate `stream-transform` module:
 
-* [`./transform.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/transform.js#L2):   
+- [`./transform.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/transform.js#L2):
   ```js
-  import {transform} from 'stream-transform/browser/esm';
+  import { transform } from 'stream-transform/browser/esm'
   ```
-* [`./transform_sync.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/transform_sync.js#L2):   
+- [`./transform_sync.js`](https://github.com/adaltas/node-csv/blob/master/demo/webpack/src/transform_sync.js#L2):
   ```js
-  import {transform} from 'stream-transform/browser/esm/sync';
+  import { transform } from 'stream-transform/browser/esm/sync'
   ```
 
 The relevant [webpack configuration](https://github.com/adaltas/node-csv/tree/master/demo/webpack/webpack.config.js) looks like:

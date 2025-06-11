@@ -17,14 +17,14 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 
 ## Main features
 
-* Extends the native Node.js streaming API
-* Simplicity with the optional callback API
-* Support for custom formatters, delimiters, quotes, escape characters and header
-* Support big datasets
-* Complete test coverage and samples for inspiration
-* No external dependency
-* Work nicely with the [csv-generate](/generate/), [csv-parse](/parse/) and [stream-transform](/transform/) packages
-* MIT License
+- Extends the native Node.js streaming API
+- Simplicity with the optional callback API
+- Support for custom formatters, delimiters, quotes, escape characters and header
+- Support big datasets
+- Complete test coverage and samples for inspiration
+- No external dependency
+- Work nicely with the [csv-generate](/generate/), [csv-parse](/parse/) and [stream-transform](/transform/) packages
+- MIT License
 
 ## Usage
 

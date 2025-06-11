@@ -14,23 +14,25 @@ The files are located inside the [`packages/csv-stringify/dist/iife`](https://gi
 
 It is globally available in the page context with:
 
-* Stream and callback API: `csv_stringify.stringify(/* arguments */);`
-* Sync API: `csv_stringify_sync.stringify(/* arguments */);`
+- Stream and callback API: `csv_stringify.stringify(/* arguments */);`
+- Sync API: `csv_stringify_sync.stringify(/* arguments */);`
 
 ## Example
 
 A working demo is available in the [`demo/browser`](https://github.com/adaltas/node-csv/tree/master/demo/browser) directory:
 
-* [`./iife/stringify.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/iife/stringify.html)
-* [`./iife/stringify_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/iife/stringify_sync.html)
+- [`./iife/stringify.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/iife/stringify.html)
+- [`./iife/stringify_sync.html`](https://github.com/adaltas/node-csv/tree/master/demo/browser/iife/stringify_sync.html)
 
 With Express, expose the files with:
 
 ```js
-const app = express();
-app.use('/lib/stringify/',
-  express.static(`node_modules/csv-stringify/dist/iife/`));
-app.listen(3000);
+const app = express()
+app.use(
+  '/lib/stringify/',
+  express.static(`node_modules/csv-stringify/dist/iife/`)
+)
+app.listen(3000)
 ```
 
 The HTML code looks like:
@@ -40,7 +42,7 @@ The HTML code looks like:
 <script>
   csv_stringify.stringify(records, options, (err, data) => {
     console.info(data)
-  });
+  })
 </script>
 ```
 
@@ -49,6 +51,6 @@ If you wish to use the sync API, use:
 ```html
 <script src="/lib/stringify/sync.js"></script>
 <script>
-  const data = csv_stringify_sync.stringify(records, options);
+  const data = csv_stringify_sync.stringify(records, options)
 </script>
 ```

@@ -17,17 +17,17 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 
 ## Main features
 
-* Extends the native Node.js [transform stream API](http://nodejs.org/api/stream.html#stream_class_stream_transform)
-* Simplicity with the optional callback and sync API
-* Pipe transformations between readable and writable streams
-* Synchronous versus asynchronous user functions
-* Sequential and parallel execution
-* Accept object, array or JSON as input and output
-* Sequential or user-defined concurrent execution
-* Skip and multiply records
-* Alter or clone input records
-* Work nicely with the [csv-generate](/generate/), [csv-parse](/parse/) and [csv-stringify](/stringify/) packages
-* MIT License
+- Extends the native Node.js [transform stream API](http://nodejs.org/api/stream.html#stream_class_stream_transform)
+- Simplicity with the optional callback and sync API
+- Pipe transformations between readable and writable streams
+- Synchronous versus asynchronous user functions
+- Sequential and parallel execution
+- Accept object, array or JSON as input and output
+- Sequential or user-defined concurrent execution
+- Skip and multiply records
+- Alter or clone input records
+- Work nicely with the [csv-generate](/generate/), [csv-parse](/parse/) and [csv-stringify](/stringify/) packages
+- MIT License
 
 ## Usage
 

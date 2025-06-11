@@ -3,8 +3,7 @@ module.exports = {
     __PATH_PREFIX__: true,
   },
   extends: `react-app`,
-
-  "rules": {
-    "no-eval": true
-  }
+  rules: {
+    'no-eval': 0,
+  },
 }
