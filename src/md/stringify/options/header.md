@@ -25,10 +25,10 @@ Run this example with the command `node samples/option.header.js`.
 
 ## Using `header` conjointly with `columns`
 
-In case you wish to output the headers on the first line, you can use this option conjointly with the `header` option. The column definition object can receive an optional [`header` property which default to the `key` property](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.header_with_columns_array_strings.js):
+In case you wish to output the headers on the first line, you can use this option conjointly with the `header` option. The column definition object can receive an optional [`header` property which default to the `key` property](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.header.with_columns_array_strings.js):
 
-`embed:packages/csv-stringify/samples/option.header_with_columns_array_strings.js`
+`embed:packages/csv-stringify/samples/option.header.with_columns_array_strings.js`
 
-This example could have been simplified by defining the [column option as an object](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.header_width_columns_object.js). This approach is not recommended as it implies relying on object property order which JavaScript doesn't guarantee.
+This example could have been simplified by defining the [column option as an object](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.header.with_columns_object.js). This approach is not recommended as it implies relying on object property order which JavaScript doesn't guarantee.
 
-`embed:packages/csv-stringify/samples/option.header_width_columns_object.js`
+`embed:packages/csv-stringify/samples/option.header.with_columns_object.js`
