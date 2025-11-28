@@ -7,7 +7,7 @@ keywords: ['csv', 'parse', 'options', 'from', 'count', 'records', 'info']
 
 # Option `from`
 
-The `from` option handles records starting from a requested number of records. Count is 1-based, for example, provides 1 (and not 0) to emit first record.
+The `from` option handles records starting from a requested number of records. Count is 1-based, for example, provides `2` (and not `1`) to omit first record and emit the second record.
 
 - Type: `number`
 - Coercion: `string` to `number`

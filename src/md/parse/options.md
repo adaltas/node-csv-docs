@@ -46,7 +46,7 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
   Set the escape character as one character/byte only. It only applies to quote and escape characters inside quoted fields and it defaults to `"` (double quote).
 - [`from`](/parse/options/from/) (number)  
   _Since version 1.2.0_  
-  Start handling records from a requested number of records. Count is 1-based, for example, provides `1` (and not `0`) to emit first record.
+  The `from` option handles records starting from a requested number of records. Count is 1-based, for example, provides `2` (and not `1`) to omit first record and emit the second record.
 - [`from_line`](/parse/options/from_line/) (number)  
   _Since version 4.0.0_  
   Start handling records from a requested line number.
