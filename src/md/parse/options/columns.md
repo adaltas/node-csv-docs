@@ -2,26 +2,30 @@
 title: Option columns
 navtitle: columns
 description: Option "columns" generate records as object literals instead of arrays.
-keywords: ['csv', 'parse', 'options', 'columns']
+keywords:
+  - csv
+  - parse
+  - options
+  - columns
 ---
 
 # Option `columns`
 
 The `columns` option generates record in the form of object literals.
 
-* Type: `boolean` | `array` | `function`
-* Optional
-* Default: `false`
-* Since: early days
-* Related: [`group_columns_by_name`](/parse/options/group_columns_by_name/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `boolean` | `array` | `function`
+- Optional
+- Default: `false`
+- Since: early days
+- Related: [`group_columns_by_name`](/parse/options/group_columns_by_name/) &mdash; see [Available Options](/parse/options/#available-options)
 
 By default, the parser generates records in the form of arrays. Its associate value may takes multiple forms:
 
-* [`true`](#as-true)    
+- [`true`](#as-true)  
   Infer the columns names from the first line.
-* [`array`](#as-an-array)    
+- [`array`](#as-an-array)  
   Declare the column definition before processing the data.
-* [`function`](#as-a-function)   
+- [`function`](#as-a-function)  
   Obtain the columns definition dynamically from the user.
 
 It is possible to skip one or multiple fields by passing the value equal to `undefined`, `null` or `false` in the definition array.
@@ -46,7 +50,7 @@ The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/c
 
 ## As a function
 
-If the value is a function, the user is responsible for returning the list of columns.  The first line is treated as a header and will not generate a record. The function receives the first line as a list of fields.
+If the value is a function, the user is responsible for returning the list of columns. The first line is treated as a header and will not generate a record. The function receives the first line as a list of fields.
 
 The [columns example](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.columns.function.js) converts each field of the first to upper case.
 

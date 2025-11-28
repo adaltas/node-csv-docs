@@ -2,7 +2,14 @@
 title: Option bom
 navtitle: bom
 description: Option "bom" strip the byte order mark (BOM).
-keywords: ['csv', 'parse', 'options', 'bom', 'utf', 'unicode', 'utf8']
+keywords:
+  - csv
+  - parse
+  - options
+  - bom
+  - utf
+  - unicode
+  - utf8
 ---
 
 # Option `bom`
@@ -11,11 +18,11 @@ The `bom` option strips the [byte order mark (BOM)](https://en.wikipedia.org/wik
 
 It is recommended to always activate this option when working with UTF-8 files.
 
-* Type: `boolean`
-* Optional
-* Default: `false`
-* Since: 4.4.0
-* Related: [`encoding`](/parse/options/encoding/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `boolean`
+- Optional
+- Default: `false`
+- Since: 4.4.0
+- Related: [`encoding`](/parse/options/encoding/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## About
 

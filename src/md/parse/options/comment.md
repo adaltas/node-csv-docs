@@ -2,17 +2,22 @@
 title: Option comment
 navtitle: comment
 description: Option "comment" discard characters.
-keywords: ['csv', 'parse', 'options', 'comment', 'escape']
+keywords:
+  - csv
+  - parse
+  - options
+  - comment
+  - escape
 ---
 
 # Option `comment`
 
 Treat all the characters after this one as a comment. It can be made of one or multiple escape characters. It is disabled by default by defining an empty string `""`.
 
-* Type: `boolean`
-* Optional
-* Default: `""`
-* Since: early days
+- Type: `boolean`
+- Optional
+- Default: `""`
+- Since: early days
 
 The escape sequence can be defined at the begining of record (a line if the record delimiter is a line return) or anywhere else. Every characters found after the escape sequence will be disregarded.
 

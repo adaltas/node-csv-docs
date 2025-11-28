@@ -2,7 +2,13 @@
 title: ECMAScript modules browser environments
 navtitle: Browser ESM
 description: The ESM distribution target the latest browsers which support ECMAScript modules introduced by ES6.
-keywords: ['csv', 'parse', 'esm', 'browser', 'ECMAScript', 'modules']
+keywords:
+  - csv
+  - parse
+  - esm
+  - browser
+  - ECMAScript
+  - modules
 sort: 2.3
 ---
 

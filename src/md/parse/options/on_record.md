@@ -2,18 +2,25 @@
 title: Option on_record
 navtitle: on_record
 description: Option "on_record" alter a record before producing it.
-keywords: ['csv', 'parse', 'options', 'transform', 'alter', 'filter', 'field']
+keywords:
+  - csv
+  - parse
+  - options
+  - transform
+  - alter
+  - filter
+  - field
 ---
 
 # Option `on_record`
 
 The `on_record` option provides an option to alter and filter records. It expects a function which receives the record and a context as arguments and which returns the new altered record or nothing if the record is to be filtered.
 
-* Type: `function`
-* Optional
-* Default: `undefined`
-* Since: 4.7.0
-* Related: [`cast`](/parse/options/cast/), [`info`](/parse/options/info/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `function`
+- Optional
+- Default: `undefined`
+- Since: 4.7.0
+- Related: [`cast`](/parse/options/cast/), [`info`](/parse/options/info/) &mdash; see [Available Options](/parse/options/#available-options)
 
 This option works at the record level. It complements the `cast` option which is adapted to field-level transformations. Also, the [stream-transform](/transform/) package provides more advanced control on the record and stream of records with asynchronous execution and concurrent control.
 

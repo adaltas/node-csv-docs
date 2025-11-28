@@ -2,7 +2,14 @@
 title: Option record_delimiter
 navtitle: record_delimiter
 description: Option "record_delimiter" indicates how to split a record into multiple fields.
-keywords: ['csv', 'parse', 'options', 'record_delimiter', 'separator', 'tsv', 'line break', 'return']
+keywords:
+  - csv
+  - parse
+  - options
+  - record_delimiter
+  - separator
+  - tsv
+  - line break
 ---
 
 # Option `record_delimiter`
@@ -11,11 +18,11 @@ The `record_delimiter` option defines one or multiple characters used to delimit
 
 The value may be a string or a buffer or an array of both. It can not be empty. By defaults, the record delimiters are auto discovered. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") record delimiters.
 
-* Type: `string|Buffer|[string|Buffer]`
-* Optional
-* Default: `[]` (auto discovered)
-* Since: 4.0.0
-* Related: [`delimiter`](/parse/options/delimiter/), `quote`, [`escape`](/parse/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `string|Buffer|[string|Buffer]`
+- Optional
+- Default: `[]` (auto discovered)
+- Since: 4.0.0
+- Related: [`delimiter`](/parse/options/delimiter/), `quote`, [`escape`](/parse/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
 
 It is not possible to escape a record delimiter. A field must be quoted if it contains a record delimiter which should not be interpreted as such.
 

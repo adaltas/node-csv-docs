@@ -1,7 +1,17 @@
 ---
 title: Stream pipe
 description: CSV Parse - learn how to leverage the Node.js stream pipe API with CSV
-keywords: ['csv', 'parse', 'parser', 'example', 'recipe', 'stream', 'sync', 'pipe', 'read', 'write']
+keywords:
+  - csv
+  - parse
+  - parser
+  - example
+  - recipe
+  - stream
+  - sync
+  - pipe
+  - read
+  - write
 ---
 
 # Using pipe to connect multiple streams

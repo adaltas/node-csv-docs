@@ -1,7 +1,17 @@
 ---
 title: Promises usage
 description: CSV Parse - how to use promises with the latest Nodejs Stream API.
-keywords: ['csv', 'parse', 'parser', 'example', 'recipe', 'promises', 'stream', 'pipe', 'read', 'async']
+keywords:
+  - csv
+  - parse
+  - parser
+  - example
+  - recipe
+  - promises
+  - stream
+  - pipe
+  - read
+  - async
 ---
 
 # Promises usage

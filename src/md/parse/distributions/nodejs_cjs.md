@@ -2,7 +2,13 @@
 title: ECMAScript modules
 navtitle: Node.js CJS
 description: The CommonJS distribution of CSV parse is appropriate to Node.js packages which have not yet migrated to ECMAScript modules.
-keywords: ['csv', 'parse', 'CJS', 'CommonJS', 'modules', 'Node.js']
+keywords:
+  - csv
+  - parse
+  - CJS
+  - CommonJS
+  - modules
+  - Node.js
 sort: 2.2
 ---
 
@@ -10,8 +16,8 @@ sort: 2.2
 
 The CommonJS distribution is appropriate to Node.js packages which have not yet migrated to ECMAScript modules. It is available in your code with:
 
-* Stream and callback API: `const {parse} = require('csv-parse');`
-* Sync API: `const {parse} = require('csv-parse/sync');`
+- Stream and callback API: `const {parse} = require('csv-parse');`
+- Sync API: `const {parse} = require('csv-parse/sync');`
 
 Additional information are available in the [project CommonJS](/project/distributions/nodejs_cjs/) documentation.
 
@@ -28,7 +34,7 @@ It is supported in Node.js 12.16.0+ as an alternative to the `main` field. For o
 In version 2 and below, the module signature was:
 
 ```js
-const parse = require('csv-parse');
+const parse = require('csv-parse')
 // And
-const parse = require('csv-parse/lib/sync');
+const parse = require('csv-parse/lib/sync')
 ```

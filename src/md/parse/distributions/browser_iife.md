@@ -2,7 +2,13 @@
 title: IIFE Vanilla JavaScript in old browser environments
 navtitle: Browser IIFE
 description: The IIFE distribution targets browsers which don't support ECMAScript modules.
-keywords: ['csv', 'parse', 'iife', 'javascript', 'vanilla', 'browser']
+keywords:
+  - csv
+  - parse
+  - iife
+  - javascript
+  - vanilla
+  - browser
 sort: 2.4
 ---
 

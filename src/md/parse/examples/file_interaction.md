@@ -1,7 +1,19 @@
 ---
 title: File system interaction
-description: Read and write UTF-8 CSV files 
-keywords: ['csv', 'parse', 'parser', 'example', 'recipe', 'file', 'fs', 'read', 'write', 'utf8', 'utf-8', 'bom']
+description: Read and write UTF-8 CSV files
+keywords:
+  - csv
+  - parse
+  - parser
+  - example
+  - recipe
+  - file
+  - fs
+  - read
+  - write
+  - utf8
+  - utf-8
+  - bom
 ---
 
 # File system interaction

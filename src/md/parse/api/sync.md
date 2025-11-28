@@ -2,7 +2,13 @@
 title: Sync API
 navtitle: Sync
 description: The sync API exposes a function, which expects as input a full dataset as text, and which returns the full result set as an array or an object.
-keywords: ['csv', 'parse', 'api', 'sync', 'memory', 'function']
+keywords:
+  - csv
+  - parse
+  - api
+  - sync
+  - memory
+  - function
 sort: 3.3
 ---
 

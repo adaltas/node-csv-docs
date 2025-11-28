@@ -2,7 +2,12 @@
 title: Async iterator API
 navtitle: Async iterator
 description: The Async iterator API is both scalable and elegant. It takes advantage of the native Readable Stream API upon which the parser is build to iterate over the parsed records.
-keywords: ['csv', 'parse', 'api', 'async', 'iterator']
+keywords:
+  - csv
+  - parse
+  - api
+  - async
+  - iterator
 sort: 3.4
 ---
 

@@ -2,7 +2,13 @@
 title: ECMAScript modules
 navtitle: Node.js ESM
 description: The callback API transform all the records and buffers the results into a single dataset which is passed to a user provided function.
-keywords: ['csv', 'parse', 'esm', 'node.js', 'ECMAScript', 'modules']
+keywords:
+  - csv
+  - parse
+  - esm
+  - node.js
+  - ECMAScript
+  - modules
 sort: 2.1
 ---
 
@@ -10,8 +16,8 @@ sort: 2.1
 
 The `csv-parse` package is written as [ECMAScript modules](https://nodejs.org/api/esm.html). It is available in your code with:
 
-* Stream and callback API: `import {parse} from 'csv-parse';`
-* Sync API: `import {parse} from 'csv-parse/sync';`
+- Stream and callback API: `import {parse} from 'csv-parse';`
+- Sync API: `import {parse} from 'csv-parse/sync';`
 
 Addtionnal information are available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
 

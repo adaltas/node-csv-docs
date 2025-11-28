@@ -2,7 +2,14 @@
 title: Option on_skip
 navtitle: on_skip
 description: Option "on_skip" provides a callback to handle skipped records that contain invalid data.
-keywords: ['csv', 'parse', 'options', 'skip', 'error', 'invalid', 'record']
+keywords:
+  - csv
+  - parse
+  - options
+  - skip
+  - error
+  - invalid
+  - record
 ---
 
 # Option `on_skip`

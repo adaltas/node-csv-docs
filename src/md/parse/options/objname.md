@@ -2,7 +2,15 @@
 title: Option objname
 navtitle: objname
 description: Option "objname" associates records using one of the fields as keys.
-keywords: ['csv', 'parse', 'options', 'objname', 'index', 'position', 'name', 'field']
+keywords:
+  - csv
+  - parse
+  - options
+  - objname
+  - index
+  - position
+  - name
+  - field
 ---
 
 # Option `objname`
@@ -11,11 +19,11 @@ The `objname` option associates records using one of the fields as keys.
 
 With the `columns` option, the field is identified by its column name. It must be a string or a buffer. Without the `column` option, the field is identified by its index position. It must be a number.
 
-* Type: `string` | `Buffer` | `number`
-* Optional
-* Default: `undefined`
-* Since: early days
-* Related: [`column`](/parse/options/column/), [`info`](/parse/options/info/), [`raw`](/parse/options/raw/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `string` | `Buffer` | `number`
+- Optional
+- Default: `undefined`
+- Since: early days
+- Related: [`column`](/parse/options/column/), [`info`](/parse/options/info/), [`raw`](/parse/options/raw/) &mdash; see [Available Options](/parse/options/#available-options)
 
 The option is compatible with the `raw` and `info` options.
 

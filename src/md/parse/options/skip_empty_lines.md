@@ -2,18 +2,23 @@
 title: Option skip_empty_lines
 navtitle: skip_empty_lines
 description: Option "skip_empty_lines" skips any line which is empty.
-keywords: ['csv', 'parse', 'options', 'skip_empty_lines', 'columns']
+keywords:
+  - csv
+  - parse
+  - options
+  - skip_empty_lines
+  - columns
 ---
 
 # Option `skip_empty_lines`
 
 The `skip_empty_lines` skips any line which is empty.
 
-* Type: `boolean`
-* Optional
-* Default: `false`
-* Since: 0.0.5
-* Related: [`skip_records_with_error`](/parse/options/skip_records_with_error/), [`trim`](/parse/options/trim/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `boolean`
+- Optional
+- Default: `false`
+- Since: 0.0.5
+- Related: [`skip_records_with_error`](/parse/options/skip_records_with_error/), [`trim`](/parse/options/trim/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Example
 

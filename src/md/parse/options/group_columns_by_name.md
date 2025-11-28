@@ -2,7 +2,13 @@
 title: Option group_columns_by_name
 navtitle: group_columns_by_name
 description: Option "group_columns_by_name" convert values into an array of values for duplicated column names.
-keywords: ['csv', 'parse', 'options', 'columns', 'array', 'duplicates']
+keywords:
+  - csv
+  - parse
+  - options
+  - columns
+  - array
+  - duplicates
 ---
 
 # Option `group_columns_by_name`
@@ -11,12 +17,12 @@ When activated by settings its value to `true`, the `group_columns_by_name` opti
 
 The option implies the usage of the `columns` mode where records are returned as literal objects. An error is thrown if the `columns` mode is not activated.
 
-* Type: `boolean`
-* Optional
-* Default: `false` (a one character comma)
-* Since: 4.10.0
-* Related: [`columns`](/parse/options/columns/) &mdash; see [Available Options](/parse/options/#available-options)
-* History: prior to version 5.0.0, this option was named `columns_duplicates_to_array`.
+- Type: `boolean`
+- Optional
+- Default: `false` (a one character comma)
+- Since: 4.10.0
+- Related: [`columns`](/parse/options/columns/) &mdash; see [Available Options](/parse/options/#available-options)
+- History: prior to version 5.0.0, this option was named `columns_duplicates_to_array`.
 
 ## Example
 

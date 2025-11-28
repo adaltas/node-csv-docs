@@ -2,7 +2,19 @@
 title: Option encoding
 navtitle: encoding
 description: Option "encoding" to set the input and output encodings.
-keywords: ['csv', 'parse', 'options', 'encoding', 'bom', 'input', 'output', 'utf8', 'utf16', 'ascii', 'base64', 'hex']
+keywords:
+  - csv
+  - parse
+  - options
+  - encoding
+  - bom
+  - input
+  - output
+  - utf8
+  - utf16
+  - ascii
+  - base64
+  - hex
 ---
 
 # Option `encoding`
@@ -11,11 +23,11 @@ The `encoding` option declare the input and output encodings.
 
 The default encoding value is `utf8`. The default 'utf8' encoding is also used when the value is `true`. The values `null` and `false` disable string serialization and returns buffers instead of strings.
 
-* Type: `string|null`
-* Optional
-* Default: `utf8`
-* Since: 4.13.0
-* Related: [`bom`](/parse/options/bom/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `string|null`
+- Optional
+- Default: `utf8`
+- Since: 4.13.0
+- Related: [`bom`](/parse/options/bom/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Default behavior
 

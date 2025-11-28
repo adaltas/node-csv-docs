@@ -2,7 +2,12 @@
 title: Option relax_column_count
 navtitle: relax_column_count
 description: Option "relax_column_count" tolerates data sets with inconsistent number of fields.
-keywords: ['csv', 'parse', 'options', 'relax_column_count', 'columns']
+keywords:
+  - csv
+  - parse
+  - options
+  - relax_column_count
+  - columns
 ---
 
 # Option `relax_column_count`
@@ -11,11 +16,11 @@ The `relax_column_count` option tolerates data sets with inconsistent number of 
 
 Note, this option is completed by the [`relax_column_count_less` option](/parse/options/relax_column_count_less/) and the [`relax_column_count_more` option](/parse/options/relax_column_count_more/) which behave similarly.
 
-* Type: `boolean`
-* Optional
-* Default: `false`
-* Since: 1.0.6
-* Related: [`relax_column_count_less`](/parse/options/relax_column_count_less/), `quote`, [`relax_column_count_more`](/parse/options/relax_column_count_more/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `boolean`
+- Optional
+- Default: `false`
+- Since: 1.0.6
+- Related: [`relax_column_count_less`](/parse/options/relax_column_count_less/), `quote`, [`relax_column_count_more`](/parse/options/relax_column_count_more/) &mdash; see [Available Options](/parse/options/#available-options)
 
 The option can be used conjointly with the `columns` option. The expected number of fields is determined by the length of the `columns` option, wether it is defined by the user or dynamically discovered.
 
