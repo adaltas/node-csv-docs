@@ -14,7 +14,7 @@ There are multiple APIs and styles available, each with their own advantages and
 * [Stream API](/parse/api/stream/)   
   The stream API might not be the most pleasant API to use but is scalable.
 * [Callback API](/parse/api/callback/)   
-  The callback API buffers all the emitted data from the stream API into a single object which is passed to a user provided function. Passing a function is easier than implementing the stream events function but it implies that the all dataset must fit into the available memory and it will only be available after the last record has been processed. This is usually not recommanded, use the Sync API instead.
+  The callback API buffers all the emitted data from the stream API into a single object which is passed to a user provided function. Passing a function is easier than implementing the stream events function but it implies that the all dataset must fit into the available memory and it will only be available after the last record has been processed. This is usually not recommended, use the Sync API instead.
   
 For additional usages and examples, you may refer to:
 

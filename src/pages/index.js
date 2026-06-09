@@ -264,7 +264,7 @@ const Index = () => (
       <div>
         <h1>
           <Link to="/convert/">
-            <span>CSV & JSON</span> <span>convertor tool</span>
+            <span>CSV & JSON</span> <span>converter tool</span>
           </Link>
         </h1>
         <p>
@@ -273,7 +273,7 @@ const Index = () => (
           our packages and to test the various options interactively.
         </p>
       </div>
-      <img src={convert_icon} alt="Convertor tool" />
+      <img src={convert_icon} alt="Converter tool" />
     </section>
     <section css={styles.blog}>
       <h1>Latest news</h1>
@@ -294,7 +294,7 @@ const Index = () => (
         <p>
           Version 5.5.0 of csv-parse include the new [`comment_no_infix`
           option](/parse/options/comment_no_infix/). When activate, comments may
-          only start at the begining of a line.
+          only start at the beginning of a line.
         </p>
       </article>
       <article>

@@ -22,7 +22,7 @@ Note, this option is completed by the [`relax_column_count_less` option](/parse/
 - Since: 1.0.6
 - Related: [`relax_column_count_less`](/parse/options/relax_column_count_less/), `quote`, [`relax_column_count_more`](/parse/options/relax_column_count_more/) &mdash; see [Available Options](/parse/options/#available-options)
 
-The option can be used conjointly with the `columns` option. The expected number of fields is determined by the length of the `columns` option, wether it is defined by the user or dynamically discovered.
+The option can be used conjointly with the `columns` option. The expected number of fields is determined by the length of the `columns` option, whether it is defined by the user or dynamically discovered.
 
 ## Default behavior
 
@@ -38,7 +38,7 @@ When using the `columns` option, the records are generated as objects whose prop
 
 ## Handling inconsistent number of fields errors
 
-When used conjointly with other options, it is possible to accept inconsistent records and provide you own parsing implementation. For exemple, the [`on_record`](/parse/options/on_record/) option let you insert your custom code. If needed, the [`raw`](/parse/options/raw/) option expose the raw record. Finally, the full error is available including the error code.
+When used conjointly with other options, it is possible to accept inconsistent records and provide you own parsing implementation. For example, the [`on_record`](/parse/options/on_record/) option let you insert your custom code. If needed, the [`raw`](/parse/options/raw/) option expose the raw record. Finally, the full error is available including the error code.
 
 This is an example to [handle inconsistent record field lengths](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.relax_column_count.record_inconsistent_length.js).
 

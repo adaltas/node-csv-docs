@@ -12,13 +12,13 @@ This package proposes different API flavors available through different modules.
 * [Sync API](/transform/api/sync/)   
   The sync API provides simplicity, readability and convenience. However, both the input and output datasets must fit into memory and only synchronous handlers are supported.
 * [Stream API](/transform/api/stream/)   
-  The stream API is scalable and is the default implemention upon witch other API are created. It is verbose but flexible.
+  The stream API is scalable and is the default implementation upon which other API are created. It is verbose but flexible.
 * [Callback API](/transform/api/callback/)   
-  If the transformed dataset fit into memory, you can obtains the records from a user defined function. This is usually not recommanded, use the Sync API instead. It is implemented in the same function as the stream API. It is easy and handlers can be written asynchronously.
+  If the transformed dataset fit into memory, you can obtains the records from a user defined function. This is usually not recommended, use the Sync API instead. It is implemented in the same function as the stream API. It is easy and handlers can be written asynchronously.
 * [Stream + callback API](/transform/api/mixed/)  
   The stream and callback APIs can be combined toguether if you need to.
 
-## Additionnal information
+## Additional information
 
 Both modules target ECMAScript Edition 6 (ES6 or ES2015), Node.js version 7.6 and above. For older version of JavaScript, every module is transpiled into ECMAScript Edition 5 (ES5) inside the folder "lib/es5". The ES5 modules share the exact same API with their ES6 counterpart. For example, the `sync` module compatible with ES5 is located available using `require('stream-transform/lib/es5/sync')`.
 

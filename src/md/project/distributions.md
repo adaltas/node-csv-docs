@@ -17,7 +17,7 @@ sort: 4
 
 # Available distributions
 
-Each package of the `csv` project is packaged into multiple distributions depending on your Node.js version, you browser environnement and wether you are using ECMAScript modules (ESM), CommonJS or vanilla JavaScript with support for older browser.
+Each package of the `csv` project is packaged into multiple distributions depending on your Node.js version, your browser environment and whether you are using ECMAScript modules (ESM), CommonJS or vanilla JavaScript with support for older browser.
 
 - [Node.js ECMAScript modules (ESM)](/project/distributions/nodejs_esm/)
 - [Node.js CommonJS (CJS)](/project/distributions/nodejs_cjs/)

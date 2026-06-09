@@ -248,7 +248,7 @@ const Menu = ({ onClickLink, pages, slug }) => {
           },
           convert: {
             slug: '/convert/',
-            title: 'Convertor',
+            title: 'Converter',
             sort: 2,
           },
         },
@@ -295,7 +295,7 @@ const Menu = ({ onClickLink, pages, slug }) => {
       }
     })
   })
-  // Sort hierachy, result is made of nested arrays
+  // Sort hierarchy, result is made of nested arrays
   const sort = (pages) => {
     return Object.keys(pages)
       .map((name) => {

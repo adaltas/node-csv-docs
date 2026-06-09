@@ -1,7 +1,7 @@
 ---
 title: Option escape
 navtitle: escape
-description: Option "escape" to escape quote and escape characters inside quoted fileds.
+description: Option "escape" to escape quote and escape characters inside quoted fields.
 keywords:
   - csv
   - parse

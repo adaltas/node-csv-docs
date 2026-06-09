@@ -31,6 +31,6 @@ This option was named `auto_parse_date` until version 2.
 
 ## Usage
 
-When active [`cast_date` with `true`](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast_date.js), every field is tested with `Date.parse`. When the convertion to a JavaScript date succeed, the new date is returned. Otherwise, the original value is returned.
+When active [`cast_date` with `true`](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.cast_date.js), every field is tested with `Date.parse`. When the conversion to a JavaScript date succeed, the new date is returned. Otherwise, the original value is returned.
 
 `embed:packages/csv-parse/samples/option.cast_date.js`

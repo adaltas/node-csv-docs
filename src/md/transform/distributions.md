@@ -18,7 +18,7 @@ sort: 2
 
 # Available distributions
 
-The library is packaged into multiple distributions depending on your Node.js version, you browser environnement and wether you are using ECMAScript modules (ESM), CommonJS or vanilla JavaScript with support for older browser.
+The library is packaged into multiple distributions depending on your Node.js version, your browser environment and whether you are using ECMAScript modules (ESM), CommonJS or vanilla JavaScript with support for older browser.
 
 - [Node.js ECMAScript modules (ESM)](/transform/distributions/nodejs_esm/)
 - [Node.js CommonJS (CJS)](/transform/distributions/nodejs_cjs/)

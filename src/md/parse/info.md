@@ -23,7 +23,7 @@ They are available in the `info` object of a parser instance and are also export
 - `bytes_records` (number)  
   Number of processed bytes until the last successfully parsed and emitted records.
 - `columns` (boolean || object)  
-  Normalized verion of `options.columns`.
+  Normalized version of `options.columns`.
 - `comment_lines` (number)  
   Count the number of lines being fully commented.
 - `empty_lines` (number)  
@@ -37,12 +37,12 @@ They are available in the `info` object of a parser instance and are also export
 
 ## Record information
 
-It is exposed with the [`info` option](/parse/options/info/) and the [`on_record` option](/parse/options/on_record/). Refers to their respective documentation to learn their usage as well as any additionnal properties they might expose.
+It is exposed with the [`info` option](/parse/options/info/) and the [`on_record` option](/parse/options/on_record/). Refers to their respective documentation to learn their usage as well as any additional properties they might expose.
 
-It contains all the dataset information with additionnal properties:
+It contains all the dataset information with additional properties:
 
 - `error` (Error)  
-  The error that was encountered, useful with the variuos relax options.
+  The error that was encountered, useful with the various relax options.
 - `header` (boolean)  
   True when the [`columns` option](/parse/options/columns/) is activated and the current record is interpreted as a header instead of a data record.
 - `index` (number)  
@@ -52,9 +52,9 @@ It contains all the dataset information with additionnal properties:
 
 It is exposed by the [`cast` option](/parse/options/cast/) and [`cast_date` option](/parse/options/cast_date/) when defined as functions.
 
-Runtime errors are enriched with the field information as well as some additionnal properties when appropriate.
+Runtime errors are enriched with the field information as well as some additional properties when appropriate.
 
-It contains all the dataset and record information with additionnal properties:
+It contains all the dataset and record information with additional properties:
 
 - `column` (string || index)  
   The column name if the `columns` option is active or the field index position in the record.

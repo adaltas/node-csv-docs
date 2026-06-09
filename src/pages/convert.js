@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../layout'
 import Convert from '../components/Convert'
 
-const Convertor = () => (
+const Converter = () => (
   <Layout
     page={{
       title: 'Node.js CSV demo',
@@ -23,4 +23,4 @@ const Convertor = () => (
   </Layout>
 )
 
-export default Convertor
+export default Converter

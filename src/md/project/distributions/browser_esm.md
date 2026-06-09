@@ -23,7 +23,7 @@ The ESM distribution target the latest browsers with support for [ECMAScript mod
 
 Compared with the [Node.js version](/csv/distributions/nodejs_esm/), this distribution bundles polyfills to run outside of the Node.js environment.
 
-Modern web browsers import ECMAScript modules nativelly and it also works within webpack and other alternative bundlers. Two demonstrations are available:
+Modern web browsers import ECMAScript modules natively and it also works within webpack and other alternative bundlers. Two demonstrations are available:
 
 - A Vanilla Javascript application with [Express](https://expressjs.com/) targeting web browsers with module support.
 - A web application bundled with [webpack](https://webpack.js.org/).

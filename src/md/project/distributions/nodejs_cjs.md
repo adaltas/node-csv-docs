@@ -10,7 +10,7 @@ sort: 4.2
 
 The CommonJS distribution is appropriate to Node.js packages which have not yet migrated to [ECMAScript modules](/project/distributions/nodejs_esm/).
 
-Node.js builtin globals and modules are not inserted. This is both motivated by performance and compatiblity reasons. The buffer shim generates error, [see #303](https://github.com/adaltas/node-csv/issues/303). Use the [browser IIFE distribution](/project/distributions/browser_iife/) or integrate the module with a build system to provide the appropriate shims.
+Node.js builtin globals and modules are not inserted. This is both motivated by performance and compatibility reasons. The buffer shim generates error, [see #303](https://github.com/adaltas/node-csv/issues/303). Use the [browser IIFE distribution](/project/distributions/browser_iife/) or integrate the module with a build system to provide the appropriate shims.
 
 When using the `csv` package, use the following import directives:
 
