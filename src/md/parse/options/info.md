@@ -14,7 +14,7 @@ keywords:
 
 # Option `info`
 
-The `info` option provide additionnal context. Instead of generating records, in the form of objects literal or arrays, it generates two properties, `info` and `record`. The `info` property is a snapshot of the [info object](/parse/info/) at the time the record was created. The `record` property is the actual record.
+The `info` option provide additional context. Instead of generating records, in the form of objects literal or arrays, it generates two properties, `info` and `record`. The `info` property is a snapshot of the [info object](/parse/info/) at the time the record was created. The `record` property is the actual record.
 
 Note, it can be used conjointly with the raw option.
 

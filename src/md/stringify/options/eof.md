@@ -17,7 +17,7 @@ The `eof` option append the value of the `record_delimiter` option after the las
 
 ## Default behavior
 
-By default, the `eof` option is [enabled](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.eof_true.js). Not defining its value is equivelent set seting `eof` as `true`:
+By default, the `eof` option is [enabled](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.eof_true.js). Not defining its value is equivalent to setting `eof` as `true`:
 
 `embed:packages/csv-stringify/samples/option.eof_true.js`
 

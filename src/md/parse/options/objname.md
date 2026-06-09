@@ -39,6 +39,6 @@ Below, [the `objname` option is a string](https://github.com/adaltas/node-csv/bl
 
 Index names reference a record field by its position. Thus, records must be generated as arrays.
 
-Below, [the `objname` option is a number](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.objname.index.js) and it defined the field in the second postion at index `1`:
+Below, [the `objname` option is a number](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.objname.index.js) and it defined the field in the second position at index `1`:
 
 `embed:packages/csv-parse/samples/option.objname.index.js`

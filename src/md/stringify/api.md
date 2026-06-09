@@ -16,7 +16,7 @@ There are multiple APIs available, each with their own advantages and disadvanta
 * [Stream API](/stringify/api/stream/)   
   The stream API might not be the most pleasant API to use but is scalable.
 * [Callback API](/stringify/api/callback/)   
-  The callback API buffers all the emitted records from the stream API into a single array which is passed to a user provided function. Passing a function is easier than implementing the stream events function but it implies that the all dataset must fit into the available memory and it will only be available after the last record has been processed. This is usually not recommanded, use the Sync API instead.
+  The callback API buffers all the emitted records from the stream API into a single array which is passed to a user provided function. Passing a function is easier than implementing the stream events function but it implies that the all dataset must fit into the available memory and it will only be available after the last record has been processed. This is usually not recommended, use the Sync API instead.
 * [Stream API + dataset](/stringify/api/stream_callback/)  
   Replace the writable stream with records or the readable stream with a callback function.
 * [Async iterator API](/stringify/api/async_iterator/)   

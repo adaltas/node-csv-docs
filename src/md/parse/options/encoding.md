@@ -35,19 +35,19 @@ The list of [available supported encoding in Node.js](https://github.com/nodejs/
 
 The default encoding in Node.js is UTF-8. When using UTF-8, you do not need to specify anything.
 
-When an alternative encoding is used, it can be discovered with the [BOM](/parse/options/bom/) (byte order mark) present at the begining of the input data or it can be defined with this option.
+When an alternative encoding is used, it can be discovered with the [BOM](/parse/options/bom/) (byte order mark) present at the beginning of the input data or it can be defined with this option.
 
 ## Working with options
 
 When providing options, the values must internally reflect the data source encoding. If the value is a string, the parser will convert the value into a buffer representation using the selected encoding input value.
 
-However, if the value is a buffer, you must make sure the buffer was created with the right encoding, here is an exemple [encoding an option as buffer](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.options.js), the `delimiter` option in this case:
+However, if the value is a buffer, you must make sure the buffer was created with the right encoding, here is an example [encoding an option as buffer](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.options.js), the `delimiter` option in this case:
 
 `embed:packages/csv-parse/samples/option.encoding.options.js`
 
 ## Bom automatic detection
 
-The BOM is a special Unicode character sequence at the begining of a text stream to indicate the encoding.
+The BOM is a special Unicode character sequence at the beginning of a text stream to indicate the encoding.
 
 Because the BOM is specific to unicode, only the UTF-8 and UTF-16LE encoding are natively detected by the parser. Here is an example [detecting the encoding](https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/samples/option.encoding.detection.js), UTF-16LE in this case:
 

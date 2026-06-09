@@ -28,7 +28,7 @@ The project is developed and maintained by [Adaltas](https://www.adaltas.com), a
 
 ## Contributors
 
-Bellow is a non-restrictive list of contributors:
+Below is a non-restrictive list of contributors:
 
 *   David Worms: <https://github.com/adaltas>
 *   Will White: <https://github.com/willwhite>
