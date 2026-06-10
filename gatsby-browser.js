@@ -16,7 +16,6 @@ const isExternalHttpLink = (href) => {
 const addNoopener = (anchor) => {
   const rel = new Set((anchor.getAttribute('rel') || '').split(/\s+/).filter(Boolean))
   rel.add('noopener')
-  rel.add('noreferrer')
   anchor.setAttribute('rel', Array.from(rel).join(' '))
 }
 
