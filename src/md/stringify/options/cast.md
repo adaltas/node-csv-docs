@@ -66,7 +66,7 @@ _Run this example with the command `node samples/option.cast.js`._
 
 ### boolean
 
-A value of `true` is converted to the string `1` while a value of `false` to converted to an empty string. The default implementation is:
+A value of `true` is converted to the string `1` while a value of `false` is converted to an empty string. The default implementation is:
 
 ```js
 function(value){
