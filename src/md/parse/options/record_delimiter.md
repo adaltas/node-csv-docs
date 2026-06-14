@@ -16,7 +16,7 @@ keywords:
 
 The `record_delimiter` option defines one or multiple characters used to delimit records.
 
-The value may be a string or a buffer or an array of both. It can not be empty. By defaults, the record delimiters are auto discovered. Supported auto discovery methods are Linux ("\n"), Apple ("\r") and Windows ("\r\n") record delimiters.
+The value may be a string or a buffer or an array of both. It can not be empty. By defaults, the record delimiters are auto discovered. Supported auto discovery methods are Linux (`\n`), Apple (`\r`) and Windows (`\r\n`) record delimiters.
 
 - Type: `string|Buffer|[string|Buffer]`
 - Optional
@@ -29,6 +29,22 @@ It is not possible to escape a record delimiter. A field must be quoted if it co
 ## History
 
 Before version 4.0.0, this option was named `rowDelimiter`.
+
+## Automatic discovery
+
+When the `record_delimiter` option is not defined, the parser automatically discovers the record delimiter from the first one encountered in the source. Auto discovery only applies outside of quoted fields.
+
+The following record delimiters are recognized and tested in this order:
+
+| Platform                     | Delimiter | Description                   |
+| ---------------------------- | --------- | ----------------------------- |
+| Windows                      | `\r\n`    | carriage return and line feed |
+| Unix / Linux                 | `\n`      | line feed                     |
+| Apple (Mac OS 9 and earlier) | `\r`      | carriage return               |
+
+The Windows delimiter (`\r\n`) is tested before the legacy Apple delimiter (`\r`) so that a `\r\n` sequence is never mistaken for a lone `\r` followed by an empty line.
+
+Once a record delimiter is discovered, it is used for the remainder of the parsing. Subsequent records are expected to use the same delimiter; a different line ending appearing later in the source is not treated as a record delimiter.
 
 ## Single value record delimiter
 
