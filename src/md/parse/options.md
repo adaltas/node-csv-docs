@@ -38,6 +38,9 @@ All options are optional. The options from the [Node.js Stream Writable](https:/
 - [`delimiter`](/parse/options/delimiter/) (string|Buffer|[string|Buffer])  
   _Since version 0.0.1_  
   Set one or several field delimiters containing one or several characters. It defaults to `,` (comma).
+- [`delimiter_auto`](/parse/options/delimiter_auto/) (boolean|object)  
+  _Since version 6.3.0_  
+  Automatically discovers the character used to separate the fields inside a record.
 - [`encoding`](/parse/options/encoding/) (string|Buffer)  
   _Since version 4.13.0_  
   Set the input and output encodings. Using `null` or `false` output the raw buffer instead of a string and it defaults to `utf8`.
