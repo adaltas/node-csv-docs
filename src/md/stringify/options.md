@@ -53,6 +53,9 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 - [`quote`](/stringify/options/quote/) (string|Buffer|boolean)  
   _Since version 0.0.1_  
   The quote characters surrounding a field, defaults to the `"` (double quotation marks), an empty quote value will preserve the original field, whether it contains quotation marks or not.
+- [`quote_record_delimiter`](/stringify/options/quote_record_delimiter/) (boolean)  
+  _Since version 6.9.0_  
+  Quote fields containing carriage return or line feed characters to ensure round-trip safety.
 - [`quoted`](/stringify/options/quoted/) (boolean)  
   _Since version 0.0.1_  
   Boolean, default to false, quote all the non-empty fields even if not
