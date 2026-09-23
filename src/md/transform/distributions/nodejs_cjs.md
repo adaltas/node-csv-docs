@@ -10,8 +10,8 @@ sort: 2.2
 
 The CommonJS distribution is appropriate to Node.js packages which have not yet migrated to ECMAScript modules. It is available in your code with:
 
-* Stream and callback API: `const {transform} = require('stream-transform');`
-* Sync API: `const {transform} = require('stream-transform/sync');`
+- Stream and callback API: `const {transform} = require('stream-transform');`
+- Sync API: `const {transform} = require('stream-transform/sync');`
 
 Addtionnal information are available in the [project CommonJS](/project/distributions/nodejs_cjs/) documentation.
 
@@ -28,7 +28,7 @@ It is supported in Node.js 12+ as an alternative to the `main` field. For older 
 In version 2 and below, the module signature was:
 
 ```js
-const transform = require('stream-transform');
+const transform = require('stream-transform')
 // And
-const transform = require('stream-transform/lib/sync');
+const transform = require('stream-transform/lib/sync')
 ```

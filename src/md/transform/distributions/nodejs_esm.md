@@ -10,8 +10,8 @@ sort: 2.1
 
 The `stream-transform` package is written as [ECMAScript modules](https://nodejs.org/api/esm.html). It is available in your code with:
 
-* Stream and callback API: `import {transform} from 'stream-transform';`
-* Sync API: `import {transform} from 'stream-transform/sync';`
+- Stream and callback API: `import {transform} from 'stream-transform';`
+- Sync API: `import {transform} from 'stream-transform/sync';`
 
 Addtionnal information are available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
 

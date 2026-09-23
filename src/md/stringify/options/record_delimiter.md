@@ -7,13 +7,13 @@ keywords: ['csv', 'stringify', 'options', 'bom', 'utf8', 'unicode', 'utf16']
 
 # Option `record_delimiter`
 
-The `record_delimiter` option define the characters used to separate each record from one another. 
+The `record_delimiter` option define the characters used to separate each record from one another.
 
-* Type: `Buffer`, `string`
-* Optional
-* Default: `\n`
-* Since: 0.0.1
-* Related: [`delimiter`](/stringify/options/delimiter/), [`eof`](/stringify/options/eof/)  &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `Buffer`, `string`
+- Optional
+- Default: `\n`
+- Since: 0.0.1
+- Related: [`delimiter`](/stringify/options/delimiter/), [`eof`](/stringify/options/eof/) &mdash; see [Available Options](/parse/options/#available-options)
 
 You can pass any value of at least one character in the form of a string or a Buffer. Special values include:
 

@@ -9,11 +9,11 @@ keywords: ['csv', 'stringify', 'options', 'bom', 'utf8', 'unicode', 'utf16']
 
 The `bom` option prepend the [byte order mark (BOM)](https://en.wikipedia.org/wiki/Byte_order_mark) to the output stream.
 
-* Type: `boolean`
-* Optional
-* Default: `false`
-* Since: 5.4.0
-* Related: see [Available Options](/parse/options/#available-options)
+- Type: `boolean`
+- Optional
+- Default: `false`
+- Since: 5.4.0
+- Related: see [Available Options](/parse/options/#available-options)
 
 ## About
 

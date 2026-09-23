@@ -2,7 +2,8 @@
 title: Combining the stream and callback APIs
 navtitle: Stream + callback
 description: Replace the writable stream with a string or buffer and the readable stream with a callback function.
-keywords: ['stream', 'transform', 'api', 'stream', 'callback', 'function', 'mixin']
+keywords:
+  ['stream', 'transform', 'api', 'stream', 'callback', 'function', 'mixin']
 sort: 3.3
 ---
 

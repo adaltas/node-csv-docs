@@ -2,7 +2,18 @@
 title: Stream API
 navtitle: Stream
 description: The stream API might not be the most pleasant API to use but is scalable.
-keywords: ['csv', 'stringify', 'api', 'stream', 'async', 'pipe', 'native', 'write', 'events']
+keywords:
+  [
+    'csv',
+    'stringify',
+    'api',
+    'stream',
+    'async',
+    'pipe',
+    'native',
+    'write',
+    'events',
+  ]
 sort: 3.1
 ---
 

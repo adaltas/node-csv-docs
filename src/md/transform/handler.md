@@ -1,7 +1,17 @@
 ---
 title: Handler
 description: Stream Transform - user handler function
-keywords: ['stream', 'transform', 'handler', 'synchronous', 'asynchronous', 'alter', 'skip', 'clone']
+keywords:
+  [
+    'stream',
+    'transform',
+    'handler',
+    'synchronous',
+    'asynchronous',
+    'alter',
+    'skip',
+    'clone',
+  ]
 sort: 5
 ---
 
@@ -13,11 +23,11 @@ The handler function is the responsible for handling all the record transformati
 
 The mode is defined by the return value or the signature of transformation function:
 
-- **synchronous mode**   
+- **synchronous mode**  
   The handler is run synchronously when it declares only one argument and when its return value is a not promise.
-- **asynchronous mode with a returned promise**   
+- **asynchronous mode with a returned promise**  
   The handler is run asynchronously when it declares only one argument and when its return value is a promise.
-- **asynchronous mode with a callback**   
+- **asynchronous mode with a callback**  
   The handler is run asynchronously until a callback is called when it declare two arguments, the data to transform and the callback to be called once the transformed data is ready.
 
 Using a callback presents the advantage that more than one record may be emitted per transform callback.

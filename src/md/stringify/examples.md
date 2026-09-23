@@ -1,6 +1,17 @@
 ---
 title: Examples
-keywords: ['csv', 'stringify', 'example', 'sample', 'stream', 'pipe', 'callback', 'sync', 'async']
+keywords:
+  [
+    'csv',
+    'stringify',
+    'example',
+    'sample',
+    'stream',
+    'pipe',
+    'callback',
+    'sync',
+    'async',
+  ]
 sort: 4
 ---
 

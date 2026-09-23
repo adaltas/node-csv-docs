@@ -20,7 +20,6 @@ The module to import or require is `csv-generate/sync` and the signature is `con
 
 The [sync example](https://github.com/adaltas/node-csv/blob/master/packages/csv-generate/samples/api.sync.js) returns an array of 2 records.
 
-
 `embed:packages/csv-generate/samples/api.sync.js`
 
 ## Stream API

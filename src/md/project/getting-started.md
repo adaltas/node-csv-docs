@@ -1,6 +1,6 @@
 ---
 title: Getting started
-keywords: ['intro','page']
+keywords: ['intro', 'page']
 sort: 3
 ---
 
@@ -19,14 +19,14 @@ CSV parser and stringifier.
 
 The `csv` package is an umbrella project exposing 4 packages:
 
-*   [`csv-generate`](/generate)   
-    A flexible generator of CSV string and Javascript objects.
-*   [`csv-parse`](/parse)   
-    A parser converting CSV text into arrays or objects.
-*   [`stream-transform`](/transform)   
-    A transformation framework.
-*   [`csv-stringify`](/stringify)   
-    A stringifier converting records into a CSV text.
+- [`csv-generate`](/generate)  
+  A flexible generator of CSV string and Javascript objects.
+- [`csv-parse`](/parse)  
+  A parser converting CSV text into arrays or objects.
+- [`stream-transform`](/transform)  
+  A transformation framework.
+- [`csv-stringify`](/stringify)  
+  A stringifier converting records into a CSV text.
 
 It means you can either install the `csv` package directly or selectively install one of its child projects to decrease your dependencies.
 Each package's code is versioned under the [Node.js CSV monorepo](https://github.com/adaltas/node-csv).

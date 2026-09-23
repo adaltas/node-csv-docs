@@ -10,8 +10,8 @@ sort: 2.1
 
 The `csv-generate` package is written as [ECMAScript modules](https://nodejs.org/api/esm.html). It is available in your code with:
 
-* Stream and callback API: `import {generate} from 'csv-generate';`
-* Sync API: `import {generate} from 'csv-generate/sync';`
+- Stream and callback API: `import {generate} from 'csv-generate';`
+- Sync API: `import {generate} from 'csv-generate/sync';`
 
 Addtionnal information are available in the [`csv` ESM](/project/distributions/nodejs_esm/) documentation.
 

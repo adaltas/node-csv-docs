@@ -1,7 +1,8 @@
 ---
 title: API
 description: Stream Transform - stream, callback and sync APIs
-keywords: ['stream', 'transform', 'csv', 'api', 'callback', 'stream', 'sync', 'promise']
+keywords:
+  ['stream', 'transform', 'csv', 'api', 'callback', 'stream', 'sync', 'promise']
 sort: 3
 ---
 
@@ -9,13 +10,13 @@ sort: 3
 
 This package proposes different API flavors available through different modules. Under the hood, they share the same implementation.
 
-* [Sync API](/transform/api/sync/)   
+- [Sync API](/transform/api/sync/)  
   The sync API provides simplicity, readability and convenience. However, both the input and output datasets must fit into memory and only synchronous handlers are supported.
-* [Stream API](/transform/api/stream/)   
+- [Stream API](/transform/api/stream/)  
   The stream API is scalable and is the default implementation upon which other API are created. It is verbose but flexible.
-* [Callback API](/transform/api/callback/)   
+- [Callback API](/transform/api/callback/)  
   If the transformed dataset fit into memory, you can obtains the records from a user defined function. This is usually not recommended, use the Sync API instead. It is implemented in the same function as the stream API. It is easy and handlers can be written asynchronously.
-* [Stream + callback API](/transform/api/mixed/)  
+- [Stream + callback API](/transform/api/mixed/)  
   The stream and callback APIs can be combined toguether if you need to.
 
 ## Additional information
@@ -24,6 +25,6 @@ Both modules target ECMAScript Edition 6 (ES6 or ES2015), Node.js version 7.6 an
 
 For additional usages and examples, you may refer to:
 
-* [the Option page](/transform/option/)
-* [the "samples" folder](https://github.com/adaltas/node-stream-transform/tree/master/samples)
-* [the "test" folder](https://github.com/adaltas/node-stream-transform/tree/master/test).
+- [the Option page](/transform/option/)
+- [the "samples" folder](https://github.com/adaltas/node-stream-transform/tree/master/samples)
+- [the "test" folder](https://github.com/adaltas/node-stream-transform/tree/master/test).

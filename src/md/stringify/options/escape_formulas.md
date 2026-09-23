@@ -9,11 +9,11 @@ keywords: ['csv', 'stringify', 'options', 'escape_formulas', 'quotes', 'escape']
 
 Escape values that start with `=`, `+`, `-`, `@`, `\t`, or `\r` with `'` and defend against CSV injection attacks.
 
-* Type: `Boolean`
-* Optional
-* Default: `false`
-* Since: 6.3.0
-* Related: `quote`, [`escape`](/stringify/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `Boolean`
+- Optional
+- Default: `false`
+- Since: 6.3.0
+- Related: `quote`, [`escape`](/stringify/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Example
 

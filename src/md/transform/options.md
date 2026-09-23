@@ -11,11 +11,11 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 
 ## Available options
 
-* `consume` (boolean)   
+- `consume` (boolean)  
   In the absence of a consumer, like a `stream.Readable`, trigger the consumption of the stream.
-* `parallel` (number)   
+- `parallel` (number)  
   The number of transformation callbacks to run in parallel; only apply with asynchronous handlers; default to "100".
-* `params` (anything)   
+- `params` (anything)  
   Pass user defined parameters to the user handler as last argument.
 
 ## Using the `parallel` option
@@ -26,4 +26,4 @@ In sequential mode, only 1 transformation function is running at a given time. T
 
 `embed:packages/stream-transform/samples/option.parallel.sequential.js`
 
-In concurrent mode, the option value defines the maximum number of parallel executions. 
+In concurrent mode, the option value defines the maximum number of parallel executions.

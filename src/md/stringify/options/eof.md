@@ -9,11 +9,11 @@ keywords: ['csv', 'stringify', 'options', 'eof']
 
 The `eof` option append the value of the `record_delimiter` option after the last record. It is enabled by default.
 
-* Type: `boolean`
-* Optional
-* Default: `true`
-* Since: 0.0.2
-* Related: [`record_delimiter`](/stringify/options/record_delimiter/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `boolean`
+- Optional
+- Default: `true`
+- Since: 0.0.2
+- Related: [`record_delimiter`](/stringify/options/record_delimiter/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Default behavior
 

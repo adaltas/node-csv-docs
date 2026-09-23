@@ -17,13 +17,13 @@ Source code for this project is available on [GitHub](https://github.com/adaltas
 
 ## Main features
 
-* Scalable `stream.Readable` implementation
-* random or pseudo-random seed based generation
-* Idempotence with the "seed" option
-* User-defined value generation
-* Multiple types of values (integer, boolean, dates, ...)
-* Work nicely with the [csv-parse](/parse/), [csv-stringify](/stringify/) and [stream-transform](/transform/) packages
-* MIT License
+- Scalable `stream.Readable` implementation
+- random or pseudo-random seed based generation
+- Idempotence with the "seed" option
+- User-defined value generation
+- Multiple types of values (integer, boolean, dates, ...)
+- Work nicely with the [csv-parse](/parse/), [csv-stringify](/stringify/) and [stream-transform](/transform/) packages
+- MIT License
 
 ## Usage
 

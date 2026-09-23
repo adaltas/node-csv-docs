@@ -9,10 +9,10 @@ keywords: ['csv', 'stringify', 'options', 'escape']
 
 Single character used for escaping. It only applies to characters matching the `quote` and the `escape` options default to double quotes (`"`).
 
-* Type: `string|Buffer`
-* Optional
-* Default: `false`
-* Since: 0.0.1
+- Type: `string|Buffer`
+- Optional
+- Default: `false`
+- Since: 0.0.1
 
 ## Default behavior
 

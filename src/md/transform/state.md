@@ -9,11 +9,11 @@ sort: 6
 
 The transform instance export a few properties which are also available from the user callback function:
 
-* `transform.state.finished`   
+- `transform.state.finished`  
   The number of transformation callback which have been executed; was `transform.finished` before version 2.
-* `transform.state.running`   
+- `transform.state.running`  
   The number of transformation callback being run at a given time; was `transform.finished` before version 2.
-* `transform.state.started`   
+- `transform.state.started`  
   The number of transformation callback which have been initiated; was `transform.finished` before version 2.
 
 ## Get state information

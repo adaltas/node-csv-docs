@@ -11,11 +11,11 @@ Quote all the non-empty fields even when there is no character requiring quotes.
 
 By default, only the fields containing a special character such a delimiter or a quote are surrounded by quotes.
 
-* Type: `boolean`
-* Optional
-* Default: `false`
-* Since: 0.0.1
-* Related: [`quote`](/stringify/options/quote/), [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/)  &mdash; see [Available Options](/stringify/options/#available-options)
+- Type: `boolean`
+- Optional
+- Default: `false`
+- Since: 0.0.1
+- Related: [`quote`](/stringify/options/quote/), [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/) &mdash; see [Available Options](/stringify/options/#available-options)
 
 Note, several options are available to control when to quote fields under certain conditions. Make sure to review the alternatives.
 

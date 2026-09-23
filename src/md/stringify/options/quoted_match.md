@@ -9,11 +9,11 @@ keywords: ['csv', 'stringify', 'options', 'quotes', 'delimiter', 'escape']
 
 Quote all fields matching a regular expression. Value may equal a string, a RegExp, and an array with any of those.
 
-* Type: `[String|RegExp]` or `String|RegExp`
-* Optional
-* Default: `null`
-* Since: 5.0.0
-* Related: [`quote`](/stringify/options/quote/), [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
+- Type: `[String|RegExp]` or `String|RegExp`
+- Optional
+- Default: `null`
+- Since: 5.0.0
+- Related: [`quote`](/stringify/options/quote/), [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/) &mdash; see [Available Options](/stringify/options/#available-options)
 
 Note, several options are available to control when to quote fields under certain conditions. Make sure to review the alternatives.
 

@@ -9,11 +9,11 @@ keywords: ['csv', 'stringify', 'options', 'delimiter']
 
 The `delimiter` option set the delimiter between the fields of a record. It can be one or multiple characters. The default value is a comma `,`.
 
-* Type: `string|Buffer`
-* Optional
-* Default: `","` (a one character comma)
-* Since: 0.0.1
-* Related: [`record_delimiter`](/stringify/options/record_delimiter/), [`quote`](/stringify/options/quote/), [`escape`](/stringify/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
+- Type: `string|Buffer`
+- Optional
+- Default: `","` (a one character comma)
+- Since: 0.0.1
+- Related: [`record_delimiter`](/stringify/options/record_delimiter/), [`quote`](/stringify/options/quote/), [`escape`](/stringify/options/escape/) &mdash; see [Available Options](/parse/options/#available-options)
 
 ## Default behavior
 

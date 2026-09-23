@@ -1,6 +1,6 @@
 ---
 title: File system interaction
-description: Read and write files with pipes 
+description: Read and write files with pipes
 keywords: ['csv', 'example', 'recipe', 'file', 'fs', 'read', 'write']
 ---
 

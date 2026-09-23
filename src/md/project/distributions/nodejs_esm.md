@@ -12,24 +12,24 @@ The packages of this project are written as [ECMAScript modules](https://nodejs.
 
 ```js
 // For the stream and callback APIs
-import {generate, parse, transform, stringify} from 'csv';
+import { generate, parse, transform, stringify } from 'csv'
 // Or for the sync API
-import {generate, parse, transform, stringify} from 'csv/sync';
+import { generate, parse, transform, stringify } from 'csv/sync'
 ```
 
 When using individual packages:
 
 ```js
 // For the stream and callback APIs
-import {generate} from 'csv-generate';
-import {parse} from 'csv-parse';
-import {transform} from 'stream-transform';
-import {stringify} from 'csv-stringify';
+import { generate } from 'csv-generate'
+import { parse } from 'csv-parse'
+import { transform } from 'stream-transform'
+import { stringify } from 'csv-stringify'
 // Or for the sync API
-import {generate} from 'csv-generate/sync';
-import {parse} from 'csv-parse/sync';
-import {transform} from 'stream-transform/sync';
-import {stringify} from 'csv-stringify/sync';
+import { generate } from 'csv-generate/sync'
+import { parse } from 'csv-parse/sync'
+import { transform } from 'stream-transform/sync'
+import { stringify } from 'csv-stringify/sync'
 ```
 
 ## Supported Node.js versions

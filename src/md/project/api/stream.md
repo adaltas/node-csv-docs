@@ -1,7 +1,19 @@
 ---
 title: Stream
 description: CSV - learn how to leverage the Node.js stream pipe API with CSV
-keywords: ['csv', 'parse', 'parser', 'example', 'recipe', 'stream', 'async', 'pipe', 'read', 'write']
+keywords:
+  [
+    'csv',
+    'parse',
+    'parser',
+    'example',
+    'recipe',
+    'stream',
+    'async',
+    'pipe',
+    'read',
+    'write',
+  ]
 sort: 3.1
 ---
 
@@ -15,7 +27,7 @@ Pipes in Node.js is a native functionality provided by the [stream API](https://
 
 The [pipe example](https://github.com/adaltas/node-csv/blob/master/packages/csv/samples/pipe.js) is quite readable while also scalable:
 
-`embed:packages/csv/samples/pipe.js` 
+`embed:packages/csv/samples/pipe.js`
 
 ## Using the native stream functions
 

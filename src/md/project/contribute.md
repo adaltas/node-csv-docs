@@ -1,6 +1,6 @@
 ---
 title: Community
-keywords: ['intro','page']
+keywords: ['intro', 'page']
 sort: 8
 ---
 
@@ -30,22 +30,22 @@ The project is developed and maintained by [Adaltas](https://www.adaltas.com), a
 
 Below is a non-restrictive list of contributors:
 
-*   David Worms: <https://github.com/adaltas>
-*   Will White: <https://github.com/willwhite>
-*   Justin Latimer: <https://github.com/justinlatimer>
-*   jonseymour: <https://github.com/jonseymour>
-*   pascalopitz: <https://github.com/pascalopitz>
-*   Josh Pschorr: <https://github.com/jpschorr>
-*   Elad Ben-Israel: <https://github.com/eladb>
-*   Philippe Plantier: <https://github.com/phipla>
-*   Tim Oxley: <https://github.com/timoxley>
-*   Damon Oehlman: <https://github.com/DamonOehlman>
-*   Alexandru Topliceanu: <https://github.com/topliceanu>
-*   Visup: <https://github.com/visup>
-*   Edmund von der Burg: <https://github.com/evdb>
-*   Douglas Christopher Wilson: <https://github.com/dougwilson>
-*   Chris Khoo: <https://github.com/khoomeister>
-*   Joeasaurus: <https://github.com/Joeasaurus>
-*   Mark Stosberg: <https://github.com/markstos>
+- David Worms: <https://github.com/adaltas>
+- Will White: <https://github.com/willwhite>
+- Justin Latimer: <https://github.com/justinlatimer>
+- jonseymour: <https://github.com/jonseymour>
+- pascalopitz: <https://github.com/pascalopitz>
+- Josh Pschorr: <https://github.com/jpschorr>
+- Elad Ben-Israel: <https://github.com/eladb>
+- Philippe Plantier: <https://github.com/phipla>
+- Tim Oxley: <https://github.com/timoxley>
+- Damon Oehlman: <https://github.com/DamonOehlman>
+- Alexandru Topliceanu: <https://github.com/topliceanu>
+- Visup: <https://github.com/visup>
+- Edmund von der Burg: <https://github.com/evdb>
+- Douglas Christopher Wilson: <https://github.com/dougwilson>
+- Chris Khoo: <https://github.com/khoomeister>
+- Joeasaurus: <https://github.com/Joeasaurus>
+- Mark Stosberg: <https://github.com/markstos>
 
 Please create an issue if you feel you deserve to be part of it.

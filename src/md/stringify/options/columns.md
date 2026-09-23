@@ -11,11 +11,11 @@ The `columns` option controls the generation of records at the field level. For 
 
 Consider the [tests](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/test/option.columns.coffee) as an exhaustive source of inspiration, examples and supported features. Also, refer to the ["header" option](/stringify/options/group_columns_by_name/) to learn how to print columns names on the first line.
 
-* Type: `array` | `object`
-* Optional
-* Default: `undefined`
-* Since: 0.0.1
-* Related: [`header`](/stringify/options/group_columns_by_name/) &mdash; see [Available Options](/stringify/options/#available-options)
+- Type: `array` | `object`
+- Optional
+- Default: `undefined`
+- Since: 0.0.1
+- Related: [`header`](/stringify/options/group_columns_by_name/) &mdash; see [Available Options](/stringify/options/#available-options)
 
 ## Usage
 
@@ -23,9 +23,9 @@ The `columns` option can be an array of `{ 'key': string, 'header': string }` ob
 
 As objects, `columns` are defined with the properties:
 
-* `key` (string)   
+- `key` (string)  
   Name of property present in the input records; required.
-* `header` (string)   
+- `header` (string)  
   Value to be printed in the first header line; to be used conjointly with the `header` option; defaults to `key`.
 
 Here is an [example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.columns_array_with_objects.js):

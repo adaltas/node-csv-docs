@@ -1,7 +1,19 @@
 ---
 title: Callback
 description: CSV - learn how to leverage the Node.js stream pipe API with CSV
-keywords: ['csv', 'parse', 'parser', 'example', 'recipe', 'stream', 'async', 'pipe', 'read', 'write']
+keywords:
+  [
+    'csv',
+    'parse',
+    'parser',
+    'example',
+    'recipe',
+    'stream',
+    'async',
+    'pipe',
+    'read',
+    'write',
+  ]
 sort: 3.2
 ---
 

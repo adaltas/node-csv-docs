@@ -2,7 +2,18 @@
 title: Stream API
 navtitle: Stream
 description: The stream API might not be the most pleasant API to use but is scalable. It is the one upon which all the other implementation are based.
-keywords: ['stream', 'transform', 'api', 'stream', 'async', 'pipe', 'native', 'write', 'events']
+keywords:
+  [
+    'stream',
+    'transform',
+    'api',
+    'stream',
+    'async',
+    'pipe',
+    'native',
+    'write',
+    'events',
+  ]
 sort: 3.1
 ---
 

@@ -10,8 +10,8 @@ sort: 2.2
 
 The CommonJS distribution is appropriate to Node.js packages which have not yet migrated to ECMAScript modules. It is available in your code with:
 
-* Stream and callback API: `const {stringify} = require('csv-stringify');`
-* Sync API: `const {stringify} = require('csv-stringify/sync');`
+- Stream and callback API: `const {stringify} = require('csv-stringify');`
+- Sync API: `const {stringify} = require('csv-stringify/sync');`
 
 Addtionnal information are available in the [project CommonJS](/project/distributions/nodejs_cjs/) documentation.
 
@@ -28,7 +28,7 @@ It is supported in Node.js 12+ as an alternative to the `main` field. For older 
 In version 2 and below, the module signature was:
 
 ```js
-const stringify = require('csv-stringify');
+const stringify = require('csv-stringify')
 // And
-const stringify = require('csv-stringify/lib/sync');
+const stringify = require('csv-stringify/lib/sync')
 ```

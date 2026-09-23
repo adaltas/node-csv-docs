@@ -9,13 +9,13 @@ keywords: ['csv', 'stringify', 'options', 'quote', 'delimiter', 'escape']
 
 The quote option defines the characters surrounding a field, defaults to the `"` (double quotation marks).
 
-It is possible to disable quoting by setting the option value to `false` or an empty string. The setting applies at any time, whether it contains a special character or not. 
+It is possible to disable quoting by setting the option value to `false` or an empty string. The setting applies at any time, whether it contains a special character or not.
 
-* Type: `string|Buffer|boolean`
-* Optional
-* Default: `"`
-* Since: 0.0.1
-* Related: [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/)  &mdash; see [Available Options](/stringify/options/#available-options)
+- Type: `string|Buffer|boolean`
+- Optional
+- Default: `"`
+- Since: 0.0.1
+- Related: [`quoted_empty`](/stringify/options/quoted_empty/), [`quoted_match`](/stringify/options/quoted_match/), [`quoted_string`](/stringify/options/quoted_string/), [`quoted`](/stringify/options/quoted/) &mdash; see [Available Options](/stringify/options/#available-options)
 
 ## Example
 

@@ -11,45 +11,46 @@ The `cast` option define multiple function to transform values based on their ty
 
 The following types are supported:
 
-* `bigint`   
+- `bigint`  
   Custom function to transform `BigInt` values.
-* `boolean`   
+- `boolean`  
   Custom function to transform `boolean` values.
-* `date`   
+- `date`  
   Custom function to transform `Date` values.
-* `number`   
+- `number`  
   Custom function to transform `Number` values.
-* `object`   
+- `object`  
   Custom function to transform `Object` literals.
-* `string`   
+- `string`  
   Custom function to transform `String` values.
-  
+
 The functions will be executed with 2 arguments:
 
-* `value` (any)   
+- `value` (any)  
   The field value being casted.
-* `context` (object)   
+- `context` (object)  
   A context object.
 
 The accepted return values are:
-* `null`, `undefined`   
+
+- `null`, `undefined`  
   The field will be empty.
-* `string`   
+- `string`  
   The string value of the field.
-* `object`   
+- `object`  
   An object containing the `value` property of the field as a well as options applied at the field level in case of a need to overwrite global options.
 
 ## Context
 
 The context object is passed as the second argument of the user provided function. It contains the following properties:
 
-* `column` (number|string)   
+- `column` (number|string)  
   The column name if the columns options is defined or the column name was discovered or the field position.
-* `header` (boolean)   
+- `header` (boolean)  
   A boolean indicating if the provided value is a part of the header.
-* `index` (number)   
+- `index` (number)  
   The field position starting at 0.
-* `records` (number)   
+- `records` (number)  
   The number of records which have been fully processed.
 
 ## Field level options
@@ -58,7 +59,7 @@ By returning an object instead of a string, a `cast` function can overwrite the 
 
 The following [`cast` example](https://github.com/adaltas/node-csv/blob/master/packages/csv-stringify/samples/option.cast.js) disable the quoting of the field, leaving it to the responsibility of the `cast` function:
 
-`embed:packages/csv-stringify/samples/option.cast.js` 
+`embed:packages/csv-stringify/samples/option.cast.js`
 
 _Run this example with the command `node samples/option.cast.js`._
 
@@ -104,7 +105,7 @@ function(value){
 }
 ```
 
-### string   
+### string
 
 String are as returned without any modification. The default implementation is:
 
