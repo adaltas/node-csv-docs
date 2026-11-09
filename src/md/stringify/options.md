@@ -72,6 +72,9 @@ All options are optional. All the options from the [Node.js Writable Stream API]
 - [`record_delimiter`](/stringify/options/record_delimiter/) (string|Buffer)  
   _Since version 0.0.1_  
   String used to delimit record rows or a special value; special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'; defaults to 'auto' (discovered in source or 'unix' if no source is specified); was `rowDelimiter` until version 4.3.1.
+- [`relax_quotes`](/stringify/options/relax_quotes/) (boolean)  
+  _Since version 6.10.0_  
+  Preserve quotes inside fields which do not otherwise require quoting; fields containing delimiters, record delimiters or a leading quote are still quoted.
 
 ## Choose your style
 
